@@ -1,0 +1,28 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 260, in script
+    if faith_faith_obs >= 2:
+  File "game/script.rpy", line 260, in <module>
+    if faith_faith_obs >= 2:
+NameError: name 'faith_faith_obs' is not defined
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 260, in script
+    if faith_faith_obs >= 2:
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\ast.py", line 1760, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\python.py", line 1944, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\python.py", line 1937, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 260, in <module>
+    if faith_faith_obs >= 2:
+NameError: name 'faith_faith_obs' is not defined
+
+Windows-8-6.2.9200
+Ren'Py 7.1.1.929
+Finals Week 1.0
+Wed Nov 28 10:48:43 2018
