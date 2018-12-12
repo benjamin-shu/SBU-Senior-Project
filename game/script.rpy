@@ -1,26 +1,112 @@
+# Define images for background art.
+# West Apartments
+image West F 301 Hallway = "Backgrounds/West F 301 Hallway 1.png"
+image West F 301C Door = "Backgrounds/West F 301C Door.png"
+# Frey Hall
+image Frey Hall Front = "Backgrounds/Frey Hall Front.png"
+# Javits Lecture Hall
+image Javits Front Door = "Backgrounds/Javits Front Door.png"
+# Staller Center for the Arts
+image Staller = "Backgrounds/Staller.png"
+image Staller Music = "Backgrounds/Staller Music.png"
+image eMedia Seats = "Backgrounds/eMedia Seats.png"
+image eMedia Screen = "Backgrounds/eMedia Screen.png"
+
+# Character sprites for Ben's introduction scene.
+image Ben Intro Cas Brth = "Ben/Intro/Casual Breathe.png"
+image Ben Intro Cas Neut Spk = "Ben/Intro/Casual Neutral Speaking.png"
+image Ben Intro Cas Sto = "Ben/Intro/Casual Stoic.png"
+image Ben Intro Cas Sto Spk = "Ben/Intro/Casual Stoic Speaking.png"
+image Ben Intro Cas Fru Spk = "Ben/Intro/Casual Frustrated Speaking.png"
+image Ben Intro Hands Ddpn = "Ben/Intro/Hands Deadpan.png"
+image Ben Intro Hands Sml = "Ben/Intro/Hands Smile.png"
+image Ben Intro Hel Spk = "Ben/Intro/Hello Speaking.png"
+image Ben Intro Hel Awk = "Ben/Intro/Hello Awkward.png"
+image Ben Intro Hel Fru = "Ben/Intro/Hello Frustrated.png"
+image Ben Intro Pho = "Ben/Intro/Phone.png"
+image Ben Intro Pho Spk = "Ben/Intro/Phone Speaking.png"
+image Ben Intro Pho Fru = "Ben/Intro/Phone Frustrated.png"
+image Ben Intro Pho Fru Spk = "Ben/Intro/Phone Frustrated Speaking.png"
+image Ben Intro Pho Chk = "Ben/Intro/Phone Check.png"
+image Ben Intro Pho Chk Fru Spk = "Ben/Intro/Phone Check Frustrated Speaking.png"
+
+# Character sprites for Ben.
+define Ben_Walk_Neut = "Ben/Walking/Neutral.png"
+define Ben_Walk_Neut_Spk = "Ben/Walking/Neutral Speaking.png"
+define Ben_Walk_Bore = "Ben/Walking/Bored.png"
+define Ben_Walk_Bore_Spk = "Ben/Walking/Bored Speaking.png"
+# define Ben_Walk Annoy = "Ben/Walking/Annoyed.png"
+# define Ben_Walk_Annoy_Spk = "Ben/Walking/Annoyed Speaking.png"
+# define Ben_Walk_Sus = "Ben/Walking/Sus.png"
+# define Ben_Walk_Sus_Spk = "Ben/Walking/Sus Speaking.png"
+define Ben_Casual_Neut = "Ben/Casual/Neutral.png"
+define Ben_Casual_Neut_Spk = "Ben/Casual/Neutral Speaking.png"
+define Ben_Casual_Sto = "Ben/Casual/Stoic.png"
+define Ben_Casual_Sto_Spk = "Ben/Casual/Stoic Speaking.png"
+
+# Character sprites for Faith.
+define Faith_Walk_Neut = "Faith/Walking/Neutral.png"
+define Faith_Walk_Neut_Spk = "Faith/Walking/Neutral Speaking.png"
+# define Faith_Walk_Pens = "Faith/Walking/Pensive.png"
+# define Faith_Walk_Pens_Spk = "Faith/Walking/Pensive Speaking.png"
+# define Faith_Walk_PupD = "Faith/Walking/Puppy Dog.png"
+# define Faith_Walk_PupD_Spk = "Faith/Walking/Puppy Dog Speaking.png"
+# define Faith_Walk_Sere = "Faith/Walking/Serene.png"
+# define Faith_Walk_Sere_Spk = "Faith/Walking/Serene Speaking.png"
+define Faith_Hello_Spk = "Faith/Hello/Speaking.png"
+
+# Character sprites for Maria. (HAS NOT APPEARED)
+define Maria_Walk_Neut = "Maria/Walking/Neutral.png"
+# define Maria_Walk_Neut_Spk = "Maria/Walking/Neutral Speaking.png"
+# define Maria_Walk_Chee = "Maria/Walking/Cheerful.png"
+# define Maria_Walk_Chee_Spk = "Maria/Walking/Cheerful Speaking.png"
+# define Maria_Walk_Annoy = "Maria/Walking/Annoyed.png"
+# define Maria_Walk_Annoy_Spk = "Maria/Walking/Annoyed Speaking.png"
+# define Maria_Walk_Conf = "Maria/Walking/Confused.png"
+# define Maria_Walk_Conf_Spk = "Maria/Walking/Confused Speaking.png"
+
+# Character sprites for Rajesh. (HAS NOT APPEARED)
+define Rajesh_Walk_Neut = "Rajesh/Walking/Neutral.png"
+# define Rajesh_Walk_Neut_Spk = "Rajesh/Walking/Neutral Speaking.png"
+
 # Definitions for each DynamicCharacter object used.
 define b_name = "Ben"
+image b_sprite = DynamicImage("[b_path]")
+define b_path = ""
 define B = DynamicCharacter("b_name", who_color="#71B7E2", who_bold=True,
     what_Size=30, what_Bold=False, what_font="fonts/Courier Prime Bold.ttf")
 
 define f_name = "???"
+image f_sprite = DynamicImage("[f_path]")
+define f_path = ""
 define F = DynamicCharacter("f_name", who_color="#FFFF66", who_bold=True, who_font="fonts/Amatic-Bold.ttf",
     what_Size=30, what_bold=True)
 
 define m_name = "???"
+image m_sprite = DynamicImage("[m_path]")
+define m_path = ""
 define M = DynamicCharacter("m_name", who_color="#C42727", who_bold=False, who_font="fonts/Chunkfive.otf",
     what_Size=30, what_bold=True)
 
 define r_name = "???"
+image r_sprite = DynamicImage("[r_path]")
+define r_path = ""
 define R = DynamicCharacter("r_name", who_color="#159639", who_bold=True,
     what_Size=30, what_Bold=True, what_font="fonts/KaushanScript-Regular.otf")
 
 # Define speaking positions for character sprites.
 define center_l = Position(xpos = 0.25)
 define center_r = Position(xpos = 0.75)
+define seat_l = Position(xpos = 0.27, xanchor = 225, ypos = 0.55, yanchor = 360)
+define seat_r = Position(xpos = 0.73, xanchor = 225, ypos = 0.55, yanchor = 360)
 
 # Define new default Dissolve for transitions between sprites.
 define dissolve = Dissolve(0.5)
+
+# Define transformation for scaling images.
+init:
+    transform img_Scale(x, y):
+        size (x, y)
 
 # Screen Effects - Images
 # A simple black screen.
@@ -81,72 +167,6 @@ image take2:
 #     linear 0.75 alpha 0.0
 
 # Dim the lights for the eMedia SINC Site screen.
-
-# Define images for background art.
-# West Apartments
-image West F 301 Hallway = "Backgrounds/West F 301 Hallway 1.png"
-image West F 301C Door = "Backgrounds/West F 301C Door.png"
-# Frey Hall
-image Frey Hall Front = "Backgrounds/Frey Hall Front.png"
-# Javits Lecture Hall
-image Javits Front Door = "Backgrounds/Javits Front Door.png"
-# Staller Center for the Arts
-image Staller = "Backgrounds/Staller.png"
-image Staller Music = "Backgrounds/Staller Music.png"
-image eMedia Seats = "Backgrounds/eMedia Seats.png"
-image eMedia Screen = "Backgrounds/eMedia Screen.png"
-
-# Character sprites for Ben's introduction scene.
-image Ben Intro Cas Brth = "Ben/Intro/Casual Breathe.png"
-image Ben Intro Cas Neut Spk = "Ben/Intro/Casual Neutral Speaking.png"
-image Ben Intro Cas Sto = "Ben/Intro/Casual Stoic.png"
-image Ben Intro Cas Sto Spk = "Ben/Intro/Casual Stoic Speaking.png"
-image Ben Intro Cas Fru Spk = "Ben/Intro/Casual Frustrated Speaking.png"
-image Ben Intro Hands Ddpn = "Ben/Intro/Hands Deadpan.png"
-image Ben Intro Hands Sml = "Ben/Intro/Hands Smile.png"
-image Ben Intro Hel Spk = "Ben/Intro/Hello Speaking.png"
-image Ben Intro Hel Awk = "Ben/Intro/Hello Awkward.png"
-image Ben Intro Hel Fru = "Ben/Intro/Hello Frustrated.png"
-image Ben Intro Pho = "Ben/Intro/Phone.png"
-image Ben Intro Pho Spk = "Ben/Intro/Phone Speaking.png"
-image Ben Intro Pho Fru = "Ben/Intro/Phone Frustrated.png"
-image Ben Intro Pho Fru Spk = "Ben/Intro/Phone Frustrated Speaking.png"
-image Ben Intro Pho Chk = "Ben/Intro/Phone Check.png"
-image Ben Intro Pho Chk Fru Spk = "Ben/Intro/Phone Check Frustrated Speaking.png"
-
-# Character sprites for Ben.
-# image Ben Walk Neut = "Ben/Walking/Neutral.png"
-image Ben Walk Neut Spk = "Ben/Walking/Neutral Speaking.png"
-image Ben Walk Bore = "Ben/Walking/Bored.png"
-# image Ben Walk Bore Spk = im.Scale("Ben/Walking/Bored Speaking.png", 440, 792)
-# image Ben Walk Annoy = "Ben/Walking/Annoyed.png"
-# image Ben Walk Annoy Spk = im.Scale("Ben/Walking/Annoyed Speaking.png", 440, 792)
-# image Ben Walk Sus = "Ben/Walking/Sus.png"
-# image Ben Walk Sus Spk = im.Scale("Ben/Walking/Sus Speaking.png", 440, 792)
-
-# Character sprites for Faith.
-# image Faith Walk Neut = "Faith/Walking/Neutral.png"
-# image Faith Walk Neut Spk = im.Scale("Faith/Walking/Neutral Speaking.png", 440, 792)
-# image Faith Walk Pens = "Faith/Walking/Pensive.png"
-# image Faith Walk Pens Spk = im.Scale("Faith/Walking/Pensive Speaking.png", 440, 792)
-# image Faith Walk PupD = "Faith/Walking/Puppy Dog.png"
-# image Faith Walk PupD Spk = im.Scale("Faith/Walking/Puppy Dog Speaking.png", 440, 792)
-# image Faith Walk Sere = "Faith/Walking/Serene.png"
-# image Faith Walk Sere Spk = im.Scale("Faith/Walking/Serene Speaking.png", 440, 792)
-
-# Character sprites for Maria. (HAS NOT APPEARED)
-# image Maria Walk Neut = "Maria/Walking/Neutral.png"
-# image Maria Walk Neut Spk = im.Scale("Maria/Walking/Neutral Speaking.png", 440, 792)
-# image Maria Walk Chee = "Maria/Walking/Cheerful.png"
-# image Maria Walk Chee Spk = im.Scale("Maria/Walking/Cheerful Speaking.png", 440, 792)
-# image Maria Walk Annoy = "Maria/Walking/Annoyed.png"
-# image Maria Walk Annoy Spk = im.Scale("Maria/Walking/Annoyed Speaking.png", 440, 792)
-# image Maria Walk Conf = "Maria/Walking/Confused.png"
-# image Maria Walk Conf Spk = im.Scale("Maria/Walking/Confused Speaking.png", 440, 792)
-
-# Character sprites for Rajesh. (HAS NOT APPEARED)
-image Rajesh Walk Neut = "Rajesh/Walking/Neutral.png"
-# image Rajesh Walk Neut Spk = im.Scale("Rajesh/Walking/Neutral Speaking.png", 440, 792)
 
 # Game starts here.
 label start:
@@ -231,26 +251,30 @@ label Day1:
     B "{i}When I was in my senior year of high school, I couldn’t wait to leave for college.{/i}"
     B "{i}Four years later, and here I am wondering where the hell I’m going next.{/i}"
 
-    show Ben Walk Bore at center with dissolve
+    $ b_path = Ben_Walk_Bore;
+    show b_sprite at center, img_Scale(500, 800) with dissolve
 
     B "{i}Laptop, charger, headphones…{/i}"
     B "{i}…binder, pencil case, notepad…{/i}"
     B "{i}…water bottle, running shoes, spare shirt…{/i}"
     B "{i}…first-aid kit, scissors, mini-stapler…{/i}"
 
-    show Ben Walk Neut Spk with dissolve
+    $ b_path = Ben_Walk_Bore_Spk
+    show b_sprite with dissolve
 
     B "…and the flashlight. Can’t forget the flashlight."
     B "Okay. I think that’s everything."
     B "I’m going to head out to class now. I’ll see you guys later."
+    $ b_path = Ben_Walk_Bore
+    show b_sprite with dissolve
     "Kris" "See you later, Shuben."
 
     scene Black with fade
 
     B "{i}First stop of the day: Staller Center for the Arts.{/i}"
     B "{i}Okay, Ben. You’ve only got two more semesters left.{/i}"
-    hide Ben with fade
     B "{i}Try not to fuck this up.{/i}"
+    hide b_sprite with dissolve
 
 label Day1_ARS:
     scene Staller with fade
@@ -262,23 +286,41 @@ label Day1_ARS:
     B "{i}…because {b}that{/b}, of course, makes {b}perfect{/b} sense.{/i}"
 
     scene eMedia Seats with fade
-    # show Ben Sitting Neutral with dissolve at l_seat
+
+    $ b_path = Ben_Walk_Bore
+    show b_sprite at center, img_Scale(500, 800) with dissolve
     B "{i}Hm. Nobody’s here yet. Guess I’ll just sit down here and wait…{/i}"
+    $ b_path = Ben_Casual_Sto
+    show b_sprite at seat_l with dissolve
     B "{i}…all by myself…{/i}"
     B "{i}…staring at a computer.{/i}"
-    B "{i}Why did I leave my room, again?{/i}"
+    $ b_path = Ben_Casual_Sto_Spk
+    show b_sprite with dissolve
+    B "Why did I leave my room, again?"
+    $ b_path = Ben_Casual_Sto
 
-    # show Faith Hello Friendly with dissolve at r_seat
+    $ f_path = Faith_Hello_Spk
+    show f_sprite at Position(xpos = 0.73, xanchor = 0.5), img_Scale(500, 800) with dissolve
+    F "Hello!"
+    $ f_path = Faith_Walk_Neut_Spk
+    show f_sprite with dissolve
+    F "Is this seat taken?"
+    $ f_path = Faith_Walk_Neut
 
-    F "Hello! Is this seat taken?"
-    # show Faith Walk Neut with dissolve
-    # show Ben Sitting Neut Spk with dissolve
+    $ b_path = Ben_Casual_Neut_Spk
+    show b_sprite with dissolve
     B "Oh! No, it’s not taken. Go right ahead."
-    # show Faith Walk Neut Spk with dissolve
+    $ b_path = Ben_Casual_Neut
+
+    $ f_path = Faith_Walk_Neut_Spk
+    show f_sprite with dissolve
     F "Thank you!"
+    $ f_path = Faith_Walk_Neut
+    show f_sprite at seat_r with dissolve
 
     # show Faith Sitting Neut with dissolve
 
+    B "{i}...{/i}"
     B "{i}...well, this is an uncomfortable silence.{/i}"
     B "{i}Maybe I should say something?{/i}"
 
@@ -286,7 +328,7 @@ label Faith_Meet:
     define faith_obs = 0
     define faith_talked = False
     menu:
-        "Maybe I should say something?"
+        "{i}Maybe I should say something?{/i}"
 
         "Say nothing.":
             B "{i}...nah. She’s probably got other things to think about right now.{/i}"
@@ -364,53 +406,3 @@ label Faith_Meet:
 # Conclusion sequence.
 label End:
     return
-
-label FontTest:
-    scene Frey Hall Front with fade
-
-    show Ben Walk Neut at Position(xpos=0.2) with dissolve
-    show Ben Walk Neut Spk with dissolve
-    B "Testing Ben."
-    show Ben Walk Neut with dissolve
-
-    show Faith Walk Neut at Position(xpos=0.4) with dissolve
-    show Faith Walk Neut Spk with dissolve
-    F "Testing Faith."
-    show Faith Walk Neut with dissolve
-
-    show Maria Walk Neut at Position(xpos=0.6) with dissolve
-    show Maria Walk Neut Spk with dissolve
-    M "Testing Maria."
-    show Maria Walk Neut with dissolve
-
-    show Rajesh Walk Neut at Position(xpos=0.8) with dissolve
-    show Rajesh Walk Neut Spk with dissolve
-    R "Testing Rajesh."
-    show Rajesh Walk Neut with dissolve
-
-    jump End
-
-label SpeakTest:
-    show Ben Walk Bore at center_l with dissolve
-    show Maria Walk Neut at center_r with dissolve
-
-    show Maria Walk Neut Spk at center_r with dissolve
-    M "{b}So, what did you think of the professor?{/b}"
-    show Maria Walk Neut at center_r with dissolve
-
-    show Ben Walk Bore Spk at center_l with dissolve
-    B "{b}He seems like a nice man, honestly.{\b}"
-    B "{b}It's a shame I had no idea what he was talking about.{/b}"
-    show Ben Walk Bore at center_l with dissolve
-
-    show Maria Walk Chee Spk at center_r with dissolve
-    M "{b}Yeah, that happens when you lose consciousness.{/b}"
-    M "{b}{i}Maybe{/i} if you're awake next time, you'll get to use those two brain cells I keep hearing about!{/b}"
-    show Maria Walk Chee at center_r with dissolve
-
-    show Ben Walk Annoy Spk at center_l with dissolve
-    B "{b}Ha, ha. Very funny.{/b}"
-    B "...never should have told you that joke..."
-    show Ben Walk Annoy at center_l with dissolve
-
-    jump End
