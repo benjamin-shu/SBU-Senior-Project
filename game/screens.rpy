@@ -208,13 +208,14 @@ screen choice(items):
     style_prefix "choice"
 
     vbox:
+        ypos 550
         for i in items:
             textbutton i.caption action i.action
 
 
 ## When this is true, menu captions will be spoken by the narrator. When false,
 ## menu captions will be displayed as empty buttons.
-define config.narrator_menu = True
+define config.narrator_menu = False
 
 
 style choice_vbox is vbox
@@ -1509,8 +1510,3 @@ style slider_pref_vbox:
 style slider_pref_slider:
     variant "small"
     xsize 600
-
-
-
-
-

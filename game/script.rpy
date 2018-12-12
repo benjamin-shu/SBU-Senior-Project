@@ -54,6 +54,9 @@ define Faith_Walk_Neut_Spk = "Faith/Walking/Neutral Speaking.png"
 # define Faith_Walk_Sere = "Faith/Walking/Serene.png"
 # define Faith_Walk_Sere_Spk = "Faith/Walking/Serene Speaking.png"
 define Faith_Hello_Spk = "Faith/Hello/Speaking.png"
+define Faith_Mac_Foc_Neut = "Faith/Macbook Focus/Neutral.png"
+define Faith_Mac_LkUp_Neut = "Faith/Macbook LookUp/Neutral.png"
+define Faith_Mac_LkUp_Spk = "Faith/Macbook LookUp/Speaking.png"
 
 # Character sprites for Maria. (HAS NOT APPEARED)
 define Maria_Walk_Neut = "Maria/Walking/Neutral.png"
@@ -317,29 +320,37 @@ label Day1_ARS:
     F "Thank you!"
     $ f_path = Faith_Walk_Neut
     show f_sprite at seat_r with dissolve
+    $ f_path = Faith_Mac_Foc_Neut
+    show f_sprite at seat_r with dissolve
 
     # show Faith Sitting Neut with dissolve
 
     B "{i}...{/i}"
     B "{i}...well, this is an uncomfortable silence.{/i}"
+    $ b_path = Ben_Casual_Sto
+    show b_sprite with dissolve
     B "{i}Maybe I should say something?{/i}"
 
 label Faith_Meet:
     define faith_obs = 0
     define faith_talked = False
+    window hide
     menu:
-        "{i}Maybe I should say something?{/i}"
+        "{i}{b}Maybe I should say something?{/b}{/i}"
 
         "Say nothing.":
+            window show
             B "{i}...nah. She’s probably got other things to think about right now.{/i}"
             B "{i}No sense in me bothering her.{i}"
 
         "Look for conversation starters.":
+            window show
             if faith_obs >= 2:
                 B "{i}Okay, that’s enough staring. This is starting to feel creepy.{/i}"
                 $ faith_obs = faith_obs + 1
                 jump Faith_Meet
             elif faith_obs == 1:
+
                 B "{i}It looks like she’s working with Adobe Illustrator.{/i}"
                 B "{i}She’s working on a profile view of a person’s face…{/i}"
                 B "{i}Have I seen that before? It kind of looks like the main character from Undertale...{/i}"
@@ -355,6 +366,7 @@ label Faith_Meet:
                 jump Faith_Meet
 
         "Attempt idle small talk.":
+            window show
             if faith_obs < 2:
                 B "So, uh, what’s your name?"
                 F "…"
