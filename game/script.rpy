@@ -1,14 +1,21 @@
-# Definitions for each Character object used.
-define B = Character("Ben", who_color="#71B7E2", who_bold=True,
-    what_Size=30, what_Bold=True, what_font="fonts/Courier Prime Bold.ttf")
-define F = Character("Faith", who_color="#FFFF66", who_bold=True, who_font="fonts/Amatic-Bold.ttf",
+# Definitions for each DynamicCharacter object used.
+define b_name = "Ben"
+define B = DynamicCharacter("b_name", who_color="#71B7E2", who_bold=True,
+    what_Size=30, what_Bold=False, what_font="fonts/Courier Prime Bold.ttf")
+
+define f_name = "???"
+define F = DynamicCharacter("f_name", who_color="#FFFF66", who_bold=True, who_font="fonts/Amatic-Bold.ttf",
     what_Size=30, what_bold=True)
-define M = Character("Maria", who_color="#C42727", who_bold=False, who_font="fonts/Chunkfive.otf",
+
+define m_name = "???"
+define M = DynamicCharacter("m_name", who_color="#C42727", who_bold=False, who_font="fonts/Chunkfive.otf",
     what_Size=30, what_bold=True)
-define R = Character("Rajesh", who_color="#159639", who_bold=True,
+
+define r_name = "???"
+define R = DynamicCharacter("r_name", who_color="#159639", who_bold=True,
     what_Size=30, what_Bold=True, what_font="fonts/KaushanScript-Regular.otf")
 
-# Define speaking positions for 1-on-1 conversations.
+# Define speaking positions for character sprites.
 define center_l = Position(xpos = 0.25)
 define center_r = Position(xpos = 0.75)
 
@@ -54,24 +61,26 @@ image take2:
     linear 0.75 alpha 0.0
 
 # Close a clapper board labeled "Take 3".
-image take3:
-    xalign 0.0
-    "Screen Effects/Take 3 Open.png"
-    linear 0.5 xalign 1.0
-    0.25
-    "Screen Effects/Take 3 Closed.png" with dissolve
-    0.5
-    linear 0.75 alpha 0.0
+# image take3:
+#     xalign 0.0
+#     "Screen Effects/Take 3 Open.png"
+#     linear 0.5 xalign 1.0
+#     0.25
+#     "Screen Effects/Take 3 Closed.png" with dissolve
+#     0.5
+#     linear 0.75 alpha 0.0
 
 # Close a clapper board labeled "Take 4".
-image take4:
-    xalign 0.0
-    "Screen Effects/Take 4 Open.png"
-    linear 0.5 xalign 1.0
-    0.25
-    "Screen Effects/Take 4 Closed.png" with dissolve
-    0.5
-    linear 0.75 alpha 0.0
+# image take4:
+#     xalign 0.0
+#     "Screen Effects/Take 4 Open.png"
+#     linear 0.5 xalign 1.0
+#     0.25
+#     "Screen Effects/Take 4 Closed.png" with dissolve
+#     0.5
+#     linear 0.75 alpha 0.0
+
+# Dim the lights for the eMedia SINC Site screen.
 
 # Define images for background art.
 # West Apartments
@@ -84,7 +93,8 @@ image Javits Front Door = "Backgrounds/Javits Front Door.png"
 # Staller Center for the Arts
 image Staller = "Backgrounds/Staller.png"
 image Staller Music = "Backgrounds/Staller Music.png"
-# image eMedia Seats = "Backgrounds/eMedia Seats.png"
+image eMedia Seats = "Backgrounds/eMedia Seats.png"
+image eMedia Screen = "Backgrounds/eMedia Screen.png"
 
 # Character sprites for Ben's introduction scene.
 image Ben Intro Cas Brth = "Ben/Intro/Casual Breathe.png"
@@ -106,7 +116,7 @@ image Ben Intro Pho Chk Fru Spk = "Ben/Intro/Phone Check Frustrated Speaking.png
 
 # Character sprites for Ben.
 # image Ben Walk Neut = "Ben/Walking/Neutral.png"
-image Ben Walk Neut Spk = im.Scale("Ben/Walking/Neutral Speaking.png", 440, 792)
+image Ben Walk Neut Spk = "Ben/Walking/Neutral Speaking.png"
 image Ben Walk Bore = "Ben/Walking/Bored.png"
 # image Ben Walk Bore Spk = im.Scale("Ben/Walking/Bored Speaking.png", 440, 792)
 # image Ben Walk Annoy = "Ben/Walking/Annoyed.png"
@@ -135,7 +145,7 @@ image Ben Walk Bore = "Ben/Walking/Bored.png"
 # image Maria Walk Conf Spk = im.Scale("Maria/Walking/Confused Speaking.png", 440, 792)
 
 # Character sprites for Rajesh. (HAS NOT APPEARED)
-# image Rajesh Walk Neut = "Rajesh/Walking/Neutral.png"
+image Rajesh Walk Neut = "Rajesh/Walking/Neutral.png"
 # image Rajesh Walk Neut Spk = im.Scale("Rajesh/Walking/Neutral Speaking.png", 440, 792)
 
 # Game starts here.
@@ -251,7 +261,7 @@ label Day1_ARS:
        are held on the Music side of the building…{/i}"
     B "{i}…because {b}that{/b}, of course, makes {b}perfect{/b} sense.{/i}"
 
-    # scene eMedia Seats with fade
+    scene eMedia Seats with fade
     # show Ben Sitting Neutral with dissolve at l_seat
     B "{i}Hm. Nobody’s here yet. Guess I’ll just sit down here and wait…{/i}"
     B "{i}…all by myself…{/i}"
@@ -260,12 +270,12 @@ label Day1_ARS:
 
     # show Faith Hello Friendly with dissolve at r_seat
 
-    "???" "Hello! Is this seat taken?"
+    F "Hello! Is this seat taken?"
     # show Faith Walk Neut with dissolve
     # show Ben Sitting Neut Spk with dissolve
     B "Oh! No, it’s not taken. Go right ahead."
     # show Faith Walk Neut Spk with dissolve
-    "???" "Thank you!"
+    F "Thank you!"
 
     # show Faith Sitting Neut with dissolve
 
@@ -305,10 +315,11 @@ label Faith_Meet:
         "Attempt idle small talk.":
             if faith_obs < 2:
                 B "So, uh, what’s your name?"
-                "???" "…"
+                F "…"
                 B "…hello?"
-                "???" "Hm? Oh! Sorry, did you say something?"
+                F "Hm? Oh! Sorry, did you say something?"
                 B "What’s your name?"
+                $ f_name = "Faith"
                 F "My name is Faith. And your name is…?"
                 B "My name is Ben. It’s nice to meet you!"
                 F "Likewise!"
@@ -319,13 +330,13 @@ label Faith_Meet:
                 B "I’ll let you get to it, then."
             elif faith_obs == 2:
                 B "Excuse me?"
-                "???" "Hm? Oh! Hi!"
-                "???" "What’s up?"
+                F "Hm? Oh! Hi!"
+                F "What’s up?"
                 B "If you don’t mind me asking, are you drawing Frisk?"
                 # Smiling
-                "???" "Yeah, I am! Have you played Undertale?"
+                F "Yeah, I am! Have you played Undertale?"
                 B "Yeah! It’s one of my favorite video games!"
-                "???" "Who was your favorite character?"
+                F "Who was your favorite character?"
                 B "Sans, hands down."
 
                 # [An image of Sans’ pixel art appears on-screen.]
@@ -334,19 +345,20 @@ label Faith_Meet:
 
                 # [An image of Toriel appears on-screen.]
 
-                "???" "Personally, Toriel is my favorite. After all, Goat Mom is Best Mom."
+                F "Personally, Toriel is my favorite. After all, Goat Mom is Best Mom."
                 B "Ha! Never heard that one before."
                 B "So is the Frisk drawing for a class?"
-                "???" "No, it’s actually for a YouTube video I wanted to make."
+                F "No, it’s actually for a YouTube video I wanted to make."
 
                 # [An image of a YouTube video with a blank thumbnail appears.]
 
-                "???" "I need a thumbnail, and I wanted to use Frisk."
+                F "I need a thumbnail, and I wanted to use Frisk."
                 B "Wow. What kind of video is it?"
-                "???" "It’s kind of a commentary, at this point. It’s…a work in progress."
+                F "It’s kind of a commentary, at this point. It’s…a work in progress."
                 B "Well, I’ll have to check it out some time."
                 B "I’m Ben, by the way! What’s your name?"
-                F "My name is Faith! It was very nice to meet you!"
+                $ f_name = "Faith"
+                F "My name is Faith! Nice to meet you!"
                 B "Likewise!"
 
 # Conclusion sequence.

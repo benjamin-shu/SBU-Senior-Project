@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 224: end of line expected.
-    show Ben Walk Bore with dissolve at center
-                                     ^
+File "game/script.rpy", line 149: end of line expected.
+    show Rajesh Walk Neut with fade at center_c
+                                    ^
 
 Ren'Py Version: Ren'Py 7.1.1.929
-Thu Nov 29 15:28:51 2018
+Tue Dec 11 23:59:22 2018
