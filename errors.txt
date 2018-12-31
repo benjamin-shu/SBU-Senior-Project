@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 306: expected statement.
-    renpy.log(boundBox)
-                       ^
+File "game/script.rpy", line 19: invalid syntax
+    im.MatrixColor(Ben Intro Cas Sto, im.matrix.brightness(-0.05))
+                            ^
+
+File "game/script.rpy", line 36: invalid syntax
+    im.MatrixColor(Ben Walk Neut, im.matrix.brightness(-0.05))
+                           ^
 
 Ren'Py Version: Ren'Py 7.1.1.929
-Wed Dec 12 03:57:10 2018
+Mon Dec 31 16:33:49 2018
