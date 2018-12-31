@@ -72,36 +72,6 @@ define Maria_Walk_Neut = "Maria/Walking/Neutral.png"
 define Rajesh_Walk_Neut = "Rajesh/Walking/Neutral.png"
 # define Rajesh_Walk_Neut_Spk = "Rajesh/Walking/Neutral Speaking.png"
 
-# Definitions for each DynamicCharacter object used.
-define b_name = "Ben"
-image b_sprite = DynamicImage("[b_path]")
-define b_path = ""
-define B = DynamicCharacter("b_name", who_color="#71B7E2", who_bold=True,
-    what_Size=30, what_Bold=False, what_font="fonts/Courier Prime Bold.ttf")
-
-define f_name = "???"
-image f_sprite = DynamicImage("[f_path]")
-define f_path = ""
-define F = DynamicCharacter("f_name", who_color="#FFFF66", who_bold=True, who_font="fonts/Amatic-Bold.ttf",
-    what_Size=30, what_bold=True)
-
-define m_name = "???"
-image m_sprite = DynamicImage("[m_path]")
-define m_path = ""
-define M = DynamicCharacter("m_name", who_color="#C42727", who_bold=False, who_font="fonts/Chunkfive.otf",
-    what_Size=30, what_bold=True)
-
-define r_name = "???"
-image r_sprite = DynamicImage("[r_path]")
-define r_path = ""
-define R = DynamicCharacter("r_name", who_color="#159639", who_bold=True,
-    what_Size=30, what_Bold=True, what_font="fonts/KaushanScript-Regular.otf")
-
-# Define speaking positions for character sprites.
-define center_l = Position(xpos = 0.25)
-define center_r = Position(xpos = 0.75)
-define seat_l = Position(xpos = 0.27, xanchor = 225, ypos = 0.55, yanchor = 360)
-define seat_r = Position(xpos = 0.73, xanchor = 225, ypos = 0.55, yanchor = 360)
 
 # Define new default Dissolve for transitions between sprites.
 define dissolve = Dissolve(0.5)
@@ -114,6 +84,8 @@ init:
 # Screen Effects - Images
 # A simple black screen.
 image Black = "Screen Effects/Black.png"
+image Dimmed = "Screen Effects/Dimmed.png"
+image Macbook = "Screen Effects/Macbook Screen.png"
 
 # Screen Effects - ATL
 # A short animation for TV static.
@@ -168,6 +140,38 @@ image take2:
 #     "Screen Effects/Take 4 Closed.png" with dissolve
 #     0.5
 #     linear 0.75 alpha 0.0
+
+# Define speaking positions for character sprites.
+define center_l = Position(xpos = 0.25)
+define center_r = Position(xpos = 0.75)
+define seat_l = Position(xpos = 0.27, xanchor = 225, ypos = 0.55, yanchor = 360)
+define seat_r = Position(xpos = 0.73, xanchor = 225, ypos = 0.55, yanchor = 360)
+
+# Definitions for each DynamicCharacter object used.
+define b_name = "Ben"
+image b_sprite = DynamicImage("[b_path]")
+define b_path = ""
+define B = DynamicCharacter("b_name", who_color="#71B7E2", who_bold=True,
+    what_Size=30, what_Bold=False, what_font="fonts/Courier Prime Bold.ttf")
+
+define f_name = "???"
+image f_sprite = DynamicImage("[f_path]")
+define f_path = ""
+define F = DynamicCharacter("f_name", who_color="#FFFF66", who_bold=True, who_font="fonts/Amatic-Bold.ttf",
+    what_Size=30, what_bold=True)
+
+define m_name = "???"
+image m_sprite = DynamicImage("[m_path]")
+define m_path = ""
+define M = DynamicCharacter("m_name", who_color="#C42727", who_bold=False, who_font="fonts/Chunkfive.otf",
+    what_Size=30, what_bold=True)
+
+define r_name = "???"
+image r_sprite = DynamicImage("[r_path]")
+define r_path = ""
+define R = DynamicCharacter("r_name", who_color="#159639", who_bold=True,
+    what_Size=30, what_Bold=True, what_font="fonts/KaushanScript-Regular.otf")
+
 
 # Dim the lights for the eMedia SINC Site screen.
 
@@ -303,7 +307,7 @@ label Day1_ARS:
     $ b_path = Ben_Casual_Sto
 
     $ f_path = Faith_Hello_Spk
-    show f_sprite at Position(xpos = 0.73, xanchor = 0.5), img_Scale(500, 800) with dissolve
+    show f_sprite at center, img_Scale(500, 800) with dissolve
     F "Hello!"
     $ f_path = Faith_Walk_Neut_Spk
     show f_sprite with dissolve
@@ -350,12 +354,15 @@ label Faith_Meet:
                 $ faith_obs = faith_obs + 1
                 jump Faith_Meet
             elif faith_obs == 1:
-
+                show Dimmed with dissolve
+                show Macbook with dissolve
                 B "{i}It looks like she’s working with Adobe Illustrator.{/i}"
                 B "{i}She’s working on a profile view of a person’s face…{/i}"
                 B "{i}Have I seen that before? It kind of looks like the main character from Undertale...{/i}"
                 B "{i}Maybe I should ask.{/i}"
                 $ faith_obs = faith_obs + 1
+                hide Macbook with dissolve
+                hide Dimmed with dissolve
                 jump Faith_Meet
             elif faith_obs == 0:
                 B "{i}Blonde hair, black t-shirt with ripped jeans, and a MacBook.{/i}"
