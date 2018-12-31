@@ -93,6 +93,14 @@ define config.end_game_transition = None
 ## A variable to set the transition used when the game starts does not exist.
 ## Instead, use a with statement after showing the initial scene.
 
+## Define transitions for say statements using side images.
+transform sideTransform(old, new):
+    old
+    new with Dissolve(0.5, alpha=True)
+
+define config.side_image_same_transform = sideTransform
+
+define config.say_attribute_transition = Dissolve(0.5, alpha=True)
 
 ## Window management ###########################################################
 ##

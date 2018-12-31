@@ -23,8 +23,6 @@ image Ben Intro Cas Sto Dark = im.MatrixColor("Ben/Intro/Casual Stoic.png", im.m
 image Ben Intro Cas Sto Spk = "Ben/Intro/Casual Stoic Speaking.png"
 image Ben Intro Cas Sto Spk Dark = im.MatrixColor("Ben/Intro/Casual Stoic Speaking.png", im.matrix.brightness(dark))
 image Ben Intro Cas Fru Spk = "Ben/Intro/Casual Frustrated Speaking.png"
-image Ben Intro Hands Ddpn = "Ben/Intro/Hands Deadpan.png"
-image Ben Intro Hands Sml = "Ben/Intro/Hands Smile.png"
 image Ben Intro Hel Spk = "Ben/Intro/Hello Speaking.png"
 image Ben Intro Hel Awk = "Ben/Intro/Hello Awkward.png"
 image Ben Intro Hel Fru = "Ben/Intro/Hello Frustrated.png"
@@ -33,6 +31,12 @@ image Ben Intro Pho Spk Dark = im.MatrixColor("Ben/Intro/Phone Speaking.png", im
 image Ben Intro Pho Fru Spk Dark = im.MatrixColor("Ben/Intro/Phone Frustrated Speaking.png", im.matrix.brightness(dark))
 image Ben Intro Pho Chk Dark = im.MatrixColor("Ben/Intro/Phone Check.png", im.matrix.brightness(dark))
 image Ben Intro Pho Chk Fru Spk Dark = im.MatrixColor("Ben/Intro/Phone Check Frustrated Speaking.png", im.matrix.brightness(dark))
+
+image side Ben Intro Cas Neut Spk Si = im.FactorScale("Ben/Intro/Casual Neutral Speaking.png", 0.5)
+image side Ben Intro Cas Sto Spk Si = im.FactorScale("Ben/Intro/Casual Stoic Speaking.png", 0.5)
+image side Ben Intro Hel Spk Si = im.FactorScale("Ben/Intro/Hello Speaking.png", 0.5)
+image side Ben Intro Hands Sml Si = im.FactorScale("Ben/Intro/Hands Smile.png", 0.5)
+image side Ben Intro Hands Ddpn Si = im.FactorScale("Ben/Intro/Hands Deadpan.png", 0.5)
 
 # Character sprites for Ben.
 image Ben Walk Neut = "Ben/Walking/Neutral.png"
@@ -151,7 +155,7 @@ image take2:
 # Turn on a projector screen in current scene.
 image projector:
     0.5
-    "Screen Effects/Projector 0.png" with Dissolve(0.8)
+    "Screen Effects/Projector 0.png" with Dissolve(2.5)
     0.5
     "Screen Effects/Projector 1.png" with Dissolve(0.5)
     0.5
@@ -168,23 +172,22 @@ define seat_r = Position(xpos = 0.73, xanchor = 225, ypos = 0.55, yanchor = 360)
 
 # Definitions for each DynamicCharacter object used.
 define b_name = "Ben"
-define b_path = ""
-define B = DynamicCharacter("b_name", who_color="#71B7E2", who_bold=True,
+define B = DynamicCharacter("b_name", image="Ben", who_color="#71B7E2", who_bold=True,
     what_Size=30, what_Bold=False, what_font="fonts/Courier Prime Bold.ttf")
 
 define f_name = "???"
 define f_path = ""
-define F = DynamicCharacter("f_name", who_color="#FFFF66", who_bold=True, who_font="fonts/Amatic-Bold.ttf",
+define F = DynamicCharacter("f_name", image="Faith", who_color="#FFFF66", who_bold=True, who_font="fonts/Amatic-Bold.ttf",
     what_Size=30, what_bold=True)
 
 define m_name = "???"
 define m_path = ""
-define M = DynamicCharacter("m_name", who_color="#C42727", who_bold=False, who_font="fonts/Chunkfive.otf",
+define M = DynamicCharacter("m_name", image="Maria", who_color="#C42727", who_bold=False, who_font="fonts/Chunkfive.otf",
     what_Size=30, what_bold=True)
 
 define r_name = "???"
 define r_path = ""
-define R = DynamicCharacter("r_name", who_color="#159639", who_bold=True,
+define R = DynamicCharacter("r_name", image="Rajesh", who_color="#159639", who_bold=True,
     what_Size=30, what_Bold=True, what_font="fonts/KaushanScript-Regular.otf")
 
 # Game starts here.
@@ -247,29 +250,28 @@ label start:
     B "..."
 
     window hide
-    show projector
+    show projector:
+    hide Ben with dissolve
+    $ renpy.pause(3.0)
     window show
 
-    show Ben Intro Hel Spk with dissolve
-    B "Hello! My name is Benjamin Shu."
-    show Ben Intro Hands Sml with dissolve
-    B "I am a senior computer science major, here at Stony Brook..."
-    show Ben Intro Hands Ddpn with dissolve
-    B "...and like a lot of people my age, I have no idea what I'm doing with my life."
-    show Ben Intro Cas Neut Spk with dissolve
-    B "Recently, I've started thinking that this {i}might{/i} be a problem."
-    show Ben Intro Sto Spk with dissolve
-    B "I can't say that I've accomplished much over the last four years..."
+    B Intro Hel Spk Si "Hello! My name is Benjamin Shu."
+    B Intro Hands Sml Si "I am a senior computer science major, here at Stony Brook..."
+    B Intro Hands Ddpn "...and like a lot of people my age, I have no idea what I'm doing with my life."
+    B Intro Cas Neut Spk Si "Recently, I've started thinking that this {i}might{/i} be a problem."
+    B Intro Cas Sto Spk Si "I can't say that I've accomplished much over the last four years..."
     B "...but I wanted to make something of my time here before I left."
-    show Ben Intro Hands Ddpn with dissolve
-    B "So I’m going to try and turn the disorganized mess of thoughts and feelings inside my head into something coherent."
+    B Intro Hands Ddpn Si "So I’m going to try and turn the disorganized mess of thoughts and feelings inside my head into something coherent."
     B "Something people might actually {i}care{/i} about."
-    show Ben Intro Hands Sml with dissolve
-    B "And hopefully, something worth their time."
-    show Ben Intro Cas Neut Spk with dissolve
-    B "With that in mind, welcome to the show. I hope you enjoy your stay."
+    B Intro Hands Sml Si "And hopefully, something worth their time."
 
-    hide Ben Intro Cas Neut Spk with dissolve
+    window hide
+    hide projector with Dissolve(1.0)
+    show Ben Intro Cas Neut Spk with dissolve
+    window show
+
+    B "With that in mind, welcome to the show. I hope you enjoy your stay."
+    hide Ben with dissolve
     scene Black with fade
 
 label Day1:
