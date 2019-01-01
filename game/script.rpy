@@ -53,10 +53,12 @@ image Ben Casual Neut = "Ben/Casual/Neutral.png"
 image Ben Casual Neut Dark = im.MatrixColor("Ben/Casual/Neutral.png", im.matrix.brightness(dark))
 image Ben Casual Neut Spk = "Ben/Casual/Neutral Speaking.png"
 image Ben Casual Sto = "Ben/Casual/Stoic.png"
+image Ben Casual Sto Dark = im.MatrixColor("Ben/Casual/Stoic.png", im.matrix.brightness(dark))
 image Ben Casual Sto Spk = "Ben/Casual/Stoic Speaking.png"
 
 # Character sprites for Faith.
 image Faith Walk Neut = "Faith/Walking/Neutral.png"
+image Faith Walk Neut Dark = im.MatrixColor("Faith/Walking/Neutral.png", im.matrix.brightness(dark))
 image Faith Walk Neut Spk = "Faith/Walking/Neutral Speaking.png"
 # image Faith Walk Pens = "Faith/Walking/Pensive.png"
 # image Faith Walk Pens Spk = "Faith/Walking/Pensive Speaking.png"
@@ -66,6 +68,7 @@ image Faith Walk Neut Spk = "Faith/Walking/Neutral Speaking.png"
 # image Faith Walk Sere Spk = "Faith/Walking/Serene Speaking.png"
 image Faith Hello Spk = "Faith/Hello/Speaking.png"
 image Faith Mac Foc Neut = "Faith/Macbook Focus/Neutral.png"
+image Faith Mac Foc Neut Dark = im.MatrixColor("Faith/Macbook Focus/Neutral.png", im.matrix.brightness(dark))
 image Faith Mac LkUp Neut = "Faith/Macbook LookUp/Neutral.png"
 image Faith Mac LkUp Spk = "Faith/Macbook LookUp/Speaking.png"
 
@@ -280,15 +283,12 @@ label Day1:
     B "{i}When I was in my senior year of high school, I couldn’t wait to leave for college.{/i}"
     B "{i}Four years later, and here I am wondering where the hell I’m going next.{/i}"
 
-    show Ben Walk Bore Dark at center, img_Scale(500, 800) with dissolve
-
+    show Ben Walk Neut Dark at center, img_Scale(500, 800) with dissolve
     B "{i}Laptop, charger, headphones…{/i}"
     B "{i}…binder, pencil case, notepad…{/i}"
     B "{i}…water bottle, running shoes, spare shirt…{/i}"
     B "{i}…first-aid kit, scissors, mini-stapler…{/i}"
-
-    show Ben Walk Bore Spk with dissolve
-
+    show Ben Walk Neut Spk with dissolve
     B "…and the flashlight. Can’t forget the flashlight."
     B "Okay. I think that’s everything."
     B "I’m going to head out to class now. I’ll see you guys later."
@@ -313,35 +313,33 @@ label Day1_ARS:
 
     scene eMedia Seats with fade
 
-    show Ben Walk Bore at center, img_Scale(500, 800) with dissolve
+    show Ben Walk Bore Dark at center, img_Scale(500, 800) with dissolve
     B "{i}Hm. Nobody’s here yet. Guess I’ll just sit down here and wait…{/i}"
-    show Ben Casual Sto at seat_l with dissolve
+    show Ben Casual Sto Dark at seat_l, img_Scale(500, 800) with dissolve
     B "{i}…all by myself…{/i}"
     B "{i}…staring at a computer.{/i}"
     show Ben Casual Sto Spk with dissolve
     B "Why did I leave my room, again?"
-    show Ben Casual Sto
-
-    show Faith Hello Spk at center, img_Scale(500, 800) with dissolve
+    show Ben Casual Sto Dark:
+    show Faith Hello Spk at center, img_Scale(500, 800) behind Ben:
+    with dissolve
     F "Hello!"
-    show Faith Walk Neut Spk with dissolve
+    show Faith Walk Neut Spk at img_Scale(500, 800) with dissolve
     F "Is this seat taken?"
-    show Faith Walk Neut
-
-    show Ben Casual Neut Spk with dissolve
+    show Faith Walk Neut Dark at img_Scale(500, 800):
+    show Ben Casual Neut Spk:
+    with dissolve
     B "Oh! No, it’s not taken. Go right ahead."
-    show Ben Casual Neut
-
-    show Faith Walk Neut Spk with dissolve
+    show Ben Casual Neut Dark:
+    show Faith Walk Neut Spk:
+    with dissolve
     F "Thank you!"
-    show Faith Walk Neut at seat_r with dissolve
-    show Faith Mac Foc Neut with dissolve
-
-    # show Faith Sitting Neut with dissolve
+    show Faith Walk Neut at seat_r, img_Scale(500, 800) with dissolve
+    show Faith Mac Foc Neut Dark with dissolve
 
     B "{i}...{/i}"
     B "{i}...well, this is an uncomfortable silence.{/i}"
-    show Ben Casual Sto with dissolve
+    show Ben Casual Sto Dark with dissolve
     B "{i}Maybe I should say something?{/i}"
 
 label Faith_Meet:
