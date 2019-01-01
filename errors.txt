@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 254: end of line expected.
-    hide Ben:
-            ^
+File "game/script.rpy", line 400: reached end of line when expecting ':'.
+    elif meet_faith_ben_clicks == 3
+                                   ^
+
+File "game/script.rpy", line 403: end of line expected.
+    jump Meet Faith_Map1
+              ^
 
 Ren'Py Version: Ren'Py 7.1.1.929
-Mon Dec 31 18:03:55 2018
+Tue Jan 01 16:32:54 2019

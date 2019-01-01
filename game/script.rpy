@@ -288,11 +288,11 @@ label Day1:
     B "{i}…binder, pencil case, notepad…{/i}"
     B "{i}…water bottle, running shoes, spare shirt…{/i}"
     B "{i}…first-aid kit, scissors, mini-stapler…{/i}"
-    show Ben Walk Neut Spk with dissolve
+    show Ben Walk Neut Spk at center, img_Scale(500, 800) with dissolve
     B "…and the flashlight. Can’t forget the flashlight."
     B "Okay. I think that’s everything."
     B "I’m going to head out to class now. I’ll see you guys later."
-    show Ben Walk Bore with dissolve
+    show Ben Walk Bore Dark at center, img_Scale(500, 800) with dissolve
     "Kris" "See you later, Shuben."
 
     scene Black with fade
@@ -318,33 +318,58 @@ label Day1_ARS:
     show Ben Casual Sto Dark at seat_l, img_Scale(500, 800) with dissolve
     B "{i}…all by myself…{/i}"
     B "{i}…staring at a computer.{/i}"
-    show Ben Casual Sto Spk with dissolve
+    show Ben Casual Sto Spk at seat_l, img_Scale(500, 800) with dissolve
     B "Why did I leave my room, again?"
-    show Ben Casual Sto Dark:
+    show Ben Casual Sto Dark at seat_l, img_Scale(500, 800):
     show Faith Hello Spk at center, img_Scale(500, 800) behind Ben:
     with dissolve
     F "Hello!"
-    show Faith Walk Neut Spk at img_Scale(500, 800) with dissolve
+    show Faith Walk Neut Spk at center, img_Scale(500, 800) with dissolve
     F "Is this seat taken?"
-    show Faith Walk Neut Dark at img_Scale(500, 800):
-    show Ben Casual Neut Spk:
+    show Faith Walk Neut Dark at center, img_Scale(500, 800):
+    show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
     with dissolve
     B "Oh! No, it’s not taken. Go right ahead."
-    show Ben Casual Neut Dark:
-    show Faith Walk Neut Spk:
+    show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
+    show Faith Walk Neut Spk at center, img_Scale(500, 800):
     with dissolve
     F "Thank you!"
     show Faith Walk Neut at seat_r, img_Scale(500, 800) with dissolve
-    show Faith Mac Foc Neut Dark with dissolve
+    show Faith Mac Foc Neut Dark at seat_r, img_Scale(500, 800) with dissolve
 
     B "{i}...{/i}"
     B "{i}...well, this is an uncomfortable silence.{/i}"
-    show Ben Casual Sto Dark with dissolve
+    show Ben Casual Sto Dark at seat_l, img_Scale(500, 800) with dissolve
     B "{i}Maybe I should say something?{/i}"
 
-label Faith_Meet:
-    define faith_obs = 0
+label Meet_Faith:
     define faith_talked = False
+    define meet_faith_faith_clicks = 0
+    define meet_faith_ben_clicks = 0
+
+    screen look_around():
+        modal True
+        imagebutton:
+            pos (40, -2)
+            focus_mask True
+            idle "Screen Effects/Meet_Faith_Map1/poster_button_idle.png"
+            hover "Screen Effects/Meet_Faith_Map1/poster_button_hover.png"
+            action Jump("Meet_Faith_Map1_poster")
+
+        imagebutton:
+            at seat_l, img_Scale(500, 800)
+            focus_mask True
+            idle ImageReference("Ben Casual Sto Dark")
+            hover ImageReference("Ben Casual Sto")
+            action Jump("Meet_Faith_Map1_ben")
+
+        imagebutton:
+            at seat_r, img_Scale(500, 800)
+            focus_mask True
+            idle ImageReference("Faith Mac Foc Neut Dark")
+            hover ImageReference("Faith Mac Foc Neut")
+            action Jump("Meet_Faith_Map1_faith")
+
     window hide
     menu:
         "{i}{b}Maybe I should say something?{/b}{/i}"
@@ -355,29 +380,72 @@ label Faith_Meet:
             B "{i}No sense in me bothering her.{i}"
 
         "Look for conversation starters.":
-            window show
-            if faith_obs >= 2:
-                B "{i}Okay, that’s enough staring. This is starting to feel creepy.{/i}"
-                $ faith_obs = faith_obs + 1
-                jump Faith_Meet
-            elif faith_obs == 1:
-                show Dimmed with dissolve
-                show Macbook with dissolve
-                B "{i}It looks like she’s working with Adobe Illustrator.{/i}"
-                B "{i}She’s working on a profile view of a person’s face…{/i}"
-                B "{i}Have I seen that before? It kind of looks like the main character from Undertale...{/i}"
-                B "{i}Maybe I should ask.{/i}"
-                $ faith_obs = faith_obs + 1
-                hide Macbook with dissolve
-                hide Dimmed with dissolve
-                jump Faith_Meet
-            elif faith_obs == 0:
-                B "{i}Blonde hair, black t-shirt with ripped jeans, and a MacBook.{/i}"
-                B "{i}I’ve always wondered why ripped jeans were a thing.{/i}"
-                B "{i}…maybe now’s not the best time to ask, though.{/i}"
-                B "{i}Maybe there’s something else…?{/i}"
-                $ faith_obs = faith_obs + 1
-                jump Faith_Meet
+            label Meet_Faith_Map1:
+                call screen look_around
+
+                label Meet_Faith_Map1_ben:
+                    if meet_faith_ben_clicks == 0:
+                        B "{i}It’s me! Not much to see here.{/i}"
+                        $ meet_faith_ben_clicks = 1
+
+                    elif meet_faith_ben_clicks == 1:
+                        B "{i}Still just me! Still just a skinny Asian kid with glasses.{/i}"
+                        $ meet_faith_ben_clicks = 2
+
+                    elif meet_faith_ben_clicks == 2:
+                        B "{i}Lots of other things to look at here!{/i}"
+                        B "{i}I am definitely not the most interesting thing in this room.{/i}"
+                        $ meet_faith_ben_clicks = 3
+
+                    elif meet_faith_ben_clicks == 3:
+                        B "{i}I should probably be spending my time thinking about something else!{/i}"
+
+                    jump Meet_Faith_Map1
+
+                label Meet_Faith_Map1_faith:
+                    if meet_faith_faith_clicks == 0:
+                        B "{i}Blonde hair, black t-shirt with ripped jeans, and a MacBook.{/i}"
+                        B "{i}No idea who she is, or where she came from.{/i}"
+                        $ meet_faith_faith_clicks = 1
+                    elif meet_faith_faith_clicks == 1:
+                        B ""
+                    jump Meet_Faith_Map1
+
+                label Meet_Faith_Map1_macbook:
+                    show Dimmed with dissolve
+                    show Macbook with dissolve
+                    # show Macbook meet_faith with dissolve (simultaneous transition!)
+                    B "{i}It looks like she’s working with Adobe Illustrator.{/i}"
+                    B "{i}She’s working on a profile view of a person’s face…{/i}"
+                    B "{i}Have I seen that before? It kind of looks like the main character from Undertale...{/i}"
+                    B "{i}Maybe I should ask.{/i}"
+                    jump Meet_Faith_Map1
+
+                label Meet_Faith_Map1_macs:
+                    jump Meet_Faith_Map1
+
+                label Meet_Faith_Map1_poster:
+                    B "{i}It's a flyer for the MFA program at Stony Brook.{/i}"
+                    B "{i}I'd really like to join, but that would mean another two years of tuition.{/i}"
+                    B "{i}I'm better off worrying about my undergrad degree first.{/i}"
+                    jump Meet_Faith_Map1
+
+
+            #     B "{i}Okay, that’s enough staring. This is starting to feel creepy.{/i}"
+            #     $ faith_obs = faith_obs + 1
+            #     jump Faith_Meet
+
+            #     $ faith_obs = faith_obs + 1
+            #     hide Macbook with dissolve
+            #     hide Dimmed with dissolve
+            #     jump Faith_Meet
+
+            #     B ""
+            #     B "{i}I’ve always wondered why ripped jeans were a thing.{/i}"
+            #     B "{i}…maybe now’s not the best time to ask, though.{/i}"
+
+            #     $ faith_obs = faith_obs + 1
+            #     jump Faith_Meet
 
         "Attempt idle small talk.":
             window show
