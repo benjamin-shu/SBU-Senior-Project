@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 400: reached end of line when expecting ':'.
-    elif meet_faith_ben_clicks == 3
-                                   ^
-
-File "game/script.rpy", line 403: end of line expected.
-    jump Meet Faith_Map1
-              ^
+File "game/script_a_Assets.rpy", line 160: expected 'comma or end of line' not found.
+    "Screen Effects/Projector 1.png":
+                                    ^
 
 Ren'Py Version: Ren'Py 7.1.1.929
-Tue Jan 01 16:32:54 2019
+Thu Jan 03 00:36:55 2019
