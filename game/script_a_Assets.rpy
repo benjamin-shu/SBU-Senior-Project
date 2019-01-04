@@ -35,6 +35,12 @@ image side Ben Intro Hel Spk Si = im.FactorScale("Ben/Intro/Hello Speaking.png",
 image side Ben Intro Hands Sml Si = im.FactorScale("Ben/Intro/Hands Smile.png", 0.5)
 image side Ben Intro Hands Ddpn Si = im.FactorScale("Ben/Intro/Hands Deadpan.png", 0.5)
 
+image Intro Slide 1 = "Screen Effects/Intro Slide 1.png"
+image Intro Slide 2 = "Screen Effects/Intro Slide 2.png"
+image Intro Slide 3 = "Screen Effects/Intro Slide 3.png"
+image Intro Slide 4 = "Screen Effects/Intro Slide 4.png"
+image Intro Slide 5 = "Screen Effects/Intro Slide 5.png"
+
 # Character sprites for Ben.
 image Ben Walk Neut = "Ben/Walking/Neutral.png"
 image Ben Walk Neut Dark = im.MatrixColor("Ben/Walking/Neutral.png", im.matrix.brightness(dark))

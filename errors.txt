@@ -2,9 +2,21 @@
 errors listed below, and try again.
 
 
-File "game/script_a_Assets.rpy", line 160: expected 'comma or end of line' not found.
-    "Screen Effects/Projector 1.png":
-                                    ^
+File "game/script_b_Intro.rpy", line 73: end of line expected.
+    hide Intro Slide 1:
+                      ^
+
+File "game/script_b_Intro.rpy", line 77: end of line expected.
+    hide Intro Slide 2:
+                      ^
+
+File "game/script_b_Intro.rpy", line 82: end of line expected.
+    hide Intro Slide 3:
+                      ^
+
+File "game/script_b_Intro.rpy", line 87: end of line expected.
+    hide Intro Slide 4:
+                      ^
 
 Ren'Py Version: Ren'Py 7.1.1.929
-Thu Jan 03 00:36:55 2019
+Fri Jan 04 02:50:17 2019

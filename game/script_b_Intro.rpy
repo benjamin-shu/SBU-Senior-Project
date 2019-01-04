@@ -26,7 +26,9 @@ label start:
     show Ben Intro Hel Awk with dissolve
     B "..."
     show Ben Intro Hel Fru with dissolve
+
     play voice "sounds/Censored Beep.mp3"
+
     B "...son of a {i}bitch{/i}!"
     stop sound
     show Ben Intro Pho Chk Fru Spk Dark with dissolve
@@ -64,21 +66,29 @@ label start:
     window hide
     show projector:
     hide Ben with dissolve
-    window show
 
+    $ renpy.pause(4)
+
+    window show
     play music "sounds/Ben/Loopster.mp3" loop
 
+    show Intro Slide 1 with dissolve
     B Intro Hel Spk Si "Hello! My name is Benjamin Shu."
+    show Intro Slide 2 with dissolve
     B Intro Hands Sml Si "I am a senior computer science major, here at Stony Brook..."
+    show Intro Slide 3 with dissolve
     B Intro Hands Ddpn "...and like a lot of people my age, I have no idea what I'm doing with my life."
     B Intro Cas Neut Spk Si "Recently, I've started thinking that this {i}might{/i} be a problem."
+    show Intro Slide 4 with dissolve
     B Intro Cas Sto Spk Si "I can't say that I've accomplished much over the last four years..."
     B "...but I wanted to make something of my time here before I left."
+    show Intro Slide 5 with dissolve
     B Intro Hands Ddpn Si "So I’m going to try and turn the disorganized mess of thoughts and feelings inside my head into something coherent."
     B "Something people might actually {i}care{/i} about."
     B Intro Hands Sml Si "And hopefully, something worth their time."
 
     window hide
+    hide Intro Slide 5 with dissolve
     hide projector with Dissolve(1.0)
     show Ben Intro Cas Neut Spk with dissolve
     window show
