@@ -22,29 +22,35 @@ label start:
 
     B "Hey, guys. My name is Benjamin Shu."
     B "I'm in my senior year here, and-"
-    play sound "sounds/Phone Vibrating.mp3" loop
+    play music "sounds/Phone Vibrating.mp3" loop
     show Ben Intro Hel Awk with dissolve
     B "..."
     show Ben Intro Hel Fru with dissolve
-
-    play voice "sounds/Censored Beep.mp3"
-
+    play sound "sounds/Censored Beep.mp3"
     B "...son of a {i}bitch{/i}!"
-    stop sound
+    stop music
     show Ben Intro Pho Chk Fru Spk Dark with dissolve
     B "Why {i}now{/i}?"
     show Ben Intro Pho Spk Dark with dissolve
     B "Hello?"
     B "No, everything's fine here. I finished unpacking a while ago."
-    play sound "sounds/Chipmunks Sound.mp3"
+    play sound "sounds/Cartoon Voice Baritone.mp3" fadeout 1.0
     show Ben Intro Pho Dark with dissolve
     B "..."
-    stop sound
     show Ben Intro Pho Spk Dark with dissolve
     B "Okay. Where is this internship?"
+    play sound "sounds/Cartoon Voice Baritone.mp3" fadeout 1.0
+    show Ben Intro Pho Dark with dissolve
+    B "..."
+    show Ben Intro Pho Spk Dark with dissolve
     B "...no, I don't really have any experience with that."
+    play sound "sounds/Cartoon Voice Baritone.mp3" fadeout 1.0
+    show Ben Intro Pho Dark with dissolve
+    B "..."
+    show Ben Intro Pho Spk Dark with dissolve
     B "I know. I'll look in a bit."
     B "Yeah, I know. I'll go see an advisor soon."
+    play sound "sounds/Cartoon Voice Baritone.mp3" fadeout 1.0
     show Ben Intro Pho Fru Spk Dark with dissolve
     B "...{i}yes{/i}, I know. I won't let it happen again."
     show Ben Intro Pho Spk Dark with dissolve
@@ -70,7 +76,7 @@ label start:
     $ renpy.pause(4)
 
     window show
-    play music "sounds/Ben/Loopster.mp3" loop
+    play music "sounds/Ben/Loopster.mp3" fadein 1.0 loop
 
     show Intro Slide 1 with dissolve
     B Intro Hel Spk Si "Hello! My name is Benjamin Shu."
@@ -83,7 +89,7 @@ label start:
     B Intro Cas Sto Spk Si "I can't say that I've accomplished much over the last four years..."
     B "...but I wanted to make something of my time here before I left."
     show Intro Slide 5 with dissolve
-    B Intro Hands Ddpn Si "So I’m going to try and turn the disorganized mess of thoughts and feelings inside my head into something coherent."
+    B Intro Hands Ddpn Si "So I’m going to try and turn the disorganized mess in my head into something coherent."
     B "Something people might actually {i}care{/i} about."
     B Intro Hands Sml Si "And hopefully, something worth their time."
 
@@ -97,5 +103,8 @@ label start:
     stop music fadeout 1.0
     hide Ben with dissolve
     scene Black with fade
+
+label End:
+    return
 
     jump Day1
