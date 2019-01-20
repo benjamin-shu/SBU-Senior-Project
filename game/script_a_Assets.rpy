@@ -29,17 +29,22 @@ image Ben Intro Pho Fru Spk Dark = im.MatrixColor("Ben/Intro/Phone Frustrated Sp
 image Ben Intro Pho Chk Dark = im.MatrixColor("Ben/Intro/Phone Check.png", im.matrix.brightness(dark))
 image Ben Intro Pho Chk Fru Spk Dark = im.MatrixColor("Ben/Intro/Phone Check Frustrated Speaking.png", im.matrix.brightness(dark))
 
-image side Ben Intro Cas Neut Spk Si = im.FactorScale("Ben/Intro/Casual Neutral Speaking.png", 0.5)
-image side Ben Intro Cas Sto Spk Si = im.FactorScale("Ben/Intro/Casual Stoic Speaking.png", 0.5)
-image side Ben Intro Hel Spk Si = im.FactorScale("Ben/Intro/Hello Speaking.png", 0.5)
-image side Ben Intro Hands Sml Si = im.FactorScale("Ben/Intro/Hands Smile.png", 0.5)
-image side Ben Intro Hands Ddpn Si = im.FactorScale("Ben/Intro/Hands Deadpan.png", 0.5)
+image side Ben Intro Cas Neut Spk Si = Image("Ben/0_Side/Casual Neutral Speaking.png", align=(0.01, 1.0))
+image side Ben Intro Cas Sto Spk Si = Image("Ben/0_Side/Casual Stoic Speaking.png", align=(0.01, 1.0))
+image side Ben Intro Hel Spk Si = Image("Ben/0_Side/Hello Speaking.png", align=(0.01, 1.0))
+image side Ben Intro Hands Sml Si = Image("Ben/0_Side/Hands Smile.png", align=(0.01, 1.0))
+image side Ben Intro Hands Ddpn Si = Image("Ben/0_Side/Hands Deadpan.png", align=(0.01, 1.0))
 
 image Intro Slide 1 = "Screen Effects/Intro Slide 1.png"
 image Intro Slide 2 = "Screen Effects/Intro Slide 2.png"
 image Intro Slide 3 = "Screen Effects/Intro Slide 3.png"
 image Intro Slide 4 = "Screen Effects/Intro Slide 4.png"
 image Intro Slide 5 = "Screen Effects/Intro Slide 5.png"
+
+image Backpack 1 = "Screen Effects/Backpack_1.png"
+image Backpack 2 = HBox("Screen Effects/Backpack_1.png", "Screen Effects/Backpack_2.png")
+image Backpack 3 = VBox(HBox("Screen Effects/Backpack_1.png", "Screen Effects/Backpack_2.png"), "Screen Effects/Backpack_3.png")
+image Backpack 4 = VBox(HBox("Screen Effects/Backpack_1.png", "Screen Effects/Backpack_2.png"), HBox("Screen Effects/Backpack_3.png", "Screen Effects/Backpack_4.png"))
 
 # Character sprites for Ben.
 image Ben Walk Neut = "Ben/Walking/Neutral.png"
@@ -98,6 +103,11 @@ define dissolve = Dissolve(0.5)
 init:
     transform img_Scale(x, y):
         size (x, y)
+
+init:
+    transform projectCenter():
+        xalign 0.5
+        yalign 0.2
 
 # Screen Effects - images
 # A simple black screen.

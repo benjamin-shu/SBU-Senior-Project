@@ -7,10 +7,17 @@ label Day1:
     B "{i}Four years later, and here I am wondering where the hell I’m going next.{/i}"
 
     show Ben Walk Neut Dark at center, img_Scale(500, 800) with dissolve
+    show Dimmed
+    show Backpack 1 at projectCenter with dissolve
     B "{i}Laptop, charger, headphones…{/i}"
+    show Backpack 2 at projectCenter with dissolve
     B "{i}…binder, pencil case, notepad…{/i}"
+    show Backpack 3 at projectCenter with dissolve
     B "{i}…water bottle, running shoes, spare shirt…{/i}"
+    show Backpack 4 at projectCenter with dissolve
     B "{i}…first-aid kit, scissors, mini-stapler…{/i}"
+    hide Backpack 4 with dissolve
+    hide Dimmed with dissolve
     show Ben Walk Neut Spk at center, img_Scale(500, 800) with dissolve
     B "…and the flashlight. Can’t forget the flashlight."
     B "Okay. I think that’s everything."

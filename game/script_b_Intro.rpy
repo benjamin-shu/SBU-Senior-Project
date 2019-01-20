@@ -28,9 +28,9 @@ label start:
     show Ben Intro Hel Fru with dissolve
     play sound "sounds/Censored Beep.mp3"
     B "...son of a {i}bitch{/i}!"
-    stop music
     show Ben Intro Pho Chk Fru Spk Dark with dissolve
     B "Why {i}now{/i}?"
+    stop music
     show Ben Intro Pho Spk Dark with dissolve
     B "Hello?"
     B "No, everything's fine here. I finished unpacking a while ago."
@@ -103,8 +103,5 @@ label start:
     stop music fadeout 1.0
     hide Ben with dissolve
     scene Black with fade
-
-label End:
-    return
 
     jump Day1

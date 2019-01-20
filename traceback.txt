@@ -1,22 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "renpy/common/00start.rpy", line 120, in script
-    return
-Exception: Could not find return label (u'C:\\Users\\Benjamin Shu\\Documents\\renpy-6.99.14.1-sdk\\SBU-Senior-Project/game/script_b_Intro.rpy', 1546493109, 178).
+After initialization, but before game start.
+SyntaxError: invalid syntax (game/options.rpy, line 103)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00start.rpy", line 120, in script
-    return
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\ast.py", line 1468, in execute
-    next_node(renpy.game.context().lookup_return(pop=True))
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\execution.py", line 664, in lookup_return
-    raise Exception("Could not find return label {!r}.".format(self.return_stack[-1]))
-Exception: Could not find return label (u'C:\\Users\\Benjamin Shu\\Documents\\renpy-6.99.14.1-sdk\\SBU-Senior-Project/game/script_b_Intro.rpy', 1546493109, 178).
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\bootstrap.py", line 313, in bootstrap
+    renpy.main.main()
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\main.py", line 453, in main
+    renpy.game.script.analyze()
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\script.py", line 894, in analyze
+    i.analyze()
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\ast.py", line 1035, in analyze
+    self.atl.mark_constant()
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\atl.py", line 689, in mark_constant
+    i.mark_constant()
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\atl.py", line 974, in mark_constant
+    constant = min(constant, is_constant_expr(withexpr))
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\pyanalysis.py", line 529, in is_constant_expr
+    node, literal = ccache.ast_eval_literal(expr)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\pyanalysis.py", line 683, in ast_eval_literal
+    expr = py_compile(expr, 'eval', ast_node=True)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\python.py", line 674, in py_compile
+    raise e
+SyntaxError: invalid syntax (game/options.rpy, line 103)
 
 Windows-8-6.2.9200
 Ren'Py 7.1.1.929
 SBU Senior Project 1.0
-Thu Jan 03 00:29:56 2019
+Sat Jan 19 21:19:15 2019

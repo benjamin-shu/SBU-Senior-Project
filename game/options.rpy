@@ -95,10 +95,17 @@ define config.end_game_transition = None
 
 ## Define transitions for say statements using side images.
 transform sideTransform(old, new):
-    old
-    new with Dissolve(0.5, alpha=True)
+    contains:
+        old
+        alpha 1.0
+        linear 0.5 alpha 0.0
+    contains:
+        new
+        alpha 0.0
+        linear 0.5 alpha 1.0
 
 define config.side_image_same_transform = sideTransform
+define config.side_image_change_transform = sideTransform
 
 define config.say_attribute_transition = Dissolve(0.5, alpha=True)
 

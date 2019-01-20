@@ -2,21 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script_b_Intro.rpy", line 73: end of line expected.
-    hide Intro Slide 1:
-                      ^
+File "game/script_c_MeetFaith.rpy", line 19: end of line expected.
+    hide Backpack 4:
+                   ^
 
-File "game/script_b_Intro.rpy", line 77: end of line expected.
-    hide Intro Slide 2:
-                      ^
-
-File "game/script_b_Intro.rpy", line 82: end of line expected.
-    hide Intro Slide 3:
-                      ^
-
-File "game/script_b_Intro.rpy", line 87: end of line expected.
-    hide Intro Slide 4:
-                      ^
+File "game/script_c_MeetFaith.rpy", line 20: end of line expected.
+    hide Dimmed:
+               ^
 
 Ren'Py Version: Ren'Py 7.1.1.929
-Fri Jan 04 02:50:17 2019
+Sat Jan 19 19:50:11 2019
