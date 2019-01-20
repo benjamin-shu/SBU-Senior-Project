@@ -193,8 +193,8 @@ define B = DynamicCharacter("b_name", image="Ben", who_color="#71B7E2", who_bold
 
 define f_name = "???"
 define f_path = ""
-define F = DynamicCharacter("f_name", image="Faith", who_color="#FFFF66", who_bold=True, who_font="fonts/Amatic-Bold.ttf",
-    what_Size=30, what_bold=True)
+define F = DynamicCharacter("f_name", image="Faith", who_color="#FFFF66", who_bold=True, who_font="fonts/Pacifico.ttf",
+    what_Size=30, what_bold=False, what_font="fonts/Pacifico.ttf")
 
 define m_name = "???"
 define m_path = ""

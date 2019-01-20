@@ -1,85 +1,7 @@
 label Day1:
-    scene West F 301C Door with fade
-
-    play music "sounds/Ben/Jazz Brunch.mp3" loop
-
-    B "{i}When I was in my senior year of high school, I couldn’t wait to leave for college.{/i}"
-    B "{i}Four years later, and here I am wondering where the hell I’m going next.{/i}"
-
-    show Ben Walk Neut Dark at center, img_Scale(500, 800) with dissolve
-    show Dimmed
-    show Backpack 1 at projectCenter with dissolve
-    B "{i}Laptop, charger, headphones…{/i}"
-    show Backpack 2 at projectCenter with dissolve
-    B "{i}…binder, pencil case, notepad…{/i}"
-    show Backpack 3 at projectCenter with dissolve
-    B "{i}…water bottle, running shoes, spare shirt…{/i}"
-    show Backpack 4 at projectCenter with dissolve
-    B "{i}…first-aid kit, scissors, mini-stapler…{/i}"
-    hide Backpack 4 with dissolve
-    hide Dimmed with dissolve
-    show Ben Walk Neut Spk at center, img_Scale(500, 800) with dissolve
-    B "…and the flashlight. Can’t forget the flashlight."
-    B "Okay. I think that’s everything."
-    B "I’m going to head out to class now. I’ll see you guys later."
-    show Ben Walk Bore Dark at center, img_Scale(500, 800) with dissolve
-    "Kris" "See you later, Shuben."
-
-    stop music fadeout 1.0
-    scene Black with fade
-
-    B "{i}First stop of the day: Staller Center for the Arts.{/i}"
-    B "{i}Okay, Ben. You’ve only got two more semesters left.{/i}"
-    B "{i}Try not to fuck this up.{/i}"
-    hide Ben Walk Bore with dissolve
-
-label Day1_ARS:
-    scene Staller with fade
-
-    B "{i}It’s been a while since I was last here.{/i}"
-    scene Staller Music with fade
-    B "{i}If I remember correctly, all of the digital art classes
-       are held on the Music side of the building…{/i}"
-    B "{i}…because {b}that{/b}, of course, makes {b}perfect{/b} sense.{/i}"
-
-    scene eMedia Seats with fade
-
-    show Ben Walk Bore Dark at center, img_Scale(500, 800) with dissolve
-    B "{i}Hm. Nobody’s here yet. Guess I’ll just sit down here and wait…{/i}"
-    show Ben Casual Sto Dark at seat_l, img_Scale(500, 800) with dissolve
-    B "{i}…all by myself…{/i}"
-    B "{i}…staring at a computer.{/i}"
-    show Ben Casual Sto Spk at seat_l, img_Scale(500, 800) with dissolve
-    B "Why did I leave my room, again?"
-    show Ben Casual Sto Dark at seat_l, img_Scale(500, 800):
-    show Faith Hello Spk at center, img_Scale(500, 800) behind Ben:
-    with dissolve
-    F "Hello!"
-    show Faith Walk Neut Spk at center, img_Scale(500, 800) with dissolve
-    F "Is this seat taken?"
-    show Faith Walk Neut Dark at center, img_Scale(500, 800):
-    show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
-    with dissolve
-    B "Oh! No, it’s not taken. Go right ahead."
-    show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
-    show Faith Walk Neut Spk at center, img_Scale(500, 800):
-    with dissolve
-    F "Thank you!"
-    show Faith Walk Neut at seat_r, img_Scale(500, 800) with dissolve
-    show Faith Mac Foc Neut Dark at seat_r, img_Scale(500, 800) with dissolve
-
-    B "{i}...{/i}"
-    B "{i}...well, this is an uncomfortable silence.{/i}"
-    show Ben Casual Sto Dark at seat_l, img_Scale(500, 800) with dissolve
-    B "{i}Maybe I should say something?{/i}"
-
-label Meet_Faith:
-    define faith_talked = False
-    define meet_faith_ben_clicks = 0
-
+    # Define screen for looking at ARS classroom
     screen look_around():
         modal True
-
         # projector
         imagebutton:
             pos (910, 84)
@@ -160,19 +82,125 @@ label Meet_Faith:
             hover ImageReference("Faith Mac Foc Neut")
             action Jump("Meet_Faith_Map1_faith")
 
+    # Actual story sequence starts here.
+    scene West F 301C Door with fade
+
+    play music "sounds/Ben/Jazz Brunch.mp3" loop
+
+    B "{i}When I was in my senior year of high school, I couldn’t wait to leave for college.{/i}"
+    B "{i}Four years later, and here I am wondering where the hell I’m going next.{/i}"
+
+    show Ben Walk Neut Dark at center, img_Scale(500, 800) with dissolve
+    show Ben Walk Neut Spl at center, img_Scale(500, 800) with dissolve
+    B "{i}Okay, last check - do I have everything?{/i}"
+    show Ben Walk Neut Dark at center, img_Scale(500, 800) with dissolve
+    show Dimmed
+    show Backpack 1 at projectCenter with dissolve
+    B "{i}Laptop, charger, headphones…{/i}"
+    show Backpack 2 at projectCenter with dissolve
+    B "{i}…binder, pencil case, notepad…{/i}"
+    show Backpack 3 at projectCenter with dissolve
+    B "{i}…water bottle, running shoes, spare shirt…{/i}"
+    show Backpack 4 at projectCenter with dissolve
+    B "{i}…first-aid kit, flashlight, mini-stapler…{/i}"
+    hide Backpack 4 with dissolve
+    hide Dimmed with dissolve
+    show Ben Walk Neut Spk at center, img_Scale(500, 800) with dissolve
+    B "Okay. I think that’s everything."
+    B "I’m going to head out to class now. I’ll see you guys later."
+    hide Ben with dissolve
+
+    stop music fadeout 1.0
+    scene Black with fade
+
+    B "{i}First stop of the day: Staller Center for the Arts.{/i}"
+    B "{i}Okay, Ben. The sun is shining, and it's a bright new day.{/i}"
+    B "{i}Try not to fuck this up.{/i}"
+
+label Day1_ARS:
+    scene Staller with fade
+
+    B "{i}It’s been a while since I was last here.{/i}"
+    scene Staller Music with fade
+    B "{i}If I remember correctly, all of the digital art classes are held on the Music side of the building…{/i}"
+    B "{i}…because, clearly, {b}that{/b} makes {b}perfect{/b} sense.{/i}"
+
+    scene eMedia Seats with fade
+
+    show Ben Walk Bore Dark at center, img_Scale(500, 800) with dissolve
+    B "{i}Hm. Nobody’s here yet. Guess I’ll just sit down here and wait…{/i}"
+    show Ben Casual Sto Dark at seat_l, img_Scale(500, 800) with dissolve
+    B "{i}…all by myself…{/i}"
+    B "{i}…staring at a computer.{/i}"
+    show Ben Casual Sto Spk at seat_l, img_Scale(500, 800) with dissolve
+    B "Why did I leave my room, again?"
+    show Ben Casual Sto Dark at seat_l, img_Scale(500, 800):
+    show Faith Hello Spk at center, img_Scale(500, 800) behind Ben:
+    with dissolve
+    F "Hello!"
+    show Faith Walk Neut Spk at center, img_Scale(500, 800) with dissolve
+    F "Is this seat taken?"
+    show Faith Walk Neut Dark at center, img_Scale(500, 800):
+    show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
+    with dissolve
+    B "Oh! No, it’s not taken. Go right ahead."
+    show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
+    show Faith Walk Neut Spk at center, img_Scale(500, 800):
+    with dissolve
+    F "Thank you!"
+    show Faith Walk Neut at seat_r, img_Scale(500, 800) with dissolve
+    show Faith Mac Foc Neut Dark at seat_r, img_Scale(500, 800) with dissolve
+
+    B "{i}...{/i}"
+    B "{i}...well, this is an uncomfortable silence.{/i}"
+    show Ben Casual Sto Dark at seat_l, img_Scale(500, 800) with dissolve
+    B "{i}Maybe I should say something?{/i}"
+
+label Meet_Faith:
+    # Conditional checks for looking around the eMedia SINC site.
+    define faith_hair = False
+    define faith_mac = False
+    define meet_faith_ben_clicks = 0
+
+    # Conditional checks for talking to Faith.
+    define faith_talked = False
+    define faith_awk = False
+    define faith_work = False
+    define faith_under = False
+    define faith_youtube = False
+
+label Meet_Faith_Interact:
     window hide
     menu:
-        "{i}{b}Maybe I should say something?{/b}{/i}"
+        "{i}{b}Should I talk to this random stranger?{/b}{/i}"
 
-        "Say nothing.":
+        "Nah - let her go about her business." if faith_talked == False:
             window show
             B "{i}...nah. She’s probably got other things to think about right now.{/i}"
             B "{i}No sense in me bothering her.{i}"
 
-        "Look for conversation starters.":
+            jump Meet_Faith_End
+
+        "Wait for class to start." if (faith_talked == True && faith_awk == False):
+            window show
+            B "{i}Okay, that's enough. I've avoided awkward interactions so far.{/i}"
+            B "{i}Let's try and keep it that way.{i}"
+
+            jump Meet_Faith_End
+
+        "Shut up and pray that the professor shows up soon." if (faith_talked == True && faith_awk == True):
+            window show
+            B "{i}Well, that was a stupid question!{/i}"
+            B "{i}Way to go, genius. I better keep a lid on it now for now.{i}"
+
+            jump Meet_Faith_End
+
+        "Look around the room for conversation starters and talking points.":
             label Meet_Faith_Map1:
+                # Call look_around screen to force the player to pick an ImageButton.
                 call screen look_around
 
+                # A little joke for if the player clicks on Ben.
                 label Meet_Faith_Map1_ben:
                     if meet_faith_ben_clicks == 0:
                         B "{i}It’s me! Not much to see here.{/i}"
@@ -194,12 +222,14 @@ label Meet_Faith:
 
                     jump Meet_Faith_Map1
 
+                # Intended for Faith's face/arms. Unsure as to whether I will use this.
                 label Meet_Faith_Map1_faith:
                     B "{i}Blonde hair, black t-shirt with ripped jeans, and a MacBook.{/i}"
                     B "{i}No idea who she is, or where she came from.{/i}"
 
                     jump Meet_Faith_Map1
 
+                # For clicking on Faith's hairstyle. Asking about this is pretty stupid.
                 label Meet_Faith_Map1_faith_hair:
                     B "{i}Her hair is {b}impressively{/b} spikey. I wonder how she does that?{/i}"
                     B "{i}Is there some kind of product that gives you anime hair?{/i}"
@@ -208,6 +238,7 @@ label Meet_Faith:
 
                     jump Meet_Faith_Map1
 
+                # Intended for Faith's t-shirt and jeans. May not use this - jeans will not be visible.
                 label Meet_Faith_Map1_faith_clothes:
                     B "{i}I've never really understood why ripped jeans are a thing.{/i}"
                     B "{i}I get that it's a fashion and all, but you're still buying damaged clothes.{/i}"
@@ -219,6 +250,7 @@ label Meet_Faith:
 
                     jump Meet_Faith_Map1
 
+                # For clicking on Faith's Macbook Pro. Leads to an image of Adobe Illustrator.
                 label Meet_Faith_Map1_macbook:
                     show Dimmed with dissolve
                     show Macbook with dissolve
@@ -233,6 +265,7 @@ label Meet_Faith:
 
                     jump Meet_Faith_Map1
 
+                # For clicking on the Mac computers in the eMedia SINC site.
                 label Meet_Faith_Map1_macs:
                     B "{i}The eMedia SINC site provides Mac computers for the students.{/i}"
                     B "{i}They run pretty fast, and they all have the Adobe Creative Cloud installed.{/i}"
@@ -242,6 +275,7 @@ label Meet_Faith:
 
                     jump Meet_Faith_Map1
 
+                # For clicking on an audio mixer in the eMedia SINC site.
                 label Meet_Faith_Map1_mixer:
                     B "{i}There's all sorts of equipment here besides the computers.{/i}"
                     B "{i}I've seen sound mixers, keyboards, art tablets, and microphones on the desks.{/i}"
@@ -249,6 +283,7 @@ label Meet_Faith:
 
                     jump Meet_Faith_Map1
 
+                # For clicking on the very back rows of the classroom.
                 label Meet_Faith_Map1_backmacs:
                     B "{i}Over yonder are the forgotten lands of the back two rows.{/i}"
                     B "{i}When you're that far away from the screen, it's hard to hear the professor.{/i}"
@@ -256,6 +291,7 @@ label Meet_Faith:
 
                     jump Meet_Faith_Map1
 
+                # For clicking on a poster on the wall.
                 label Meet_Faith_Map1_poster:
                     B "{i}It's a flyer for the MFA program here at Stony Brook.{/i}"
                     B "{i}I'd really like to join, but that would mean another two years of torture and tuition.{/i}"
@@ -263,6 +299,7 @@ label Meet_Faith:
 
                     jump Meet_Faith_Map1
 
+                # For clicking on a projector in the back of the classroom.
                 label Meet_Faith_Map1_projector:
                     B "{i}This room doesn't have a chalkboard or a dry erase board.{/i}"
                     B "{i}Instead, that projector displays a computer screen up on the front wall.{/i}"
@@ -270,18 +307,66 @@ label Meet_Faith:
 
                     jump Meet_Faith_Map1
 
-        "Attempt idle small talk.":
+                # Must include a button to return to interaction menu!
+                # jump Meet_Faith_Interact
+
+        "Interrupt her work with idle small talk.":
+        label Meet_Faith_Talk:
+            menu:
+                "On second thought, I'll just keep my mouth shut." if faith_talked == False:
+                    jump Meet_Faith_Interact
+
+                "I'm going to shut up now." if faith_talked == True:
+                    jump Meet_Faith_Interact
+
+                "So, what's your name?" if (faith_talked == False && f_name == "???"):
+                    B "So, uh, what’s your name?"
+                    F "…"
+                    B "…hello?"
+                    F "Hm? Oh! Sorry, did you say something?"
+                    B "What’s your name?"
+                    $ f_name = "Faith"
+                    F "My name is Faith. And your name is…?"
+                    B "My name is Ben. It’s nice to meet you!"
+                    F "Likewise!"
+                    B "..."
+                    B "{i}Alright, genius - {b}now{/b} what?{/i}"
+
+                    jump Meet_Faith_Talk
+
+                "I probably should have asked this first, but what's your name?" if (faith_talked == True && f_name == "???"):
+                    B "So, uh, probably should have asked this first, but..."
+                    B "What's your name?"
+                    $ f_name = "Faith"
+                    F "My name is Faith. What's yours?"
+                    B "My name is Ben. It's nice to meet you!"
+                    F "Likewise!"
+
+                    jump Meet_Faith_Talk
+
+                "Are you an arts major?" if faith_talked == False:
+                    B "So, uh, are you an arts major?"
+                    F "What was that?"
+                    B "Oh! I didn’t mean to bug you or anything!"
+                    B "I just thought I’d ask, since we’re sitting in an arts lab and all..."
+                    B "{i}Real smooth, jackass!{/i}"
+                    F "Oh! Yeah, no, I get that!"
+                    F "I’m an ARS major, or Studio Art."
+                    F "What about you? What major are you in?"
+                    B "I'm a Computer Science major."
+                    F "Really? Why are you in an arts class, then?"
+                    B "{i}That's an {b}excellent{/b} question!{/i}"
+                    B "I'm doing a Digital Arts minor, so I get to take this class too."
+                    F "Oh, wow! What made you decide to take that minor?"
+                    B "Well, at first, I was hoping I could major in something like Digital Arts."
+                    B "After I got here, I found out that they only offered the minor. So I decided to major in CS instead."
+                    F "Isn't the Comp Sci major here really difficult?"
+                    B "I never said it was a {b}good{/b} decision."
+
+                "So, I'm guessing you're an arts major?" if faith_talked == True:
+
             window show
             if faith_obs < 2:
-                B "So, uh, what’s your name?"
-                F "…"
-                B "…hello?"
-                F "Hm? Oh! Sorry, did you say something?"
-                B "What’s your name?"
-                $ f_name = "Faith"
-                F "My name is Faith. And your name is…?"
-                B "My name is Ben. It’s nice to meet you!"
-                F "Likewise!"
                 # Needs rewrite!
                 F "I’m really sorry to cut you off - I don’t want to be rude or anything…"
                 F "But I really need to get this thing done."
@@ -319,6 +404,9 @@ label Meet_Faith:
                 $ f_name = "Faith"
                 F "My name is Faith! Nice to meet you!"
                 B "Likewise!"
+
+label Meet_Faith_End:
+
 
 # Conclusion sequence.
 label End:
