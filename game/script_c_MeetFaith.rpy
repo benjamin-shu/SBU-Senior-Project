@@ -182,14 +182,14 @@ label Meet_Faith_Interact:
 
             jump Meet_Faith_End
 
-        "Wait for class to start." if (faith_talked == True && faith_awk == False):
+        "Wait for class to start." if (faith_talked == True and faith_awk == False):
             window show
             B "{i}Okay, that's enough. I've avoided awkward interactions so far.{/i}"
             B "{i}Let's try and keep it that way.{i}"
 
             jump Meet_Faith_End
 
-        "Shut up and pray that the professor shows up soon." if (faith_talked == True && faith_awk == True):
+        "Shut up and pray that the professor shows up soon." if (faith_talked == True and faith_awk == True):
             window show
             B "{i}Well, that was a stupid question!{/i}"
             B "{i}Way to go, genius. I better keep a lid on it now for now.{i}"
@@ -312,7 +312,7 @@ label Meet_Faith_Interact:
                 # jump Meet_Faith_Interact
 
         "Interrupt her work with idle small talk.":
-        label Meet_Faith_Talk:
+            label Meet_Faith_Talk:
             menu:
                 # If the player backs out on talking to Faith.
                 "On second thought, I'll just keep my mouth shut." if faith_talked == False:
@@ -323,7 +323,7 @@ label Meet_Faith_Interact:
                     jump Meet_Faith_Interact
 
                 # If the player decides to start by asking Faith's name.
-                "So, what's your name?" if (faith_awk == False && faith_talked == False && f_name == "???"):
+                "So, what's your name?" if (faith_awk == False and faith_talked == False and f_name == "???"):
                     $ faith_talked = True;
                     B "So, uh, what’s your name?"
                     F "…"
@@ -340,7 +340,7 @@ label Meet_Faith_Interact:
                     jump Meet_Faith_Talk
 
                 # If the player asks for Faith's name after saying something else.
-                "I probably should have asked this first, but what's your name?" if (faith_awk == False && faith_talked == True && f_name == "???"):
+                "I probably should have asked this first, but what's your name?" if (faith_awk == False and faith_talked == True and f_name == "???"):
                     $ faith_talked = True
                     $ f_name = "Faith"
                     B "So, uh, probably should have asked this first, but..."
@@ -352,7 +352,7 @@ label Meet_Faith_Interact:
                     jump Meet_Faith_Talk
 
                 # If the player starts by asking about Faith's major.
-                "Are you an arts major?" if (faith_awk == False && faith_talked == False):
+                "Are you an arts major?" if (faith_awk == False and faith_talked == False and faith_art == False):
                     $ faith_talked = True
                     $ faith_art = True
                     B "So, uh, are you an arts major?"
@@ -373,8 +373,10 @@ label Meet_Faith_Interact:
                     F "Isn't the Comp Sci major here really difficult?"
                     B "I never said it was a {b}good{/b} decision."
 
+                    jump Meet_Faith_Talk
+
                 # If the player asks about Faith's major after saying something else.
-                "So, I'm guessing you're an arts major?" if (faith_awk == False && faith_talked == True):
+                "So, I'm guessing you're an arts major?" if (faith_awk == False and faith_talked == True and faith_art == False):
                     $ faith_talked = True
                     $ faith_art = True
                     B "So, I'm guessing you're an arts major?"
@@ -393,9 +395,12 @@ label Meet_Faith_Interact:
                     F "Isn't the Comp Sci major here really difficult?"
                     B "I never said it was a {b}good{/b} decision."
 
-                "Weird question - what do you use on your hair?" if (faith_awk == False && faith_hair == True):
+                    jump Meet_Faith_Talk
+
+                "Weird question - what do you use on your hair?" if (faith_awk == False and faith_hair == True):
                     $ faith_talked = True
                     $ faith_awk = True
+                    $ faith_hair = True
                     B "So, um, weird question - what do you use on your hair?"
                     F "...I’m sorry. What was that?"
                     B "Well, your hair is just so spikey! How did you make it do that?"
@@ -409,7 +414,9 @@ label Meet_Faith_Interact:
                     F "...?"
                     B "{i}I really need to shut up now.{/i}"
 
-                "What are you working on right now?" if (faith_awk == False && faith_under == False):
+                    jump Meet_Faith_Talk
+
+                "What are you working on right now?" if (faith_awk == False and faith_under == False and faith_work == False):
                     $ faith_talked = True
                     $ faith_work = True
                     if faith_talked == False:
@@ -423,20 +430,132 @@ label Meet_Faith_Interact:
                     F "Nothing special, really - just me, talking about video games."
                     F "It's a fun little side project I like to do when I have time."
 
-                "So you've made YouTube videos before?" if (faith_awk == False && faith_work == True):
+                    jump Meet_Faith_Talk
+
+                "So you've made YouTube videos before?" if (faith_awk == False and faith_work == True and faith_youtube == False):
+                    $ faith_talked = True
+                    $ faith_youtube = True
                     B "So you've made YouTube videos before?"
-                    F "Yeah, I have. I made a channel a long time ago."
+                    F "Yeah, I have! I made a channel a long time ago."
                     F "Most of the videos are just speedpaints or me talking about video games."
                     B "That sounds like fun!"
                     F "It is! I don’t really have a lot of subscribers, but it’s nice to just make videos every once in a while."
 
+                    jump Meet_Faith_Talk
 
-                    # F "I don't really expect much, honestly. There's no way I could ever do it for a living."
-                    # B "Really? Why's that?"
-                    # F "I wouldn't get discovered. Not enough to partner with YouTube, anyway."
+                "Is that a character from Undertale that you're drawing?" if (faith_awk == False and faith_mac == True and faith_under == False):
+                    $ faith_talked = True
+                    $ faith_under = True
+                    B "Is that a character from Undertale that you're drawing?"
+                    F "Yeah, it is! You've played Undertale?"
+                    B "Yeah! I played it a while ago, but it’s one of my favorite video games."
+                    B "Who was your favorite character?"
+                    F "Ooh, that’s a tough question. I really liked all of the characters!"
+                    F "I guess if I had to pick just one, it’d be Toriel."
+                    # show Dimmed with dissolve
+                    # show Toriel with dissolve
+                    F "She’s so sweet and fuzzy and warm, and I love her for it!"
+                    F "She also really likes making puns, just like my real mom."
+                    # hide Toriel with dissolve
+                    # hide Dimmed with dissolve
+                    F "Honestly, all of the characters are just so huggable!"
+                    F "The story was great, I really liked the dodging mechanics, the music was incredible..."
+                    F "..."
+                    F "I really liked Undertale, in case you hadn’t noticed."
+                    B "No, I hadn’t noticed at all."
+                    B "Thank you for pointing that out!"
+
+                    jump Meet_Faith_Talk
+
+                "Have you thought of making gaming videos full-time?" if (faith_awk == False and faith_work == True and faith_under == True):
+                    B "Have you thought of making gaming videos full-time?"
+                    B "You seem like you'd be a good fit for the job."
+                    F "I've thought about it! But with it being senior year and all, I don't really have the time."
+                    F "I don't really expect much from my channel, honestly. There's no way I could ever do it for a living."
+                    B "Really? Why's that?"
+                    F "I wouldn't get discovered. Not enough to partner with YouTube, anyway."
+                    F "It takes a lot of time to make videos, and even longer to make money off of them."
+                    F "And it's not like I'm about to go viral, either."
+                    F "It's okay, though. I'll just have to find a real job, is all."
+                    B "..." # Awkward silence ensues.
+                    B "{i}...okay, this talk is getting a little too real.{/i}"
+
+                    jump Meet_Faith_End
 
 label Meet_Faith_End:
+    if faith_talked == False:
+        B "{i}I’ll leave her be. She’s probably got other things to think about right now.{/i}"
+        B "{i}No sense in me bothering her.{/i}"
+        # show Ben Phone Chk Dark with dissolve
+        B "{i}Just need to sit tight and wait for the professor to show up.{/i}"
+    else:
+        B "{i}Oh, looks like the professor's here.{/i}"
+        if faith_awk == True:
+            B "{i}And not a moment too soon.{/i}"
 
+    # hide Ben with dissolve
+    # hide Faith with dissolve
+    # scene eMedia Screen with dissolve
+    # show ARS_IntroSlide with dissolve
+
+    B "{i}Okay, the syllabus is looking pretty good!{/i}"
+    B "{i}The class is going through the principles of graphic design, and assigns projects for each.{/i}"
+    B "{i}Poster projects, typography, video editing, the Creative Cloud - I like it!{/i}"
+    B "{i}Just hope the projects don’t get too work-intensive.{/i}"
+
+    # hide ARS_IntroSlide with dissolve
+    # scene eMedia Seats with dissolve
+    # show Ben at seat_l, imgScale(300, 800) with dissolve
+    # show Faith at seat_r, imgScale(300, 800) with dissolve
+
+    if faith_talked == False:
+        B "{i}Okay, on to the next class.{/i}"
+        B "{i}Time for my daily dose of programming pain.{/i}"
+
+        # show Ben at center_l, imgScale(300, 800) with dissolve
+        # hide Ben with dissolve
+        # show Faith at center_r, imgScale(300, 800) with dissolve
+        # hide Faith with dissolve
+        # scene Black with fade
+
+    elif faith_awk == True:
+        B "{i}Alright, time to make myself scarce.{/i}"
+        # hide Faith with dissolve
+        # show Ben at center, imgScale(500, 800) with dissolve
+        # scene Staller Music with fade
+        B "{i}You just had to ask about her hair, didn’t you?{/i}"
+        B "{i}Try not to offend anyone else today, you moron!{/i}"
+        # hide Ben with dissolve
+        # scene Black with fade
+
+    elif faith_awk == False:
+        B "{i}Okay, on to the next class.{/i}"
+        B "{i}Hopefully computer science lectures won’t be too bad this year.{/i}"
+        B "Alright, I’ve got to get to my next class."
+        F "Same here."
+
+        if f_name == "???":
+            F "Before you go, though - I don’t think I got your name."
+            B "Oh, wow, I completely forgot!"
+            B "My name is Ben. What’s yours?"
+            F "My name is Faith."
+
+        if faith_under == True:
+            B "Are you on Steam?"
+            F "Yeah, I am! My name’s kind of dumb - it’s 'GOATmom', with 'goat' in all caps."
+            B "Hey, I’m not judging - I named myself 'SaltedBeef.'"
+
+        if faith_youtube == True:
+            B "What’s the name of your YouTube channel? I’d like to check it out later."
+            F "Oh, it’s the same as my Steam username - GOATmom, with ‘goat’ in all caps."
+
+        B "Okay, then - it was nice meeting you!"
+        F "It was nice meeting you too!"
+        F "I’ll see you next class, then."
+
+        # hide Ben with dissolve
+        # hide Faith with dissolve
+        # scene Black with fade
 
 # Conclusion sequence.
 label End:

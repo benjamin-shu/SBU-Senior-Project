@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script_c_MeetFaith.rpy", line 19: end of line expected.
-    hide Backpack 4:
-                   ^
-
-File "game/script_c_MeetFaith.rpy", line 20: end of line expected.
-    hide Dimmed:
-               ^
+File "game/script_c_MeetFaith.rpy", line 469: reached end of line when expecting ':'.
+    "Have you thought of making gaming videos full-time?" if (faith_awk == False && faith_work == True && faith_under == True)
+                                                                                                                              ^
 
 Ren'Py Version: Ren'Py 7.1.1.929
-Sat Jan 19 19:50:11 2019
+Mon Jan 21 00:32:52 2019
