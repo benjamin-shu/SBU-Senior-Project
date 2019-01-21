@@ -183,6 +183,8 @@ image projector:
 # Define speaking positions for character sprites.
 define center_l = Position(xpos = 0.25)
 define center_r = Position(xpos = 0.75)
+define center_stand = Position(ypos = 0.50)
+
 define seat_l = Position(xpos = 0.27, xanchor = 225, ypos = 0.55, yanchor = 360)
 define seat_r = Position(xpos = 0.73, xanchor = 225, ypos = 0.55, yanchor = 360)
 

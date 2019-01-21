@@ -118,6 +118,7 @@ label Day1:
     B "{i}Try not to fuck this up.{/i}"
 
 label Day1_ARS:
+    # Ben arrives at the Staller Center for the Arts.
     scene Staller with fade
 
     B "{i}It’s been a while since I was last here.{/i}"
@@ -135,8 +136,9 @@ label Day1_ARS:
     show Ben Casual Sto Spk at seat_l, img_Scale(500, 800) with dissolve
     B "Why did I leave my room, again?"
     show Ben Casual Sto Dark at seat_l, img_Scale(500, 800):
-    show Faith Hello Spk at center, img_Scale(500, 800) behind Ben:
+    show Faith Hello Spk at center_stand, img_Scale(500, 800) behind Ben:
     with dissolve
+    play music "sounds/Faith/Doobly Doo.mp3" loop
     F "Hello!"
     show Faith Walk Neut Spk at center, img_Scale(500, 800) with dissolve
     F "Is this seat taken?"
@@ -176,10 +178,6 @@ label Meet_Faith_Interact:
         "{i}{b}Should I talk to this random stranger?{/b}{/i}"
 
         "Nah - let her go about her business." if faith_talked == False:
-            window show
-            B "{i}...nah. She’s probably got other things to think about right now.{/i}"
-            B "{i}No sense in me bothering her.{i}"
-
             jump Meet_Faith_End
 
         "Wait for class to start." if (faith_talked == True and faith_awk == False):
@@ -557,6 +555,7 @@ label Meet_Faith_End:
         # hide Faith with dissolve
         # scene Black with fade
 
+    stop music fadeout 1.0
 # Conclusion sequence.
 label End:
     return
