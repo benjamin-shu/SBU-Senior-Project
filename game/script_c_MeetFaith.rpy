@@ -164,10 +164,11 @@ label Meet_Faith:
 
     # Conditional checks for talking to Faith.
     define faith_talked = False
-    define faith_awk = False
-    define faith_work = False
-    define faith_under = False
-    define faith_youtube = False
+    define faith_awk = False            # Have you made conversation awkward?
+    define faith_art = False            # Have you asked if Faith is an Arts major?
+    define faith_work = False           # Have you asked Faith what she's working on?
+    define faith_under = False          # Have you asked Faith about Undertale?
+    define faith_youtube = False        # Have you found out about Faith's YouTube channel?
 
 label Meet_Faith_Interact:
     window hide
@@ -313,13 +314,17 @@ label Meet_Faith_Interact:
         "Interrupt her work with idle small talk.":
         label Meet_Faith_Talk:
             menu:
+                # If the player backs out on talking to Faith.
                 "On second thought, I'll just keep my mouth shut." if faith_talked == False:
                     jump Meet_Faith_Interact
 
+                # If the player decides to stop talking after saying something.
                 "I'm going to shut up now." if faith_talked == True:
                     jump Meet_Faith_Interact
 
-                "So, what's your name?" if (faith_talked == False && f_name == "???"):
+                # If the player decides to start by asking Faith's name.
+                "So, what's your name?" if (faith_awk == False && faith_talked == False && f_name == "???"):
+                    $ faith_talked = True;
                     B "So, uh, what’s your name?"
                     F "…"
                     B "…hello?"
@@ -334,17 +339,22 @@ label Meet_Faith_Interact:
 
                     jump Meet_Faith_Talk
 
-                "I probably should have asked this first, but what's your name?" if (faith_talked == True && f_name == "???"):
+                # If the player asks for Faith's name after saying something else.
+                "I probably should have asked this first, but what's your name?" if (faith_awk == False && faith_talked == True && f_name == "???"):
+                    $ faith_talked = True
+                    $ f_name = "Faith"
                     B "So, uh, probably should have asked this first, but..."
                     B "What's your name?"
-                    $ f_name = "Faith"
                     F "My name is Faith. What's yours?"
                     B "My name is Ben. It's nice to meet you!"
                     F "Likewise!"
 
                     jump Meet_Faith_Talk
 
-                "Are you an arts major?" if faith_talked == False:
+                # If the player starts by asking about Faith's major.
+                "Are you an arts major?" if (faith_awk == False && faith_talked == False):
+                    $ faith_talked = True
+                    $ faith_art = True
                     B "So, uh, are you an arts major?"
                     F "What was that?"
                     B "Oh! I didn’t mean to bug you or anything!"
@@ -363,47 +373,67 @@ label Meet_Faith_Interact:
                     F "Isn't the Comp Sci major here really difficult?"
                     B "I never said it was a {b}good{/b} decision."
 
-                "So, I'm guessing you're an arts major?" if faith_talked == True:
+                # If the player asks about Faith's major after saying something else.
+                "So, I'm guessing you're an arts major?" if (faith_awk == False && faith_talked == True):
+                    $ faith_talked = True
+                    $ faith_art = True
+                    B "So, I'm guessing you're an arts major?"
+                    F "Yeah, I am! Well, technically I'm a {i}Studio{/i} Art major."
+                    B "What's the difference?"
+                    F "..."
+                    F "I dunno!"
+                    F "What major are you, by the way?"
+                    B "I'm a Computer Science major."
+                    F "Really? Why are you in an arts class, then?"
+                    B "{i}That's an {b}excellent{/b} question!{/i}"
+                    B "I'm doing a Digital Arts minor, so I get to take this class too."
+                    F "Oh, wow! What made you decide to take that minor?"
+                    B "Well, at first, I was hoping I could major in something like Digital Arts."
+                    B "After I got here, I found out that they only offered the minor. So I decided to major in CS instead."
+                    F "Isn't the Comp Sci major here really difficult?"
+                    B "I never said it was a {b}good{/b} decision."
 
-            window show
-            if faith_obs < 2:
-                # Needs rewrite!
-                F "I’m really sorry to cut you off - I don’t want to be rude or anything…"
-                F "But I really need to get this thing done."
-                B "Oh! Okay, that’s fine. I completely understand."
-                B "I’ll let you get to it, then."
-            elif faith_obs == 2:
-                B "Excuse me?"
-                F "Hm? Oh! Hi!"
-                F "What’s up?"
-                B "If you don’t mind me asking, are you drawing Frisk?"
-                # Smiling
-                F "Yeah, I am! Have you played Undertale?"
-                B "Yeah! It’s one of my favorite video games!"
-                F "Who was your favorite character?"
-                B "Sans, hands down."
+                "Weird question - what do you use on your hair?" if (faith_awk == False && faith_hair == True):
+                    $ faith_talked = True
+                    $ faith_awk = True
+                    B "So, um, weird question - what do you use on your hair?"
+                    F "...I’m sorry. What was that?"
+                    B "Well, your hair is just so spikey! How did you make it do that?"
+                    F "...I didn’t do anything to it. This is just my hair."
+                    B "...oh."
+                    B "{i}And now you made it awkward. Nice going, jackass!{/i}"
+                    F "Is there something wrong with my hair?" # Use puppy dog face!
+                    B "What? No! Not at all!"
+                    B "I didn’t mean it like that! I was just surprised, is all!"
+                    B "I haven’t seen hair that sticks out at those...{i}angles{/i} before."
+                    F "...?"
+                    B "{i}I really need to shut up now.{/i}"
 
-                # [An define of Sans’ pixel art appears on-screen.]
+                "What are you working on right now?" if (faith_awk == False && faith_under == False):
+                    $ faith_talked = True
+                    $ faith_work = True
+                    if faith_talked == False:
+                        B "Excuse me? What are you working on right now?"
+                        F "Oh, this? It's a thumbnail for a YouTube video I want to make."
+                    else:
+                        B "What are you working on right now?"
+                        F "I'm making a thumbnail for a YouTube video I want to make."
 
-                B "The man is incapable of taking anything seriously, and it’s amazing."
+                    B "Neat! What kind of video is it?"
+                    F "Nothing special, really - just me, talking about video games."
+                    F "It's a fun little side project I like to do when I have time."
 
-                # [An define of Toriel appears on-screen.]
+                "So you've made YouTube videos before?" if (faith_awk == False && faith_work == True):
+                    B "So you've made YouTube videos before?"
+                    F "Yeah, I have. I made a channel a long time ago."
+                    F "Most of the videos are just speedpaints or me talking about video games."
+                    B "That sounds like fun!"
+                    F "It is! I don’t really have a lot of subscribers, but it’s nice to just make videos every once in a while."
 
-                F "Personally, Toriel is my favorite. After all, Goat Mom is Best Mom."
-                B "Ha! Never heard that one before."
-                B "So is the Frisk drawing for a class?"
-                F "No, it’s actually for a YouTube video I wanted to make."
 
-                # [An define of a YouTube video with a blank thumbnail appears.]
-
-                F "I need a thumbnail, and I wanted to use Frisk."
-                B "Wow. What kind of video is it?"
-                F "It’s kind of a commentary, at this point. It’s…a work in progress."
-                B "Well, I’ll have to check it out some time."
-                B "I’m Ben, by the way! What’s your name?"
-                $ f_name = "Faith"
-                F "My name is Faith! Nice to meet you!"
-                B "Likewise!"
+                    # F "I don't really expect much, honestly. There's no way I could ever do it for a living."
+                    # B "Really? Why's that?"
+                    # F "I wouldn't get discovered. Not enough to partner with YouTube, anyway."
 
 label Meet_Faith_End:
 
