@@ -66,8 +66,11 @@ image Ben Casual Sto Spk = "Ben/Casual/Stoic Speaking.png"
 
 # Character sprites for Faith.
 image Faith Walk Neut = "Faith/Walking/Neutral.png"
+image Faith Walk Neut Stan = "Faith/Walking/Neutral Standing.png"
 image Faith Walk Neut Dark = im.MatrixColor("Faith/Walking/Neutral.png", im.matrix.brightness(dark))
+image Faith Walk Neut Stan Dark = im.MatrixColor("Faith/Walking/Neutral Standing.png", im.matrix.brightness(dark))
 image Faith Walk Neut Spk = "Faith/Walking/Neutral Speaking.png"
+image Faith Walk Neut Spk Stan = "Faith/Walking/Neutral Speaking Standing.png"
 # image Faith Walk Pens = "Faith/Walking/Pensive.png"
 # image Faith Walk Pens Spk = "Faith/Walking/Pensive Speaking.png"
 # image Faith Walk PupD = "Faith/Walking/Puppy Dog.png"
@@ -75,6 +78,7 @@ image Faith Walk Neut Spk = "Faith/Walking/Neutral Speaking.png"
 # image Faith Walk Sere = "Faith/Walking/Serene.png"
 # image Faith Walk Sere Spk = "Faith/Walking/Serene Speaking.png"
 image Faith Hello Spk = "Faith/Hello/Speaking.png"
+image Faith Hello Spk Stan = "Faith/Hello/Speaking Standing.png"
 image Faith Mac Foc Neut = "Faith/Macbook Focus/Neutral.png"
 image Faith Mac Foc Neut Dark = im.MatrixColor("Faith/Macbook Focus/Neutral.png", im.matrix.brightness(dark))
 image Faith Mac LkUp Neut = "Faith/Macbook LookUp/Neutral.png"
@@ -104,6 +108,7 @@ init:
     transform img_Scale(x, y):
         size (x, y)
 
+# Define transformation for centering images on projector screen.
 init:
     transform projectCenter():
         xalign 0.5
@@ -181,12 +186,34 @@ image projector:
     "Screen Effects/Projector 3.png" with Dissolve(0.5)
 
 # Define speaking positions for character sprites.
-define center_l = Position(xpos = 0.25)
-define center_r = Position(xpos = 0.75)
-define center_stand = Position(ypos = 0.50)
+init:
+    transform center_l():
+        xpos 0.25
+        xanchor 225
+        yanchor 360
 
-define seat_l = Position(xpos = 0.27, xanchor = 225, ypos = 0.55, yanchor = 360)
-define seat_r = Position(xpos = 0.73, xanchor = 225, ypos = 0.55, yanchor = 360)
+    transform center_r():
+        xpos 0.75
+        xanchor 225
+        yanchor 360
+
+    transform center_stand():
+        xpos 0.5
+        xanchor 225
+        ypos 0.15
+        yanchor 360
+
+    transform seat_l():
+        xpos 0.27
+        xanchor 225
+        ypos 0.55
+        yanchor 360
+
+    transform seat_r():
+        xpos 0.73
+        xanchor 225
+        ypos 0.55
+        yanchor 360
 
 # Definitions for each DynamicCharacter object used.
 define b_name = "Ben"

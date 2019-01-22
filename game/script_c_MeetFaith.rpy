@@ -136,18 +136,18 @@ label Day1_ARS:
     show Ben Casual Sto Spk at seat_l, img_Scale(500, 800) with dissolve
     B "Why did I leave my room, again?"
     show Ben Casual Sto Dark at seat_l, img_Scale(500, 800):
-    show Faith Hello Spk at center_stand, img_Scale(500, 800) behind Ben:
+    show Faith Hello Spk Stan at center_stand, img_Scale(500, 1128) behind Ben:
     with dissolve
     play music "sounds/Faith/Doobly Doo.mp3" loop
     F "Hello!"
-    show Faith Walk Neut Spk at center, img_Scale(500, 800) with dissolve
+    show Faith Walk Neut Spk Stan at center_stand, img_Scale(500, 1128) with dissolve
     F "Is this seat taken?"
-    show Faith Walk Neut Dark at center, img_Scale(500, 800):
+    show Faith Walk Neut Dark Stan at center_stand, img_Scale(500, 1128):
     show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
     with dissolve
     B "Oh! No, it’s not taken. Go right ahead."
     show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
-    show Faith Walk Neut Spk at center, img_Scale(500, 800):
+    show Faith Walk Neut Spk Stan at center_stand, img_Scale(500, 1128):
     with dissolve
     F "Thank you!"
     show Faith Walk Neut at seat_r, img_Scale(500, 800) with dissolve
