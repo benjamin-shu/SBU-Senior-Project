@@ -82,6 +82,15 @@ label Day1:
             hover ImageReference("Faith Mac Foc Neut")
             action Jump("Meet_Faith_Map1_faith")
 
+        # Faith's Hair
+        imagebutton:
+            pos (815, 146)
+            focus_mask True
+            idle "Screen Effects/Meet_Faith_Map1/hair_button_idle.png"
+            hover "Screen Effects/Meet_Faith_Map1/hair_button_hover.png"
+            action Jump("Meet_Faith_Map1_hair")
+
+
     # Actual story sequence starts here.
     scene West F 301C Door with fade
 
@@ -229,7 +238,7 @@ label Meet_Faith_Interact:
                     jump Meet_Faith_Map1
 
                 # For clicking on Faith's hairstyle. Asking about this is pretty stupid.
-                label Meet_Faith_Map1_faith_hair:
+                label Meet_Faith_Map1_hair:
                     B "{i}Her hair is {b}impressively{/b} spikey. I wonder how she does that?{/i}"
                     B "{i}Is there some kind of product that gives you anime hair?{/i}"
                     B "{i}I'm kind of curious now. Would it be rude to ask?{/i}"

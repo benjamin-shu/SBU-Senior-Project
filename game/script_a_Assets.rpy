@@ -103,13 +103,12 @@ define dark = -0.25
 # Define new default Dissolve for transitions between sprites.
 define dissolve = Dissolve(0.5)
 
-# Define transformation for scaling images.
 init:
+    # Define transformation for scaling images.
     transform img_Scale(x, y):
         size (x, y)
 
-# Define transformation for centering images on projector screen.
-init:
+    # Define transformation for centering images on projector screen.
     transform projectCenter():
         xalign 0.5
         yalign 0.2

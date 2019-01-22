@@ -1,26 +1,61 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script_c_MeetFaith.rpy", line 175, in script
-    menu:
-SyntaxError: invalid syntax (game/script_c_MeetFaith.rpy, line 192)
+While processing the pos property of anonymous style:
+  File "game/script_c_MeetFaith.rpy", line 209, in script
+    call screen look_around
+  File "renpy/common/000statements.rpy", line 519, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+IndexError: tuple index out of range
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script_c_MeetFaith.rpy", line 175, in script
-    menu:
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\ast.py", line 1562, in execute
-    choice = renpy.exports.menu(choices, self.set)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\exports.py", line 878, in menu
-    if renpy.python.py_eval(condition) ]
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\python.py", line 1942, in py_eval
-    code = py_compile(code, 'eval')
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\python.py", line 674, in py_compile
-    raise e
-SyntaxError: invalid syntax (game/script_c_MeetFaith.rpy, line 192)
+  File "game/script_c_MeetFaith.rpy", line 209, in script
+    call screen look_around
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\ast.py", line 1861, in execute
+    self.call("execute")
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\ast.py", line 1849, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\statements.py", line 203, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 519, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\exports.py", line 2755, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\ui.py", line 289, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 2672, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 3059, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 531, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 531, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 531, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\screen.py", line 428, in visit_all
+    self.child.visit_all(callback, seen=None)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 531, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 533, in visit_all
+    callback(self)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 3059, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\behavior.py", line 838, in per_interact
+    super(Button, self).per_interact()
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\layout.py", line 1075, in per_interact
+    size_group = self.style.size_group
+  File "gen/styleclass.pxi", line 165, in renpy.styledata.styleclass.Style.size_group.__get__
+  File "style.pyx", line 493, in renpy.style.StyleCore._get
+  File "style.pyx", line 709, in renpy.style.build_style
+  File "style.pyx", line 706, in renpy.style.build_style
+  File "gen/style_functions.pyx", line 1326, in style_functions.pos_property
+  File "include/style_common.pxi", line 30, in style_functions.index_0
+    return v[0]
+IndexError: tuple index out of range
 
 Windows-8-6.2.9200
-Ren'Py 7.1.1.929
+Ren'Py 7.1.3.1092
 SBU Senior Project 1.0
-Mon Jan 21 00:38:42 2019
+Mon Jan 21 23:53:57 2019
