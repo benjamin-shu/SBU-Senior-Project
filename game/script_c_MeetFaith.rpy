@@ -90,6 +90,21 @@ label Day1:
             hover "Screen Effects/Meet_Faith_Map1/hair_button_hover.png"
             action Jump("Meet_Faith_Map1_hair")
 
+        # Faith's Macbook
+        imagebutton:
+            pos (808, 463)
+            focus_mask True
+            idle "Screen Effects/Meet_Faith_Map1/macbook_button_idle.png"
+            hover "Screen Effects/Meet_Faith_Map1/macbook_button_hover.png"
+            action Jump("Meet_Faith_Map1_macbook")
+
+        # Button to return from screen
+        imagebutton:
+            pos (560, 600)
+            focus_mask True
+            idle "Screen Effects/back_button_idle.png"
+            hover "Screen Effects/back_button_hover.png"
+            action Jump("Meet_Faith_Interact")
 
     # Actual story sequence starts here.
     scene West F 301C Door with fade
