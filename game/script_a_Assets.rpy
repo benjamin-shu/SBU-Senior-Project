@@ -57,12 +57,15 @@ image Ben Walk Bore Spk = "Ben/Walking/Bored Speaking.png"
 # image Ben Walk Annoy Spk = "Ben/Walking/Annoyed Speaking.png"
 # image Ben Walk Sus = "Ben/Walking/Sus.png"
 # image Ben Walk Sus Spk = "Ben/Walking/Sus Speaking.png"
+
 image Ben Casual Neut = "Ben/Casual/Neutral.png"
 image Ben Casual Neut Dark = im.MatrixColor("Ben/Casual/Neutral.png", im.matrix.brightness(dark))
 image Ben Casual Neut Spk = "Ben/Casual/Neutral Speaking.png"
 image Ben Casual Sto = "Ben/Casual/Stoic.png"
 image Ben Casual Sto Dark = im.MatrixColor("Ben/Casual/Stoic.png", im.matrix.brightness(dark))
 image Ben Casual Sto Spk = "Ben/Casual/Stoic Speaking.png"
+
+image Ben Pho Chk Dark = im.MatrixColor("Ben/Phone Check/Stoic.png", im.matrix.brightness(dark))
 
 # Character sprites for Faith.
 image Faith Walk Neut = "Faith/Walking/Neutral.png"
@@ -175,14 +178,21 @@ image take2:
 
 # Turn on a projector screen in current scene.
 image projector:
-    0.5
-    "Screen Effects/Projector 0.png" with Dissolve(2.5)
-    0.5
+    "Screen Effects/Projector 0.png" with Dissolve(0.5)
+    0.25
     "Screen Effects/Projector 1.png" with Dissolve(0.5)
-    0.5
+    0.25
     "Screen Effects/Projector 2.png" with Dissolve(0.5)
-    0.5
+    0.25
     "Screen Effects/Projector 3.png" with Dissolve(0.5)
+
+# Quick fade in/out with a black screen
+image fadeInOut:
+    "Screen Effects/Black.png"
+    alpha 0.0
+    linear 0.5 alpha 1.0
+    0.25
+    linear 0.5 alpha 0.0
 
 # Define speaking positions for character sprites.
 init:

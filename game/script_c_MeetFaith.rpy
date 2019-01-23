@@ -508,8 +508,13 @@ label Meet_Faith_End:
     if faith_talked == False:
         B "{i}I’ll leave her be. She’s probably got other things to think about right now.{/i}"
         B "{i}No sense in me bothering her.{/i}"
-        # show Ben Phone Chk Dark with dissolve
+        show Ben Pho Chk Dark at seat_l, img_Scale(500, 800) with dissolve
         B "{i}Just need to sit tight and wait for the professor to show up.{/i}"
+
+        window hide
+        show fadeInOut
+        $ renpy.pause(1.25)
+        window show
     else:
         B "{i}Oh, looks like the professor's here.{/i}"
         if faith_awk == True:
