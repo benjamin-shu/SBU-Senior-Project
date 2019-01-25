@@ -70,7 +70,7 @@ label start:
     B "..."
 
     window hide
-    show projector:
+    show projector
     hide Ben with dissolve
 
     $ renpy.pause(4)

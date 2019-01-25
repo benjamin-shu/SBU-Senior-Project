@@ -515,14 +515,23 @@ label Meet_Faith_End:
         show fadeInOut
         $ renpy.pause(1.25)
         window show
+
+        show Ben Cas Sto Dark at seat_l, img_Scale(500, 800) with dissolve
+        B "{i}Okay, the professor's here.{/i}"
+        B "{i}I wonder what's on the syllabus for this class?{/i}"
+
     else:
         B "{i}Oh, looks like the professor's here.{/i}"
         if faith_awk == True:
             B "{i}And not a moment too soon.{/i}"
 
-    # hide Ben with dissolve
-    # hide Faith with dissolve
-    # scene eMedia Screen with dissolve
+        B "{i}Alright - time to see what we're in for this semester.{/i}"
+
+    hide Ben with dissolve
+    hide Faith with dissolve
+
+    scene eMedia Screen with dissolve
+    show projector
     # show ARS_IntroSlide with dissolve
 
     B "{i}Okay, the syllabus is looking pretty good!{/i}"
@@ -531,58 +540,93 @@ label Meet_Faith_End:
     B "{i}Just hope the projects don’t get too work-intensive.{/i}"
 
     # hide ARS_IntroSlide with dissolve
-    # scene eMedia Seats with dissolve
-    # show Ben at seat_l, imgScale(300, 800) with dissolve
-    # show Faith at seat_r, imgScale(300, 800) with dissolve
+    hide projector with dissolve
+    scene eMedia Seats with dissolve
+    show Ben Casual Neut Dark at seat_l, imgScale(300, 800) with dissolve
+    show Faith Mac Foc Neut Dark at seat_r, imgScale(300, 800) with dissolve
 
     if faith_talked == False:
         B "{i}Okay, on to the next class.{/i}"
         B "{i}Time for my daily dose of programming pain.{/i}"
 
-        # show Ben at center_l, imgScale(300, 800) with dissolve
-        # hide Ben with dissolve
-        # show Faith at center_r, imgScale(300, 800) with dissolve
-        # hide Faith with dissolve
-        # scene Black with fade
+        show Ben Walk Neut Dark at center_l, imgScale(300, 800) with dissolve
+        hide Ben with dissolve
+        $ renpy.pause(1.0)
+        show Faith Walk Neut Dark at center_r, imgScale(300, 800) with dissolve
+        hide Faith with dissolve
+        scene Black with fade
 
     elif faith_awk == True:
         B "{i}Alright, time to make myself scarce.{/i}"
-        # hide Faith with dissolve
-        # show Ben at center, imgScale(500, 800) with dissolve
-        # scene Staller Music with fade
+        hide Ben with dissolve
+        hide Faith with dissolve
+        scene Staller Music with fade
+        # show Ben Walk Fru Dark at center, imgScale(500, 800) with dissolve
         B "{i}You just had to ask about her hair, didn’t you?{/i}"
         B "{i}Try not to offend anyone else today, you moron!{/i}"
         # hide Ben with dissolve
-        # scene Black with fade
+        scene Black with fade
 
     elif faith_awk == False:
         B "{i}Okay, on to the next class.{/i}"
         B "{i}Hopefully computer science lectures won’t be too bad this year.{/i}"
+        show Ben Casual Neut Spk at seat_l, img_Scale(500, 800) with dissolve
         B "Alright, I’ve got to get to my next class."
+        show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
+        show Faith Mac LkUp Spk at seat_r, img_Scale(500, 800):
+        with dissolve
         F "Same here."
 
         if f_name == "???":
             F "Before you go, though - I don’t think I got your name."
+            show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
+            show Faith Mac LkUp Neut at seat_r, img_Scale(500, 800):
+            with dissolve
             B "Oh, wow, I completely forgot!"
             B "My name is Ben. What’s yours?"
+            show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
+            show Faith Mac LkUp Spk at seat_r, img_Scale(500, 800):
+            with dissolve
             F "My name is Faith."
 
         if faith_under == True:
+            show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
+            show Faith Mac LkUp Neut at seat_r, img_Scale(500, 800):
+            with dissolve
             B "Are you on Steam?"
+            show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
+            show Faith Mac LkUp Spk at seat_r, img_Scale(500, 800):
+            with dissolve
             F "Yeah, I am! My name’s kind of dumb - it’s 'GOATmom', with 'goat' in all caps."
+            show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
+            show Faith Mac LkUp Neut at seat_r, img_Scale(500, 800):
+            with dissolve
             B "Hey, I’m not judging - I named myself 'SaltedBeef.'"
 
         if faith_youtube == True:
+            show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
+            show Faith Mac LkUp Neut at seat_r, img_Scale(500, 800):
+            with dissolve
             B "What’s the name of your YouTube channel? I’d like to check it out later."
+            show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
+            show Faith Mac LkUp Spk at seat_r, img_Scale(500, 800):
+            with dissolve
             F "Oh, it’s the same as my Steam username - GOATmom, with ‘goat’ in all caps."
 
+        show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
+        show Faith Mac LkUp Neut at seat_r, img_Scale(500, 800):
+        with dissolve
         B "Okay, then - it was nice meeting you!"
+        show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
+        show Faith Mac LkUp Spk at seat_r, img_Scale(500, 800):
+        with dissolve
         F "It was nice meeting you too!"
         F "I’ll see you next class, then."
 
-        # hide Ben with dissolve
-        # hide Faith with dissolve
-        # scene Black with fade
+        hide Ben with dissolve
+        hide Faith with dissolve
+
+        scene Black with fade
 
     stop music fadeout 1.0
 # Conclusion sequence.

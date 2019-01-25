@@ -80,8 +80,10 @@ image Faith Walk Neut Spk Stan = "Faith/Walking/Neutral Speaking Standing.png"
 # image Faith Walk PupD Spk = "Faith/Walking/Puppy Dog Speaking.png"
 # image Faith Walk Sere = "Faith/Walking/Serene.png"
 # image Faith Walk Sere Spk = "Faith/Walking/Serene Speaking.png"
+
 image Faith Hello Spk = "Faith/Hello/Speaking.png"
 image Faith Hello Spk Stan = "Faith/Hello/Speaking Standing.png"
+
 image Faith Mac Foc Neut = "Faith/Macbook Focus/Neutral.png"
 image Faith Mac Foc Neut Dark = im.MatrixColor("Faith/Macbook Focus/Neutral.png", im.matrix.brightness(dark))
 image Faith Mac LkUp Neut = "Faith/Macbook LookUp/Neutral.png"
@@ -201,9 +203,21 @@ init:
         xanchor 225
         yanchor 360
 
+    transform center_l_stand():
+        xpos 0.25
+        xanchor 225
+        ypos 0.15
+        yanchor 360
+
     transform center_r():
         xpos 0.75
         xanchor 225
+        yanchor 360
+
+    transform center_r_stand():
+        xpos 0.75
+        xanchor 225
+        ypos 0.15
         yanchor 360
 
     transform center_stand():
