@@ -64,6 +64,18 @@ image Ben Casual Neut Spk = "Ben/Casual/Neutral Speaking.png"
 image Ben Casual Sto = "Ben/Casual/Stoic.png"
 image Ben Casual Sto Dark = im.MatrixColor("Ben/Casual/Stoic.png", im.matrix.brightness(dark))
 image Ben Casual Sto Spk = "Ben/Casual/Stoic Speaking.png"
+# image Ben Casual Fru = "Ben/Casual/Frustrated.png"
+# image Ben Casual Fru Dark = im.MatrixColor("Ben/Casual/Frustrated.png", im.matrix.brightness(dark))
+# image Ben Casual Fru Spk = "Ben/Casual/Frustrated Speaking.png"
+# image Ben Casual Res = "Ben/Casual/Resigned.png"
+# image Ben Casual Res Dark = im.MatrixColor("Ben/Casual/Resigned.png", im.matrix.brightness(dark))
+# image Ben Casual Res Spk = "Ben/Casual/Resigned Speaking.png"
+# image Ben Casual Ann = "Ben/Casual/Annoyed.png"
+# image Ben Casual Ann Dark = im.MatrixColor("Ben/Casual/Annoyed.png", im.matrix.brightness(dark))
+# image Ben Casual Ann Spk = "Ben/Casual/Annoyed Speaking.png"
+# image Ben Casual Shook = "Ben/Casual/Shook.png"
+# image Ben Casual Shook Spk = "Ben/Casual/Shook Speaking.png"
+# image Ben Casual Shook Dark = im.matrix.brightness("Ben/Casual/Shook.png", im.matrix.brightness(dark))
 
 image Ben Pho Chk Dark = im.MatrixColor("Ben/Phone Check/Stoic.png", im.matrix.brightness(dark))
 
@@ -86,8 +98,16 @@ image Faith Hello Spk Stan = "Faith/Hello/Speaking Standing.png"
 
 image Faith Mac Foc Neut = "Faith/Macbook Focus/Neutral.png"
 image Faith Mac Foc Neut Dark = im.MatrixColor("Faith/Macbook Focus/Neutral.png", im.matrix.brightness(dark))
+# image Faith Mac Foc Neut Spk = "Faith/Macbook Focus/Neutral Speaking.png"
 image Faith Mac LkUp Neut = "Faith/Macbook LookUp/Neutral.png"
-image Faith Mac LkUp Spk = "Faith/Macbook LookUp/Speaking.png"
+image Faith Mac LkUp Neut Dark = im.MatrixColor("Faith/Macbook LookUp/Neutral.png", im.matrix.brightness(dark))
+image Faith Mac LkUp Neut Spk = "Faith/Macbook LookUp/Neutral Speaking.png"
+# image Faith Mac LkUp Laugh = "Faith/Macbook LookUp/Laugh.png"
+# image Faith Mac LkUp Laugh Dark = im.MatrixColor("Faith/Macbook LookUp/Laugh.png", im.matrix.brightness(dark))
+# image Faith Mac LkUp Laugh Spk = "Faith/Macbook LookUp/Laugh Speaking.png"
+# image Faith Mac LkUp Ques = "Faith/Macbook LookUp/Question.png"
+# image Faith Mac LkUp Ques Dark = im.MatrixColor("Faith/Macbook LookUp/Question.png", im.matrix.brightness(dark))
+# image Faith Mac LkUp Ques Spk = "Faith/Macbook LookUp/Question Speaking.png"
 
 # Character sprites for Maria. (HAS NOT APPEARED)
 image Maria Walk Neut = "Maria/Walking/Neutral.png"
