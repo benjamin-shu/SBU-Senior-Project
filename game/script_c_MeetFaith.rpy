@@ -214,9 +214,9 @@ label Meet_Faith_Interact:
 
         "Shut up and pray that the professor shows up soon." if (faith_talked == True and faith_awk == True):
             window show
-            # show Ben Casual Fru Dark at seat_l, img_Scale(500, 800) with dissolve
+            show Ben Casual Fru Dark at seat_l, img_Scale(500, 800) with dissolve
             B "{i}Well, that was a stupid question!{/i}"
-            # show Ben Casual Res Dark at seat_l, img_Scale(500, 800) with dissolve
+            show Ben Casual Res Dark at seat_l, img_Scale(500, 800) with dissolve
             B "{i}Way to go, genius. I better keep a lid on it now for now.{i}"
 
             jump Meet_Faith_End
@@ -231,27 +231,27 @@ label Meet_Faith_Interact:
                     if meet_faith_ben_clicks == 0:
                         show Ben Casual Neut Dark at seat_l, img_Scale(500, 800) with dissolve
                         B "{i}It’s me!"
-                        # show Ben Casual Neut Pens Dark at seat_l, img_Scale(500, 800) with dissolve
+                        show Ben Casual Neut Pens Dark at seat_l, img_Scale(500, 800) with dissolve
                         B "Not much to see here.{/i}"
                         show Ben Casual Neut Sto Dark at seat_l, img_Scale(500, 800) with dissolve
                         $ meet_faith_ben_clicks = 1
 
                     elif meet_faith_ben_clicks == 1:
-                        # show Ben Casual Pens Dark at seat_l, img_Scale(500, 800) with dissolve
+                        show Ben Casual Pens Dark at seat_l, img_Scale(500, 800) with dissolve
                         B "{i}Still just me! Still just a skinny Asian kid with glasses.{/i}"
                         B "{i}Really not much else to say.{/i}"
                         show Ben Casual Neut Sto Dark at seat_l, img_Scale(500, 800) with dissolve
                         $ meet_faith_ben_clicks = 2
 
                     elif meet_faith_ben_clicks == 2:
-                        # show Ben Casual Ann Dark at seat_l, img_Scale(500, 800) with dissolve
+                        show Ben Casual Fru Dark at seat_l, img_Scale(500, 800) with dissolve
                         B "{i}Lots of other things to look at here!{/i}"
                         B "{i}I am definitely not the most interesting thing in this room.{/i}"
                         show Ben Casual Sto Dark at seat_l, img_Scale(500, 800) with dissolve
                         $ meet_faith_ben_clicks = 3
 
                     elif meet_faith_ben_clicks > 2:
-                        # show Ben Casual Ann Dark at seat_l, img_Scale(500, 800) with dissolve
+                        show Ben Casual Fru Dark at seat_l, img_Scale(500, 800) with dissolve
                         B "{i}I should probably be spending my time thinking about something else!{/i}"
                         show Ben Casual Neut Sto Dark at seat_l, img_Scale(500, 800) with dissolve
                         $ meet_faith_ben_clicks = meet_faith_ben_clicks + 1
@@ -269,7 +269,7 @@ label Meet_Faith_Interact:
                 # For clicking on Faith's hairstyle. Asking about this is pretty stupid.
                 label Meet_Faith_Map1_hair:
                     B "{i}Her hair is {b}impressively{/b} spikey. I wonder how she does that?{/i}"
-                    # show Ben Casual Pens Dark at seat_l, img_Scale(500, 800) with dissolve
+                    show Ben Casual Pens Dark at seat_l, img_Scale(500, 800) with dissolve
                     B "{i}Is there some kind of product that gives you anime hair?{/i}"
                     B "{i}I'm kind of curious now. Would it be rude to ask?{/i}"
                     show Ben Casual Sto Dark at seat_l, img_Scale(500, 800) with dissolve
@@ -299,7 +299,7 @@ label Meet_Faith_Interact:
                     B "{i}They're also tall, so they can hide you if you're on your phone or napping.{/i}"
                     show Ben Casual Neut Dark at seat_l, img_Scale(500, 800) with dissolve
                     B "{i}It happens more often than you'd think.{/i}"
-                    # show Ben Casual Pens Dark at seat_l, img_Scale(500, 800) with dissolve
+                    show Ben Casual Pens Dark at seat_l, img_Scale(500, 800) with dissolve
                     B "{i}From what I've been told, I mean.{/i}"
                     show Ben Casual Sto Dark at seat_l, img_Scale(500, 800) with dissolve
 
@@ -308,7 +308,7 @@ label Meet_Faith_Interact:
                 # For clicking on an audio mixer in the eMedia SINC site.
                 label Meet_Faith_Map1_mixer:
                     B "{i}There's all sorts of equipment here besides the computers.{/i}"
-                    # show Ben Casual Pens Dark at seat_l, img_Scale(500, 800) with dissolve
+                    show Ben Casual Pens Dark at seat_l, img_Scale(500, 800) with dissolve
                     B "{i}I've seen sound mixers, keyboards, art tablets, and microphones on the desks.{/i}"
                     # show Ben Casual Neut Dark at seat_l, img_Scale(500, 800) with dissolve
                     B "{i}It makes this a great place to work, if you know what you're doing.{/i}"
@@ -327,7 +327,7 @@ label Meet_Faith_Interact:
                 # For clicking on a poster on the wall.
                 label Meet_Faith_Map1_poster:
                     B "{i}It's a flyer for the MFA program here at Stony Brook.{/i}"
-                    # show Ben Casual Pens Dark at seat_l, img_Scale(500, 800) with dissolve
+                    show Ben Casual Pens Dark at seat_l, img_Scale(500, 800) with dissolve
                     B "{i}I'd really like to join, but that would mean another two years of torture and tuition.{/i}"
                     B "{i}And that {/i}still{i} wouldn't guarantee a job after graduation.{/i}"
                     show Ben Casual Sto Dark at seat_l, img_Scale(500, 800) with dissolve
@@ -435,7 +435,7 @@ label Meet_Faith_Interact:
                     with dissolve
                     B "Oh! I didn’t mean to bug you or anything!"
                     B "I just thought I’d ask, since we’re sitting in an arts lab and all..."
-                    # show Ben Casual Fru Dark at seat_l, img_Scale(500, 800) with dissolve
+                    show Ben Casual Fru Dark at seat_l, img_Scale(500, 800) with dissolve
                     B "{i}Real smooth, jackass!{/i}"
                     # show Faith Mac LkUp Laugh Spk at seat_r, img_Scale(500, 800) with dissolve
                     F "Oh! Yeah, no, I get that!"
@@ -545,7 +545,7 @@ label Meet_Faith_Interact:
                     show Faith Mac LkUp Neut Dark at seat_r, img_Scale(500, 800):
                     with dissolve
                     B "...oh."
-                    # show Ben Casual Fru Dark at seat_l, img_Scale(500, 800) with dissolve
+                    show Ben Casual Fru Dark at seat_l, img_Scale(500, 800) with dissolve
                     B "{i}And now you made it awkward. Nice going, jackass!{/i}"
                     # show Faith Mac LkUp Pup Spk at seat_r, img_Scale(500, 800) with dissolve
                     F "Is...is there something wrong with my hair?" # Use puppy dog face!
@@ -559,7 +559,7 @@ label Meet_Faith_Interact:
                     # show Faith Mac LkUp Pup at seat_r, img_Scale(500, 800):
                     # with dissolve
                     F "...?"
-                    # show Ben Casual Fru Dark at seat_l, img_Scale(500, 800) with dissolve
+                    show Ben Casual Fru Dark at seat_l, img_Scale(500, 800) with dissolve
                     B "{i}I really need to shut up now.{/i}":
                     # show Ben Casual Sto Dark at seat_r, img_Scale(500, 800):
                     # show Faith Mac Foc Sad Dark at seat_r, img_Scale(500, 800):
@@ -690,7 +690,7 @@ label Meet_Faith_Interact:
                     # show Faith Mac LkUp Laugh Dark at seat_r, img_Scale(500, 800):
                     with dissolve
                     B "..." # Awkward silence ensues.
-                    # show Ben Casual Res Dark at seat_l, img_Scale(500, 800) with dissolve
+                    show Ben Casual Res Dark at seat_l, img_Scale(500, 800) with dissolve
                     B "{i}...okay, this talk is getting a little too real.{/i}"
 
                     jump Meet_Faith_End
@@ -752,10 +752,10 @@ label Meet_Faith_End:
         hide Ben with dissolve
         hide Faith with dissolve
         scene Staller Music with fade
-        # show Ben Walk Fru Dark at center, imgScale(500, 800) with dissolve
+        show Ben Walk Fru Dark at center, imgScale(500, 800) with dissolve
         B "{i}You just had to ask about her hair, didn’t you?{/i}"
         B "{i}Try not to offend anyone else today, you moron!{/i}"
-        # hide Ben with dissolve
+        hide Ben with dissolve
         scene Black with fade
 
     elif faith_awk == False:

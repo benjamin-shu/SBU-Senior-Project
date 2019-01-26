@@ -67,15 +67,16 @@ image Ben Casual Sto Spk = "Ben/Casual/Stoic Speaking.png"
 image Ben Casual Fru = "Ben/Casual/Frustrated.png"
 image Ben Casual Fru Dark = im.MatrixColor("Ben/Casual/Frustrated.png", im.matrix.brightness(dark))
 image Ben Casual Fru Spk = "Ben/Casual/Frustrated Speaking.png"
-# image Ben Casual Res = "Ben/Casual/Resigned.png"
-# image Ben Casual Res Dark = im.MatrixColor("Ben/Casual/Resigned.png", im.matrix.brightness(dark))
-# image Ben Casual Res Spk = "Ben/Casual/Resigned Speaking.png"
-# image Ben Casual Ann = "Ben/Casual/Annoyed.png"
-# image Ben Casual Ann Dark = im.MatrixColor("Ben/Casual/Annoyed.png", im.matrix.brightness(dark))
-# image Ben Casual Ann Spk = "Ben/Casual/Annoyed Speaking.png"
-# image Ben Casual Shook = "Ben/Casual/Shook.png"
-# image Ben Casual Shook Spk = "Ben/Casual/Shook Speaking.png"
-# image Ben Casual Shook Dark = im.matrix.brightness("Ben/Casual/Shook.png", im.matrix.brightness(dark))
+image Ben Casual Res = "Ben/Casual/Resigned.png"
+image Ben Casual Res Dark = im.MatrixColor("Ben/Casual/Resigned.png", im.matrix.brightness(dark))
+image Ben Casual Res Spk = "Ben/Casual/Resigned Speaking.png"
+image Ben Casual Shook = "Ben/Casual/Shook.png"
+image Ben Casual Shook Spk = "Ben/Casual/Shook Speaking.png"
+image Ben Casual Shook Dark = im.matrix.brightness("Ben/Casual/Shook.png", im.matrix.brightness(dark))
+image Ben Casual Pens = "Ben/Casual/Pensive.png"
+image Ben Casual Pens Dark = im.MatrixColor("Ben/Casual/Pensive.png", im.matrix.brightness(dark))
+image Ben Casual Pens Spk = "Ben/Casual/Pensive Speaking.png"
+
 
 image Ben Pho Chk Dark = im.MatrixColor("Ben/Phone Check/Stoic.png", im.matrix.brightness(dark))
 
