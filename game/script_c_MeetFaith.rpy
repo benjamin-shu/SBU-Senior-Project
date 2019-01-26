@@ -533,16 +533,37 @@ label Meet_Faith_Interact:
                     show Faith Mac LkUp Ques Spk at seat_r, img_Scale(500, 800):
                     with dissolve
                     F "...I’m sorry. What was that?"
+                    show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
+                    show Faith Mac LkUp Ques Dark at seat_r, img_Scale(500, 800):
+                    with dissolve
                     B "Well, your hair is just so spikey! How did you make it do that?"
+                    show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
+                    show Faith Mac LkUp Neut Spk at seat_r, img_Scale(500, 800):
+                    with dissolve
                     F "...I didn’t do anything to it. This is just my hair."
+                    show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
+                    show Faith Mac LkUp Neut Dark at seat_r, img_Scale(500, 800):
+                    with dissolve
                     B "...oh."
+                    # show Ben Casual Fru Dark at seat_l, img_Scale(500, 800) with dissolve
                     B "{i}And now you made it awkward. Nice going, jackass!{/i}"
-                    F "Is there something wrong with my hair?" # Use puppy dog face!
+                    # show Faith Mac LkUp Pup Spk at seat_r, img_Scale(500, 800) with dissolve
+                    F "Is...is there something wrong with my hair?" # Use puppy dog face!
+                    # show Ben Casual Shook Spk at seat_l, img_Scale(500, 800):
+                    # show Faith Mac LkUp Pup Dark at seat_r, img_Scale(500, 800):
+                    # with dissolve
                     B "What? No! Not at all!"
                     B "I didn’t mean it like that! I was just surprised, is all!"
                     B "I haven’t seen hair that sticks out at those...{i}angles{/i} before."
+                    # show Ben Casual Shook Dark at seat_l, img_Scale(500, 800):
+                    # show Faith Mac LkUp Pup at seat_r, img_Scale(500, 800):
+                    # with dissolve
                     F "...?"
-                    B "{i}I really need to shut up now.{/i}"
+                    # show Ben Casual Fru Dark at seat_l, img_Scale(500, 800) with dissolve
+                    B "{i}I really need to shut up now.{/i}":
+                    # show Ben Casual Sto Dark at seat_r, img_Scale(500, 800):
+                    # show Faith Mac Foc Sad Dark at seat_r, img_Scale(500, 800):
+                    # with dissolve
 
                     jump Meet_Faith_Talk
 
@@ -550,64 +571,126 @@ label Meet_Faith_Interact:
                     $ faith_talked = True
                     $ faith_work = True
                     if faith_talked == False:
+                        show Ben Cas Sto Spk at seat_l, img_Scale(500, 800) with dissolve
                         B "Excuse me? What are you working on right now?"
+                        show Ben Cas Sto Dark at seat_l, img_Scale(500, 800):
+                        show Faith Mac LkUp Neut Spk at seat_r, img_Scale(500, 800):
+                        with dissolve
                         F "Oh, this? It's a thumbnail for a YouTube video I want to make."
                     else:
+                        show Ben Cas Neut Spk at seat_l, img_Scale(500, 800) with dissolve
                         B "What are you working on right now?"
+                        show Ben Cas Neut Dark at seat_l, img_Scale(500, 800):
+                        show Faith Mac LkUp Neut Spk at seat_r, img_Scale(500, 800):
+                        with dissolve
                         F "I'm making a thumbnail for a YouTube video I want to make."
 
+                    show Ben Cas Neut Spk at seat_l, img_Scale(500, 800):
+                    show Faith Mac LkUp Neut Dark at seat_r, img_Scale(500, 800):
+                    with dissolve
                     B "Neat! What kind of video is it?"
+                    show Ben Cas Neut Dark at seat_l, img_Scale(500, 800):
+                    show Faith Mac LkUp Neut Spk at seat_r, img_Scale(500, 800):
+                    with dissolve
                     F "Nothing special, really - just me, talking about video games."
                     F "It's a fun little side project I like to do when I have time."
+                    show Faith Mac Foc Neut Dark at seat_r, img_Scale(500, 800) with dissolve
 
                     jump Meet_Faith_Talk
 
                 "So you've made YouTube videos before?" if (faith_awk == False and faith_work == True and faith_youtube == False):
                     $ faith_talked = True
                     $ faith_youtube = True
+                    show Ben Cas Neut Spk at seat_l, img_Scale(500, 800) with dissolve
                     B "So you've made YouTube videos before?"
+                    show Ben Cas Neut Dark at seat_l, img_Scale(500, 800):
+                    show Faith Mac LkUp Neut Spk at seat_r, img_Scale(500, 800):
+                    with dissolve
                     F "Yeah, I have! I made a channel a long time ago."
                     F "Most of the videos are just speedpaints or me talking about video games."
+                    show Ben Cas Neut Spk at seat_l, img_Scale(500, 800):
+                    show Faith Mac LkUp Neut Dark at seat_r, img_Scale(500, 800):
+                    with dissolve
                     B "That sounds like fun!"
-                    F "It is! I don’t really have a lot of subscribers, but it’s nice to just make videos every once in a while."
+                    show Ben Cas Neut Dark at seat_l, img_Scale(500, 800):
+                    show Faith Mac LkUp Neut Spk at seat_r, img_Scale(500, 800):
+                    with dissolve
+                    F "It is!"
+                    F "I don’t really have a lot of subscribers, but it’s nice to just make videos every once in a while."
+                    show Faith Mac Foc Neut at seat_r, img_Scale(500, 800) with dissolve
 
                     jump Meet_Faith_Talk
 
                 "Is that a character from Undertale that you're drawing?" if (faith_awk == False and faith_mac == True and faith_under == False):
                     $ faith_talked = True
                     $ faith_under = True
+                    show Ben Casual Neut Spk at seat_l, img_Scale(500, 800) with dissolve
                     B "Is that a character from Undertale that you're drawing?"
+                    show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
+                    show Faith Mac LkUp Neut Spk at seat_l, img_Scale(500, 800):
+                    with dissolve
                     F "Yeah, it is! You've played Undertale?"
+                    show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
+                    show Faith Mac LkUp Neut Dark at seat_l, img_Scale(500, 800):
+                    with dissolve
                     B "Yeah! I played it a while ago, but it’s one of my favorite video games."
                     B "Who was your favorite character?"
+                    show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
+                    show Faith Mac LkUp Neut Spk at seat_l, img_Scale(500, 800):
+                    with dissolve
                     F "Ooh, that’s a tough question. I really liked all of the characters!"
                     F "I guess if I had to pick just one, it’d be Toriel."
-                    # show Dimmed with dissolve
+                    show Dimmed with dissolve
                     # show Toriel with dissolve
+                    # F LkUp Geek Spk Si
                     F "She’s so sweet and fuzzy and warm, and I love her for it!"
+                    # F Mac LkUp Neut Spk Si
                     F "She also really likes making puns, just like my real mom."
                     # hide Toriel with dissolve
-                    # hide Dimmed with dissolve
+                    hide Dimmed with dissolve
+                    # show Faith Mac LkUp Geek Spk at seat_r, img_Scale(500, 800) with dissolve
                     F "Honestly, all of the characters are just so huggable!"
+                    show Faith Mac LkUp Net Spk at seat_r, img_Scale(500, 800) with dissolve
                     F "The story was great, I really liked the dodging mechanics, the music was incredible..."
                     F "..."
+                    # show Faith Mac Foc Neut Spk at seat_r, img_Scale(500, 800) with dissolve
                     F "I really liked Undertale, in case you hadn’t noticed."
+                    # show Ben Casual Snrk Spk at seat_l, img_Scale(500, 800):
+                    # show Faith Mac Foc Neut Dark at seat_r, img_Scale(500, 800):
+                    # with dissolve
                     B "No, I hadn’t noticed at all."
                     B "Thank you for pointing that out!"
+                    show Ben Casual Neut Dark at seat_l, img_Scale(500, 800) with dissolve
 
                     jump Meet_Faith_Talk
 
                 "Have you thought of making gaming videos full-time?" if (faith_awk == False and faith_work == True and faith_under == True):
+                    show Ben Casual Neut Spk at seat_l, img_Scale(500, 800) with dissolve
                     B "Have you thought of making gaming videos full-time?"
                     B "You seem like you'd be a good fit for the job."
+                    show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
+                    show Faith Mac LkUp Neut Spk at seat_r, img_Scale(500, 800):
+                    with dissolve
                     F "I've thought about it! But with it being senior year and all, I don't really have the time."
+                    # show Faith Mac LkUp Laugh Spk at seat_r, img_Scale(500, 800) with dissolve
                     F "I don't really expect much from my channel, honestly. There's no way I could ever do it for a living."
+                    show Ben Casual Sto Spk at seat_l, img_Scale(500, 800):
+                    # show Faith Mac LkUp Laugh Dark at seat_r, img_Scale(500, 800):
+                    with dissolve
                     B "Really? Why's that?"
+                    show Ben Casual Sto Dark at seat_l, img_Scale(500, 800):
+                    show Faith Mac LkUp Neut Spk at seat_r, img_Scale(500, 800):
+                    with dissolve
                     F "I wouldn't get discovered. Not enough to partner with YouTube, anyway."
                     F "It takes a lot of time to make videos, and even longer to make money off of them."
                     F "And it's not like I'm about to go viral, either."
+                    # show Faith Mac LkUp Laugh Spk at seat_r, img_Scale(500, 800) with dissolve
                     F "It's okay, though. I'll just have to find a real job, is all."
+                    show Ben Casual Sto Spk at seat_l, img_Scale(500, 800):
+                    # show Faith Mac LkUp Laugh Dark at seat_r, img_Scale(500, 800):
+                    with dissolve
                     B "..." # Awkward silence ensues.
+                    # show Ben Casual Res Dark at seat_l, img_Scale(500, 800) with dissolve
                     B "{i}...okay, this talk is getting a little too real.{/i}"
 
                     jump Meet_Faith_End
