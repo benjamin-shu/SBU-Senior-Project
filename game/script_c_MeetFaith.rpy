@@ -280,8 +280,9 @@ label Meet_Faith_Interact:
                 # For clicking on Faith's Macbook Pro. Leads to an image of Adobe Illustrator.
                 label Meet_Faith_Map1_macbook:
                     show Dimmed with dissolve
-                    show Macbook with dissolve
-                    # show Macbook meet_faith with dissolve (simultaneous transition!)
+                    show Macbook:
+                    # show Macbook meet_faith:
+                    with dissolve
                     B "{i}It looks like she’s working with Adobe Illustrator.{/i}"
                     B "{i}She’s working on a profile view of a person’s face...{/i}"
                     B "{i}Have I seen that before? It kind of looks like the main character from Undertale.{/i}"
@@ -310,7 +311,7 @@ label Meet_Faith_Interact:
                     B "{i}There's all sorts of equipment here besides the computers.{/i}"
                     show Ben Casual Pens Dark at seat_l, img_Scale(500, 800) with dissolve
                     B "{i}I've seen sound mixers, keyboards, art tablets, and microphones on the desks.{/i}"
-                    # show Ben Casual Neut Dark at seat_l, img_Scale(500, 800) with dissolve
+                    show Ben Casual Neut Dark at seat_l, img_Scale(500, 800) with dissolve
                     B "{i}It makes this a great place to work, if you know what you're doing.{/i}"
                     show Ben Casual Sto Dark at seat_l, img_Scale(500, 800) with dissolve
 
@@ -430,14 +431,14 @@ label Meet_Faith_Interact:
                     show Faith Mac LkUp Neut Spk at seat_r, img_Scale(500, 800):
                     with dissolve
                     F "What was that?"
-                    # show Ben Casual Shook Spk at seat_l, img_Scale(500, 800):
+                    show Ben Casual Shook Spk at seat_l, img_Scale(500, 800):
                     show Faith Mac LkUp Neut Dark at seat_r, img_Scale(500, 800):
                     with dissolve
                     B "Oh! I didn’t mean to bug you or anything!"
                     B "I just thought I’d ask, since we’re sitting in an arts lab and all..."
                     show Ben Casual Fru Dark at seat_l, img_Scale(500, 800) with dissolve
                     B "{i}Real smooth, jackass!{/i}"
-                    # show Faith Mac LkUp Laugh Spk at seat_r, img_Scale(500, 800) with dissolve
+                    show Faith Mac LkUp Laugh Spk at seat_r, img_Scale(500, 800) with dissolve
                     F "Oh! Yeah, no, I get that!"
                     show Faith Mac LkUp Neut Spk at seat_r, img_Scale(500, 800) with dissolve
                     F "I’m an ARS major, or Studio Art."
@@ -447,10 +448,10 @@ label Meet_Faith_Interact:
                     with dissolve
                     B "I'm a Computer Science major."
                     show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
-                    # show Faith Mac LkUp Ques Spk at seat_r, img_Scale(500, 800):
+                    show Faith Mac LkUp Ques Spk at seat_r, img_Scale(500, 800):
                     with dissolve
                     F "Really? Why are you in an arts class, then?"
-                    # show Faith Mac LkUp Ques Dark at seat_r, img_Scale(500, 800) with dissolve
+                    show Faith Mac LkUp Ques Dark at seat_r, img_Scale(500, 800) with dissolve
                     B "{i}That's an {b}excellent{/b} question!{/i}"
                     show Ben Casual Neut Spk at seat_l, img_Scale(500, 800) with dissolve
                     B "I'm doing a Digital Arts minor, so I get to take this class too."
@@ -493,11 +494,11 @@ label Meet_Faith_Interact:
                     with dissolve
                     B "I'm a Computer Science major."
                     show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
-                    # show Faith Mac LkUp Ques Spk at seat_r, img_Scale(500, 800):
+                    show Faith Mac LkUp Ques Spk at seat_r, img_Scale(500, 800):
                     with dissolve
                     F "Really? Why are you in an arts class, then?"
                     show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
-                    # show Faith Mac LkUp Ques Dark at seat_r, img_Scale(500, 800):
+                    show Faith Mac LkUp Ques Dark at seat_r, img_Scale(500, 800):
                     with dissolve
                     B "I'm doing a Digital Arts minor, so I get to take this class too."
                     show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
@@ -510,11 +511,11 @@ label Meet_Faith_Interact:
                     B "Well, at first, I was hoping I could major in something like Digital Arts."
                     B "After I got here, I found out that they only offered the minor. So I decided to major in CS instead."
                     show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
-                    # show Faith Mac LkUp Ques Spk at seat_r, img_Scale(500, 800):
+                    show Faith Mac LkUp Ques Spk at seat_r, img_Scale(500, 800):
                     with dissolve
                     F "Isn't the Comp Sci major here really difficult?"
                     show Ben Casual Sto Spk at seat_l, img_Scale(500, 800):
-                    # show Faith Mac LkUp Ques Dark at seat_r, img_Scale(500, 800):
+                    show Faith Mac LkUp Ques Dark at seat_r, img_Scale(500, 800):
                     with dissolve
                     B "I never said it was a {b}good{/b} decision."
                     show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
@@ -547,23 +548,23 @@ label Meet_Faith_Interact:
                     B "...oh."
                     show Ben Casual Fru Dark at seat_l, img_Scale(500, 800) with dissolve
                     B "{i}And now you made it awkward. Nice going, jackass!{/i}"
-                    # show Faith Mac LkUp Pup Spk at seat_r, img_Scale(500, 800) with dissolve
+                    show Faith Mac LkUp Pup Spk at seat_r, img_Scale(500, 800) with dissolve
                     F "Is...is there something wrong with my hair?" # Use puppy dog face!
-                    # show Ben Casual Shook Spk at seat_l, img_Scale(500, 800):
-                    # show Faith Mac LkUp Pup Dark at seat_r, img_Scale(500, 800):
-                    # with dissolve
+                    show Ben Casual Shook Spk at seat_l, img_Scale(500, 800):
+                    show Faith Mac LkUp Pup Dark at seat_r, img_Scale(500, 800):
+                    with dissolve
                     B "What? No! Not at all!"
                     B "I didn’t mean it like that! I was just surprised, is all!"
                     B "I haven’t seen hair that sticks out at those...{i}angles{/i} before."
-                    # show Ben Casual Shook Dark at seat_l, img_Scale(500, 800):
-                    # show Faith Mac LkUp Pup at seat_r, img_Scale(500, 800):
-                    # with dissolve
+                    show Ben Casual Shook Dark at seat_l, img_Scale(500, 800):
+                    show Faith Mac LkUp Pup at seat_r, img_Scale(500, 800):
+                    with dissolve
                     F "...?"
                     show Ben Casual Fru Dark at seat_l, img_Scale(500, 800) with dissolve
                     B "{i}I really need to shut up now.{/i}":
-                    # show Ben Casual Sto Dark at seat_r, img_Scale(500, 800):
-                    # show Faith Mac Foc Sad Dark at seat_r, img_Scale(500, 800):
-                    # with dissolve
+                    show Ben Casual Sto Dark at seat_r, img_Scale(500, 800):
+                    show Faith Mac Foc Sad Dark at seat_r, img_Scale(500, 800):
+                    with dissolve
 
                     jump Meet_Faith_Talk
 
@@ -642,22 +643,20 @@ label Meet_Faith_Interact:
                     F "I guess if I had to pick just one, it’d be Toriel."
                     show Dimmed with dissolve
                     # show Toriel with dissolve
-                    # F LkUp Geek Spk Si
-                    F "She’s so sweet and fuzzy and warm, and I love her for it!"
-                    # F Mac LkUp Neut Spk Si
-                    F "She also really likes making puns, just like my real mom."
+                    F LkUp Geek Spk Si "She’s so sweet and fuzzy and warm, and I love her for it!"
+                    F Mac LkUp Neut Spk Si "She also really likes making puns, just like my real mom."
                     # hide Toriel with dissolve
                     hide Dimmed with dissolve
-                    # show Faith Mac LkUp Geek Spk at seat_r, img_Scale(500, 800) with dissolve
+                    show Faith Mac LkUp Geek Spk at seat_r, img_Scale(500, 800) with dissolve
                     F "Honestly, all of the characters are just so huggable!"
                     show Faith Mac LkUp Net Spk at seat_r, img_Scale(500, 800) with dissolve
                     F "The story was great, I really liked the dodging mechanics, the music was incredible..."
                     F "..."
-                    # show Faith Mac Foc Neut Spk at seat_r, img_Scale(500, 800) with dissolve
+                    show Faith Mac Foc Neut Spk at seat_r, img_Scale(500, 800) with dissolve
                     F "I really liked Undertale, in case you hadn’t noticed."
                     # show Ben Casual Snrk Spk at seat_l, img_Scale(500, 800):
-                    # show Faith Mac Foc Neut Dark at seat_r, img_Scale(500, 800):
-                    # with dissolve
+                    show Faith Mac Foc Neut Dark at seat_r, img_Scale(500, 800):
+                    with dissolve
                     B "No, I hadn’t noticed at all."
                     B "Thank you for pointing that out!"
                     show Ben Casual Neut Dark at seat_l, img_Scale(500, 800) with dissolve
@@ -672,10 +671,10 @@ label Meet_Faith_Interact:
                     show Faith Mac LkUp Neut Spk at seat_r, img_Scale(500, 800):
                     with dissolve
                     F "I've thought about it! But with it being senior year and all, I don't really have the time."
-                    # show Faith Mac LkUp Laugh Spk at seat_r, img_Scale(500, 800) with dissolve
+                    show Faith Mac LkUp Laugh Spk at seat_r, img_Scale(500, 800) with dissolve
                     F "I don't really expect much from my channel, honestly. There's no way I could ever do it for a living."
                     show Ben Casual Sto Spk at seat_l, img_Scale(500, 800):
-                    # show Faith Mac LkUp Laugh Dark at seat_r, img_Scale(500, 800):
+                    show Faith Mac LkUp Laugh Dark at seat_r, img_Scale(500, 800):
                     with dissolve
                     B "Really? Why's that?"
                     show Ben Casual Sto Dark at seat_l, img_Scale(500, 800):
@@ -684,10 +683,10 @@ label Meet_Faith_Interact:
                     F "I wouldn't get discovered. Not enough to partner with YouTube, anyway."
                     F "It takes a lot of time to make videos, and even longer to make money off of them."
                     F "And it's not like I'm about to go viral, either."
-                    # show Faith Mac LkUp Laugh Spk at seat_r, img_Scale(500, 800) with dissolve
+                    show Faith Mac LkUp Laugh Spk at seat_r, img_Scale(500, 800) with dissolve
                     F "It's okay, though. I'll just have to find a real job, is all."
                     show Ben Casual Sto Spk at seat_l, img_Scale(500, 800):
-                    # show Faith Mac LkUp Laugh Dark at seat_r, img_Scale(500, 800):
+                    show Faith Mac LkUp Laugh Dark at seat_r, img_Scale(500, 800):
                     with dissolve
                     B "..." # Awkward silence ensues.
                     show Ben Casual Res Dark at seat_l, img_Scale(500, 800) with dissolve
@@ -699,7 +698,7 @@ label Meet_Faith_End:
     if faith_talked == False:
         B "{i}I’ll leave her be. She’s probably got other things to think about right now.{/i}"
         B "{i}No sense in me bothering her.{/i}"
-        show Ben Pho Chk Dark at seat_l, img_Scale(500, 800) with dissolve
+        show Ben Pho Chk Sto Dark at seat_l, img_Scale(500, 800) with dissolve
         B "{i}Just need to sit tight and wait for the professor to show up.{/i}"
 
         window hide
