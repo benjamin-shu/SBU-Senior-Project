@@ -654,7 +654,7 @@ label Meet_Faith_Interact:
                     F "..."
                     show Faith Mac Foc Neut Spk at seat_r, img_Scale(500, 800) with dissolve
                     F "I really liked Undertale, in case you hadn’t noticed."
-                    # show Ben Casual Snrk Spk at seat_l, img_Scale(500, 800):
+                    show Ben Casual Snrk Spk at seat_l, img_Scale(500, 800):
                     show Faith Mac Foc Neut Dark at seat_r, img_Scale(500, 800):
                     with dissolve
                     B "No, I hadn’t noticed at all."
