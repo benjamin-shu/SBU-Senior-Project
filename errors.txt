@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script_a_Assets.rpy", line 197: expected 'simple_expression' not found.
-    xpos = 0.27
-         ^
+File "game/script_c_MeetFaith.rpy", line 748: end of line expected.
+    show Ben Casual Neut Dark at seat_l, imgScale(500, 800): with dissolve
+                                                             ^
 
-File "game/script_a_Assets.rpy", line 203: expected 'simple_expression' not found.
-    xpos = 0.73
-         ^
-
-Ren'Py Version: Ren'Py 7.1.1.929
-Mon Jan 21 22:15:54 2019
+Ren'Py Version: Ren'Py 7.1.3.1092
+Tue Jan 29 01:15:10 2019
