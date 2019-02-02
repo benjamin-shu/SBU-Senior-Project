@@ -19,7 +19,76 @@ define CSE_study3 = 0
 define resume = 0
 define portfolio = 0
 
+define ARS_progress = 0
+define ARS_max = 0
+
+define CSE_progress = 0
+define CSE_max = 0
+
+define HON_progress = 0
+define HON_max = 4
+
+default L_src = [ "Schedule/L ARS.png", "Schedule/L CSE.png", "Schedule/L Study.png" ]
+define L_img = "Schedule/L Placeholder.png"
+define L_ind = 0
+
+default M_src = [ "Schedule/M ARS.png", "Schedule/M CSE.png", "Schedule/M Study.png" ]
+define M_img = "Schedule/M Placeholder.png"
+define M_ind = 0
+
+default R_src = [ "Schedule/R ARS.png", "Schedule/R CSE.png", "Schedule/R Study.png" ]
+define R_img = "Schedule/R Placeholder.png"
+define R_ind = 0
+
+define act_cnt = [ 0, 0, 0 ]
+
+screen schedule():
+    modal True
+
+    add "Schedule/Clock Back.png"
+    add "Schedule/Sleep Slot.png"
+
+    add "[L_img]"
+    imagebutton:
+        focus_mask True
+        idle "Schedule/L Idle.png"
+        hover "Schedule/L Hover.png"
+        action [SetVariable("L_ind", (L_ind + 1) % len(L_src)), SetVariable("L_img", L_src[L_ind])]
+
+    add "[M_img]"
+    imagebutton:
+        focus_mask True
+        idle "Schedule/M Idle.png"
+        hover "Schedule/M Hover.png"
+        action [SetVariable("M_ind", (M_ind + 1) % len(M_src)), SetVariable("M_img", M_src[M_ind])]
+
+    add "[R_img]"
+    imagebutton:
+        focus_mask True
+        idle "Schedule/R Idle.png"
+        hover "Schedule/R Hover.png"
+        action [SetVariable("R_ind", (R_ind + 1) % len(R_src)), SetVariable("R_img", R_src[R_ind])]
+
+    add "Schedule/Clock Face.png"
+
+    imagebutton:
+        focus_mask True
+        pos (551, 626)
+        idle "Schedule/Continue Idle.png"
+        hover "Schedule/Continue Hover.png"
+        action Jump("check_schedule")
+
 label start:
+
+    label screen_schedule:
+        hide window
+        show screen schedule
+        $ renpy.pause()
+
+    label check_schedule:
+        "[act_cnt]"
+
+        jump screen_schedule
 
     label menu_morning:
         if week_num == 3:
