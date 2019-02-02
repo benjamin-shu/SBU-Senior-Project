@@ -834,5 +834,5 @@ label Meet_Faith_End:
 
     stop music fadeout 1.0
 # Conclusion sequence.
-label End:
-    return
+# label End:
+#     return
