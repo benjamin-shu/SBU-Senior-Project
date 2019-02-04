@@ -1,67 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script_d_WeekLoop.rpy", line 123, in script
-    call screen schedule
-  File "renpy/common/000statements.rpy", line 519, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/script_d_WeekLoop.rpy", line 88, in execute
-    screen schedule():
-  File "game/script_d_WeekLoop.rpy", line 88, in execute
-    screen schedule():
-  File "game/script_d_WeekLoop.rpy", line 97, in execute
-    imagebutton:
-  File "game/script_d_WeekLoop.rpy", line 97, in keywords
-    imagebutton:
-NameError: name 'src' is not defined
+  File "game/script_b_WeekLoop.rpy", line 54, in script
+    $ renpy.jump("Week_" + week_num)
+  File "game/script_b_WeekLoop.rpy", line 54, in <module>
+    $ renpy.jump("Week_" + week_num)
+TypeError: jump() takes exactly 1 argument (2 given)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script_d_WeekLoop.rpy", line 123, in script
-    call screen schedule
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\ast.py", line 1861, in execute
-    self.call("execute")
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\ast.py", line 1849, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\statements.py", line 203, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 519, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\exports.py", line 2755, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\ui.py", line 289, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 2672, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 3059, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 531, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 531, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 531, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\screen.py", line 424, in visit_all
-    callback(self)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 3059, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\screen.py", line 434, in per_interact
-    self.update()
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\screen.py", line 619, in update
-    self.screen.function(**self.scope)
-  File "game/script_d_WeekLoop.rpy", line 88, in execute
-    screen schedule():
-  File "game/script_d_WeekLoop.rpy", line 88, in execute
-    screen schedule():
-  File "game/script_d_WeekLoop.rpy", line 97, in execute
-    imagebutton:
-  File "game/script_d_WeekLoop.rpy", line 97, in keywords
-    imagebutton:
-  File "<screen language>", line 101, in <module>
-NameError: name 'src' is not defined
+  File "game/script_b_WeekLoop.rpy", line 54, in script
+    $ renpy.jump("Week_" + week_num)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\ast.py", line 881, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\python.py", line 1913, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/script_b_WeekLoop.rpy", line 54, in <module>
+    $ renpy.jump("Week_" + week_num)
+TypeError: jump() takes exactly 1 argument (2 given)
 
 Windows-8-6.2.9200
 Ren'Py 7.1.3.1092
 SBU Senior Project 1.0
-Mon Feb 04 14:45:47 2019
+Mon Feb 04 15:41:51 2019

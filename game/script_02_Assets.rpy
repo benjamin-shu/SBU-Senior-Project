@@ -130,14 +130,13 @@ image projector:
     0.25
     "Screen Effects/Projector 3.png" with Dissolve(0.5)
 
-## (UNUSED)
-## Quick fade in/out with a black screen
-# image fadeInOut:
-#     "Screen Effects/Black.png"
-#     alpha 0.0
-#     linear 0.5 alpha 1.0
-#     0.25
-#     linear 0.5 alpha 0.0
+# Quick fade in/out with a black screen
+image fadeInOut:
+    "Screen Effects/Black.png"
+    alpha 0.0
+    linear 0.5 alpha 1.0
+    0.25
+    linear 0.5 alpha 0.0
 
 # ==========================================================================
 # Screen Positions - Character Sprites
