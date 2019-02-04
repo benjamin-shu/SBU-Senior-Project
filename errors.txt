@@ -2,8 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script_aa_WeekLoop.rpy", line 45: is not terminated with a newline. (Check strings and parenthesis.)
-    image schedule_img = Composite(
+File "game/script_c_WeekLoop.rpy", line 83: u'show' is not a keyword argument or valid child for the label statement.
+    show schedule_img
+        ^
 
 Ren'Py Version: Ren'Py 7.1.3.1092
-Mon Feb 04 01:43:32 2019
+Mon Feb 04 02:04:38 2019

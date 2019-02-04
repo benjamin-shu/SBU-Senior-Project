@@ -1,5 +1,5 @@
 # Game starts here.
-# label start:
+label start:
     scene West F 301 Hallway with fade
 
     show Ben Intro Cas Sto Dark at center with dissolve
@@ -87,11 +87,11 @@
     B Intro Cas Neut Spk Si "Recently, I've started thinking that this {i}might{/i} be a problem."
     show Intro Slide 4 with dissolve
     B Intro Cas Sto Spk Si "I can't say that I've accomplished much over the last four years..."
-    B "...but I wanted to make something of my time here before I left."
+    B "...but hopefully, this semester is where I can turn things around."
     show Intro Slide 5 with dissolve
-    B Intro Hands Ddpn Si "So I’m going to try and turn the disorganized mess in my head into something coherent."
-    B "Something people might actually {i}care{/i} about."
-    B Intro Hands Sml Si "And hopefully, something worth their time."
+    B Intro Hands Ddpn Si "The great and terrifying thing about my life is that I don't know what comes next."
+    B "Without a job lined up, there's no security or guarantees."
+    B Intro Hands Sml Si "But that also means there's a lot of possibilities."
 
     window hide
     hide Intro Slide 5 with dissolve
@@ -99,9 +99,12 @@
     show Ben Intro Cas Neut Spk with dissolve
     window show
 
-    B "With that in mind, welcome to the show. I hope you enjoy your stay."
+    B "I'm going to try to keep that in mind this semester."
+    B "So, to whoever you are watching, wish me luck!"
+    show Ben Intro Cas Sto Spk with dissolve
+    B "I'm probably going to need it."
     stop music fadeout 1.0
     hide Ben with dissolve
     scene Black with fade
 
-    jump Day1
+    jump screen_schedule
