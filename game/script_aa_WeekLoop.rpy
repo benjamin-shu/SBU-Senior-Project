@@ -42,6 +42,15 @@ define R_ind = 0
 
 define act_cnt = [ 0, 0, 0 ]
 
+image schedule_img = Composite(
+    (1280, 720),
+    (0, 0), "Schedule/Clock Back.png",
+    (0, 0), "Schedule/Sleep Slot.png",
+    (0, 0), "[L_img]",
+    (0, 0), "[M_img]",
+    (0, 0), "[R_img]",
+    (0, 0), "Schedule/Clock Face.png")
+
 screen schedule():
     modal True
 
@@ -81,14 +90,16 @@ screen schedule():
 label start:
 
     label screen_schedule:
-        hide window
-        show screen schedule
+        show schedule_img
+
+        call screen schedule
         $ renpy.pause()
 
     label check_schedule:
-        "[act_cnt]"
+        "Hello!"
+        "Click me!"
 
-        jump screen_schedule
+        # jump screen_schedule
 
     label menu_morning:
         if week_num == 3:

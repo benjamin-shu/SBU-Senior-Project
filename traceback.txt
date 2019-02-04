@@ -1,62 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script_aa_WeekLoop.rpy", line 92, in script
-    menu:
-  File "renpy/common/00action_data.rpy", line 79, in get_selected
-    return __get_field(self.object, self.field, self.kind) == self.value
-  File "renpy/common/00action_data.rpy", line 39, in _m1_00action_data__get_field
-    raise NameError("The {} {} does not exist.".format(kind, name))
-NameError: The variable act_cnt[L_ind] does not exist.
+  File "game/script_aa_WeekLoop.rpy", line 45, in script
+    image schedule_img = Composite(
+  File "game/script_aa_WeekLoop.rpy", line 51, in <module>
+    (0, 0), "Schedule/Clock Face.png")
+Exception: LiveComposite requires an odd number of arguments.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script_aa_WeekLoop.rpy", line 92, in script
-    menu:
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\ast.py", line 1564, in execute
-    choice = renpy.exports.menu(choices, self.set)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\exports.py", line 917, in menu
-    rv = renpy.store.menu(items)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\exports.py", line 1110, in display_menu
-    rv = renpy.ui.interact(mouse='menu', type=type, roll_forward=roll_forward)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\ui.py", line 289, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 2672, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 3059, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 531, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 531, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 531, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\screen.py", line 428, in visit_all
-    self.child.visit_all(callback, seen=None)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 531, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 533, in visit_all
-    callback(self)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 3059, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\behavior.py", line 808, in per_interact
-    if self.is_selected():
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\behavior.py", line 798, in is_selected
-    return is_selected(self.action)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\behavior.py", line 365, in is_selected
-    return any(is_selected(i) for i in action)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\behavior.py", line 365, in <genexpr>
-    return any(is_selected(i) for i in action)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\behavior.py", line 368, in is_selected
-    return action.get_selected()
-  File "renpy/common/00action_data.rpy", line 79, in get_selected
-    return __get_field(self.object, self.field, self.kind) == self.value
-  File "renpy/common/00action_data.rpy", line 39, in _m1_00action_data__get_field
-    raise NameError("The {} {} does not exist.".format(kind, name))
-NameError: The variable act_cnt[L_ind] does not exist.
+  File "game/script_aa_WeekLoop.rpy", line 45, in script
+    image schedule_img = Composite(
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\ast.py", line 980, in execute
+    img = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\python.py", line 1937, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script_aa_WeekLoop.rpy", line 51, in <module>
+    (0, 0), "Schedule/Clock Face.png")
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\layout.py", line 299, in Composite
+    raise Exception("LiveComposite requires an odd number of arguments.")
+Exception: LiveComposite requires an odd number of arguments.
 
 Windows-8-6.2.9200
 Ren'Py 7.1.3.1092
 SBU Senior Project 1.0
-Sat Feb 02 13:39:49 2019
+Mon Feb 04 01:43:37 2019

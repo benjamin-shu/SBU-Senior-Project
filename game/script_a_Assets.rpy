@@ -275,8 +275,10 @@ init:
         yanchor 360
 
 # Definitions for each DynamicCharacter object used.
-define b_name = "Ben"
-define B = DynamicCharacter("b_name", image="Ben", who_color="#71B7E2", who_bold=True,
+# define b_name = "Ben"
+# define B = DynamicCharacter("b_name", image="Ben", who_color="#71B7E2", who_bold=True,
+#     what_Size=30, what_Bold=False, what_font="fonts/Courier Prime Bold.ttf")
+define B = Character("Ben", image="Ben", who_color="#71B7E2", who_bold=True,
     what_Size=30, what_Bold=False, what_font="fonts/Courier Prime Bold.ttf")
 
 define f_name = "???"
