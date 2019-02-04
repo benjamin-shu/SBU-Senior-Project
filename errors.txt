@@ -2,9 +2,37 @@
 errors listed below, and try again.
 
 
-File "game/script_c_WeekLoop.rpy", line 83: u'show' is not a keyword argument or valid child for the label statement.
-    show schedule_img
-        ^
+The label start is defined twice, at
+  File "game/script_01_Sprites.rpy", line 1 and
+  File "game/script_c_Intro.rpyc", line 4.
+
+The label screen_schedule is defined twice, at
+  File "game/script_b_WeekLoop.rpy", line 4 and
+  File "game/script_d_WeekLoop.rpyc", line 119.
+
+The label check_schedule is defined twice, at
+  File "game/script_b_WeekLoop.rpy", line 11 and
+  File "game/script_d_WeekLoop.rpyc", line 126.
+
+The label menu_morning is defined twice, at
+  File "game/script_b_WeekLoop.rpy", line 54 and
+  File "game/script_d_WeekLoop.rpyc", line 169.
+
+The label menu_afternoon is defined twice, at
+  File "game/script_b_WeekLoop.rpy", line 121 and
+  File "game/script_d_WeekLoop.rpyc", line 236.
+
+The label menu_night is defined twice, at
+  File "game/script_b_WeekLoop.rpy", line 188 and
+  File "game/script_d_WeekLoop.rpyc", line 303.
+
+The label week_end is defined twice, at
+  File "game/script_b_WeekLoop.rpy", line 239 and
+  File "game/script_d_WeekLoop.rpyc", line 354.
+
+The label End is defined twice, at
+  File "game/script_b_WeekLoop.rpy", line 245 and
+  File "game/script_d_WeekLoop.rpyc", line 360.
 
 Ren'Py Version: Ren'Py 7.1.3.1092
-Mon Feb 04 02:04:38 2019
+Mon Feb 04 15:24:07 2019

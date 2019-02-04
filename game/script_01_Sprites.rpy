@@ -1,5 +1,3 @@
-label start:
-
 # Character sprites for Ben's introduction scene.
 image Ben Intro Cas Brth = "Ben/Intro/Casual Breathe.png"
 image Ben Intro Cas Neut Spk = "Ben/Intro/Casual Neutral Speaking.png"
