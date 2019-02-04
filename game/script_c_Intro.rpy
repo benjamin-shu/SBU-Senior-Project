@@ -1,5 +1,4 @@
 # Game starts here.
-label start:
     scene West F 301 Hallway with fade
 
     show Ben Intro Cas Sto Dark at center with dissolve
