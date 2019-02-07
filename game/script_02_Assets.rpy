@@ -1,5 +1,5 @@
 # ==============================================================================
-# Presentation Slides
+# Presentation Slides & Project Materials
 # ==============================================================================
 
 # Slides used for Ben's introduction.
@@ -29,16 +29,33 @@ image Composition Slide 3b:
     "Slides/Composition/Slide 03 d.png" with Dissolve(0.5)
 
 image Composition Slide 4:
-    "Slides/Composition/Slide 04 a.png" with dissolve
-    "Slides/Composition/Slide 04 b.png" with dissolve
+    "Slides/Composition/Slide 04 a.png" with Dissolve(0.5)
+    0.5
+    "Slides/Composition/Slide 04 b.png" with Dissolve(0.5)
 
 image Composition Slide 5:
-    "Slides/Composition/Slide 05 a.png" with dissolve
-    "Slides/Composition/Slide 05 b.png" with dissolve
+    "Slides/Composition/Slide 05 a.png" with Dissolve(0.5)
+    0.5
+    "Slides/Composition/Slide 05 b.png" with Dissolve(0.5)
 
 image Composition Slide 6 = "Slides/Composition/Slide 06.png"
 image Composition Slide 7 = "Slides/Composition/Slide 07.png"
 image Composition Slide 8 = "Slides/Composition/Slide 08.png"
+
+# First ARS assignment.
+image Composition Canvas = "Projects/Composition_Canvas.png"
+image Composition Point01 = "Projects/Composition_Point01.png"
+image Composition Point02 = "Projects/Composition_Point02.png"
+image Composition Depth01 = "Projects/Composition_Depth01.png"
+image Composition Depth02 = "Projects/Composition_Depth02.png"
+image Composition Shape01 = "Projects/Composition_Shape01.png"
+image Composition Shape02:
+    "Projects/Composition_Shape02.png" with Dissolve(0.5)
+    0.5
+    "Projects/Composition_Shape03.png" with Dissolve(0.5)
+    0.5
+    "Projects/Composition_Shape04.png" with Dissolve(0.5)
+    0.5
 
 # ==============================================================================
 # Background Art
