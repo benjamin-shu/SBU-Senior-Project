@@ -14,9 +14,5 @@ The label Week_1_CSE is defined twice, at
   File "game/script_c_Week1.rpyc", line 183 and
   File "game/script_f_Week1.rpy", line 183.
 
-The label ARS_Work is defined twice, at
-  File "game/script_c_Week1.rpyc", line 185 and
-  File "game/script_f_Week1.rpy", line 185.
-
 Ren'Py Version: Ren'Py 7.1.3.1092
-Thu Feb 07 01:23:38 2019
+Thu Feb 07 13:35:20 2019

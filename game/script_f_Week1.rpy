@@ -179,6 +179,7 @@ label Week_1_ARS:
     with dissolve
 
     scene Black with fade
+    jump ARS_composition_1
 
 label Week_1_CSE:
 

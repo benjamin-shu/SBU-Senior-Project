@@ -20,9 +20,11 @@ label ARS_composition_1:
     hide Dimmed
     with dissolve
 
+    B "I like the way these look right now, but I should probably add some more detail later."
+
     $ phase += 1
     if phase < 3:
-        $ renpy.jump("week_phase_%d", phase)
+        $ renpy.jump("week_phase_%d" % phase)
     else:
         $ phase = 0
         jump week_end
