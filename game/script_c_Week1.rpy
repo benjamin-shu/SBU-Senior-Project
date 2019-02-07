@@ -1,112 +1,5 @@
 label Week_1:
-    # Define screen for looking at ARS classroom
-    screen look_around():
-        modal True
-        # projector
-        imagebutton:
-            pos (910, 84)
-            focus_mask True
-            idle "Screen Effects/Meet_Faith_map1/projector_button_idle.png"
-            hover "Screen Effects/Meet_Faith_map1/projector_button_hover.png"
-            action Jump("Meet_Faith_Map1_projector")
-
-        # backmacs
-        imagebutton:
-            pos (588, 233)
-            focus_mask True
-            idle "Screen Effects/Meet_Faith_map1/backmacs_button_idle.png"
-            hover "Screen Effects/Meet_Faith_map1/backmacs_button_hover.png"
-            action Jump("Meet_Faith_Map1_backmacs")
-
-        # mac22
-        imagebutton:
-            pos (1110, 209)
-            focus_mask True
-            idle "Screen Effects/Meet_Faith_map1/mac22_button_idle.png"
-            hover "Screen Effects/Meet_Faith_map1/mac22_button_hover.png"
-            action Jump("Meet_Faith_Map1_macs")
-
-        # mac21
-        imagebutton:
-            pos (446, 209)
-            focus_mask True
-            idle "Screen Effects/Meet_Faith_Map1/mac21_button_idle.png"
-            hover "Screen Effects/Meet_Faith_Map1/mac21_button_hover.png"
-            action Jump("Meet_Faith_Map1_macs")
-
-        # mixer
-        imagebutton:
-            pos (478, 393)
-            focus_mask True
-            idle "Screen Effects/Meet_Faith_Map1/mixer_button_idle.png"
-            hover "Screen Effects/Meet_Faith_Map1/mixer_button_hover.png"
-            action Jump("Meet_Faith_Map1_mixer")
-
-        # mac12
-        imagebutton:
-            pos (722, 126)
-            focus_mask True
-            idle "Screen Effects/Meet_Faith_Map1/mac12_button_idle.png"
-            hover "Screen Effects/Meet_Faith_Map1/mac12_button_hover.png"
-            action Jump("Meet_Faith_Map1_macs")
-
-        # mac11
-        imagebutton:
-            pos (56, 129)
-            focus_mask True
-            idle "Screen Effects/Meet_Faith_Map1/mac11_button_idle.png"
-            hover "Screen Effects/Meet_Faith_Map1/mac11_button_hover.png"
-            action Jump("Meet_Faith_Map1_macs")
-
-        # poster
-        imagebutton:
-            pos (40, -2)
-            focus_mask True
-            idle "Screen Effects/Meet_Faith_Map1/poster_button_idle.png"
-            hover "Screen Effects/Meet_Faith_Map1/poster_button_hover.png"
-            action Jump("Meet_Faith_Map1_poster")
-
-        # Ben
-        imagebutton:
-            at seat_l, img_Scale(500, 800)
-            focus_mask True
-            idle ImageReference("Ben Casual Sto Dark")
-            hover ImageReference("Ben Casual Sto")
-            action Jump("Meet_Faith_Map1_ben")
-
-        # Faith
-        imagebutton:
-            at seat_r, img_Scale(500, 800)
-            focus_mask True
-            idle ImageReference("Faith Mac Foc Neut Dark")
-            hover ImageReference("Faith Mac Foc Neut")
-            action Jump("Meet_Faith_Map1_faith")
-
-        # Faith's Hair
-        imagebutton:
-            pos (815, 146)
-            focus_mask True
-            idle "Screen Effects/Meet_Faith_Map1/hair_button_idle.png"
-            hover "Screen Effects/Meet_Faith_Map1/hair_button_hover.png"
-            action Jump("Meet_Faith_Map1_hair")
-
-        # Faith's Macbook
-        imagebutton:
-            pos (808, 463)
-            focus_mask True
-            idle "Screen Effects/Meet_Faith_Map1/macbook_button_idle.png"
-            hover "Screen Effects/Meet_Faith_Map1/macbook_button_hover.png"
-            action Jump("Meet_Faith_Map1_macbook")
-
-        # Button to return from screen
-        imagebutton:
-            pos (560, 600)
-            focus_mask True
-            idle "Screen Effects/back_button_idle.png"
-            hover "Screen Effects/back_button_hover.png"
-            action Jump("Meet_Faith_Interact")
-
-    scene West F 301C Door with fade
+    scene West F 301C with fade
 
     play music "sounds/Ben/Jazz Brunch.mp3" loop
 
@@ -140,15 +33,17 @@ label Week_1:
     B "({i}Okay, Ben. The sun is shining, and it's a bright new day.{/i})"
     B "({i}Try not to fuck this up.{/i})"
 
-label Day1_ARS:
+label Week_1_ARS:
     # Ben arrives at the Staller Center for the Arts.
     scene Staller with fade
+    play sound "sounds/Sunny Day.mp3" loop
 
     B "({i}It’s been a while since I was last here.{/i})"
     scene Staller Music with fade
     B "({i}If I remember correctly, all of the digital art classes are held on the Music side of the building…{/i})"
     B "({i}…because, clearly, {b}that{/b} makes {b}perfect{/b} sense.{/i})"
 
+    stop sound
     scene eMedia Seats with fade
 
     show Ben Walk Bore Dark at center, img_Scale(500, 800) with dissolve
@@ -161,7 +56,6 @@ label Day1_ARS:
     show Ben Casual Sto Dark at seat_l, img_Scale(500, 800):
     show Faith Hello Spk Stan at center_stand, img_Scale(500, 1128) behind Ben:
     with dissolve
-    play music "sounds/Faith/Doobly Doo.mp3" loop
     F "Hello!"
     show Faith Walk Neut Spk Stan at center_stand, img_Scale(500, 1128) with dissolve
     F "Is this seat taken?"
@@ -176,61 +70,120 @@ label Day1_ARS:
     show Faith Walk Neut at seat_r, img_Scale(500, 800) with dissolve
     show Faith Mac Foc Neut Dark at seat_r, img_Scale(500, 800) with dissolve
 
-    B "({i}...{/i})"
-    B "({i}...well, this is an uncomfortable silence.{/i})"
-    show Ben Casual Sto Dark at seat_l, img_Scale(500, 800) with dissolve
-    B "({i}Maybe I should say something?{/i})"
+    B "Looks like class is about to start."
+    hide Ben
+    hide Faith
+    with dissolve
 
-    show fadeInOut
+    scene eMedia Screen with dissolve
+    show projector
+    play music "sounds/Miami Viceroy.mp3" loop
+    show Composition Slide 1 with dissolve
+    "Hello, everyone, and welcome back! I hope you enjoyed your break!"
+    "We're going to get right into it, and start by going over the basics of graphic design."
+    "There are seven elements that make up any composition."
+    show Composition Slide 2a with dissolve
+    "The first element is called {b}Point{/b}, or {b}Dot{/b}."
+    show Composition Slide 2b with dissolve
+    "Placing dots is a good way to focus the viewer's eye on one part of your composition."
+    show Composition Slide 2c
+    "Using multiple dots can also help guide the viewer's attention in a certain direction."
+    show Composition Slide 3a with dissolve
+    "That brings us nicely to the next element - {b}Line{/b}."
+    show Composition Slide 3b
+    "Lines are composed of many individual points, and give directions for the eye."
+    show Composition Slide 4
+    "When lines are joined together to enclose an area, we have a {b}Shape{/b}."
+    "Well-defined shapes help the viewer make sense of your composition."
+    show Composition Slide 5
+    "Shapes can be manipulated to give the viewer a sense of {b}Depth{/b}."
+    "Here, we're making the shape grow smaller as it gets further away."
+    "This helps make the image feel less flat and more realistic."
+    show Composition Slide 6 with dissolve
+    "When arranging shapes, make sure to consider how you use {b}Space{/b}."
+    "Placing elements closer together or further apart can change the feel of a composition."
+    "Here, we want the road and the ground to shrink and come closer as they get further from the viewer."
+    show Composition Slide 7 with dissolve
+    "Careful use of {b}Color{/b} also makes a big difference."
+    "Different colors elicit different moods, and contrasting colors can highlight your use of space."
+    show Composition Slide 8 with dissolve
+    "Last but not least, consider adding some {b}Texture{/b}."
+    "Doing so helps make your objects look more real, and makes an image feel less flat."
+    hide Composition with dissolve
+    "Those are all seven of the Compositional Elements."
+    "For your first assignment, I want you make an image each for three elements."
+    "Make that element very visible in your image, and write short explanations for how you've used them."
+    "That's it for now, everyone! I'll see you again next lecture."
 
-    B "({i}Okay, on to the next class.{/i})"
+    hide projector with dissolve
+    stop music fadeout 1.0
+    $ renpy.pause(0.5)
+    scene eMedia Seats with dissolve
+    show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
+    show Faith Mac Foc Neut Dark at seat_r, img_Scale(500, 800):
+    with dissolve
+
+    B "({i}Okay, so that wasn't too complicated.{/i})"
+    B "({i}I'll have to start this project later, though. I need to get to my next class.{/i})"
     B "({i}Hopefully computer science lectures won’t be too bad this year.{/i})"
-    show Ben Casual Neut Spk at seat_l, img_Scale(500, 800) with dissolve
-    B "Alright, I’ve got to get to my next class."
-    show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
-    show Faith Mac LkUp Spk at seat_r, img_Scale(500, 800):
-    with dissolve
-    F "Same here."
 
-    F "Before you go, though - I don’t think I got your name."
-    show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
-    show Faith Mac LkUp Neut at seat_r, img_Scale(500, 800):
-    with dissolve
-    B "Oh, wow, I completely forgot!"
-    B "My name is Ben. What’s yours?"
-    show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
-    show Faith Mac LkUp Spk at seat_r, img_Scale(500, 800):
-    with dissolve
-    F "My name is Faith."
+    # Needs rewriting - how do we introduce Faith?
 
-    show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
-    show Faith Mac LkUp Neut at seat_r, img_Scale(500, 800):
-    with dissolve
-    B "Are you on Steam?"
-    show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
-    show Faith Mac LkUp Spk at seat_r, img_Scale(500, 800):
-    with dissolve
-    F "Yeah, I am! My name’s kind of dumb - it’s 'GOATmom', with 'goat' in all caps."
-    show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
-    show Faith Mac LkUp Neut Dark at seat_r, img_Scale(500, 800):
-    with dissolve
-    B "Hey, I’m not judging - I named myself 'SaltedBeef.'"
+    # B "({i}...{/i})"
+    # B "({i}...well, this is an uncomfortable silence.{/i})"
+    # show Ben Casual Sto Dark at seat_l, img_Scale(500, 800) with dissolve
+    # B "({i}Maybe I should say something?{/i})"
 
-    show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
-    show Faith Mac LkUp Neut Dark at seat_r, img_Scale(500, 800):
-    with dissolve
-    B "Okay, then - it was nice meeting you!"
-    show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
-    show Faith Mac LkUp Spk at seat_r, img_Scale(500, 800):
-    with dissolve
-    F "It was nice meeting you too!"
-    F "I’ll see you next class, then."
+    # show Ben Casual Neut Spk at seat_l, img_Scale(500, 800) with dissolve
+    # B "Alright, I’ve got to get to my next class."
+    # show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
+    # show Faith Mac LkUp Spk at seat_r, img_Scale(500, 800):
+    # with dissolve
+    # F "Same here."
+    # F "Before you go, though - I don’t think I got your name."
+    # show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
+    # show Faith Mac LkUp Neut at seat_r, img_Scale(500, 800):
+    # with dissolve
+    # B "Oh, wow, I completely forgot!"
+    # B "My name is Ben. What’s yours?"
+    # show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
+    # show Faith Mac LkUp Spk at seat_r, img_Scale(500, 800):
+    # with dissolve
+    # F "My name is Faith."
+    #
+    # show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
+    # show Faith Mac LkUp Neut at seat_r, img_Scale(500, 800):
+    # with dissolve
+    # B "Are you on Steam?"
+    # show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
+    # show Faith Mac LkUp Spk at seat_r, img_Scale(500, 800):
+    # with dissolve
+    # F "Yeah, I am! My name’s kind of dumb - it’s 'GOATmom', with 'goat' in all caps."
+    # show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
+    # show Faith Mac LkUp Neut Dark at seat_r, img_Scale(500, 800):
+    # with dissolve
+    # B "Hey, I’m not judging - I named myself 'SaltedBeef.'"
+    #
+    # show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
+    # show Faith Mac LkUp Neut Dark at seat_r, img_Scale(500, 800):
+    # with dissolve
+    # B "Okay, then - it was nice meeting you!"
+    # show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
+    # show Faith Mac LkUp Spk at seat_r, img_Scale(500, 800):
+    # with dissolve
+    # F "It was nice meeting you too!"
+    # F "I’ll see you next class, then."
 
-    hide Ben with dissolve
-    hide Faith with dissolve
+    hide Ben
+    hide Faith
+    with dissolve
 
     scene Black with fade
 
-    stop music fadeout 1.0
+label Week_1_CSE:
 
-    jump screen_schedule
+label ARS_Work:
+    show Dimmed with dissolve
+    B "For this first project, I'm thinking that I'll use "
+
+#    jump screen_schedule

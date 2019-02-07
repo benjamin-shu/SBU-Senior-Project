@@ -1,19 +1,52 @@
-# ==========================================================================
-# Intro Sequence Presentation Slides
-# ==========================================================================
+# ==============================================================================
+# Presentation Slides
+# ==============================================================================
 
-image Intro Slide 1 = "Screen Effects/Intro Slide 1.png"
-image Intro Slide 2 = "Screen Effects/Intro Slide 2.png"
-image Intro Slide 3 = "Screen Effects/Intro Slide 3.png"
-image Intro Slide 4 = "Screen Effects/Intro Slide 4.png"
-image Intro Slide 5 = "Screen Effects/Intro Slide 5.png"
+# Slides used for Ben's introduction.
+image Intro Slide 1 = "Slides/Intro/Intro Slide 1.png"
+image Intro Slide 2 = "Slides/Intro/Intro Slide 2.png"
+image Intro Slide 3 = "Slides/Intro/Intro Slide 3.png"
+image Intro Slide 4 = "Slides/Intro/Intro Slide 4.png"
+image Intro Slide 5 = "Slides/Intro/Intro Slide 5.png"
 
-# ==========================================================================
+# Slides for first ARS assignment.
+image Composition Slide 1 = "Slides/Composition/Slide 01.png"
+image Composition Slide 2a = "Slides/Composition/Slide 02 a.png"
+image Composition Slide 2b = "Slides/Composition/Slide 02 b.png"
+image Composition Slide 2c:
+    "Slides/Composition/Slide 02 c.png" with Dissolve(0.5)
+    0.5
+    "Slides/Composition/Slide 02 d.png" with Dissolve(0.5)
+    0.5
+    "Slides/Composition/Slide 02 e.png" with Dissolve(0.5)
+
+image Composition Slide 3a = "Slides/Composition/Slide 03 a.png"
+image Composition Slide 3b:
+    "Slides/Composition/Slide 03 b.png" with Dissolve(0.5)
+    0.5
+    "Slides/Composition/Slide 03 c.png" with Dissolve(0.5)
+    0.5
+    "Slides/Composition/Slide 03 d.png" with Dissolve(0.5)
+
+image Composition Slide 4:
+    "Slides/Composition/Slide 04 a.png" with dissolve
+    "Slides/Composition/Slide 04 b.png" with dissolve
+
+image Composition Slide 5:
+    "Slides/Composition/Slide 05 a.png" with dissolve
+    "Slides/Composition/Slide 05 b.png" with dissolve
+
+image Composition Slide 6 = "Slides/Composition/Slide 06.png"
+image Composition Slide 7 = "Slides/Composition/Slide 07.png"
+image Composition Slide 8 = "Slides/Composition/Slide 08.png"
+
+# ==============================================================================
 # Background Art
-# ==========================================================================
+# ==============================================================================
 
 # West Apartments
 image West F 301 Hallway = "Backgrounds/West F 301 Hallway 1.png"
+image West F 301C = "Backgrounds/West F 301C.png"
 image West F 301C Door = "Backgrounds/West F 301C Door.png"
 
 # Frey Hall
@@ -45,9 +78,14 @@ init:
         xalign 0.5
         yalign 0.2
 
-# ==========================================================================
+# ==============================================================================
+#
+# ==============================================================================
+
+
+# ==============================================================================
 # Screen Effects - Images
-# ==========================================================================
+# ==============================================================================
 
 # A simple black screen.
 image Black = "Screen Effects/Black.png"
@@ -60,9 +98,9 @@ image Backpack 2 = HBox("Screen Effects/Backpack_1.png", "Screen Effects/Backpac
 image Backpack 3 = VBox(HBox("Screen Effects/Backpack_1.png", "Screen Effects/Backpack_2.png"), "Screen Effects/Backpack_3.png")
 image Backpack 4 = VBox(HBox("Screen Effects/Backpack_1.png", "Screen Effects/Backpack_2.png"), HBox("Screen Effects/Backpack_3.png", "Screen Effects/Backpack_4.png"))
 
-# ==========================================================================
+# ==============================================================================
 # Screen Effects - ATL
-# ==========================================================================
+# ==============================================================================
 
 ## (UNUSED)
 ## A short animation for TV static.
@@ -122,13 +160,10 @@ image take2:
 
 # Turn on a projector screen in current scene.
 image projector:
-    "Screen Effects/Projector 0.png" with Dissolve(0.5)
-    0.25
-    "Screen Effects/Projector 1.png" with Dissolve(0.5)
-    0.25
-    "Screen Effects/Projector 2.png" with Dissolve(0.5)
-    0.25
-    "Screen Effects/Projector 3.png" with Dissolve(0.5)
+    "Screen Effects/Projector 0.png" with dissolve
+    "Screen Effects/Projector 1.png" with dissolve
+    "Screen Effects/Projector 2.png" with dissolve
+    "Screen Effects/Projector 3.png" with dissolve
 
 # Quick fade in/out with a black screen
 image fadeInOut:
@@ -138,9 +173,9 @@ image fadeInOut:
     0.25
     linear 0.5 alpha 0.0
 
-# ==========================================================================
+# ==============================================================================
 # Screen Positions - Character Sprites
-# ==========================================================================
+# ==============================================================================
 init:
     transform center_l():
         xpos 0.25
@@ -182,18 +217,17 @@ init:
         ypos 0.55
         yanchor 360
 
-# ==========================================================================
+# ==============================================================================
 # DynamicCharacter Definitions
-# ==========================================================================
+# ==============================================================================
 define b_name = "Ben"
 define B = DynamicCharacter("b_name", image="Ben", who_color="#71B7E2", who_bold=True,
     what_Size=30, what_Bold=False, what_font="fonts/Courier Prime Bold.ttf")
 
-# # (UNUSED)
-# define f_name = "???"
-# define f_path = ""
-# define F = DynamicCharacter("f_name", image="Faith", who_color="#FFFF66", who_bold=True, who_font="fonts/Pacifico.ttf",
-#     what_Size=30, what_bold=False, what_font="fonts/Pacifico.ttf")
+define f_name = "???"
+define f_path = ""
+define F = DynamicCharacter("f_name", image="Faith", who_color="#FFFF66", who_bold=True, who_font="fonts/Pacifico.ttf",
+    what_Size=30, what_bold=False, what_font="fonts/Pacifico.ttf")
 
 # # (UNUSED)
 # define m_name = "???"

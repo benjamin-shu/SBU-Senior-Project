@@ -50,8 +50,7 @@ label week_play:
 
     $ week_num = week_num + 1
 
-    if week_num == 1:
-        $ renpy.jump("Week_%d" % week_num)
+    # $ renpy.jump("Week_%d" % week_num)
 
 label week_end:
     if week_num < 14:

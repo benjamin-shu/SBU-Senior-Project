@@ -109,4 +109,4 @@ label start:
     hide Ben with dissolve
     scene Black with fade
 
-    jump screen_schedule
+    jump Week_1
