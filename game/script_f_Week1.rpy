@@ -23,7 +23,6 @@ label Week_1:
     hide Dimmed with dissolve
     show Ben Walk Neut Spk at center, img_Scale(500, 800) with dissolve
     B "Okay. I think that’s everything."
-    B "I’m going to head out to class now. I’ll see you guys later."
     hide Ben with dissolve
 
     stop music fadeout 1.0
@@ -70,7 +69,7 @@ label Week_1_ARS:
     show Faith Walk Neut at seat_r, img_Scale(500, 800) with dissolve
     show Faith Mac Foc Neut Dark at seat_r, img_Scale(500, 800) with dissolve
 
-    B "Looks like class is about to start."
+    B "{i}It doesn't take much longer for class to start.{/i}"
     hide Ben
     hide Faith
     with dissolve
@@ -86,16 +85,16 @@ label Week_1_ARS:
     "The first element is called {b}Point{/b}, or {b}Dot{/b}."
     show Composition Slide 2b with dissolve
     "Placing dots is a good way to focus the viewer's eye on one part of your composition."
-    show Composition Slide 2c
+    show Composition Slide 2c with dissolve
     "Using multiple dots can also help guide the viewer's attention in a certain direction."
     show Composition Slide 3a with dissolve
     "That brings us nicely to the next element - {b}Line{/b}."
-    show Composition Slide 3b
+    show Composition Slide 3b with dissolve
     "Lines are composed of many individual points, and give directions for the eye."
-    show Composition Slide 4
+    show Composition Slide 4 with dissolve
     "When lines are joined together to enclose an area, we have a {b}Shape{/b}."
     "Well-defined shapes help the viewer make sense of your composition."
-    show Composition Slide 5
+    show Composition Slide 5 with dissolve
     "Shapes can be manipulated to give the viewer a sense of {b}Depth{/b}."
     "Here, we're making the shape grow smaller as it gets further away."
     "This helps make the image feel less flat and more realistic."

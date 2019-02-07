@@ -12,7 +12,7 @@ label ARS_composition_1:
     B "Adding a point makes it look a little more like a tunnel, but I think it's missing something."
     show Composition Shape01 with dissolve
     B "And for {b}Shape{/b}, I thought of a video game character that's basically a puff ball."
-    show Composition Shape02
+    show Composition Shape02 with dissolve
     B "It's a fun little design, and made entirely of distinctive shapes."
     B "It might look better with some color, though."
 
