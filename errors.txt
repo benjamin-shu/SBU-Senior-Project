@@ -2,9 +2,21 @@
 errors listed below, and try again.
 
 
-File "game/script_02_Assets.rpy", line 163: expected 'comma or end of line' not found.
-    with dissolve
-    ^
+The label Week_1 is defined twice, at
+  File "game/script_c_Week1.rpyc", line 1 and
+  File "game/script_f_Week1.rpy", line 1.
+
+The label Week_1_ARS is defined twice, at
+  File "game/script_c_Week1.rpyc", line 36 and
+  File "game/script_f_Week1.rpy", line 36.
+
+The label Week_1_CSE is defined twice, at
+  File "game/script_c_Week1.rpyc", line 183 and
+  File "game/script_f_Week1.rpy", line 183.
+
+The label ARS_Work is defined twice, at
+  File "game/script_c_Week1.rpyc", line 185 and
+  File "game/script_f_Week1.rpy", line 185.
 
 Ren'Py Version: Ren'Py 7.1.3.1092
-Thu Feb 07 01:07:55 2019
+Thu Feb 07 01:23:38 2019

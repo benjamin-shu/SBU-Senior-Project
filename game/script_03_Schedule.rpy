@@ -45,6 +45,9 @@ default HON_max = 4
 # Control Variables For schedule() Screen.
 # ==========================================================================
 
+# Int counter to track current phase of the week.
+default phase = 0
+
 # Image array for the clock's left slot.
 default L_src = [ "Schedule/L ARS.png", "Schedule/L CSE.png", "Schedule/L Study.png" ]
 # File path for currently displayed image left slots.

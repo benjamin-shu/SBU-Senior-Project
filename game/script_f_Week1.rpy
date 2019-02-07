@@ -182,8 +182,4 @@ label Week_1_ARS:
 
 label Week_1_CSE:
 
-label ARS_Work:
-    show Dimmed with dissolve
-    B "For this first project, I'm thinking that I'll use "
-
 #    jump screen_schedule

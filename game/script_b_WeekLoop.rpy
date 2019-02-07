@@ -45,12 +45,14 @@ label check_schedule:
     "CSE Progress: [CSE_progress]"
     "HON Progress: [HON_progress]"
 
-label week_play:
+label week_phase_0:
     $ act_cnt = [ 0, 0, 0, 0]
 
     $ week_num = week_num + 1
 
     # $ renpy.jump("Week_%d" % week_num)
+
+label week_phase_1:
 
 label week_end:
     if week_num < 14:
