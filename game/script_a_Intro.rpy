@@ -5,23 +5,28 @@ label start:
     scene West F 301 Hallway with fade
 
     show Ben Intro Cas Sto Dark at center with dissolve
+    play sound "sounds/Record Player Static.mp3" loop
     B "..."
 
     show Ben Intro Cas Sto Spk with dissolve
-    B "...okay, is this thing recording?"
+    B "...okay, is this piece of junk recording?"
 
     show Ben Intro Cas Fru Spk with dissolve
-    B "...ah crap, it is!"
+    B "...no, I suppose not."
     show Ben Intro Cas Sto Spk Dark with dissolve
-    B "Okay, going to have to cut this-"
+    B "Alright, guess I'll just have to cut this-"
+
+    stop sound
 
     window hide
     show Ben Intro Hel Spk:
     show take1:
     with dissolve
+    play sound "sounds/Banana Slap.mp3"
     $ renpy.pause(1.0)
     window show
 
+    play music "sounds/Ben/Loopster.mp3" loop
     B "Hey, guys. My name is Benjamin Shu."
     B "I'm in my senior year here, and-"
     play music "sounds/Phone Vibrating.mp3" loop
@@ -33,6 +38,7 @@ label start:
     show Ben Intro Pho Chk Fru Spk Dark with dissolve
     B "Why {i}now{/i}?"
     stop music
+    play sound "sounds/Checkout Scanner Beep.mp3"
     show Ben Intro Pho Spk Dark with dissolve
     B "Hello?"
     B "No, everything's fine here. I finished unpacking a while ago."
@@ -57,6 +63,7 @@ label start:
     B "...{i}yes{/i}, I know. I won't let it happen again."
     show Ben Intro Pho Spk Dark with dissolve
     B "Okay. I will. Bye, mom."
+    play sound "sounds/Checkout Scanner Beep.mp3"
     show Ben Intro Pho Chk Dark with dissolve
     B "..."
 
@@ -64,21 +71,20 @@ label start:
     show Ben Intro Cas Sto Spk:
     show take2:
     with dissolve
+    play sound "sounds/Banana Slap.mp3"
     $ renpy.pause(1.0)
     window show
 
     B "Okay, here goes. From the top..."
-    show Ben Intro Cas Brth with dissolve
-    B "..."
 
     window hide
     show projector
     hide Ben with dissolve
 
-    $ renpy.pause(4)
-
     window show
     play music "sounds/Ben/Loopster.mp3" fadein 1.0 loop
+
+    $ renpy.pause(2.0)
 
     show Intro Slide 1 with dissolve
     B Intro Hel Spk Si "Hello! My name is Benjamin Shu."
@@ -103,8 +109,6 @@ label start:
 
     B "I'm going to try to keep that in mind this semester."
     B "So, to whoever you are watching, wish me luck!"
-    show Ben Intro Cas Sto Spk with dissolve
-    B "I'm probably going to need it."
     stop music fadeout 1.0
     hide Ben with dissolve
     scene Black with fade

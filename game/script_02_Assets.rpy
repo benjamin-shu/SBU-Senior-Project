@@ -1,4 +1,94 @@
 # ==============================================================================
+# Ren'Py Object Definitions
+# ==============================================================================
+define b_name = "Ben"
+define B = DynamicCharacter("b_name", image="Ben", who_color="#71B7E2", who_bold=True,
+    what_Size=30, what_Bold=False, what_font="fonts/Courier Prime Bold.ttf")
+
+define f_name = "???"
+define f_path = ""
+define F = DynamicCharacter("f_name", image="Faith", who_color="#FFFF66", who_bold=True, who_font="fonts/Pacifico.ttf",
+    what_Size=30, what_bold=False, what_font="fonts/Pacifico.ttf")
+
+# # (UNUSED)
+# define m_name = "???"
+# define m_path = ""
+# define M = DynamicCharacter("m_name", image="Maria", who_color="#C42727", who_bold=False, who_font="fonts/Chunkfive.otf",
+#     what_Size=30, what_bold=True)
+
+# # (UNUSED)
+# define r_name = "???"
+# define r_path = ""
+# define R = DynamicCharacter("r_name", image="Rajesh", who_color="#159639", who_bold=True,
+#     what_Size=30, what_Bold=True, what_font="fonts/KaushanScript-Regular.otf")
+
+# Default darkness setting for sprites.
+define dark = -0.25
+
+# Define new default Dissolve for transitions between sprites.
+define dissolve = Dissolve(0.5)
+
+# ==============================================================================
+# Init Block - Transforms
+# ==============================================================================
+init:
+    # Define transformation for scaling images.
+    transform img_Scale(x, y):
+        size (x, y)
+
+    # Define transformation for centering images on projector screen.
+    transform projectCenter():
+        xalign 0.5
+        yalign 0.2
+# ==============================================================================
+# Init Block - Screen Positions
+# ==============================================================================
+    transform center_l():
+        xpos 0.25
+        xanchor 225
+        yanchor 360
+
+    transform center_l_stand():
+        xpos 0.25
+        xanchor 225
+        ypos 0.15
+        yanchor 360
+
+    transform center_r():
+        xpos 0.75
+        xanchor 225
+        yanchor 360
+
+    transform center_r_stand():
+        xpos 0.75
+        xanchor 225
+        ypos 0.15
+        yanchor 360
+
+    transform center_stand():
+        xpos 0.5
+        xanchor 225
+        ypos 0.15
+        yanchor 360
+
+    transform seat_l():
+        xpos 0.27
+        xanchor 225
+        ypos 0.55
+        yanchor 360
+
+    transform seat_r():
+        xpos 0.73
+        xanchor 225
+        ypos 0.55
+        yanchor 360
+
+# ==============================================================================
+# Python Statements (If Needed)
+# ==============================================================================
+# init python:
+
+# ==============================================================================
 # Presentation Slides & Project Materials
 # ==============================================================================
 
@@ -78,28 +168,6 @@ image Staller Music = "Backgrounds/Staller Music.png"
 image eMedia Seats = "Backgrounds/eMedia Seats.png"
 image eMedia Screen = "Backgrounds/eMedia Screen.png"
 
-
-# Default darkness setting for sprites.
-define dark = -0.25
-
-# Define new default Dissolve for transitions between sprites.
-define dissolve = Dissolve(0.5)
-
-init:
-    # Define transformation for scaling images.
-    transform img_Scale(x, y):
-        size (x, y)
-
-    # Define transformation for centering images on projector screen.
-    transform projectCenter():
-        xalign 0.5
-        yalign 0.2
-
-# ==============================================================================
-#
-# ==============================================================================
-
-
 # ==============================================================================
 # Screen Effects - Images
 # ==============================================================================
@@ -135,9 +203,7 @@ image Backpack 4 = VBox(HBox("Screen Effects/Backpack_1.png", "Screen Effects/Ba
 
 # Close a clapper board labeled "Take 1".
 image take1:
-    xalign 0.0
     "Screen Effects/Take 1 Open.png"
-    linear 0.5 xalign 1.0
     0.25
     "Screen Effects/Take 1 Closed.png" with dissolve
     0.5
@@ -145,9 +211,7 @@ image take1:
 
 # Close a clapper board labeled "Take 2".
 image take2:
-    xalign 0.0
     "Screen Effects/Take 2 Open.png"
-    linear 0.5 xalign 1.0
     0.25
     "Screen Effects/Take 2 Closed.png" with dissolve
     0.5
@@ -177,10 +241,13 @@ image take2:
 
 # Turn on a projector screen in current scene.
 image projector:
-    "Screen Effects/Projector 0.png" with dissolve
-    "Screen Effects/Projector 1.png" with dissolve
-    "Screen Effects/Projector 2.png" with dissolve
-    "Screen Effects/Projector 3.png" with dissolve
+    "Screen Effects/Projector 0.png" with Dissolve(0.5)
+    0.5
+    "Screen Effects/Projector 1.png" with Dissolve(0.5)
+    0.5
+    "Screen Effects/Projector 2.png" with Dissolve(0.5)
+    0.5
+    "Screen Effects/Projector 3.png" with Dissolve(0.5)
 
 # Quick fade in/out with a black screen
 image fadeInOut:
@@ -189,71 +256,3 @@ image fadeInOut:
     linear 0.5 alpha 1.0
     0.25
     linear 0.5 alpha 0.0
-
-# ==============================================================================
-# Screen Positions - Character Sprites
-# ==============================================================================
-init:
-    transform center_l():
-        xpos 0.25
-        xanchor 225
-        yanchor 360
-
-    transform center_l_stand():
-        xpos 0.25
-        xanchor 225
-        ypos 0.15
-        yanchor 360
-
-    transform center_r():
-        xpos 0.75
-        xanchor 225
-        yanchor 360
-
-    transform center_r_stand():
-        xpos 0.75
-        xanchor 225
-        ypos 0.15
-        yanchor 360
-
-    transform center_stand():
-        xpos 0.5
-        xanchor 225
-        ypos 0.15
-        yanchor 360
-
-    transform seat_l():
-        xpos 0.27
-        xanchor 225
-        ypos 0.55
-        yanchor 360
-
-    transform seat_r():
-        xpos 0.73
-        xanchor 225
-        ypos 0.55
-        yanchor 360
-
-# ==============================================================================
-# DynamicCharacter Definitions
-# ==============================================================================
-define b_name = "Ben"
-define B = DynamicCharacter("b_name", image="Ben", who_color="#71B7E2", who_bold=True,
-    what_Size=30, what_Bold=False, what_font="fonts/Courier Prime Bold.ttf")
-
-define f_name = "???"
-define f_path = ""
-define F = DynamicCharacter("f_name", image="Faith", who_color="#FFFF66", who_bold=True, who_font="fonts/Pacifico.ttf",
-    what_Size=30, what_bold=False, what_font="fonts/Pacifico.ttf")
-
-# # (UNUSED)
-# define m_name = "???"
-# define m_path = ""
-# define M = DynamicCharacter("m_name", image="Maria", who_color="#C42727", who_bold=False, who_font="fonts/Chunkfive.otf",
-#     what_Size=30, what_bold=True)
-
-# # (UNUSED)
-# define r_name = "???"
-# define r_path = ""
-# define R = DynamicCharacter("r_name", image="Rajesh", who_color="#159639", who_bold=True,
-#     what_Size=30, what_Bold=True, what_font="fonts/KaushanScript-Regular.otf")

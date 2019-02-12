@@ -3,41 +3,37 @@ label Week_1:
 
     play music "sounds/Ben/Jazz Brunch.mp3" loop
 
-    B "({i}When I was in my senior year of high school, I couldn’t wait to leave for college.{/i})"
-    B "({i}Four years later, and here I am wondering where the hell I’m going next.{/i})"
-
     show Ben Walk Neut Dark at center, img_Scale(500, 800) with dissolve
     show Ben Walk Neut Spk at center, img_Scale(500, 800) with dissolve
-    B "({i}Okay, last check - do I have everything?{/i})"
+    B "Okay, Ben, one last check - do you have everything?"
     show Ben Walk Neut Dark at center, img_Scale(500, 800) with dissolve
     show Dimmed
     show Backpack 1 at projectCenter with dissolve
-    B "({i}Laptop, charger, headphones…{/i})"
+    B "Laptop, charger, headphones..."
     show Backpack 2 at projectCenter with dissolve
-    B "({i}…binder, pencil case, notepad…{/i})"
+    B "...binder, pencil case, notepad..."
     show Backpack 3 at projectCenter with dissolve
-    B "({i}…water bottle, running shoes, spare shirt…{/i})"
+    B "...water bottle, running shoes, spare shirt..."
     show Backpack 4 at projectCenter with dissolve
-    B "({i}…first-aid kit, flashlight, mini-stapler…{/i})"
+    B "...first-aid kit, flashlight, mini-stapler..."
     hide Backpack 4 with dissolve
     hide Dimmed with dissolve
     show Ben Walk Neut Spk at center, img_Scale(500, 800) with dissolve
-    B "Okay. I think that’s everything."
+    B "Okay, I think we're good. Off to class I go, then."
     hide Ben with dissolve
 
     stop music fadeout 1.0
     scene Black with fade
 
     B "({i}First stop of the day: Staller Center for the Arts.{/i})"
-    B "({i}Okay, Ben. The sun is shining, and it's a bright new day.{/i})"
-    B "({i}Try not to fuck this up.{/i})"
 
 label Week_1_ARS:
     # Ben arrives at the Staller Center for the Arts.
     scene Staller with fade
     play sound "sounds/Sunny Day.mp3" loop
 
-    B "({i}It’s been a while since I was last here.{/i})"
+    B "({i}Okay, Ben. The sun is shining, and it's a bright new day.{/i})"
+    B "({i}And now, I get to take an art class again."
     scene Staller Music with fade
     B "({i}If I remember correctly, all of the digital art classes are held on the Music side of the building…{/i})"
     B "({i}…because, clearly, {b}that{/b} makes {b}perfect{/b} sense.{/i})"
@@ -46,10 +42,10 @@ label Week_1_ARS:
     scene eMedia Seats with fade
 
     show Ben Walk Bore Dark at center, img_Scale(500, 800) with dissolve
-    B "({i}Hm. Nobody’s here yet. Guess I’ll just sit down here and wait…{/i})"
+    B "{i}Hm. Nobody’s here yet. Guess I’ll just sit down here and wait…{/i}"
     show Ben Casual Sto Dark at seat_l, img_Scale(500, 800) with dissolve
-    B "({i}…all by myself…{/i})"
-    B "({i}…staring at a computer.{/i})"
+    B "{i}…all by myself…{/i}"
+    B "{i}…staring at a computer.{/i}"
     show Ben Casual Sto Spk at seat_l, img_Scale(500, 800) with dissolve
     B "Why did I leave my room, again?"
     show Ben Casual Sto Dark at seat_l, img_Scale(500, 800):
@@ -75,7 +71,7 @@ label Week_1_ARS:
     with dissolve
 
     scene eMedia Screen with dissolve
-    show projector
+    show projector with dissolve
     play music "sounds/Miami Viceroy.mp3" loop
     show Composition Slide 1 with dissolve
     "Hello, everyone, and welcome back! I hope you enjoyed your break!"
@@ -117,14 +113,15 @@ label Week_1_ARS:
     hide projector with dissolve
     stop music fadeout 1.0
     $ renpy.pause(0.5)
+
     scene eMedia Seats with dissolve
     show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
     show Faith Mac Foc Neut Dark at seat_r, img_Scale(500, 800):
     with dissolve
 
-    B "({i}Okay, so that wasn't too complicated.{/i})"
-    B "({i}I'll have to start this project later, though. I need to get to my next class.{/i})"
-    B "({i}Hopefully computer science lectures won’t be too bad this year.{/i})"
+    B "{i}Okay, so that wasn't too complicated.{/i}"
+    B "{i}I'll have to start this project later, though. I need to get to my next class.{/i}"
+    B "{i}Hopefully computer science lectures won’t be too bad this year.{/i}"
 
     # Needs rewriting - how do we introduce Faith?
 
@@ -173,11 +170,11 @@ label Week_1_ARS:
     # F "It was nice meeting you too!"
     # F "I’ll see you next class, then."
 
-    hide Ben
-    hide Faith
-    with dissolve
+    # hide Ben
+    # hide Faith
+    # with dissolve
 
-    scene Black with fade
+    # scene Black with fade
     jump ARS_composition_1
 
 label Week_1_CSE:

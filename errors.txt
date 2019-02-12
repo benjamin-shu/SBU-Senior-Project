@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-The label Week_1 is defined twice, at
-  File "game/script_c_Week1.rpyc", line 1 and
-  File "game/script_f_Week1.rpy", line 1.
-
-The label Week_1_ARS is defined twice, at
-  File "game/script_c_Week1.rpyc", line 36 and
-  File "game/script_f_Week1.rpy", line 36.
-
-The label Week_1_CSE is defined twice, at
-  File "game/script_c_Week1.rpyc", line 183 and
-  File "game/script_f_Week1.rpy", line 183.
+The label End is defined twice, at
+  File "game/script_b_WeekLoop.rpy", line 61 and
+  File "game/script_f_Week1.rpy", line 123.
 
 Ren'Py Version: Ren'Py 7.1.3.1092
-Thu Feb 07 13:35:20 2019
+Fri Feb 08 22:16:08 2019

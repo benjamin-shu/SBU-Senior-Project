@@ -55,8 +55,8 @@ label week_phase_0:
 label week_phase_1:
 
 label week_end:
+
+    return
+    
     if week_num < 14:
         jump screen_schedule
-
-label End:
-    return
