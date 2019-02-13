@@ -6,7 +6,7 @@
 default week_num = 0
 
 # Progress counters for the different ARS projects.
-default ARS_principles = 0
+default ARS_composition = 0
 default ARS_shapes = 0
 default ARS_typography = 0
 default ARS_poster = 0
@@ -20,9 +20,9 @@ default CSE_phase2 = 0
 default CSE_phase3 = 0
 
 # Progress counters for the three CS midterms.
-default CSE_study1 = 0
-default CSE_study2 = 0
-default CSE_study3 = 0
+default HON_study1 = 0
+default HON_study2 = 0
+default HON_study3 = 0
 
 # Progress counters for non-class-related activities.
 default resume = 0
@@ -37,9 +37,36 @@ default CSE_progress = 0
 default HON_progress = 0
 
 # Maximum point caps for each week of the game.
-default ARS_max = [ 2, 2, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4 ]
-default CSE_max = [ 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4 ]
+define ARS_caps = ( 2, 2, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4 )
+default ARS_max = 2
+define CSE_caps = ( 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4 )
+default CSE_max = 2
 default HON_max = 4
+
+# Dictionary for ARS project deadlines.
+define ARS_deadlines = {
+2:"composition",
+4:"shapes",
+6:"typography",
+10:"poster",
+14:"video"
+}
+
+# Dictionary for CSE project deadlines.
+define CSE_deadlines = {
+2:"uml",
+4:"srs",
+7:"phase1",
+10:"phase2",
+14:"phase3"
+}
+
+# Dictionary for midterm dates.
+define HON_deadlines = {
+4:"study1",
+9:"study2",
+14:"study3"
+}
 
 # ==========================================================================
 # Control Variables For schedule() Screen.
@@ -114,16 +141,16 @@ screen schedule():
         pos (551, 626)
         idle "Schedule/Continue Idle.png"
         hover "Schedule/Continue Hover.png"
-        action [SetVariable("valid_schedule", True), Jump("check_schedule")]
+        action [SetVariable("valid_schedule", True), Jump("schedule_check")]
 
 # ==============================================================================
 # Schedule Making Dialogue
 # ==============================================================================
-# String variable for printing reminders.
+# String variable for printing reminders and completion notices.
 default reminder = ""
 
 # List of reminders for each ARS project.
-define ARS_reminders = [
+define ARS_reminders = (
 "There's a Compositional Elements project due in 2 weeks.",
 "The Compositional Elements Project is due next week.",
 "The Shapes project is due in 2 weeks.",
@@ -138,10 +165,46 @@ define ARS_reminders = [
 "I've only got 3 weeks to finish the Video project.",
 "Just 2 more weeks for the Video project.",
 "The Video project is due next week."
-]
+)
+
+# List of reminders that ARS projects are finished.
+define ARS_completed = (
+"I've already finished the Compositional Elements project.",
+"The Compositional Elements project is already done.",
+"I've finished the Shapes project - no sense in doing more work on it.",
+"The Shapes project is finished. I should work on something else.",
+"I'm done with the Typography project. Time to move on.",
+"There's no need to work on the Typography project - it's finished.",
+"I've already finished the Poster project.",
+"The Poster's done - on to the next task.",
+"I'm done with the Poster. I should do something else this week.",
+"Why am I working on the Poster? It's done.",
+"The final Video project is done. What else is there to do?",
+"I'm already done with the final Video.",
+"I've finished the Video already. I really should do something else.",
+"The final Video project is done. I should be focusing on another project."
+)
+
+# Notices that too many points are allocated to ARS.
+define ARS_overflow = (
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+""
+)
 
 # List of reminders for each CSE project.
-define CSE_reminders = [
+define CSE_reminders = (
 "The CSE 308 professor wants us to hand in UML diagrams in 2 weeks.",
 "Those UML diagrams for CSE 308 are due next week.",
 "The SRS document is due 2 weeks from now.",
@@ -156,10 +219,46 @@ define CSE_reminders = [
 "There's 3 more weeks left for the CSE 308 project.",
 "Just 2 more weeks...just two more weeks of CSE 308.",
 "It's almost over. The CSE 308 project is due next week."
-]
+)
+
+# List of reminders that each CSE project is completed.
+define CSE_completed = (
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+""
+)
+
+# Notices that too many points are allocated to CSE.
+define CSE_overflow = (
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+""
+)
 
 # List of reminders for midterms/exams.
-define HON_reminders = [
+define HON_reminders = (
 "The first round of midterms comes up in 4 weeks.",
 "I have 3 weeks until midterms.",
 "T-minus 2 weeks until the first midterms arrive.",
@@ -174,4 +273,22 @@ define HON_reminders = [
 "There's 3 weeks left until the final exams come for us all.",
 "And only 2 more weeks before final exams. Just enough time to write a will.",
 "Final exams are next week. Time to make peace with my gods."
-]
+)
+
+# List of reminders that exam review is finished.
+define HON_completed = (
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+)
