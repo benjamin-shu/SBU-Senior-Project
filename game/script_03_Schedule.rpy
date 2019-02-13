@@ -115,3 +115,63 @@ screen schedule():
         idle "Schedule/Continue Idle.png"
         hover "Schedule/Continue Hover.png"
         action [SetVariable("valid_schedule", True), Jump("check_schedule")]
+
+# ==============================================================================
+# Schedule Making Dialogue
+# ==============================================================================
+# String variable for printing reminders.
+default reminder = ""
+
+# List of reminders for each ARS project.
+define ARS_reminders = [
+"There's a Compositional Elements project due in 2 weeks.",
+"The Compositional Elements Project is due next week.",
+"The Shapes project is due in 2 weeks.",
+"I need to finish the Shapes project for next week.",
+"I have 2 weeks to finish the Typography project.",
+"The Typography project is due next week.",
+"There are 4 weeks left to do the Poster project.",
+"I've got 3 weeks left for the Poster project.",
+"There's just 2 weeks left for the Poster project."
+"That Poster project is due next week."
+"The final Video project is due 4 weeks from now.",
+"I've only got 3 weeks to finish the Video project.",
+"Just 2 more weeks for the Video project.",
+"The Video project is due next week."
+]
+
+# List of reminders for each CSE project.
+define CSE_reminders = [
+"The CSE 308 professor wants us to hand in UML diagrams in 2 weeks.",
+"Those UML diagrams for CSE 308 are due next week.",
+"The SRS document is due 2 weeks from now.",
+"The SRS is due next week.",
+"The Phase 1 goals for CSE 308 are due in 3 weeks.",
+"I have 2 weeks left for the Phase 1 goals.",
+"The Phase 1 goals are due next week.",
+"I've got 3 weeks to finish those Phase 2 goals.",
+"There are 2 weeks left to finish CSE 308's Phase 2.",
+"Just 1 more week to finish Phase 2 of the CSE project.",
+"I've got 4 weeks for the last phase of the CSE 308 project.",
+"There's 3 more weeks left for the CSE 308 project.",
+"Just 2 more weeks...just two more weeks of CSE 308.",
+"It's almost over. The CSE 308 project is due next week."
+]
+
+# List of reminders for midterms/exams.
+define HON_reminders = [
+"The first round of midterms comes up in 4 weeks.",
+"I have 3 weeks until midterms.",
+"T-minus 2 weeks until the first midterms arrive.",
+"Only one week before the attack of the midterms.",
+"The first midterms are this week. We can all panic now.",
+"The second wave of midterms comes in 4 weeks.",
+"I have 3 weeks before the second round of midterms.",
+"Just two weeks before the next midterms come to finish me off.",
+"The second round of midterms is next week. I'll let that sink in for a bit.",
+"Round 2 of midterms is here, with pain and misery for all.",
+"Final exams are 4 weeks from now.",
+"There's 3 weeks left until the final exams come for us all.",
+"And only 2 more weeks before final exams. Just enough time to write a will.",
+"Final exams are next week. Time to make peace with my gods."
+]

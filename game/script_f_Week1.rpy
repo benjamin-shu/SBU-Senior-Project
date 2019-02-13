@@ -179,4 +179,4 @@ label Week_1_ARS:
 
 label Week_1_CSE:
 
-#    jump screen_schedule
+#    jump schedule_show
