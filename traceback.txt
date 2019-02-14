@@ -1,26 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script_b_WeekLoop.rpy", line 91, in script
-    $ renpy.set("ARS_%s" % ARS_deadlines[week_num], ARS_progress)
-  File "game/script_b_WeekLoop.rpy", line 91, in <module>
-    $ renpy.set("ARS_%s" % ARS_deadlines[week_num], ARS_progress)
-AttributeError: 'module' object has no attribute 'setValue'
+  File "game/script_b_WeekLoop.rpy", line 102, in script
+    "ARS: [ARS_scores["composition"]]"
+  File "renpy/common/00library.rpy", line 266, in say
+    who(what, interact=interact, *args, **kwargs)
+Exception: Say has image attributes (u'composition',), but there's no image tag associated with the speaking character.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script_b_WeekLoop.rpy", line 91, in script
-    $ renpy.set("ARS_%s" % ARS_deadlines[week_num], ARS_progress)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\ast.py", line 881, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\python.py", line 1913, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "game/script_b_WeekLoop.rpy", line 91, in <module>
-    $ renpy.set("ARS_%s" % ARS_deadlines[week_num], ARS_progress)
-AttributeError: 'module' object has no attribute 'setValue'
+  File "game/script_b_WeekLoop.rpy", line 102, in script
+    "ARS: [ARS_scores["composition"]]"
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\ast.py", line 678, in execute
+    renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\exports.py", line 1227, in say
+    renpy.store.say(who, what, *args, **kwargs)
+  File "renpy/common/00library.rpy", line 266, in say
+    who(what, interact=interact, *args, **kwargs)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\character.py", line 971, in __call__
+    self.resolve_say_attributes(False, wanted=speaking)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\character.py", line 851, in resolve_say_attributes
+    raise Exception("Say has image attributes %r, but there's no image tag associated with the speaking character." % (attrs,))
+Exception: Say has image attributes (u'composition',), but there's no image tag associated with the speaking character.
 
 Windows-8-6.2.9200
 Ren'Py 7.1.3.1092
 SBU Senior Project 1.0
-Wed Feb 13 15:38:32 2019
+Wed Feb 13 23:38:12 2019

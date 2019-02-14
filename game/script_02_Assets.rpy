@@ -161,6 +161,8 @@ image Frey Hall Front = "Backgrounds/Frey Hall Front.png"
 
 # Javits Lecture Hall
 image Javits Front Door = "Backgrounds/Javits Front Door.png"
+image Javits Seats = "Backgrounds/Javits Seats.png"
+image Javits Screen = "Backgrounds/Javits Screen.png"
 
 # Staller Center for the Arts
 image Staller = "Backgrounds/Staller.png"

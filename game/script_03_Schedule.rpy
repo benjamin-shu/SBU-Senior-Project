@@ -6,27 +6,37 @@
 default week_num = 0
 
 # Progress counters for the different ARS projects.
-default ARS_composition = 0
-default ARS_shapes = 0
-default ARS_typography = 0
-default ARS_poster = 0
-default ARS_video = 0
+default ARS_scores = {
+"composition": 0,
+"shapes": 0,
+"typography": 0,
+"poster": 0,
+"video": 0
+}
 
 # Progress counters for the different CSE projects.
-default CSE_uml = 0
-default CSE_srs = 0
-default CSE_phase1 = 0
-default CSE_phase2 = 0
-default CSE_phase3 = 0
+default CSE_scores = {
+"uml": 0,
+"srs": 0,
+"phase1": 0,
+"phase2": 0,
+"phase3": 0
+}
 
 # Progress counters for the three CS midterms.
-default HON_study1 = 0
-default HON_study2 = 0
-default HON_study3 = 0
+default HON_scores = {
+"study1": 0,
+"study2": 0,
+"study3": 0
+}
 
 # Progress counters for non-class-related activities.
-default resume = 0
-default portfolio = 0
+default EXT_scores = {
+"resume": 0,
+"portfolio": 0,
+"career": 0,
+"apps": 0
+}
 
 # Boolean flag for whether or not the player's schedule is valid.
 default valid_schedule = True
@@ -151,45 +161,45 @@ default reminder = ""
 
 # List of reminders for each ARS project.
 define ARS_reminders = (
-"There's a Compositional Elements project due in 2 weeks.",
-"The Compositional Elements Project is due next week.",
-"The Shapes project is due in 2 weeks.",
-"I need to finish the Shapes project for next week.",
-"I have 2 weeks to finish the Typography project.",
-"The Typography project is due next week.",
-"There are 4 weeks left to do the Poster project.",
-"I've got 3 weeks left for the Poster project.",
-"There's just 2 weeks left for the Poster project."
-"That Poster project is due next week."
-"The final Video project is due 4 weeks from now.",
-"I've only got 3 weeks to finish the Video project.",
-"Just 2 more weeks for the Video project.",
-"The Video project is due next week."
+"The Compositional Elements project for {b}ARS{/b} is due in 2 weeks.",
+"That {b}ARS{/b} Compositional Elements Project is due next week.",
+"The {b}ARS{/b} Shapes project is due in 2 weeks.",
+"I need to finish the {b}ARS{/b} Shapes project for next week.",
+"I have 2 weeks to finish the Typography project for {b}ARS{/b}.",
+"The {b}ARS{/b} Typography project is due next week.",
+"There are 4 weeks left to do the {b}ARS{/b} Poster project.",
+"I've got 3 weeks left for the {b}ARS{/b} Poster project.",
+"There's just 2 weeks left for the {b}Poster{/b} project."
+"That {b}ARS{/b} Poster project is due next week."
+"The final {b}ARS{/b} Video project is due 4 weeks from now.",
+"I've only got 3 weeks to finish the {b}ARS{/b} Video project.",
+"Just 2 more weeks for the {b}ARS{/b} Video project.",
+"The {b}ARS{/b} Video project is due next week."
 )
 
 # List of reminders that ARS projects are finished.
 define ARS_completed = (
-"I've already finished the Compositional Elements project.",
-"The Compositional Elements project is already done.",
-"I've finished the Shapes project - no sense in doing more work on it.",
-"The Shapes project is finished. I should work on something else.",
-"I'm done with the Typography project. Time to move on.",
-"There's no need to work on the Typography project - it's finished.",
-"I've already finished the Poster project.",
-"The Poster's done - on to the next task.",
-"I'm done with the Poster. I should do something else this week.",
-"Why am I working on the Poster? It's done.",
-"The final Video project is done. What else is there to do?",
-"I'm already done with the final Video.",
-"I've finished the Video already. I really should do something else.",
-"The final Video project is done. I should be focusing on another project."
+"I've already finished the Compositional Elements project for {b}ARS{/b}.",
+"The {b}ARS{/b} Compositional Elements project is already done.",
+"I've finished the {b}ARS{/b} Shapes project - no sense in doing more work on it.",
+"The {b}ARS{/b} Shapes project is finished. I should work on something else.",
+"I'm done with the Typography project for {b}ARS{/b}. Time to move on.",
+"There's no need to work on the {b}ARS{/b} Typography project - it's finished.",
+"I've already finished the {b}ARS{/b} Poster project.",
+"The {b}ARS{/b} Poster's done - I should move on to the next task.",
+"I'm done with the {b}ARS{/b} Poster. I should do something else this week.",
+"Why am I working on the {b}ARS{/b} Poster? It's done.",
+"The final {b}ARS{/b} Video project is done. What else is there to do?",
+"I'm already done with the final Video for {b}ARS{/b}.",
+"I've finished the {b}ARS{/b} Video already. I really should do something else.",
+"The final {b}ARS{/b} Video project is done. I should be focusing on another project."
 )
 
 # Notices that too many points are allocated to ARS.
 define ARS_overflow = (
-"",
-"",
-"",
+"That {b}ARS{/b} project shouldn't take long. I should save space for something else.",
+"This schedule needs to change - there's too much time in the {b}ARS{/b} Composition project.",
+"The current {b}ARS{/b} project doesn't need this much time.",
 "",
 "",
 "",
@@ -273,22 +283,4 @@ define HON_reminders = (
 "There's 3 weeks left until the final exams come for us all.",
 "And only 2 more weeks before final exams. Just enough time to write a will.",
 "Final exams are next week. Time to make peace with my gods."
-)
-
-# List of reminders that exam review is finished.
-define HON_completed = (
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
 )
