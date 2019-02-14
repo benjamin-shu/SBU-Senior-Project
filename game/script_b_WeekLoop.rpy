@@ -6,6 +6,17 @@ label schedule_show:
     scene West F 301C with fade
     show Dimmed with dissolve
 
+    # If current week is a project deadline, save current progress on that project.
+    if (week_num in ARS_deadlines):
+        $ ARS_scores[ARS_deadlines[week_num]] = ARS_progress
+        $ ARS_progress = 0
+    if (week_num in CSE_deadlines):
+        $ CSE_scores[CSE_deadlines[week_num]] = CSE_progress
+        $ CSE_progress = 0
+    if (week_num in HON_deadlines):
+        $ HON_scores[HON_deadlines[week_num]] = HON_progress
+        $ HON_progress = 0
+
     # Go over weekly reminders of project due dates.
     $ reminder = ARS_reminders[week_num]
     B "{i}[reminder]{/i}"
@@ -24,6 +35,11 @@ label schedule_screen:
     $ renpy.pause()
 
 label schedule_check:
+    # If player hasn't selected something for all slots, jump back to schedule screen.
+    if (L_img == "Schedule/L Placeholder.png" or M_img == "Schedule/M Placeholder.png" or R_img == "Schedule/R Placeholder.png"):
+        B "I haven't filled out the schedule yet - I should add something to each slot."
+        jump schedule_screen
+
     # Add to act_cnt[] based on player's choices.
     $ act_cnt[L_src.index(L_img)] += 1
     $ act_cnt[M_src.index(M_img)] += 1
@@ -61,11 +77,6 @@ label schedule_check:
         $ act_cnt = [ 0, 0, 0, 0]
         jump schedule_screen
 
-    # Add to progress counters for each activity.
-    $ ARS_progress += act_cnt[0]
-    $ CSE_progress += act_cnt[1]
-    $ HON_progress += act_cnt[2]
-
     "Week [week_num]"
     "Checking progress so far."
     "ARS Progress: [ARS_progress]"
@@ -77,6 +88,34 @@ label week_phase_0:
     hide Dimmed with dissolve
     scene eMedia Seats with fade
     show Dimmed with dissolve
+    $ renpy.pause()
+
+    if (code_A in L_img):
+        $ week_dict = ARS_deadlines
+        $ week_act = code_A
+        $ ARS_progress += 1
+    elif (code_C in L_img):
+        $ week_dict = CSE_deadlines
+        $ week_act = code_C
+        $ CSE_progress += 1
+    elif (code_S in L_img):
+        $ week_dict = HON_deadlines
+        $ week_act = code_S
+        $ HON_progress += 1
+
+    $ week_cnt = week_num + 1
+    $ week_proj = ""
+
+    while week_cnt < 16:
+        if (week_cnt in week_dict):
+            $ week_proj = week_dict[week_cnt]
+            jump week_phase_0_act
+        else:
+            $ week_cnt += 1
+
+label week_phase_0_act:
+    if (week_proj != ""):
+        $ renpy.jump("%s_%s" % (week_act, week_proj))
 
     # $ renpy.jump("Week_%d" % week_num)
 
@@ -85,13 +124,70 @@ label week_phase_1:
     hide Dimmed with dissolve
     scene Javits Seats with fade
     show Dimmed with dissolve
+    $ renpy.pause()
+
+    if (code_A in L_img):
+        $ week_dict = ARS_deadlines
+        $ week_act = code_A
+        $ ARS_progress += 1
+    elif (code_C in L_img):
+        $ week_dict = CSE_deadlines
+        $ week_act = code_C
+        $ CSE_progress += 1
+    elif (code_S in L_img):
+        $ week_dict = HON_deadlines
+        $ week_act = code_S
+        $ HON_progress += 1
+
+    $ week_cnt = week_num + 1
+    $ week_proj = ""
+
+    while week_cnt < 16:
+        if (week_cnt in week_dict):
+            $ week_proj = week_dict[week_cnt]
+            jump week_phase_1_act
+        else:
+            $ week_cnt += 1
+
+label week_phase_1_act:
+    if (week_proj != ""):
+        $ renpy.jump("%s_%s" % (week_act, week_proj))
 
 label week_phase_2:
     # Set scene for free time at West F 301C.
     hide Dimmed with dissolve
     scene West F 301C with fade
     show Dimmed with dissolve
+    $ renpy.pause()
 
+    if (code_A in L_img):
+        $ week_dict = ARS_deadlines
+        $ week_act = code_A
+        $ ARS_progress += 1
+    elif (code_C in L_img):
+        $ week_dict = CSE_deadlines
+        $ week_act = code_C
+        $ CSE_progress += 1
+    elif (code_S in L_img):
+        $ week_dict = HON_deadlines
+        $ week_act = code_S
+        $ HON_progress += 1
+
+    $ week_cnt = week_num + 1
+    $ week_proj = ""
+
+    while week_cnt < 16:
+        if (week_cnt in week_dict):
+            $ week_proj = week_dict[week_cnt]
+            jump week_phase_2_act
+        else:
+            $ week_cnt += 1
+
+label week_phase_2_act:
+    if (week_proj != ""):
+        $ renpy.jump("%s_%s" % (week_act, week_proj))
+
+label week_end:
     # Reset schedule planner for next week.
     $ L_img = "Schedule/L Placeholder.png"
     $ L_ind = 0
@@ -99,6 +195,9 @@ label week_phase_2:
     $ M_ind = 0
     $ R_img = "Schedule/R Placeholder.png"
     $ R_ind = 0
+
+    # Reset phase counter for next week.
+    $ phase = 0
 
     # Reset act_cnt[] to take input for next week.
     $ act_cnt = [ 0, 0, 0, 0]
@@ -108,17 +207,6 @@ label week_phase_2:
     # Increment week counter.
     $ week_num += 1
     "[week_num]"
-
-    # If next week is a project deadline, save current progress on that project.
-    if (week_num in ARS_deadlines):
-        $ ARS_scores[ARS_deadlines[week_num]] = ARS_progress
-        $ ARS_progress = 0
-    if (week_num in CSE_deadlines):
-        $ CSE_scores[CSE_deadlines[week_num]] = CSE_progress
-        $ CSE_progress = 0
-    if (week_num in HON_deadlines):
-        $ HON_scores[HON_deadlines[week_num]] = HON_progress
-        $ HON_progress = 0
 
     # Jump back to schedule planner if semester is not over.
     if week_num < 14:

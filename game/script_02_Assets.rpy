@@ -134,10 +134,19 @@ image Composition Slide 8 = "Slides/Composition/Slide 08.png"
 
 # First ARS assignment.
 image Composition Canvas = "Projects/Composition_Canvas.png"
+
 image Composition Point01 = "Projects/Composition_Point01.png"
 image Composition Point02 = "Projects/Composition_Point02.png"
+image Composition Point03 = "Projects/Composition_Point03.png"
+image Composition Point04 = "Projects/Composition_Point04.png"
+image Composition Point05 = "Projects/Composition_Point05.png"
+
 image Composition Depth01 = "Projects/Composition_Depth01.png"
 image Composition Depth02 = "Projects/Composition_Depth02.png"
+image Composition Depth03 = "Projects/Composition_Depth03.png"
+image Composition Depth04 = "Projects/Composition_Depth04.png"
+image Composition Depth05 = "Projects/Composition_Depth05.png"
+
 image Composition Shape01 = "Projects/Composition_Shape01.png"
 image Composition Shape02:
     "Projects/Composition_Shape02.png" with Dissolve(0.5)
@@ -146,6 +155,10 @@ image Composition Shape02:
     0.5
     "Projects/Composition_Shape04.png" with Dissolve(0.5)
     0.5
+image Composition Shape03 = "Projects/Composition_Shape03.png"
+image Composition Shape04 = "Projects/Composition_Shape04.png"
+image Composition Shape05 = "Projects/Composition_Shape05.png"
+image Composition Shape06 = "Projects/Composition_Shape06.png"
 
 # ==============================================================================
 # Background Art

@@ -1,9 +1,20 @@
-# ==========================================================================
-# Integer counters used to track the player's progress in various areas.
-# ==========================================================================
+# ==============================================================================
+# Variables and constants used to track the player's progress in various areas.
+# ==============================================================================
+
+# String constants to use as codes for various activities.
+define code_A = "ARS"
+define code_C = "CSE"
+define code_S = "HON"
 
 # Current week in the semester.
 default week_num = 0
+
+# Control variables for selecting activities.
+default week_cnt = 0
+default week_dict = {}
+default week_act = ""
+default week_proj = ""
 
 # Progress counters for the different ARS projects.
 default ARS_scores = {
@@ -197,66 +208,66 @@ define ARS_completed = (
 
 # Notices that too many points are allocated to ARS.
 define ARS_overflow = (
-"That {b}ARS{/b} project shouldn't take long. I should save space for something else.",
+"That {b}ARS{/b} Composition project shouldn't take long. I need space for something else.",
 "This schedule needs to change - there's too much time in the {b}ARS{/b} Composition project.",
-"The current {b}ARS{/b} project doesn't need this much time.",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-""
+"The {b}ARS{/b} Shapes project doesn't need this much time.",
+"Why is there so much time in {b}ARS{/b}? The Shapes project shouldn't be too bad.",
+"I don't need that much time for the {b}ARS{/b} Typography project.",
+"The {b}ARS{/b} Typography project won't need this much time.",
+"I've already made good progress on the {b}ARS{/b} Poster project. Time for something else.",
+"I should redo the schedule - the {b}ARS{/b} Poster project shouldn't take this long.",
+"The {b}ARS{/b} Poster project doesn't need this many time slots.",
+"I should be focusing on things other than the {b}ARS{/b} Poster project.",
+"As much as I like the {b}ARS{/b} Video project, the time should go to other things.",
+"I'm putting too much time into the {b}ARS{/b} Video project.",
+"The {b}ARS{/b} Video project won't need that much time to finish.",
+"I shouldn't spend more time on the {b}ARS{/b} Video project than necessary."
 )
 
 # List of reminders for each CSE project.
 define CSE_reminders = (
-"The CSE 308 professor wants us to hand in UML diagrams in 2 weeks.",
-"Those UML diagrams for CSE 308 are due next week.",
-"The SRS document is due 2 weeks from now.",
-"The SRS is due next week.",
-"The Phase 1 goals for CSE 308 are due in 3 weeks.",
-"I have 2 weeks left for the Phase 1 goals.",
-"The Phase 1 goals are due next week.",
-"I've got 3 weeks to finish those Phase 2 goals.",
-"There are 2 weeks left to finish CSE 308's Phase 2.",
-"Just 1 more week to finish Phase 2 of the CSE project.",
-"I've got 4 weeks for the last phase of the CSE 308 project.",
-"There's 3 more weeks left for the CSE 308 project.",
-"Just 2 more weeks...just two more weeks of CSE 308.",
-"It's almost over. The CSE 308 project is due next week."
+"The {b}CSE 308's{/b} professor wants us to hand in UML diagrams in 2 weeks.",
+"Those UML diagrams for {b}CSE 308{/b} are due next week.",
+"The {b}CSE 308{/b} SRS document is due 2 weeks from now.",
+"The {b}CSE 308{/b} SRS is due next week.",
+"The Phase 1 goals for {b}CSE 308{/b} are due in 3 weeks.",
+"I have 2 weeks left for the {b}CSE 308{/b} Phase 1 goals.",
+"The {b}CSE 308{/b} Phase 1 goals are due next week.",
+"I've got 3 weeks to finish those {b}CSE 308{/b} Phase 2 goals.",
+"There are 2 weeks left to finish {b}CSE 308{/b}'s Phase 2.",
+"Just 1 more week to finish Phase 2 of the {b}CSE 308{/b} project.",
+"I've got 4 weeks for the last phase of the {b}CSE 308{/b} project.",
+"There's 3 more weeks left for the {b}CSE 308{/b} project.",
+"Just 2 more weeks...just two more weeks of {b}CSE 308{/b}.",
+"It's almost over. The {b}CSE 308{/b} project is due next week."
 )
 
 # List of reminders that each CSE project is completed.
 define CSE_completed = (
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-""
+"I'm already done with the UML diagrams for {b}CSE 308{/b}. I should do something else.",
+"Those UML diagrams for {b}CSE 308{/b} are finished. What else can I do?",
+"I've finished the SRS for {b}CSE 308{/b}. I need to get some other work done.",
+"The {b}CSE 308{/b} SRS document is done. The time should go elsewhere.",
+"Phase 1 for {b}CSE 308{/b} is done. There's other projects that need attention.",
+"I'm done with Phase 1 for {b}CSE 308{/b}. Time to work on something else. ",
+"{b}CSE 308{/b}'s Phase 1 is complete. I should spend time on other things.",
+"Phase 2 of the {b}CSE 308{/b} project is done. I should work on something else.",
+"The goals for Phase 2 of the {b}CSE 308{/b} project are already finished.",
+"I'm done with Phase 2 of {b}CSE 308{/b}. I ought to be working on something else.",
+"Phase 3 of {b}CSE 308{/b} is done. Is there something else I can do with that time?",
+"The Phase 3 goals for {b}CSE 308{/b} are done. What else can I do with my time?",
+"I've already finished Phase 3 of the {b}CSE 308{/b} project.",
+"The {b}CSE 308{/b} project is already finished, Phase 3 included."
 )
 
 # Notices that too many points are allocated to CSE.
 define CSE_overflow = (
-"",
-"",
-"",
-"",
-"",
-"",
+"The UML diagrams for {b}CSE 308{/b} don't need that much time to finish.",
+"I shouldn't put that much time into {b}CSE 308{/b}'s UML diagram.",
+"The SRS for {b}CSE 308{/b} won't take that long - the time should go to something else.",
+"There's not much left of the SRS to write for {b}CSE 308{/b}. I should use that time for something else.",
+"I can't spare this much time for Phase 1 for {b}CSE 308{/b}. Can I work on something else?",
+"The Phase 1 goals for {b}CSE 308{/b} don't need this much time. I can use that time for other things.",
 "",
 "",
 "",

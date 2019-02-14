@@ -1,59 +1,20 @@
-label HON_study1_1:
+label HON_study1:
     $ phase += 1
     if phase < 3:
-        $ renpy.jump("week_phase_%d", phase)
+        $ renpy.jump("week_phase_%d" % phase)
+    else:
+        jump week_end
 
-label HON_study1_2:
+label HON_study2:
     $ phase += 1
     if phase < 3:
-        $ renpy.jump("week_phase_%d", phase)
+        $ renpy.jump("week_phase_%d" % phase)
+    else:
+        jump week_end
 
-label HON_study1_3:
+label HON_study3:
     $ phase += 1
     if phase < 3:
-        $ renpy.jump("week_phase_%d", phase)
-
-label HON_study1_4:
-    $ phase += 1
-    if phase < 3:
-        $ renpy.jump("week_phase_%d", phase)
-
-label HON_study2_1:
-    $ phase += 1
-    if phase < 3:
-        $ renpy.jump("week_phase_%d", phase)
-
-label HON_study2_2:
-    $ phase += 1
-    if phase < 3:
-        $ renpy.jump("week_phase_%d", phase)
-
-label HON_study2_3:
-    $ phase += 1
-    if phase < 3:
-        $ renpy.jump("week_phase_%d", phase)
-
-label HON_study2_4:
-    $ phase += 1
-    if phase < 3:
-        $ renpy.jump("week_phase_%d", phase)
-
-label HON_study3_1:
-    $ phase += 1
-    if phase < 3:
-        $ renpy.jump("week_phase_%d", phase)
-
-label HON_study3_2:
-    $ phase += 1
-    if phase < 3:
-        $ renpy.jump("week_phase_%d", phase)
-
-label HON_study3_3:
-    $ phase += 1
-    if phase < 3:
-        $ renpy.jump("week_phase_%d", phase)
-
-label HON_study3_4:
-    $ phase += 1
-    if phase < 3:
-        $ renpy.jump("week_phase_%d", phase)
+        $ renpy.jump("week_phase_%d" % phase)
+    else:
+        jump week_end
