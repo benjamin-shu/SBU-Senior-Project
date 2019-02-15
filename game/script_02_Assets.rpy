@@ -212,19 +212,14 @@ image Backpack 4 = VBox(HBox("Screen Effects/Backpack_1.png", "Screen Effects/Ba
 # Screen Effects - ATL
 # ==============================================================================
 
-## (UNUSED)
-## A short animation for TV static.
-# image static:
-#     alpha 0.0
-#     "Screen Effects/Static 1.png" with dissolve
-#     linear 0.25 alpha 1.0
-#     0.25
-#     "Screen Effects/Static 2.png" with dissolve
-#     0.25
-#     "Screen Effects/Static 1.png" with dissolve
-#     0.25
-#     "Screen Effects/Static 2.png" with dissolve
-#     linear 0.25 alpha 0.0
+# A short animation for TV static.
+image static:
+    alpha 0.35
+    "Screen Effects/Static 1.png" with dissolve
+    0.25
+    "Screen Effects/Static 2.png" with dissolve
+    0.25
+    repeat
 
 # Close a clapper board labeled "Take 1".
 image take1:

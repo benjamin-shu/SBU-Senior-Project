@@ -2,11 +2,12 @@
 # Game starts here.
 # ==============================================================================
 label start:
-    jump schedule_show
+    # jump schedule_show
 
     scene West F 301 Hallway with fade
 
-    show Ben Intro Cas Sto Dark at center with dissolve
+    show static with dissolve
+    show Ben Intro Cas Sto Dark at center behind static with dissolve
     play sound "sounds/Record Player Static.mp3" loop
     B "..."
 
@@ -18,6 +19,8 @@ label start:
     show Ben Intro Cas Sto Spk Dark with dissolve
     B "Alright, guess I'll just have to cut this-"
 
+    show fadeInOut
+    hide static with dissolve
     stop sound
 
     window hide
