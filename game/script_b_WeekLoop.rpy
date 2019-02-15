@@ -84,12 +84,16 @@ label schedule_check:
     "HON Progress: [HON_progress]"
 
 label week_phase_0:
+    if (week_num in ARS_events):
+        $ renpy.jump("Week_%d_ARS" % week_num)
+
     # Set scene for ARS classes at eMedia.
     hide Dimmed with dissolve
     scene eMedia Seats with fade
     show Dimmed with dissolve
     $ renpy.pause()
 
+label week_phase_0_check:
     if (code_A in L_img):
         $ week_dict = ARS_deadlines
         $ week_act = code_A
@@ -120,12 +124,16 @@ label week_phase_0_act:
     # $ renpy.jump("Week_%d" % week_num)
 
 label week_phase_1:
+    if (week_num in CSE_events):
+        $ renpy.jump("Week_%d_CSE" % week_num)
+
     # Set scene for CSE classes at Javits.
     hide Dimmed with dissolve
     scene Javits Seats with fade
     show Dimmed with dissolve
     $ renpy.pause()
 
+label week_phase_1_check:
     if (code_A in L_img):
         $ week_dict = ARS_deadlines
         $ week_act = code_A
@@ -154,12 +162,17 @@ label week_phase_1_act:
         $ renpy.jump("%s_%s" % (week_act, week_proj))
 
 label week_phase_2:
+    
+    if (week_num in HON_events):
+        $ renpy.jump("Week_%d_HON" % week_num)
+
     # Set scene for free time at West F 301C.
     hide Dimmed with dissolve
     scene West F 301C with fade
     show Dimmed with dissolve
     $ renpy.pause()
 
+label week_phase_2_check:
     if (code_A in L_img):
         $ week_dict = ARS_deadlines
         $ week_act = code_A

@@ -1,4 +1,4 @@
-label Week_1:
+label Week_0:
     scene West F 301C with fade
 
     play music "sounds/Ben/Jazz Brunch.mp3" loop
@@ -25,18 +25,18 @@ label Week_1:
     stop music fadeout 1.0
     scene Black with fade
 
-    B "({i}First stop of the day: Staller Center for the Arts.{/i})"
+    B "{i}First stop of the day: Staller Center for the Arts.{/i}"
 
-label Week_1_ARS:
+label Week_0_ARS:
     # Ben arrives at the Staller Center for the Arts.
     scene Staller with fade
     play sound "sounds/Sunny Day.mp3" loop
 
-    B "({i}Okay, Ben. The sun is shining, and it's a bright new day.{/i})"
-    B "({i}And now, I get to take an art class again."
+    B "{i}Okay, Ben. The sun is shining, and it's a bright new day.{/i}"
+    B "{i}And now, I get to take an art class again."
     scene Staller Music with fade
-    B "({i}If I remember correctly, all of the digital art classes are held on the Music side of the building…{/i})"
-    B "({i}…because, clearly, {b}that{/b} makes {b}perfect{/b} sense.{/i})"
+    B "{i}If I remember correctly, all of the digital art classes are held on the Music side of the building…{/i}"
+    B "{i}…because, clearly, {b}that{/b} makes {b}perfect{/b} sense.{/i}"
 
     stop sound
     scene eMedia Seats with fade
@@ -108,7 +108,7 @@ label Week_1_ARS:
     "Those are all seven of the Compositional Elements."
     "For your first assignment, I want you make an image each for three elements."
     "Make that element very visible in your image, and write short explanations for how you've used them."
-    "That's it for now, everyone! I'll see you again next lecture."
+    "That's it for now, everyone! Take the rest of lecture to think about how you'll approach this assignment."
 
     hide projector with dissolve
     stop music fadeout 1.0
@@ -120,15 +120,13 @@ label Week_1_ARS:
     with dissolve
 
     B "{i}Okay, so that wasn't too complicated.{/i}"
-    B "{i}I'll have to start this project later, though. I need to get to my next class.{/i}"
-    B "{i}Hopefully computer science lectures won’t be too bad this year.{/i}"
 
     # Needs rewriting - how do we introduce Faith?
 
-    # B "({i}...{/i})"
-    # B "({i}...well, this is an uncomfortable silence.{/i})"
+    # B "{i}...{/i}"
+    # B "{i}...well, this is an uncomfortable silence.{/i}"
     # show Ben Casual Sto Dark at seat_l, img_Scale(500, 800) with dissolve
-    # B "({i}Maybe I should say something?{/i})"
+    # B "{i}Maybe I should say something?{/i}"
 
     # show Ben Casual Neut Spk at seat_l, img_Scale(500, 800) with dissolve
     # B "Alright, I’ve got to get to my next class."
@@ -175,8 +173,29 @@ label Week_1_ARS:
     # with dissolve
 
     # scene Black with fade
-    jump ARS_composition_1
+    jump week_phase_0_check
 
-label Week_1_CSE:
+label Week_0_CSE:
+    scene Javits Front Door with fade
+    play sound "sounds/Sunny Day.mp3" loop
 
-#    jump schedule_show
+    B "{i}Javits Lecture Hall hosts a lot of classes on campus.{/i}"
+    B "{i}It's a crowded, worn-down building that, much like the students here, seems ready to give up on life.{/i}"
+
+    scene Javits Seats with dissolve
+    # show Maria Casual Hdphn Dark at seat_r with dissolve
+    show Ben Walk Bore Dark at center with dissolve
+
+    B "{i}There's never really enough space in these seats. I feel like I'm invading someone's bubble just by breathing.{/i}"
+    show Ben Casual Sto Dark at seat_l with dissolve
+    B "{i}At least nobody ever makes eye contact long enough to ever complain about it.{/i}"
+
+    hide Ben
+    # hide Maria
+    with dissolve
+
+    scene Javits Screen with dissolve
+    jump week_phase_1_check
+
+label Week_0_HON:
+    jump week_phase_2_check

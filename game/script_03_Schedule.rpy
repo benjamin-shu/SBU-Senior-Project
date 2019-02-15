@@ -73,6 +73,9 @@ define ARS_deadlines = {
 14:"video"
 }
 
+# Tuple for dates of ARS presentations/events.
+define ARS_events = ( 0, 2, 4, 6, 10 )
+
 # Dictionary for CSE project deadlines.
 define CSE_deadlines = {
 2:"uml",
@@ -82,12 +85,18 @@ define CSE_deadlines = {
 14:"phase3"
 }
 
+# Tuple for dates of CSE presentations/events.
+define CSE_events = (0, 2, 4, 7, 10 )
+
 # Dictionary for midterm dates.
 define HON_deadlines = {
 4:"study1",
 9:"study2",
 14:"study3"
 }
+
+# Tuple for dates of extra events.
+define HON_events = ( 4, 9 )
 
 # ==========================================================================
 # Control Variables For schedule() Screen.

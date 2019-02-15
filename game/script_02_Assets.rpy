@@ -89,15 +89,8 @@ init:
 # init python:
 
 # ==============================================================================
-# Presentation Slides & Project Materials
+# ARS Presentation Slides & Project Materials
 # ==============================================================================
-
-# Slides used for Ben's introduction.
-image Intro Slide 1 = "Slides/Intro/Intro Slide 1.png"
-image Intro Slide 2 = "Slides/Intro/Intro Slide 2.png"
-image Intro Slide 3 = "Slides/Intro/Intro Slide 3.png"
-image Intro Slide 4 = "Slides/Intro/Intro Slide 4.png"
-image Intro Slide 5 = "Slides/Intro/Intro Slide 5.png"
 
 # Slides for first ARS assignment.
 image Composition Slide 1 = "Slides/Composition/Slide 01.png"
@@ -159,6 +152,23 @@ image Composition Shape03 = "Projects/Composition_Shape03.png"
 image Composition Shape04 = "Projects/Composition_Shape04.png"
 image Composition Shape05 = "Projects/Composition_Shape05.png"
 image Composition Shape06 = "Projects/Composition_Shape06.png"
+
+# ==============================================================================
+# CSE Presentation Slides & Project Materials
+# ==============================================================================
+
+# Slides for first CSE assignment.
+image UML Slide 1 = "Slides/UML Slide 01.png"
+image UML Slide 2 = "Slides/UML Slide 02.png"
+image UML Slide 3a = "Slides/UML Slide 03a.png"
+image UML Slide 3b = "Slides/UML Slide 03b.png"
+image UML Slide 3c = "Slides/UML Slide 03c.png"
+image UML Slide 4a = "Slides/UML Slide 04a.png"
+image UML Slide 4b = "Slides/UML Slide 04b.png"
+image UML Slide 4c = "Slides/UML Slide 04c.png"
+image UML Slide 5a = "Slides/UML Slide 05a.png"
+image UML Slide 5b = "Slides/UML Slide 05b.png"
+image UML Slide 5c = "Slides/UML Slide 05c.png"
 
 # ==============================================================================
 # Background Art
