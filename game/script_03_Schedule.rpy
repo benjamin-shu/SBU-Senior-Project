@@ -10,6 +10,9 @@ define code_S = "HON"
 # Current week in the semester.
 default week_num = 0
 
+# Dates for introductory cutscenes at start of each week.
+define week_events = ( 0, 14 )
+
 # Control variables for selecting activities.
 default week_cnt = 0
 default week_dict = {}

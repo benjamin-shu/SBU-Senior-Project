@@ -3,7 +3,6 @@
 # ==============================================================================
 label start:
     # jump schedule_show
-
     scene West F 301 Hallway with fade
 
     show static with dissolve
@@ -118,5 +117,4 @@ label start:
     hide Ben with dissolve
     scene Black with fade
 
-    # jump schedule_screen
-    jump Week_1
+    jump schedule_show

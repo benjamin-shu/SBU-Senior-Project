@@ -28,6 +28,9 @@ define dark = -0.25
 # Define new default Dissolve for transitions between sprites.
 define dissolve = Dissolve(0.5)
 
+# Define generic index counter.
+default i = 0
+
 # ==============================================================================
 # Init Block - Transforms
 # ==============================================================================

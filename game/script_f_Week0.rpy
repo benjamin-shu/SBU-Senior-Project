@@ -1,8 +1,4 @@
 label Week_0:
-    scene West F 301C with fade
-
-    play music "sounds/Ben/Jazz Brunch.mp3" loop
-
     show Ben Walk Neut Dark at center, img_Scale(500, 800) with dissolve
     show Ben Walk Neut Spk at center, img_Scale(500, 800) with dissolve
     B "Okay, Ben, one last check - do you have everything?"
@@ -19,16 +15,15 @@ label Week_0:
     hide Backpack 4 with dissolve
     hide Dimmed with dissolve
     show Ben Walk Neut Spk at center, img_Scale(500, 800) with dissolve
-    B "Okay, I think we're good. Off to class I go, then."
+    B "Okay, I think we're good. Now, what's on the agenda for today?."
     hide Ben with dissolve
 
-    stop music fadeout 1.0
-    scene Black with fade
-
-    B "{i}First stop of the day: Staller Center for the Arts.{/i}"
+    jump schedule_reminders
 
 label Week_0_ARS:
     # Ben arrives at the Staller Center for the Arts.
+    B "{i}First stop of the day: Staller Center for the Arts.{/i}"
+
     scene Staller with fade
     play sound "sounds/Sunny Day.mp3" loop
 

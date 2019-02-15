@@ -5,6 +5,7 @@ label schedule_show:
     # Set scene at Ben's apartment.
     scene West F 301C with fade
     show Dimmed with dissolve
+    play music "sounds/Ben/Jazz Brunch.mp3" loop
 
     # If current week is a project deadline, save current progress on that project.
     if (week_num in ARS_deadlines):
@@ -17,6 +18,14 @@ label schedule_show:
         $ HON_scores[HON_deadlines[week_num]] = HON_progress
         $ HON_progress = 0
 
+    $ i = 0
+    while (i < len(week_events)):
+        if (week_num == week_events[i]):
+            $ renpy.jump("Week_%d" % week_num)
+        else:
+            $ i += 1
+
+label schedule_reminders:
     # Go over weekly reminders of project due dates.
     $ reminder = ARS_reminders[week_num]
     B "{i}[reminder]{/i}"
@@ -82,6 +91,12 @@ label schedule_check:
     "ARS Progress: [ARS_progress]"
     "CSE Progress: [CSE_progress]"
     "HON Progress: [HON_progress]"
+
+    B "Okay, looks good! Time to head out, then."
+
+    hide Ben with dissolve
+    scene Black with fade
+    stop music fadeout 1.0
 
 label week_phase_0:
     if (week_num in ARS_events):
@@ -162,7 +177,7 @@ label week_phase_1_act:
         $ renpy.jump("%s_%s" % (week_act, week_proj))
 
 label week_phase_2:
-    
+
     if (week_num in HON_events):
         $ renpy.jump("Week_%d_HON" % week_num)
 
