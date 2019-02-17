@@ -127,6 +127,7 @@ image Composition Slide 5:
 image Composition Slide 6 = "Slides/Composition/Slide 06.png"
 image Composition Slide 7 = "Slides/Composition/Slide 07.png"
 image Composition Slide 8 = "Slides/Composition/Slide 08.png"
+image Composition Slide 9 = "Slides/Composition/Slide 09.png"
 
 # First ARS assignment.
 image Composition Canvas = "Projects/Composition_Canvas.png"
@@ -161,17 +162,17 @@ image Composition Shape06 = "Projects/Composition_Shape06.png"
 # ==============================================================================
 
 # Slides for first CSE assignment.
-image UML Slide 1 = "Slides/UML Slide 01.png"
-image UML Slide 2 = "Slides/UML Slide 02.png"
-image UML Slide 3a = "Slides/UML Slide 03a.png"
-image UML Slide 3b = "Slides/UML Slide 03b.png"
-image UML Slide 3c = "Slides/UML Slide 03c.png"
-image UML Slide 4a = "Slides/UML Slide 04a.png"
-image UML Slide 4b = "Slides/UML Slide 04b.png"
-image UML Slide 4c = "Slides/UML Slide 04c.png"
-image UML Slide 5a = "Slides/UML Slide 05a.png"
-image UML Slide 5b = "Slides/UML Slide 05b.png"
-image UML Slide 5c = "Slides/UML Slide 05c.png"
+image UML Slide 1 = "Slides/UML/Slide 01.png"
+image UML Slide 2 = "Slides/UML/Slide 02.png"
+image UML Slide 3a = "Slides/UML/Slide 03a.png"
+image UML Slide 3b = "Slides/UML/Slide 03b.png"
+image UML Slide 3c = "Slides/UML/Slide 03c.png"
+image UML Slide 4a = "Slides/UML/Slide 04a.png"
+image UML Slide 4b = "Slides/UML/Slide 04b.png"
+image UML Slide 4c = "Slides/UML/Slide 04c.png"
+image UML Slide 5a = "Slides/UML/Slide 05a.png"
+image UML Slide 5b = "Slides/UML/Slide 05b.png"
+image UML Slide 5c = "Slides/UML/Slide 05c.png"
 
 # ==============================================================================
 # Background Art
@@ -203,7 +204,9 @@ image eMedia Screen = "Backgrounds/eMedia Screen.png"
 # A simple black screen.
 image Black = "Screen Effects/Black.png"
 image Dimmed = "Screen Effects/Dimmed.png"
-image Macbook = "Screen Effects/Macbook Screen.png"
+image Laptop = "Screen Effects/Laptop.png"
+## (UNUSED)
+#image Macbook = "Screen Effects/Macbook Screen.png"
 
 # Used in first week to show contents of Ben's bag.
 image Backpack 1 = "Screen Effects/Backpack_1.png"

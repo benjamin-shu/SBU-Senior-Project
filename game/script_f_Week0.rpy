@@ -99,11 +99,11 @@ label Week_0_ARS:
     show Composition Slide 8 with dissolve
     "Last but not least, consider adding some {b}Texture{/b}."
     "Doing so helps make your objects look more real, and makes an image feel less flat."
-    hide Composition with dissolve
-    "Those are all seven of the Compositional Elements."
-    "For your first assignment, I want you make an image each for three elements."
+    show Composition Slide 9 with dissolve
+    "For your first assignment, I want you make three images, each demonstrating an element."
     "Make that element very visible in your image, and write short explanations for how you've used them."
-    "That's it for now, everyone! Take the rest of lecture to think about how you'll approach this assignment."
+    hide Composition with dissolve
+    "That's it for now, everyone! Take the rest of lecture to work on this assignment."
 
     hide projector with dissolve
     stop music fadeout 1.0

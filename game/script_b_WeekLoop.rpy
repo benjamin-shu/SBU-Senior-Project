@@ -57,7 +57,7 @@ label schedule_check:
 
     # If player has put too many points into any activity,
     # or already completed an activity, set valid_schedule to False.
-    if (ARS_progress >= ARS_max):
+    if (ARS_progress >= ARS_max and act_cnt[0] > 0):
         "ARS Progress: [ARS_progress], Max: [ARS_max]"
         $ reminder = ARS_completed[week_num]
         B "[reminder]"
@@ -67,7 +67,7 @@ label schedule_check:
         $ reminder = ARS_overflow[week_num]
         B "[reminder]"
         $ valid_schedule = False
-    if (CSE_progress >= CSE_max):
+    if (CSE_progress >= CSE_max and act_cnt[1] > 0):
         "CSE Progress: [CSE_progress], Max: [CSE_max]"
         $ reminder = CSE_completed[week_num]
         B "[reminder]"
@@ -77,6 +77,7 @@ label schedule_check:
         $ reminder = CSE_overflow[week_num]
         B "[reminder]"
         $ valid_schedule = False
+    
     if (HON_progress + act_cnt[2]) > HON_max:
         "HON Progress: [HON_progress], Max: [HON_max]"
         B "Done with studying."

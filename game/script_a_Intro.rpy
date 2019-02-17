@@ -99,14 +99,16 @@ label start:
     B Intro Cas Neut Spk Si "Recently, I've started thinking that this {i}might{/i} be a problem."
     show Intro Slide 4 with dissolve
     B Intro Cas Sto Spk Si "I can't say that I've accomplished much over the last four years..."
-    B "...but hopefully, this semester is where I can turn things around."
     show Intro Slide 5 with dissolve
+    B "...but hopefully, this semester is where I can turn things around."
+    hide Intro with dissolve
     B Intro Hands Ddpn Si "The great and terrifying thing about my life is that I don't know what comes next."
-    B "Without a job lined up, there's no security or guarantees."
-    B Intro Hands Sml Si "But that also means there's a lot of possibilities."
+    show Intro Slide 6 with dissolve
+    B Intro Cas Sto Spk Si "Keeping up with everything - classes, applications, networking - often feels pointless and impossible."
+    B "But even if I'm doomed to joblessness and failure, I owe myself a damn good effort."
 
     window hide
-    hide Intro Slide 5 with dissolve
+    hide Intro with dissolve
     hide projector with Dissolve(1.0)
     show Ben Intro Cas Neut Spk with dissolve
     window show

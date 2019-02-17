@@ -1,21 +1,21 @@
-Fri Feb 15 03:15:03 2019
+Sat Feb 16 18:34:19 2019
 Windows-8-6.2.9200
 Ren'Py 7.1.3.1092
  
 
 Bootstrap to the start of init.init took 0.17s
-Early init took 0.01s
-Loader init took 0.20s
-Loading error handling took 0.07s
-Loading script took 0.51s
-Loading save slot metadata. took 0.11s
-Loading persistent took 0.01s
+Early init took 0.02s
+Loader init took 1.88s
+Loading error handling took 0.26s
+Loading script took 3.30s
+Loading save slot metadata. took 1.12s
+Loading persistent took 0.00s
 
-File "game/script_b_WeekLoop.rpy", line 20: expected statement.
-    for i in week_events:
-          ^
+File "game/script_a_Intro.rpy", line 10: end of line expected.
+    show Laptop with dissolve behind Ben
+                              ^
 DPI scale factor: 1.000000
-Interface start took 0.53s
+Interface start took 0.71s
 
 primary display bounds: (0, 0, 1366, 768)
 swap interval: 1 frames
@@ -239,36 +239,36 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 4.8069999218s
+Total time until interface ready: 11.0090000629s
 Resetting cache.
-Bootstrap to the start of init.init took 108.98s
-Early init took 0.00s
-Loader init took 0.15s
-Loading error handling took 0.05s
-Loading script took 0.65s
-Loading save slot metadata. took 0.12s
+Bootstrap to the start of init.init took 54.86s
+Early init took 0.01s
+Loader init took 0.16s
+Loading error handling took 0.04s
+Loading script took 1.12s
+Loading save slot metadata. took 0.14s
 Loading persistent took 0.01s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.28s
-Loading analysis data took 0.14s
+Running init code took 1.49s
+Loading analysis data took 0.24s
 Analyze and compile ATL took 0.01s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\Benjamin Shu\\AppData\\Roaming/RenPy/backups\\SBU-Senior-Project':
-Dump and make backups. took 0.28s
+Dump and make backups. took 0.74s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.07s
+Initial gc. took 0.05s
 DPI scale factor: 1.000000
 Creating interface object took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.06s
+Init translation took 0.04s
 Build styles took 0.01s
-Load screen analysis took 0.00s
+Load screen analysis took 0.15s
 Analyze screens took 0.03s
-Save screen analysis took 0.17s
-Prepare screens took 0.20s
+Save screen analysis took 0.27s
+Prepare screens took 0.23s
 Save pyanalysis. took 0.59s
-Save bytecode. took 0.16s
+Save bytecode. took 0.18s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.08s
@@ -495,31 +495,11 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 114.247999907s
+Total time until interface ready: 63.1980001926s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.024949 seconds.
-- Frame drawn at 0.045949 seconds.
-- Frame drawn at 0.063949 seconds.
-- Frame drawn at 0.079949 seconds.
-- 0.079949 seconds to render 5 frames.
-
-Full traceback:
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\bootstrap.py", line 313, in bootstrap
-    renpy.main.main()
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\main.py", line 513, in main
-    run(restart)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\main.py", line 139, in run
-    renpy.execution.run_context(True)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\execution.py", line 876, in run_context
-    context.run()
-  File "game/script_b_WeekLoop.rpy", line 23, in script
-    if (week_num == i):
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\script.py", line 875, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'Week_1'.
-
-While running game code:
-  File "game/script_b_WeekLoop.rpy", line 23, in script
-    if (week_num == i):
-ScriptError: could not find label 'Week_1'.
+- Frame drawn at 0.019949 seconds.
+- Frame drawn at 0.035949 seconds.
+- Frame drawn at 0.052949 seconds.
+- Frame drawn at 0.068949 seconds.
+- 0.068949 seconds to render 5 frames.

@@ -4,6 +4,7 @@ image Intro Slide 2 = "Slides/Intro/Intro Slide 2.png"
 image Intro Slide 3 = "Slides/Intro/Intro Slide 3.png"
 image Intro Slide 4 = "Slides/Intro/Intro Slide 4.png"
 image Intro Slide 5 = "Slides/Intro/Intro Slide 5.png"
+image Intro Slide 6 = "Slides/Intro/Intro Slide 6.png"
 
 # Character sprites for Ben's introduction scene.
 image Ben Intro Cas Brth = "Ben/Intro/Casual Breathe.png"
