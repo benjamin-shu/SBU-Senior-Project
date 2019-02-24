@@ -15,7 +15,7 @@ label Week_0:
     hide Backpack 4 with dissolve
     hide Dimmed with dissolve
     show Ben Walk Neut Spk at center, img_Scale(500, 800) with dissolve
-    B "Okay, I think we're good. Now, what's on the agenda for today?."
+    B "Okay, I think we're good. Now, what's on the agenda for today?"
     hide Ben with dissolve
 
     jump schedule_reminders
@@ -177,6 +177,7 @@ label Week_0_CSE:
     B "{i}Javits Lecture Hall hosts a lot of classes on campus.{/i}"
     B "{i}It's a crowded, worn-down building that, much like the students here, seems ready to give up on life.{/i}"
 
+    stop sound
     scene Javits Seats with dissolve
     # show Maria Casual Hdphn Dark at seat_r with dissolve
     show Ben Walk Bore Dark at center with dissolve

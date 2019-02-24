@@ -129,33 +129,36 @@ image Composition Slide 7 = "Slides/Composition/Slide 07.png"
 image Composition Slide 8 = "Slides/Composition/Slide 08.png"
 image Composition Slide 9 = "Slides/Composition/Slide 09.png"
 
-# First ARS assignment.
-image Composition Canvas = "Projects/Composition_Canvas.png"
+# First ARS assignment - Composition.
+define path_ARSComposition = ""
+image Composition Completed = "[ARS_Composition]"
 
-image Composition Point01 = "Projects/Composition_Point01.png"
-image Composition Point02 = "Projects/Composition_Point02.png"
-image Composition Point03 = "Projects/Composition_Point03.png"
-image Composition Point04 = "Projects/Composition_Point04.png"
-image Composition Point05 = "Projects/Composition_Point05.png"
+image Composition Canvas = "Projects/ARS_01-Composition/Canvas.png"
 
-image Composition Depth01 = "Projects/Composition_Depth01.png"
-image Composition Depth02 = "Projects/Composition_Depth02.png"
-image Composition Depth03 = "Projects/Composition_Depth03.png"
-image Composition Depth04 = "Projects/Composition_Depth04.png"
-image Composition Depth05 = "Projects/Composition_Depth05.png"
+image Composition Point01 = "Projects/ARS_01-Composition/01/Point01.png"
+image Composition Point02 = "Projects/ARS_01-Composition/01/Point02.png"
+image Composition Point03 = "Projects/ARS_01-Composition/02/Point03.png"
+image Composition Point04 = "Projects/ARS_01-Composition/02/Point04.png"
+image Composition Point05 = "Projects/ARS_01-Composition/02/Point05.png"
 
-image Composition Shape01 = "Projects/Composition_Shape01.png"
+image Composition Depth01 = "Projects/ARS_01-Composition/01/Depth01.png"
+image Composition Depth02 = "Projects/ARS_01-Composition/01/Depth02.png"
+image Composition Depth03 = "Projects/ARS_01-Composition/02/Depth03.png"
+image Composition Depth04 = "Projects/ARS_01-Composition/02/Depth04.png"
+image Composition Depth05 = "Projects/ARS_01-Composition/02/Depth05.png"
+
+image Composition Shape01 = "Projects/ARS_01-Composition/01/Shape01.png"
 image Composition Shape02:
-    "Projects/Composition_Shape02.png" with Dissolve(0.5)
+    "Projects/ARS_01-Composition/01/Shape02.png" with Dissolve(0.5)
     0.5
-    "Projects/Composition_Shape03.png" with Dissolve(0.5)
+    "Projects/ARS_01-Composition/01/Shape03.png" with Dissolve(0.5)
     0.5
-    "Projects/Composition_Shape04.png" with Dissolve(0.5)
+    "Projects/ARS_01-Composition/01/Shape04.png" with Dissolve(0.5)
     0.5
-image Composition Shape03 = "Projects/Composition_Shape03.png"
-image Composition Shape04 = "Projects/Composition_Shape04.png"
-image Composition Shape05 = "Projects/Composition_Shape05.png"
-image Composition Shape06 = "Projects/Composition_Shape06.png"
+image Composition Shape03 = "Projects/ARS_01-Composition/02/Shape03.png"
+image Composition Shape04 = "Projects/ARS_01-Composition/02/Shape04.png"
+image Composition Shape05 = "Projects/ARS_01-Composition/02/Shape05.png"
+image Composition Shape06 = "Projects/ARS_01-Composition/02/Shape06.png"
 
 # ==============================================================================
 # CSE Presentation Slides & Project Materials
@@ -173,6 +176,46 @@ image UML Slide 4c = "Slides/UML/Slide 04c.png"
 image UML Slide 5a = "Slides/UML/Slide 05a.png"
 image UML Slide 5b = "Slides/UML/Slide 05b.png"
 image UML Slide 5c = "Slides/UML/Slide 05c.png"
+
+# First CSE assignment - UML Diagrams
+image UML Diagram MetroMap 01 = "Projects/CSE_01-UMLDiagrams/01/MetroMap01.png"
+image UML Diagram MetroMap 02 = "Projects/CSE_01-UMLDiagrams/01/MetroMap02.png"
+image UML Diagram MetroStation 01 = "Projects/CSE_01-UMLDiagrams/01/MetroStation01.png"
+image UML Diagram MetroStation 02 = "Projects/CSE_01-UMLDiagrams/01/MetroStation02.png"
+image UML Diagram MetroLine 01 = "Projects/CSE_01-UMLDiagrams/01/MetroLine01.png"
+image UML Diagram MetroLine 02 = "Projects/CSE_01-UMLDiagrams/01/MetroLine02.png"
+
+image UML Diagram Combined 01:
+    "Projects/CSE_01-UMLDiagrams/01/Combined01a.png" with Dissolve(0.5)
+    0.5
+    "Projects/CSE_01-UMLDiagrams/01/Combined01b.png" with Dissolve(0.5)
+    0.5
+    "Projects/CSE_01-UMLDiagrams/01/Combined01c.png" with Dissolve(0.5)
+    0.5
+    "Projects/CSE_01-UMLDiagrams/01/Combined01d.png" with Dissolve(0.5)
+    0.5
+image UML Diagram Combined 02 = "Projects/CSE_01-UMLDiagrams/02/Combined02.png"
+image UML Diagram Combined 03:
+    "Projects/CSE_01-UMLDiagram/02/Combined03a.png" with Dissolve(0.5)
+    0.5
+    "Projects/CSE_01-UMLDiagram/02/Combined03b.png" with Dissolve(0.5)
+    0.5
+image UML Diagram Combined 04:
+    "Projects/CSE_01-UMLDiagram/02/Combined04a.png" with Dissolve(0.5)
+    0.5
+    "Projects/CSE_01-UMLDiagram/02/Combined04b.png" with Dissolve(0.5)
+    0.5
+    "Projects/CSE_01-UMLDiagram/02/Combined04c.png" with Dissolve(0.5)
+    0.5
+image UML Diagram Combined 05:
+    "Projects/CSE_01-UMLDiagram/02/Combined05a.png" with Dissolve(0.5)
+    0.5
+    "Projects/CSE_01-UMLDiagram/02/Combined05b.png" with Dissolve(0.5)
+    0.5
+    "Projects/CSE_01-UMLDiagram/02/Combined05c.png" with Dissolve(0.5)
+    0.5
+    "Projects/CSE_01-UMLDiagram/02/Combined05d.png" with Dissolve(0.5)
+    0.5
 
 # ==============================================================================
 # Background Art
@@ -203,8 +246,16 @@ image eMedia Screen = "Backgrounds/eMedia Screen.png"
 
 # A simple black screen.
 image Black = "Screen Effects/Black.png"
+
+# Dimming effect for the entire screen.
 image Dimmed = "Screen Effects/Dimmed.png"
+
+# Image used to show Ben using his laptop.
 image Laptop = "Screen Effects/Laptop.png"
+
+# The various applications that may be running on Ben's laptop.
+image Violet UML = "Screen Effects/Violet UML.png"
+
 ## (UNUSED)
 #image Macbook = "Screen Effects/Macbook Screen.png"
 

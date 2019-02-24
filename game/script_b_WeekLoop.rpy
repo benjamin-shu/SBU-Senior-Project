@@ -4,7 +4,7 @@
 label schedule_show:
     # Set scene at Ben's apartment.
     scene West F 301C with fade
-    show Dimmed with dissolve
+    # show Dimmed with dissolve
     play music "sounds/Ben/Jazz Brunch.mp3" loop
 
     # If current week is a project deadline, save current progress on that project.
@@ -26,6 +26,8 @@ label schedule_show:
             $ i += 1
 
 label schedule_reminders:
+    show Dimmed with dissolve
+    
     # Go over weekly reminders of project due dates.
     $ reminder = ARS_reminders[week_num]
     B "{i}[reminder]{/i}"
@@ -77,7 +79,7 @@ label schedule_check:
         $ reminder = CSE_overflow[week_num]
         B "[reminder]"
         $ valid_schedule = False
-    
+
     if (HON_progress + act_cnt[2]) > HON_max:
         "HON Progress: [HON_progress], Max: [HON_max]"
         B "Done with studying."
@@ -150,15 +152,15 @@ label week_phase_1:
     $ renpy.pause()
 
 label week_phase_1_check:
-    if (code_A in L_img):
+    if (code_A in M_img):
         $ week_dict = ARS_deadlines
         $ week_act = code_A
         $ ARS_progress += 1
-    elif (code_C in L_img):
+    elif (code_C in M_img):
         $ week_dict = CSE_deadlines
         $ week_act = code_C
         $ CSE_progress += 1
-    elif (code_S in L_img):
+    elif (code_S in M_img):
         $ week_dict = HON_deadlines
         $ week_act = code_S
         $ HON_progress += 1
@@ -189,15 +191,15 @@ label week_phase_2:
     $ renpy.pause()
 
 label week_phase_2_check:
-    if (code_A in L_img):
+    if (code_A in R_img):
         $ week_dict = ARS_deadlines
         $ week_act = code_A
         $ ARS_progress += 1
-    elif (code_C in L_img):
+    elif (code_C in R_img):
         $ week_dict = CSE_deadlines
         $ week_act = code_C
         $ CSE_progress += 1
-    elif (code_S in L_img):
+    elif (code_S in R_img):
         $ week_dict = HON_deadlines
         $ week_act = code_S
         $ HON_progress += 1

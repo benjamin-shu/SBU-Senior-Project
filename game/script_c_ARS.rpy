@@ -2,20 +2,12 @@ label ARS_composition:
     if (ARS_progress == 1):
         show Dimmed with dissolve
         show Composition Canvas with dissolve
-        B "For this first project, I'm thinking that I'll use {b}Point{/p}, {b}Depth{/b}, and {b}Shape{/b}."
         show Composition Point01 with dissolve
-        B "For {b}Point{/b}, I think I'll use this - a single boat out on the water draws attention."
         show Composition Point02 with dissolve
-        B "I think I'll add a sunset in the back, just to make it more obvious."
         show Composition Depth01 with dissolve
-        B "For {b}Depth{/b}, I'm thinking of a tunnel, drawn with one-point perspective."
         show Composition Depth02 with dissolve
-        B "Adding a point makes it look a little more like a tunnel, but I think it's missing something."
         show Composition Shape01 with dissolve
-        B "And for {b}Shape{/b}, I thought of a video game character that's basically a puff ball."
         show Composition Shape02 with dissolve
-        B "It's a fun little design, and made entirely of distinctive shapes."
-        B "It might look better with some color, though."
 
         B "I like the way these look right now, but I should probably add some more detail later."
 
@@ -25,17 +17,16 @@ label ARS_composition:
     elif (ARS_progress == 2):
         show Dimmed with dissolve
         show Composition Point02 with dissolve
-        show Composition Point03 with dissolve
+        #show Composition Point03 with dissolve
         show Composition Point04 with dissolve
         show Composition Point05 with dissolve
-        $ renpy.pause()
+
         show Composition Depth02 with dissolve
         show Composition Depth03 with dissolve
         show Composition Depth04 with dissolve
         show Composition Depth05 with dissolve
         $ renpy.pause()
-        show Composition Shape02 with dissolve
-        show Composition Shape03 with dissolve
+        #show Composition Shape03 with dissolve
         show Composition Shape04 with dissolve
         show Composition Shape05 with dissolve
         show Composition Shape06 with dissolve
