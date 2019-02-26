@@ -38,27 +38,27 @@ label Week_0_ARS:
 
     show Ben Walk Bore Dark at center, img_Scale(500, 800) with dissolve
     B "{i}Hm. Nobody’s here yet. Guess I’ll just sit down here and wait…{/i}"
-    show Ben Casual Sto Dark at seat_l, img_Scale(500, 800) with dissolve
+    show Ben Casual Sto Dark at seat_l_ARS, img_Scale(500, 800) with dissolve
     B "{i}…all by myself…{/i}"
     B "{i}…staring at a computer.{/i}"
-    show Ben Casual Sto Spk at seat_l, img_Scale(500, 800) with dissolve
+    show Ben Casual Sto Spk at seat_l_ARS, img_Scale(500, 800) with dissolve
     B "Why did I leave my room, again?"
-    show Ben Casual Sto Dark at seat_l, img_Scale(500, 800):
+    show Ben Casual Sto Dark at seat_l_ARS, img_Scale(500, 800):
     show Faith Hello Spk Stan at center_stand, img_Scale(500, 1128) behind Ben:
     with dissolve
     F "Hello!"
     show Faith Walk Neut Spk Stan at center_stand, img_Scale(500, 1128) with dissolve
     F "Is this seat taken?"
     show Faith Walk Neut Dark Stan at center_stand, img_Scale(500, 1128):
-    show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
+    show Ben Casual Neut Spk at seat_l_ARS, img_Scale(500, 800):
     with dissolve
     B "Oh! No, it’s not taken. Go right ahead."
-    show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
+    show Ben Casual Neut Dark at seat_l_ARS, img_Scale(500, 800):
     show Faith Walk Neut Spk Stan at center_stand, img_Scale(500, 1128):
     with dissolve
     F "Thank you!"
-    show Faith Walk Neut at seat_r, img_Scale(500, 800) with dissolve
-    show Faith Mac Foc Neut Dark at seat_r, img_Scale(500, 800) with dissolve
+    show Faith Walk Neut at seat_r_ARS, img_Scale(500, 800) with dissolve
+    show Faith Mac Foc Neut Dark at seat_r_ARS, img_Scale(500, 800) with dissolve
 
     B "{i}It doesn't take much longer for class to start.{/i}"
     hide Ben
@@ -103,94 +103,79 @@ label Week_0_ARS:
     "For your first assignment, I want you make three images, each demonstrating an element."
     "Make that element very visible in your image, and write short explanations for how you've used them."
     hide Composition with dissolve
-    "That's it for now, everyone! Take the rest of lecture to work on this assignment."
 
     hide projector with dissolve
     stop music fadeout 1.0
     $ renpy.pause(0.5)
 
     scene eMedia Seats with dissolve
-    show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
-    show Faith Mac Foc Neut Dark at seat_r, img_Scale(500, 800):
+    show Ben Casual Neut Dark at seat_l_ARS, img_Scale(500, 800):
+    show Faith Mac Foc Neut Dark at seat_r_ARS, img_Scale(500, 800):
     with dissolve
 
     B "{i}Okay, so that wasn't too complicated.{/i}"
+    B "{i}Might as well get some work done while the professor's still talking.{/i}"
 
-    # Needs rewriting - how do we introduce Faith?
-
-    # B "{i}...{/i}"
-    # B "{i}...well, this is an uncomfortable silence.{/i}"
-    # show Ben Casual Sto Dark at seat_l, img_Scale(500, 800) with dissolve
-    # B "{i}Maybe I should say something?{/i}"
-
-    # show Ben Casual Neut Spk at seat_l, img_Scale(500, 800) with dissolve
-    # B "Alright, I’ve got to get to my next class."
-    # show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
-    # show Faith Mac LkUp Spk at seat_r, img_Scale(500, 800):
-    # with dissolve
-    # F "Same here."
-    # F "Before you go, though - I don’t think I got your name."
-    # show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
-    # show Faith Mac LkUp Neut at seat_r, img_Scale(500, 800):
-    # with dissolve
-    # B "Oh, wow, I completely forgot!"
-    # B "My name is Ben. What’s yours?"
-    # show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
-    # show Faith Mac LkUp Spk at seat_r, img_Scale(500, 800):
-    # with dissolve
-    # F "My name is Faith."
-    #
-    # show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
-    # show Faith Mac LkUp Neut at seat_r, img_Scale(500, 800):
-    # with dissolve
-    # B "Are you on Steam?"
-    # show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
-    # show Faith Mac LkUp Spk at seat_r, img_Scale(500, 800):
-    # with dissolve
-    # F "Yeah, I am! My name’s kind of dumb - it’s 'GOATmom', with 'goat' in all caps."
-    # show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
-    # show Faith Mac LkUp Neut Dark at seat_r, img_Scale(500, 800):
-    # with dissolve
-    # B "Hey, I’m not judging - I named myself 'SaltedBeef.'"
-    #
-    # show Ben Casual Neut Spk at seat_l, img_Scale(500, 800):
-    # show Faith Mac LkUp Neut Dark at seat_r, img_Scale(500, 800):
-    # with dissolve
-    # B "Okay, then - it was nice meeting you!"
-    # show Ben Casual Neut Dark at seat_l, img_Scale(500, 800):
-    # show Faith Mac LkUp Spk at seat_r, img_Scale(500, 800):
-    # with dissolve
-    # F "It was nice meeting you too!"
-    # F "I’ll see you next class, then."
-
-    # hide Ben
-    # hide Faith
-    # with dissolve
-
-    # scene Black with fade
     jump week_phase_0_check
 
 label Week_0_CSE:
+    scene Black with fade
+    B "{i}The next stop of the day is Javits.{/i}"
+
     scene Javits Front Door with fade
     play sound "sounds/Sunny Day.mp3" loop
 
-    B "{i}Javits Lecture Hall hosts a lot of classes on campus.{/i}"
+    B "{i}The Javits Lecture Hall hosts a lot of different classes on campus.{/i}"
     B "{i}It's a crowded, worn-down building that, much like the students here, seems ready to give up on life.{/i}"
 
     stop sound
     scene Javits Seats with dissolve
     # show Maria Casual Hdphn Dark at seat_r with dissolve
-    show Ben Walk Bore Dark at center with dissolve
+    show Ben Walk Bore Dark at center_stand, img_Scale(600, 960) with dissolve
 
     B "{i}There's never really enough space in these seats. I feel like I'm invading someone's bubble just by breathing.{/i}"
-    show Ben Casual Sto Dark at seat_l with dissolve
+    show Ben Casual Sto Dark at seat_l_CSE, img_Scale(600, 960) with dissolve
     B "{i}At least nobody ever makes eye contact long enough to ever complain about it.{/i}"
 
     hide Ben
     # hide Maria
     with dissolve
-
     scene Javits Screen with dissolve
+    show projector_javits with dissolve
+
+    show UML Slide 1 with dissolve
+    "Hello, everyone, and welcome to your senior year of Computer Science!"
+    "I'm sure you've heard plenty of things about this class, but don't worry! It's way worse than you think!"
+    show UML Slide 2 with dissolve
+    "We like to take you guys by surprise, though, so we're starting with something simple - UML diagrams!"
+    show UML Slide 3a with dissolve
+    show UML Slide 3b with dissolve
+    "You've all seen these before. Done right, they're an intuitive and visual way to explain code."
+    show UML Slide 3c with dissolve
+    "For those of you who don't remember the format - shame on you! This is not hard to remember!"
+    show UML Slide 4a with dissolve
+    show UML Slide 4b with dissolve
+    $ renpy.pause(0.5)
+    show UML Slide 4c with dissolve
+    "I hope you at least remember how the lines work. You know, the ones that tell you what your code does?"
+    show UML Slide 5a with dissolve
+    $ renpy.pause(0.5)
+    show UML Slide 5b with dissolve
+    "Well, whether you remember or not, you'll be making UML diagrams for your first assignment."
+    show UML Slide 5c with dissolve
+    "Make sure to get this right - you'll have to follow the plans you set for the rest of the semester!"
+
+    scene Javits Seats with dissolve
+    show Ben Casual Sto Dark at seat_l_CSE, img_Scale(600, 960) with dissolve
+    # show Maria Casual Hdphn Dark at seat_r with dissolve
+
+    B "{i}I don't think I've ever seen a professor this...honest before.{/i}"
+    B "{i}Well, as long as he's going to keep talking, I might as well get some work done.{/i}"
+
+    # hide Ben
+    # # hide Maria
+    # with dissolve
+
     jump week_phase_1_check
 
 label Week_0_HON:

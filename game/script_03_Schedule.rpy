@@ -109,21 +109,21 @@ define HON_events = ( 4, 9 )
 default phase = 0
 
 # Image array for the clock's left slot.
-default L_src = [ "Schedule/L ARS.png", "Schedule/L CSE.png", "Schedule/L Study.png" ]
+default L_src = [ "Schedule/L ARS.png", "Schedule/L CSE.png", "Schedule/L HON.png" ]
 # File path for currently displayed image left slots.
 default L_img = "Schedule/L Placeholder.png"
 # Index of current image in L_src[].
 default L_ind = 0
 
 # Image array for the clock's center slot.
-default M_src = [ "Schedule/M ARS.png", "Schedule/M CSE.png", "Schedule/M Study.png" ]
+default M_src = [ "Schedule/M ARS.png", "Schedule/M CSE.png", "Schedule/M HON.png" ]
 # File path for currently-displayed image in center slot.
 default M_img = "Schedule/M Placeholder.png"
 # Index of current image in M_src[].
 default M_ind = 0
 
 # Image array for the clock's right slot.
-default R_src = [ "Schedule/R ARS.png", "Schedule/R CSE.png", "Schedule/R Study.png" ]
+default R_src = [ "Schedule/R ARS.png", "Schedule/R CSE.png", "Schedule/R HON.png" ]
 # File path for currently-displayed image in right slot.
 default R_img = "Schedule/R Placeholder.png"
 # Index of current image in R_src[].

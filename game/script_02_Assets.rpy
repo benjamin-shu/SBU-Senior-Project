@@ -74,16 +74,28 @@ init:
         ypos 0.15
         yanchor 360
 
-    transform seat_l():
+    transform seat_l_ARS():
         xpos 0.27
         xanchor 225
         ypos 0.55
         yanchor 360
 
-    transform seat_r():
+    transform seat_l_CSE():
+        xpos 0.23
+        xanchor 225
+        ypos 0.40
+        yanchor 360
+
+    transform seat_r_ARS():
         xpos 0.73
         xanchor 225
         ypos 0.55
+        yanchor 360
+
+    transform seat_r_CSE():
+        xpos 0.73
+        xanchor 225
+        ypos 0.40
         yanchor 360
 
 # ==============================================================================
@@ -325,6 +337,15 @@ image projector:
     "Screen Effects/Projector 2.png" with Dissolve(0.5)
     0.5
     "Screen Effects/Projector 3.png" with Dissolve(0.5)
+
+# Turn on the projector in Javits 100.
+image projector_javits:
+    "Screen Effects/Javits Screen Projector 1.png" with Dissolve(0.5)
+    0.5
+    "Screen Effects/Javits Screen Projector 2.png" with Dissolve(0.5)
+    0.5
+    "Screen Effects/Javits Screen Projector 3.png" with Dissolve(0.5)
+    0.5
 
 # Quick fade in/out with a black screen
 image fadeInOut:

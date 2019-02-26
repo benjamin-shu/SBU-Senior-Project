@@ -27,7 +27,7 @@ label schedule_show:
 
 label schedule_reminders:
     show Dimmed with dissolve
-    
+
     # Go over weekly reminders of project due dates.
     $ reminder = ARS_reminders[week_num]
     B "{i}[reminder]{/i}"
@@ -180,7 +180,6 @@ label week_phase_1_act:
         $ renpy.jump("%s_%s" % (week_act, week_proj))
 
 label week_phase_2:
-
     if (week_num in HON_events):
         $ renpy.jump("Week_%d_HON" % week_num)
 
@@ -203,6 +202,10 @@ label week_phase_2_check:
         $ week_dict = HON_deadlines
         $ week_act = code_S
         $ HON_progress += 1
+
+    show schedule_img
+    "week_act: [week_act]"
+    hide schedule_img
 
     $ week_cnt = week_num + 1
     $ week_proj = ""
