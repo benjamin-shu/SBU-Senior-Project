@@ -255,7 +255,6 @@ image Study1 B07 = "Projects/HON_01-Study1/B07.png"
 image Study1 B08 = "Projects/HON_01-Study1/B08.png"
 image Study1 B09 = "Projects/HON_01-Study1/B09.png"
 image Study1 B10 = "Projects/HON_01-Study1/B10.png"
-image Study1 B11 = "Projects/HON_01-Study1/B11.png"
 
 # Review on Decimal/Binary
 # image Study1 C01 = "Projects/HON_01-Study1/C01.png"

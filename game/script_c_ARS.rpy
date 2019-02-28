@@ -43,6 +43,20 @@ label ARS_composition:
         jump week_end
 
 label ARS_shapes:
+    if (ARS_progress == 1):
+        show Dimmed with dissolve
+
+        $ renpy.pause()
+
+        hide Dimmed
+        with dissolve
+    elif (ARS_progress == 2):
+        show Dimmed with dissolve
+
+        $ renpy.pause()
+
+        hide Dimmed
+        with dissolve
 
     $ phase += 1
     if phase < 3:
@@ -51,6 +65,21 @@ label ARS_shapes:
         jump week_end
 
 label ARS_typography:
+    if (ARS_progress == 1):
+        show Dimmed with dissolve
+
+        $ renpy.pause()
+
+        hide Dimmed
+        with dissolve
+    elif (ARS_progress == 2):
+        show Dimmed with dissolve
+
+        $ renpy.pause()
+
+        hide Dimmed
+        with dissolve
+
     $ phase += 1
     if phase < 3:
         $ renpy.jump("week_phase_%d" % phase)
@@ -58,6 +87,35 @@ label ARS_typography:
         jump week_end
 
 label ARS_poster:
+    if (ARS_progress == 1):
+        show Dimmed with dissolve
+
+        $ renpy.pause()
+
+        hide Dimmed
+        with dissolve
+    elif (ARS_progress == 2):
+        show Dimmed with dissolve
+
+        $ renpy.pause()
+
+        hide Dimmed
+        with dissolve
+    elif (ARS_progress == 3):
+        show Dimmed with dissolve
+
+        $ renpy.pause()
+
+        hide Dimmed
+        with dissolve
+    elif (ARS_progress == 4):
+        show Dimmed with dissolve
+
+        $ renpy.pause()
+
+        hide Dimmed
+        with dissolve
+
     $ phase += 1
     if phase < 3:
         $ renpy.jump("week_phase_%d" % phase)
@@ -65,6 +123,35 @@ label ARS_poster:
         jump week_end
 
 label ARS_video:
+    if (ARS_progress == 1):
+        show Dimmed with dissolve
+
+        $ renpy.pause()
+
+        hide Dimmed
+        with dissolve
+    elif (ARS_progress == 2):
+        show Dimmed with dissolve
+
+        $ renpy.pause()
+
+        hide Dimmed
+        with dissolve
+    elif (ARS_progress == 3):
+        show Dimmed with dissolve
+
+        $ renpy.pause()
+
+        hide Dimmed
+        with dissolve
+    elif (ARS_progress == 4):
+        show Dimmed with dissolve
+
+        $ renpy.pause()
+
+        hide Dimmed
+        with dissolve
+
     $ phase += 1
     if phase < 3:
         $ renpy.jump("week_phase_%d" % phase)

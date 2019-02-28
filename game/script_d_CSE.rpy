@@ -44,6 +44,25 @@ label CSE_uml:
         jump week_end
 
 label CSE_srs:
+    if (CSE_progress == 1):
+        show Dimmed with dissolve
+        show Laptop with dissolve
+
+        $ renpy.pause()
+
+        hide Laptop
+        hide Dimmed
+        with dissolve
+    elif (CSE_progress == 2):
+        show Dimmed with dissolve
+        show Laptop with dissolve
+
+        $ renpy.pause()
+
+        hide Laptop
+        hide Dimmed
+        with dissolve
+
     $ phase += 1
     if phase < 3:
         $ renpy.jump("week_phase_%d" % phase)
@@ -51,6 +70,34 @@ label CSE_srs:
         jump week_end
 
 label CSE_phase1:
+    if (CSE_progress == 1):
+        show Dimmed with dissolve
+        show Laptop with dissolve
+
+        $ renpy.pause()
+
+        hide Laptop
+        hide Dimmed
+        with dissolve
+    elif (CSE_progress == 2):
+        show Dimmed with dissolve
+        show Laptop with dissolve
+
+        $ renpy.pause()
+
+        hide Laptop
+        hide Dimmed
+        with dissolve
+    elif (CSE_progress == 3):
+        show Dimmed with dissolve
+        show Laptop with dissolve
+
+        $ renpy.pause()
+
+        hide Laptop
+        hide Dimmed
+        with dissolve
+
     $ phase += 1
     if phase < 3:
         $ renpy.jump("week_phase_%d" % phase)
@@ -58,6 +105,43 @@ label CSE_phase1:
         jump week_end
 
 label CSE_phase2:
+    if (CSE_progress == 1):
+        show Dimmed with dissolve
+        show Laptop with dissolve
+
+        $ renpy.pause()
+
+        hide Laptop
+        hide Dimmed
+        with dissolve
+    elif (CSE_progress == 2):
+        show Dimmed with dissolve
+        show Laptop with dissolve
+
+        $ renpy.pause()
+
+        hide Laptop
+        hide Dimmed
+        with dissolve
+    elif (CSE_progress == 3):
+        show Dimmed with dissolve
+        show Laptop with dissolve
+
+        $ renpy.pause()
+
+        hide Laptop
+        hide Dimmed
+        with dissolve
+    elif (CSE_progress == 4):
+        show Dimmed with dissolve
+        show Laptop with dissolve
+
+        $ renpy.pause()
+
+        hide Laptop
+        hide Dimmed
+        with dissolve
+
     $ phase += 1
     if phase < 3:
         $ renpy.jump("week_phase_%d" % phase)
@@ -65,6 +149,43 @@ label CSE_phase2:
         jump week_end
 
 label CSE_phase3:
+    if (CSE_progress == 1):
+        show Dimmed with dissolve
+        show Laptop with dissolve
+
+        $ renpy.pause()
+
+        hide Laptop
+        hide Dimmed
+        with dissolve
+    elif (CSE_progress == 2):
+        show Dimmed with dissolve
+        show Laptop with dissolve
+
+        $ renpy.pause()
+
+        hide Laptop
+        hide Dimmed
+        with dissolve
+    elif (CSE_progress == 3):
+        show Dimmed with dissolve
+        show Laptop with dissolve
+
+        $ renpy.pause()
+
+        hide Laptop
+        hide Dimmed
+        with dissolve
+    elif (CSE_progress == 4):
+        show Dimmed with dissolve
+        show Laptop with dissolve
+
+        $ renpy.pause()
+
+        hide Laptop
+        hide Dimmed
+        with dissolve
+
     $ phase += 1
     if phase < 3:
         $ renpy.jump("week_phase_%d" % phase)
