@@ -230,6 +230,42 @@ image UML Diagram Combined 05:
     0.5
 
 # ==============================================================================
+# HON Review Materials
+# ==============================================================================
+
+# Review on Proof by Contradiction
+image Study1 A01 = "Projects/HON_01-Study1/A01.png"
+image Study1 A02 = "Projects/HON_01-Study1/A02.png"
+image Study1 A03 = "Projects/HON_01-Study1/A03.png"
+image Study1 A04 = "Projects/HON_01-Study1/A04.png"
+image Study1 A05 = "Projects/HON_01-Study1/A05.png"
+image Study1 A06 = "Projects/HON_01-Study1/A06.png"
+image Study1 A07 = "Projects/HON_01-Study1/A07.png"
+image Study1 A08 = "Projects/HON_01-Study1/A08.png"
+image Study1 A09 = "Projects/HON_01-Study1/A09.png"
+
+# Review on Binary Search Trees
+image Study1 B01 = "Projects/HON_01-Study1/B01.png"
+image Study1 B02 = "Projects/HON_01-Study1/B02.png"
+image Study1 B03 = "Projects/HON_01-Study1/B03.png"
+image Study1 B04 = "Projects/HON_01-Study1/B04.png"
+image Study1 B05 = "Projects/HON_01-Study1/B05.png"
+image Study1 B06 = "Projects/HON_01-Study1/B06.png"
+image Study1 B07 = "Projects/HON_01-Study1/B07.png"
+image Study1 B08 = "Projects/HON_01-Study1/B08.png"
+image Study1 B09 = "Projects/HON_01-Study1/B09.png"
+image Study1 B10 = "Projects/HON_01-Study1/B10.png"
+image Study1 B11 = "Projects/HON_01-Study1/B11.png"
+
+# Review on Decimal/Binary
+# image Study1 C01 = "Projects/HON_01-Study1/C01.png"
+# image Study1 C01 = "Projects/HON_01-Study1/C01.png"
+# image Study1 C01 = "Projects/HON_01-Study1/C01.png"
+# image Study1 C01 = "Projects/HON_01-Study1/C01.png"
+# image Study1 C01 = "Projects/HON_01-Study1/C01.png"
+# image Study1 C01 = "Projects/HON_01-Study1/C01.png"
+
+# ==============================================================================
 # Background Art
 # ==============================================================================
 
@@ -267,6 +303,7 @@ image Laptop = "Screen Effects/Laptop.png"
 
 # The various applications that may be running on Ben's laptop.
 image Violet UML = "Screen Effects/Violet UML.png"
+# image Browser PDF = "Screen Effects/Browser PDF.png"
 
 ## (UNUSED)
 #image Macbook = "Screen Effects/Macbook Screen.png"
