@@ -32,6 +32,7 @@ label CSE_uml:
         show UML Diagram Combined 05 with dissolve
         $ renpy.pause()
 
+        hide UML Diagram
         hide Laptop
         hide Dimmed
         hide Violet UML

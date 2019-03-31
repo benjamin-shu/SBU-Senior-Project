@@ -5,17 +5,6 @@ define b_name = "Ben"
 define B = DynamicCharacter("b_name", image="Ben", who_color="#71B7E2", who_bold=True,
     what_Size=30, what_Bold=False, what_font="fonts/Courier Prime Bold.ttf")
 
-define f_name = "???"
-define f_path = ""
-define F = DynamicCharacter("f_name", image="Faith", who_color="#FFFF66", who_bold=True, who_font="fonts/Pacifico.ttf",
-    what_Size=30, what_bold=False, what_font="fonts/Pacifico.ttf")
-
-# # (UNUSED)
-# define m_name = "???"
-# define m_path = ""
-# define M = DynamicCharacter("m_name", image="Maria", who_color="#C42727", who_bold=False, who_font="fonts/Chunkfive.otf",
-#     what_Size=30, what_bold=True)
-
 # # (UNUSED)
 # define r_name = "???"
 # define r_path = ""
@@ -43,6 +32,7 @@ init:
     transform projectCenter():
         xalign 0.5
         yalign 0.2
+
 # ==============================================================================
 # Init Block - Screen Positions
 # ==============================================================================
@@ -74,195 +64,41 @@ init:
         ypos 0.15
         yanchor 360
 
-    transform seat_l_ARS():
-        xpos 0.27
-        xanchor 225
-        ypos 0.55
-        yanchor 360
-
-    transform seat_l_CSE():
-        xpos 0.23
-        xanchor 225
-        ypos 0.40
-        yanchor 360
-
-    transform seat_r_ARS():
-        xpos 0.73
-        xanchor 225
-        ypos 0.55
-        yanchor 360
-
-    transform seat_r_CSE():
-        xpos 0.73
-        xanchor 225
-        ypos 0.40
-        yanchor 360
-
 # ==============================================================================
-# Python Statements (If Needed)
-# ==============================================================================
-# init python:
-
-# ==============================================================================
-# ARS Presentation Slides & Project Materials
+# ARS Project Materials
 # ==============================================================================
 
-# Slides for first ARS assignment.
-image Composition Slide 1 = "Slides/Composition/Slide 01.png"
-image Composition Slide 2a = "Slides/Composition/Slide 02 a.png"
-image Composition Slide 2b = "Slides/Composition/Slide 02 b.png"
-image Composition Slide 2c:
-    "Slides/Composition/Slide 02 c.png" with Dissolve(0.5)
-    0.5
-    "Slides/Composition/Slide 02 d.png" with Dissolve(0.5)
-    0.5
-    "Slides/Composition/Slide 02 e.png" with Dissolve(0.5)
+# Compositional Elements Presentation
 
-image Composition Slide 3a = "Slides/Composition/Slide 03 a.png"
-image Composition Slide 3b:
-    "Slides/Composition/Slide 03 b.png" with Dissolve(0.5)
-    0.5
-    "Slides/Composition/Slide 03 c.png" with Dissolve(0.5)
-    0.5
-    "Slides/Composition/Slide 03 d.png" with Dissolve(0.5)
+# Typography Project
 
-image Composition Slide 4:
-    "Slides/Composition/Slide 04 a.png" with Dissolve(0.5)
-    0.5
-    "Slides/Composition/Slide 04 b.png" with Dissolve(0.5)
+# Poster Design Project
 
-image Composition Slide 5:
-    "Slides/Composition/Slide 05 a.png" with Dissolve(0.5)
-    0.5
-    "Slides/Composition/Slide 05 b.png" with Dissolve(0.5)
-
-image Composition Slide 6 = "Slides/Composition/Slide 06.png"
-image Composition Slide 7 = "Slides/Composition/Slide 07.png"
-image Composition Slide 8 = "Slides/Composition/Slide 08.png"
-image Composition Slide 9 = "Slides/Composition/Slide 09.png"
-
-# First ARS assignment - Composition.
-define path_ARSComposition = ""
-image Composition Completed = "[ARS_Composition]"
-
-image Composition Canvas = "Projects/ARS_01-Composition/Canvas.png"
-
-image Composition Point01 = "Projects/ARS_01-Composition/01/Point01.png"
-image Composition Point02 = "Projects/ARS_01-Composition/01/Point02.png"
-image Composition Point03 = "Projects/ARS_01-Composition/02/Point03.png"
-image Composition Point04 = "Projects/ARS_01-Composition/02/Point04.png"
-image Composition Point05 = "Projects/ARS_01-Composition/02/Point05.png"
-
-image Composition Depth01 = "Projects/ARS_01-Composition/01/Depth01.png"
-image Composition Depth02 = "Projects/ARS_01-Composition/01/Depth02.png"
-image Composition Depth03 = "Projects/ARS_01-Composition/02/Depth03.png"
-image Composition Depth04 = "Projects/ARS_01-Composition/02/Depth04.png"
-image Composition Depth05 = "Projects/ARS_01-Composition/02/Depth05.png"
-
-image Composition Shape01 = "Projects/ARS_01-Composition/01/Shape01.png"
-image Composition Shape02:
-    "Projects/ARS_01-Composition/01/Shape02.png" with Dissolve(0.5)
-    0.5
-    "Projects/ARS_01-Composition/01/Shape03.png" with Dissolve(0.5)
-    0.5
-    "Projects/ARS_01-Composition/01/Shape04.png" with Dissolve(0.5)
-    0.5
-image Composition Shape03 = "Projects/ARS_01-Composition/02/Shape03.png"
-image Composition Shape04 = "Projects/ARS_01-Composition/02/Shape04.png"
-image Composition Shape05 = "Projects/ARS_01-Composition/02/Shape05.png"
-image Composition Shape06 = "Projects/ARS_01-Composition/02/Shape06.png"
+# Video Editing Project
 
 # ==============================================================================
 # CSE Presentation Slides & Project Materials
 # ==============================================================================
 
-# Slides for first CSE assignment.
-image UML Slide 1 = "Slides/UML/Slide 01.png"
-image UML Slide 2 = "Slides/UML/Slide 02.png"
-image UML Slide 3a = "Slides/UML/Slide 03a.png"
-image UML Slide 3b = "Slides/UML/Slide 03b.png"
-image UML Slide 3c = "Slides/UML/Slide 03c.png"
-image UML Slide 4a = "Slides/UML/Slide 04a.png"
-image UML Slide 4b = "Slides/UML/Slide 04b.png"
-image UML Slide 4c = "Slides/UML/Slide 04c.png"
-image UML Slide 5a = "Slides/UML/Slide 05a.png"
-image UML Slide 5b = "Slides/UML/Slide 05b.png"
-image UML Slide 5c = "Slides/UML/Slide 05c.png"
+# Website Design Diagrams
 
-# First CSE assignment - UML Diagrams
-image UML Diagram MetroMap 01 = "Projects/CSE_01-UMLDiagrams/01/MetroMap01.png"
-image UML Diagram MetroMap 02 = "Projects/CSE_01-UMLDiagrams/01/MetroMap02.png"
-image UML Diagram MetroStation 01 = "Projects/CSE_01-UMLDiagrams/01/MetroStation01.png"
-image UML Diagram MetroStation 02 = "Projects/CSE_01-UMLDiagrams/01/MetroStation02.png"
-image UML Diagram MetroLine 01 = "Projects/CSE_01-UMLDiagrams/01/MetroLine01.png"
-image UML Diagram MetroLine 02 = "Projects/CSE_01-UMLDiagrams/01/MetroLine02.png"
+# Page Designs in HTML
 
-image UML Diagram Combined 01:
-    "Projects/CSE_01-UMLDiagrams/01/Combined01a.png" with Dissolve(0.5)
-    0.5
-    "Projects/CSE_01-UMLDiagrams/01/Combined01b.png" with Dissolve(0.5)
-    0.5
-    "Projects/CSE_01-UMLDiagrams/01/Combined01c.png" with Dissolve(0.5)
-    0.5
-    "Projects/CSE_01-UMLDiagrams/01/Combined01d.png" with Dissolve(0.5)
-    0.5
-image UML Diagram Combined 02 = "Projects/CSE_01-UMLDiagrams/02/Combined02.png"
-image UML Diagram Combined 03:
-    "Projects/CSE_01-UMLDiagram/02/Combined03a.png" with Dissolve(0.5)
-    0.5
-    "Projects/CSE_01-UMLDiagram/02/Combined03b.png" with Dissolve(0.5)
-    0.5
-image UML Diagram Combined 04:
-    "Projects/CSE_01-UMLDiagram/02/Combined04a.png" with Dissolve(0.5)
-    0.5
-    "Projects/CSE_01-UMLDiagram/02/Combined04b.png" with Dissolve(0.5)
-    0.5
-    "Projects/CSE_01-UMLDiagram/02/Combined04c.png" with Dissolve(0.5)
-    0.5
-image UML Diagram Combined 05:
-    "Projects/CSE_01-UMLDiagram/02/Combined05a.png" with Dissolve(0.5)
-    0.5
-    "Projects/CSE_01-UMLDiagram/02/Combined05b.png" with Dissolve(0.5)
-    0.5
-    "Projects/CSE_01-UMLDiagram/02/Combined05c.png" with Dissolve(0.5)
-    0.5
-    "Projects/CSE_01-UMLDiagram/02/Combined05d.png" with Dissolve(0.5)
-    0.5
+# Content Uploading
+
+# Website Deployment
 
 # ==============================================================================
 # HON Review Materials
 # ==============================================================================
 
-# Review on Proof by Contradiction
-image Study1 A01 = "Projects/HON_01-Study1/A01.png"
-image Study1 A02 = "Projects/HON_01-Study1/A02.png"
-image Study1 A03 = "Projects/HON_01-Study1/A03.png"
-image Study1 A04 = "Projects/HON_01-Study1/A04.png"
-image Study1 A05 = "Projects/HON_01-Study1/A05.png"
-image Study1 A06 = "Projects/HON_01-Study1/A06.png"
-image Study1 A07 = "Projects/HON_01-Study1/A07.png"
-image Study1 A08 = "Projects/HON_01-Study1/A08.png"
-image Study1 A09 = "Projects/HON_01-Study1/A09.png"
+# Resume Review
 
-# Review on Binary Search Trees
-image Study1 B01 = "Projects/HON_01-Study1/B01.png"
-image Study1 B02 = "Projects/HON_01-Study1/B02.png"
-image Study1 B03 = "Projects/HON_01-Study1/B03.png"
-image Study1 B04 = "Projects/HON_01-Study1/B04.png"
-image Study1 B05 = "Projects/HON_01-Study1/B05.png"
-image Study1 B06 = "Projects/HON_01-Study1/B06.png"
-image Study1 B07 = "Projects/HON_01-Study1/B07.png"
-image Study1 B08 = "Projects/HON_01-Study1/B08.png"
-image Study1 B09 = "Projects/HON_01-Study1/B09.png"
-image Study1 B10 = "Projects/HON_01-Study1/B10.png"
+# LinkedIn Profile
 
-# Review on Decimal/Binary
-# image Study1 C01 = "Projects/HON_01-Study1/C01.png"
-# image Study1 C01 = "Projects/HON_01-Study1/C01.png"
-# image Study1 C01 = "Projects/HON_01-Study1/C01.png"
-# image Study1 C01 = "Projects/HON_01-Study1/C01.png"
-# image Study1 C01 = "Projects/HON_01-Study1/C01.png"
-# image Study1 C01 = "Projects/HON_01-Study1/C01.png"
+# Presentation Prep
+
+# Interview Prep
 
 # ==============================================================================
 # Background Art
@@ -272,9 +108,6 @@ image Study1 B10 = "Projects/HON_01-Study1/B10.png"
 image West F 301 Hallway = "Backgrounds/West F 301 Hallway 1.png"
 image West F 301C = "Backgrounds/West F 301C.png"
 image West F 301C Door = "Backgrounds/West F 301C Door.png"
-
-# Frey Hall
-image Frey Hall Front = "Backgrounds/Frey Hall Front.png"
 
 # Javits Lecture Hall
 image Javits Front Door = "Backgrounds/Javits Front Door.png"
@@ -286,6 +119,8 @@ image Staller = "Backgrounds/Staller.png"
 image Staller Music = "Backgrounds/Staller Music.png"
 image eMedia Seats = "Backgrounds/eMedia Seats.png"
 image eMedia Screen = "Backgrounds/eMedia Screen.png"
+
+# Interview Background
 
 # ==============================================================================
 # Screen Effects - Images
@@ -300,72 +135,12 @@ image Dimmed = "Screen Effects/Dimmed.png"
 # Image used to show Ben using his laptop.
 image Laptop = "Screen Effects/Laptop.png"
 
-# The various applications that may be running on Ben's laptop.
-image Violet UML = "Screen Effects/Violet UML.png"
-# image Browser PDF = "Screen Effects/Browser PDF.png"
-
-## (UNUSED)
-#image Macbook = "Screen Effects/Macbook Screen.png"
-
-# Used in first week to show contents of Ben's bag.
-image Backpack 1 = "Screen Effects/Backpack_1.png"
-image Backpack 2 = HBox("Screen Effects/Backpack_1.png", "Screen Effects/Backpack_2.png")
-image Backpack 3 = VBox(HBox("Screen Effects/Backpack_1.png", "Screen Effects/Backpack_2.png"), "Screen Effects/Backpack_3.png")
-image Backpack 4 = VBox(HBox("Screen Effects/Backpack_1.png", "Screen Effects/Backpack_2.png"), HBox("Screen Effects/Backpack_3.png", "Screen Effects/Backpack_4.png"))
-
 # ==============================================================================
 # Screen Effects - ATL
 # ==============================================================================
 
-# A short animation for TV static.
-image static:
-    alpha 0.35
-    "Screen Effects/Static 1.png" with dissolve
-    0.25
-    "Screen Effects/Static 2.png" with dissolve
-    0.25
-    repeat
-
-# Close a clapper board labeled "Take 1".
-image take1:
-    "Screen Effects/Take 1 Open.png"
-    0.25
-    "Screen Effects/Take 1 Closed.png" with dissolve
-    0.5
-    linear 0.75 alpha 0.0
-
-# Close a clapper board labeled "Take 2".
-image take2:
-    "Screen Effects/Take 2 Open.png"
-    0.25
-    "Screen Effects/Take 2 Closed.png" with dissolve
-    0.5
-    linear 0.75 alpha 0.0
-
-## (UNUSED)
-## Close a clapper board labeled "Take 3".
-# image take3:
-#     xalign 0.0
-#     "Screen Effects/Take 3 Open.png"
-#     linear 0.5 xalign 1.0
-#     0.25
-#     "Screen Effects/Take 3 Closed.png" with dissolve
-#     0.5
-#     linear 0.75 alpha 0.0
-
-## (UNUSED)
-## Close a clapper board labeled "Take 4".
-# image take4:
-#     xalign 0.0
-#     "Screen Effects/Take 4 Open.png"
-#     linear 0.5 xalign 1.0
-#     0.25
-#     "Screen Effects/Take 4 Closed.png" with dissolve
-#     0.5
-#     linear 0.75 alpha 0.0
-
 # Turn on a projector screen in current scene.
-image projector:
+image projector_emedia:
     "Screen Effects/Projector 0.png" with Dissolve(0.5)
     0.5
     "Screen Effects/Projector 1.png" with Dissolve(0.5)
