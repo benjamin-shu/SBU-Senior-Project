@@ -17,8 +17,25 @@ define dark = -0.25
 # Define new default Dissolve for transitions between sprites.
 define dissolve = Dissolve(0.5)
 
-# Define generic index counter.
+# ==============================================================================
+# Day Loop Control Variables
+# ==============================================================================
+
+# Counter and countdown for current day, with min and max values (i.e. days 1 - 10)
+default day_num = 0
+default countdown = 10
+define day_min = 1
+define day_max = 10
 default i = 0
+
+# List of Booleans for tracking player's choices on a given day.
+default choices = [ false, false, false ]
+
+# Counters for player's progress in each of the three skill trees.
+default progress = [ 0, 0, 0 ]
+
+# Codes for jump labels when showing progress sequences.
+define codes = [ "ARS", "CSE", "HON" ]
 
 # ==============================================================================
 # Init Block - Transforms
