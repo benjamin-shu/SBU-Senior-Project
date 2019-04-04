@@ -86,36 +86,185 @@ init:
 # ==============================================================================
 
 # Compositional Elements Presentation
+image composition_1:
+    "images\\0_ARS\\composition_1.png" with dissolve
+    0.25
+    "images\\0_ARS\\composition_1a.png" with dissolve
+    "images\\0_ARS\\composition_1b.png" with dissolve
+    "images\\0_ARS\\composition_1c.png" with dissolve
+    "images\\0_ARS\\composition_1d.png" with dissolve
+    "images\\0_ARS\\composition_1e.png" with dissolve
+    "images\\0_ARS\\composition_1f.png" with dissolve
+    "images\\0_ARS\\composition_1g.png" with dissolve
+    "images\\0_ARS\\composition_1h.png" with dissolve
+    "images\\0_ARS\\composition_1i.png" with dissolve
+    "images\\0_ARS\\composition_1j.png" with dissolve
+    "images\\0_ARS\\composition_1k.png" with dissolve
+    "images\\0_ARS\\composition_1l.png" with dissolve
+
+image composition_2:
+    "images\\0_ARS\\composition_2a.png" with dissolve
+    0.25
+    "images\\0_ARS\\composition_2b.png" with dissolve
+    0.25
+    "images\\0_ARS\\composition_2c.png" with dissolve
 
 # Typography Project
+image typo_1:
+    "images\\0_ARS\\typo_1a.png" with dissolve
+    0.25
+    "images\\0_ARS\\typo_1b.png" with dissolve
+    0.25
+    "images\\0_ARS\\typo_1c.png" with dissolve
+    0.25
+    "images\\0_ARS\\typo_1d.png" with dissolve
+    0.25
+
+image typo_2:
+    "images\\0_ARS\\typo_2a.png" with dissolve
+    0.25
+    "images\\0_ARS\\typo_2b.png" with dissolve
+    0.25
+    "images\\0_ARS\\typo_2c.png" with dissolve
+    0.25
 
 # Poster Design Project
+image poster_1:
+    "images\\0_ARS\\poster_1a.png" with dissolve
+    0.25
+    "images\\0_ARS\\poster_1b.png" with dissolve
+    0.25
+
+image poster_2:
+    "images\\0_ARS\\poster_2a.png" with dissolve
+    0.25
+    "images\\0_ARS\\poster_2b.png" with dissolve
+    0.25
+
+image poster_3:
+    "images\\0_ARS\\poster_3a.png" with dissolve
+    0.25
+    "images\\0_ARS\\poster_3b.png" with dissolve
+    0.25
 
 # Video Editing Project
+image video_1 = "images\\0_ARS\\video_1.png"
+
+image video_2 = "images\\0_ARS\\video_2.png"
+
+image video_3:
+    "images\\0_ARS\\video_3.png" with dissolve
+    0.25
+    "images\\0_ARS\\video_3a.png" with dissolve
+    0.25
+    "images\\0_ARS\\video_3b.png" with dissolve
+    0.25
+    "images\\0_ARS\\video_3c.png" with dissolve
+    0.25
+    "images\\0_ARS\\video_3d.png" with dissolve
+    0.25
+    "images\\0_ARS\\video_3e.png" with dissolve
+    0.25
+    "images\\0_ARS\\video_3f.png" with dissolve
+    0.25
+    "images\\0_ARS\\video_3a.png" with dissolve
+    0.25
 
 # ==============================================================================
 # CSE Presentation Slides & Project Materials
 # ==============================================================================
 
 # Website Design Diagrams
+image uml_1 = "images\\1_CSE\\uml_1.png"
+
+image uml_2 = "images\\1_CSE\\uml_2.png"
 
 # Page Designs in HTML
+image html_1:
+    "images\\1_CSE\\html_1a.png" with dissolve
+    0.25
+    "images\\1_CSE\\html_1b.png" with dissolve
+    0.25
+    "images\\1_CSE\\html_1c.png" with dissolve
+    0.25
+    "images\\1_CSE\\html_1d.png" with dissolve
+    0.25
+
+image html_2:
+    "images\\1_CSE\\html_2a.png" with dissolve
+    0.25
+    "images\\1_CSE\\html_2b.png" with dissolve
+    0.25
+    "images\\1_CSE\\html_2c.png" with dissolve
+    0.25
 
 # Content Uploading
+image content_1 = "images\\1_CSE\\content_1.png"
+
+image content_2 = "images\\1_CSE\\content_2.png"
+
+image content_3:
+    "images\\1_CSE\\content_3a.png" with dissolve
+    0.25
+    "images\\1_CSE\\content_3b.png" with dissolve
+    0.25
 
 # Website Deployment
+image web_1 = "images\\1_CSE\\web_1.png"
+
+image web_2 = "images\\1_CSE\\web_2.png"
+
+image web_3 = "images\\1_CSE\\web_3.png"
 
 # ==============================================================================
 # HON Review Materials
 # ==============================================================================
 
 # Resume Review
+image resume_1 = "images\\2_HON\\resume_1.png"
+
+image resume_2 = "images\\2_HON\\resume_2.png"
 
 # LinkedIn Profile
+image linkedin_1 = "images\\2_HON\\linkedin_1.png"
+image linkedin_1a = "images\\2_HON\\linkedin_1a.png"
+image linkedin_1b = "images\\2_HON\\linkedin_1b.png"
+image linkedin_1c:
+    "images\\2_HON\\linkedin_1c.png" with dissolve
+    0.25
+    "images\\2_HON\\linkedin_1d.png" with dissolve
+    0.25
+
+image linkedin_2a = "images\\2_HON\\linkedin_2a.png" with dissolve
+image linkedin_2b:
+    "images\\2_HON\\linkedin_2b.png" with dissolve
+    0.25
+    "images\\2_HON\\linkedin_2c.png" with dissolve
+    0.25
 
 # Presentation Prep
+image present_1a = "images\\2_HON\\present_1a.png"
+image present_1b = "images\\2_HON\\present_1b.png"
+
+image present_2:
+    "images\\2_HON\\present_2a.png" with dissolve
+    0.25
+    "images\\2_HON\\present_2b.png" with dissolve
+    0.25
+    repeat
+
+image present_3 = "images\\2_HON\\present_3.png"
 
 # Interview Prep
+image interview_1a = "images\\2_HON\\interview_1a.png"
+image interview_1b = "images\\2_HON\\interview_1b.png"
+image interview_1c = "images\\2_HON\\interview_1c.png"
+
+image interview_2 = "images\\2_HON\\interview_2.png"
+
+image interview_3a = "images\\2_HON\\interview_3a.png"
+image interview_3b = "images\\2_HON\\interview_3b.png"
+image interview_3c = "images\\2_HON\\interview_3c.png"
 
 # ==============================================================================
 # Background Art
