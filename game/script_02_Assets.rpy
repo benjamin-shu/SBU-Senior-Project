@@ -239,15 +239,32 @@ image web_3 = "images/1_CSE/web_3.png"
 # ==============================================================================
 
 # Resume Review
-image resume_1 = "images/2_HON/resume_1.png"
+image resume_1a = "images/2_HON/resume_1a.png"
+image resume_1b = "images/2_HON/resume_1b.png"
 
-image resume_2 = "images/2_HON/resume_2.png"
+image resume_2a:
+    "images/2_HON/resume_2a.png" with Dissolve(0.5)
+    0.5
+    "images/2_HON/resume_2b.png" with Dissolve(0.5)
+    0.5
+    "images/2_HON/resume_2c.png" with Dissolve(0.5)
+    0.5
+
+image resume_2b:
+    "images/2_HON/resume_2d.png" with Dissolve(0.5)
+    0.5
+    "images/2_HON/resume_2e.png" with Dissolve(0.5)
+    0.5
+    "images/2_HON/resume_2f.png" with Dissolve(0.5)
+    0.5
 
 # LinkedIn Profile
 image linkedin_1 = "images/2_HON/linkedin_1.png"
-image linkedin_1a = "images/2_HON/linkedin_1a.png"
-image linkedin_1b = "images/2_HON/linkedin_1b.png"
-image linkedin_1c:
+image linkedin_1a:
+    "images/2_HON/linkedin_1a.png" with Dissolve(0.5)
+    0.75
+    "images/2_HON/linkedin_1b.png" with Dissolve(0.5)
+    0.75
     "images/2_HON/linkedin_1c.png" with Dissolve(0.5)
     0.5
     "images/2_HON/linkedin_1d.png" with Dissolve(0.5)
@@ -266,9 +283,9 @@ image present_1b = "images/2_HON/present_1b.png"
 
 image present_2:
     "images/2_HON/present_2a.png" with Dissolve(0.5)
-    0.5
+    1.5
     "images/2_HON/present_2b.png" with Dissolve(0.5)
-    0.5
+    1.5
     repeat
 
 image present_3 = "images/2_HON/present_3.png"
