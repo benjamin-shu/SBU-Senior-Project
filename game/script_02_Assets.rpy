@@ -198,27 +198,28 @@ image uml_2 = "images/1_CSE/uml_2.png"
 
 # Page Designs in HTML
 image html_1:
-    "images/1_CSE/html_1a.png" with Dissolve(0.5)
-    0.5
-    "images/1_CSE/html_1b.png" with Dissolve(0.5)
-    0.5
-    "images/1_CSE/html_1c.png" with Dissolve(0.5)
-    0.5
-    "images/1_CSE/html_1d.png" with Dissolve(0.5)
-    0.5
+    "images/1_CSE/html_1a.png" with Dissolve(1.0)
+    1.5
+    "images/1_CSE/html_1b.png" with Dissolve(1.0)
+    1.5
+    "images/1_CSE/html_1c.png" with Dissolve(1.0)
+    1.5
+    "images/1_CSE/html_1d.png" with Dissolve(1.0)
+    1.5
 
 image html_2:
-    "images/1_CSE/html_2a.png" with Dissolve(0.5)
-    0.5
-    "images/1_CSE/html_2b.png" with Dissolve(0.5)
-    0.5
-    "images/1_CSE/html_2c.png" with Dissolve(0.5)
-    0.5
+    "images/1_CSE/html_2a.png" with Dissolve(1.0)
+    1.5
+    "images/1_CSE/html_2b.png" with Dissolve(1.0)
+    1.5
+    "images/1_CSE/html_2c.png" with Dissolve(1.0)
+    1.5
 
 # Content Uploading
 image content_1 = "images/1_CSE/content_1.png"
 
-image content_2 = "images/1_CSE/content_2.png"
+image content_2a = "images/1_CSE/html_1d.png"
+image content_2b = "images/1_CSE/content_2.png"
 
 image content_3:
     "images/1_CSE/content_3a.png" with Dissolve(0.5)

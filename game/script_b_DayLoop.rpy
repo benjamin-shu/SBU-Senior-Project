@@ -1,5 +1,5 @@
 label day_start:
-    jump ARS_sequences
+    jump CSE_sequences
 
     if (day_num < 0 and day_num > 11):
         "Error with counter."
