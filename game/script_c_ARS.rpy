@@ -1,13 +1,11 @@
 label ARS_sequences:
     # Retrieve index for ARS data using codes[].
     default ARS_index = codes.index("ARS")
-    # Retrieve player's current progress in this skill tree.
-    default ARS_progress = progress[ARS_index]
-
+    
     # Set scene in Staller's eMedia SINC site.
     scene eMedia Screen with fade
 
-    #$ renpy.jump("ARS_sequences_%d" % (ARS_progress))
+    $ renpy.jump("ARS_sequences_%d" % (progress[ARS_index]))
 
 label ARS_sequences_1:
     show projector_emedia with dissolve
@@ -19,8 +17,8 @@ label ARS_sequences_1:
 
     hide projector_emedia with dissolve
 
-    #i += 1
-    #jump show_skills
+    $ i += 1
+    jump show_skills
 
 label ARS_sequences_2:
     show projector_emedia with dissolve
@@ -32,8 +30,8 @@ label ARS_sequences_2:
 
     hide projector_emedia with dissolve
 
-    #i += 1
-    #jump show_skills
+    $ i += 1
+    jump show_skills
 
 label ARS_sequences_3:
     show projector_emedia with dissolve
@@ -45,8 +43,8 @@ label ARS_sequences_3:
 
     hide projector_emedia with dissolve
 
-    #i += 1
-    #jump show_skills
+    $ i += 1
+    jump show_skills
 
 label ARS_sequences_4:
     show projector_emedia with dissolve
@@ -58,8 +56,8 @@ label ARS_sequences_4:
 
     hide projector_emedia with dissolve
 
-    #i += 1
-    #jump show_skills
+    $ i += 1
+    jump show_skills
 
 label ARS_sequences_5:
     show projector_emedia with dissolve
@@ -71,8 +69,8 @@ label ARS_sequences_5:
 
     hide projector_emedia with dissolve
 
-    #i += 1
-    #jump show_skills
+    $ i += 1
+    jump show_skills
 
 label ARS_sequences_6:
     show projector_emedia with dissolve
@@ -83,8 +81,9 @@ label ARS_sequences_6:
     hide poster_2 with dissolve
 
     hide projector_emedia with dissolve
-    #i += 1
-    #jump show_skills
+
+    $ i += 1
+    jump show_skills
 
 label ARS_sequences_7:
     show projector_emedia with dissolve
@@ -96,8 +95,8 @@ label ARS_sequences_7:
 
     hide projector_emedia with dissolve
 
-    #i += 1
-    #jump show_skills
+    $ i += 1
+    jump show_skills
 
 label ARS_sequences_8:
     show projector_emedia with dissolve
@@ -109,8 +108,8 @@ label ARS_sequences_8:
 
     hide projector_emedia with dissolve
 
-    #i += 1
-    #jump show_skills
+    $ i += 1
+    jump show_skills
 
 label ARS_sequences_9:
     show projector_emedia with dissolve
@@ -121,8 +120,8 @@ label ARS_sequences_9:
 
     hide projector_emedia with dissolve
 
-    #i += 1
-    #jump show_skills
+    $ i += 1
+    jump show_skills
 
 label ARS_sequences_10:
     show projector_emedia with dissolve
@@ -137,5 +136,5 @@ label ARS_sequences_10:
     with dissolve
 
     hide projector_emedia with dissolve
-    #i += 1
-    #jump show_skills
+    $ i += 1
+    jump show_skills

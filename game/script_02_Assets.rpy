@@ -37,6 +37,40 @@ default progress = [ 0, 0, 0 ]
 # Codes for jump labels when showing progress sequences.
 define codes = [ "ARS", "CSE", "HON" ]
 
+# Screen definition for choosing daily activites.
+define day_promptARS = "Build art portfolio"
+define day_buttonARS = False
+define day_promptCSE = "Work on personal website"
+define day_buttonCSE = False
+define day_promptHON = "Prepare for interview"
+define day_buttonHON = False
+
+init python:
+    style.choiceButton = Style(style.button_text)
+    style.choiceButton.color = "#FF0000"
+    style.choiceButton.hover_color = "#0000FF"
+    style.choiceButton.selected_color = "#00FF00"
+
+screen day_actions():
+    modal True
+    vbox:
+        xcenter 0.5
+        ycenter 0.5
+        hbox:
+            vbox:
+                xcenter 0.25
+                textbutton "[day_promptARS]" action [SetVariable("day_buttonARS", (not day_buttonARS)), SelectedIf(day_buttonARS)] text_style "choiceButton"
+                text " / 10" xcenter 0.5
+            vbox:
+                xcenter 0.5
+                textbutton "[day_promptCSE]" action [SetVariable("day_buttonCSE", (not day_buttonCSE)), SelectedIf(day_buttonCSE)] text_style "choiceButton"
+                text " / 10" xcenter 0.5
+            vbox:
+                xcenter 0.75
+                textbutton "[day_promptHON]" action [SetVariable("day_buttonHON", (not day_buttonHON)), SelectedIf(day_buttonHON)] text_style "choiceButton"
+                text " / 10" xcenter 0.5
+        textbutton "Go" action Jump("check_skills") text_style "choiceButton" xcenter 0.5
+
 # ==============================================================================
 # Init Block - Transforms
 # ==============================================================================

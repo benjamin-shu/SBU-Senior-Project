@@ -1,66 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <'Image' 'images\\0_ARS\\composition_1.png'>:
-  File "game/script_c_ARS.rpy", line 16, in script
-    show composition_1 with dissolve
-Exception: Backslash in filename, use '/' instead: 'images\\0_ARS\\composition_1.png'
+While running game code:
+  File "game/script_d_CSE.rpy", line 10, in script
+    $ renpy.jump("CSE_sequences_%d" % (CSE_progress))
+ScriptError: could not find label 'CSE_sequences_0'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script_c_ARS.rpy", line 16, in script
-    show composition_1 with dissolve
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\ast.py", line 1356, in execute
-    renpy.exports.with_statement(trans, paired)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\exports.py", line 1481, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 2227, in do_with
-    clear=clear)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 2672, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 3158, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\core.py", line 2075, in draw_screen
-    renpy.config.screen_height,
-  File "render.pyx", line 487, in renpy.display.render.render_screen
-  File "render.pyx", line 235, in renpy.display.render.render
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\layout.py", line 722, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 147, in renpy.display.render.render
-  File "render.pyx", line 235, in renpy.display.render.render
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\transition.py", line 361, in render
-    top = render(self.new_widget, width, height, st, at)
-  File "render.pyx", line 147, in renpy.display.render.render
-  File "render.pyx", line 235, in renpy.display.render.render
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\layout.py", line 722, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 147, in renpy.display.render.render
-  File "render.pyx", line 235, in renpy.display.render.render
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\layout.py", line 722, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 147, in renpy.display.render.render
-  File "render.pyx", line 235, in renpy.display.render.render
-  File "accelerator.pyx", line 110, in renpy.display.accelerator.transform_render
-  File "render.pyx", line 235, in renpy.display.render.render
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\image.py", line 500, in render
-    return wrap_render(self.target, width, height, st, at)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\image.py", line 306, in wrap_render
-    rend = render(child, w, h, st, at)
-  File "render.pyx", line 147, in renpy.display.render.render
-  File "render.pyx", line 235, in renpy.display.render.render
-  File "accelerator.pyx", line 110, in renpy.display.accelerator.transform_render
-  File "render.pyx", line 235, in renpy.display.render.render
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\im.py", line 580, in render
-    return cache.get(self, render=True)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\im.py", line 266, in get
-    surf = image.load()
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\im.py", line 625, in load
-    surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\loader.py", line 567, in load
-    raise Exception("Backslash in filename, use '/' instead: %r" % name)
-Exception: Backslash in filename, use '/' instead: 'images\\0_ARS\\composition_1.png'
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\bootstrap.py", line 313, in bootstrap
+    renpy.main.main()
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\main.py", line 513, in main
+    run(restart)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\main.py", line 139, in run
+    renpy.execution.run_context(True)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\execution.py", line 876, in run_context
+    context.run()
+  File "game/script_d_CSE.rpy", line 10, in script
+    $ renpy.jump("CSE_sequences_%d" % (CSE_progress))
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\script.py", line 875, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'CSE_sequences_0'.
 
 Windows-8-6.2.9200
 Ren'Py 7.1.3.1092
 SBU Senior Project 1.0
-Thu Apr 04 16:13:29 2019
+Tue Apr 09 03:58:25 2019

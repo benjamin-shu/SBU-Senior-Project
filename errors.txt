@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script_02_Assets.rpy", line 191: invalid syntax
-    "images/1_CSE/uml_1.png" with Dissolve(0.5)
-                                 ^
-
-File "game/script_02_Assets.rpy", line 193: invalid syntax
-    "images/1_CSE/uml_2.png" with Dissolve(0.5)
-                                 ^
+File "game/script_02_Assets.rpy", line 56: u'xcenter' is not a keyword argument or valid child for the screen statement.
+    xcenter
+           ^
 
 Ren'Py Version: Ren'Py 7.1.3.1092
-Thu Apr 04 16:20:46 2019
+Tue Apr 09 03:32:21 2019

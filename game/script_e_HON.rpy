@@ -1,13 +1,11 @@
 label HON_sequences:
     # Retrieve index for HON data using codes[].
     default HON_index = codes.index("HON")
-    # Retrive player's current progress in this skill tree.
-    default HON_progress = progress[HON_index]
 
     # Set scene in West F 301C.
     scene West F 301C with fade
 
-    # $ renpy.jump("HON_sequences_%d" % (HON_progress))
+    $ renpy.jump("HON_sequences_%d" % (progress[HON_index]))
 
 label HON_sequences_1:
     show projector_emedia with dissolve
@@ -24,8 +22,8 @@ label HON_sequences_1:
 
     hide projector_emedia with dissolve
 
-    # $ i += 1
-    # jump show_skills
+    $ i += 1
+    jump show_skills
 
 label HON_sequences_2:
     show projector_emedia with dissolve
@@ -47,8 +45,8 @@ label HON_sequences_2:
 
     hide projector_emedia with dissolve
 
-    # $ i += 1
-    # jump show_skills
+    $ i += 1
+    jump show_skills
 
 label HON_sequences_3:
     show Dimmed
@@ -69,8 +67,8 @@ label HON_sequences_3:
     hide Dimmed
     with dissolve
 
-    # $ i += 1
-    # jump show_skills
+    $ i += 1
+    jump show_skills
 
 label HON_sequences_4:
     show Dimmed
@@ -91,8 +89,8 @@ label HON_sequences_4:
     hide Dimmed
     with dissolve
 
-    # $ i += 1
-    # jump show_skills
+    $ i += 1
+    jump show_skills
 
 label HON_sequences_5:
     show projector_emedia with dissolve
@@ -109,8 +107,8 @@ label HON_sequences_5:
 
     hide projector_emedia with dissolve
 
-    # $ i += 1
-    # jump show_skills
+    $ i += 1
+    jump show_skills
 
 label HON_sequences_6:
     show projector_emedia with dissolve
@@ -124,8 +122,8 @@ label HON_sequences_6:
 
     hide projector_emedia with dissolve
 
-    # $ i += 1
-    # jump show_skills
+    $ i += 1
+    jump show_skills
 
 label HON_sequences_7:
     show projector_emedia with dissolve
@@ -139,8 +137,8 @@ label HON_sequences_7:
 
     hide projector_emedia with dissolve
 
-    # $ i += 1
-    # jump show_skills
+    $ i += 1
+    jump show_skills
 
 label HON_sequences_8:
     show projector_emedia with dissolve
@@ -161,8 +159,8 @@ label HON_sequences_8:
 
     hide projector_emedia with dissolve
 
-    # $ i += 1
-    # jump show_skills
+    $ i += 1
+    jump show_skills
 
 label HON_sequences_9:
     show Dimmed
@@ -180,8 +178,8 @@ label HON_sequences_9:
     hide Dimmed
     with dissolve
 
-    # $ i += 1
-    # jump show_skills
+    $ i += 1
+    jump show_skills
 
 label HON_sequences_10:
     show projector_emedia with dissolve
@@ -202,5 +200,5 @@ label HON_sequences_10:
 
     hide projector_emedia with dissolve
 
-    # $ i += 1
-    # jump show_skills
+    $ i += 1
+    jump show_skills

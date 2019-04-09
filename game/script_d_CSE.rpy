@@ -1,13 +1,11 @@
 label CSE_sequences:
     # Retrieve index for CSE data using codes[].
     default CSE_index = codes.index("CSE")
-    # Retrive player's current progress in this skill tree.
-    default CSE_progress = progress[CSE_index]
 
     # Set scene in Javits 100.
     scene Javits Screen with fade
 
-    #$ renpy.jump("CSE_sequences_%d" % (CSE_progress))
+    $ renpy.jump("CSE_sequences_%d" % (progress[CSE_index]))
 
 label CSE_sequences_1:
     show projector_javits with dissolve
@@ -19,8 +17,8 @@ label CSE_sequences_1:
 
     hide projector_javits with dissolve
 
-    # $ i += 1
-    # jump show_skills
+    $ i += 1
+    jump show_skills
 
 label CSE_sequences_2:
     show projector_javits with dissolve
@@ -32,8 +30,8 @@ label CSE_sequences_2:
 
     hide projector_javits with dissolve
 
-    # $ i += 1
-    # jump show_skills
+    $ i += 1
+    jump show_skills
 
 label CSE_sequences_3:
     show Dimmed
@@ -49,8 +47,8 @@ label CSE_sequences_3:
     hide Laptop
     with dissolve
 
-    # $ i += 1
-    # jump show_skills
+    $ i += 1
+    jump show_skills
 
 label CSE_sequences_4:
     show Dimmed
@@ -66,8 +64,8 @@ label CSE_sequences_4:
     hide Laptop
     with dissolve
 
-    # $ i += 1
-    # jump show_skills
+    $ i += 1
+    jump show_skills
 
 label CSE_sequences_5:
     show Dimmed
@@ -83,8 +81,8 @@ label CSE_sequences_5:
     hide Laptop
     with dissolve
 
-    # $ i += 1
-    # jump show_skills
+    $ i += 1
+    jump show_skills
 
 label CSE_sequences_6:
     show Dimmed
@@ -104,8 +102,8 @@ label CSE_sequences_6:
     hide Laptop
     with dissolve
 
-    # $ i += 1
-    # jump show_skills
+    $ i += 1
+    jump show_skills
 
 label CSE_sequences_7:
     show Dimmed
@@ -121,8 +119,8 @@ label CSE_sequences_7:
     hide Laptop
     with dissolve
 
-    # $ i += 1
-    # jump show_skills
+    $ i += 1
+    jump show_skills
 
 label CSE_sequences_8:
     show Dimmed
@@ -138,8 +136,8 @@ label CSE_sequences_8:
     hide Laptop
     with dissolve
 
-    # $ i += 1
-    # jump show_skills
+    $ i += 1
+    jump show_skills
 
 label CSE_sequences_9:
     show Dimmed
@@ -155,8 +153,8 @@ label CSE_sequences_9:
     hide Laptop
     with dissolve
 
-    # $ i += 1
-    # jump show_skills
+    $ i += 1
+    jump show_skills
 
 label CSE_sequences_10:
     show Dimmed
@@ -172,5 +170,5 @@ label CSE_sequences_10:
     hide Laptop
     with dissolve
 
-    # $ i += 1
-    # jump show_skills
+    $ i += 1
+    jump show_skills
