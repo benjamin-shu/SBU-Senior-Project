@@ -1,28 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script_d_CSE.rpy", line 10, in script
-    $ renpy.jump("CSE_sequences_%d" % (CSE_progress))
-ScriptError: could not find label 'CSE_sequences_0'.
+  File "game/script_02_Assets.rpy", line 51, in script
+    init python:
+  File "game/script_02_Assets.rpy", line 54, in <module>
+    style.goButton.size = 16
+Exception: Style 'goButton' does not exist.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\bootstrap.py", line 313, in bootstrap
-    renpy.main.main()
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\main.py", line 513, in main
-    run(restart)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\main.py", line 139, in run
-    renpy.execution.run_context(True)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\execution.py", line 876, in run_context
-    context.run()
-  File "game/script_d_CSE.rpy", line 10, in script
-    $ renpy.jump("CSE_sequences_%d" % (CSE_progress))
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\script.py", line 875, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'CSE_sequences_0'.
+  File "game/script_02_Assets.rpy", line 51, in script
+    init python:
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\ast.py", line 881, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\python.py", line 1913, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/script_02_Assets.rpy", line 54, in <module>
+    style.goButton.size = 16
+  File "style.pyx", line 216, in renpy.style.StyleManager.__getattr__
+  File "style.pyx", line 83, in renpy.style.get_style
+Exception: Style 'goButton' does not exist.
 
 Windows-8-6.2.9200
 Ren'Py 7.1.3.1092
 SBU Senior Project 1.0
-Tue Apr 09 03:58:25 2019
+Wed Apr 10 16:11:30 2019

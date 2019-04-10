@@ -38,38 +38,72 @@ default progress = [ 0, 0, 0 ]
 define codes = [ "ARS", "CSE", "HON" ]
 
 # Screen definition for choosing daily activites.
-define day_promptARS = "Build art portfolio"
+define day_promptARS = "Build art\nportfolio"
 define day_buttonARS = False
-define day_promptCSE = "Work on personal website"
+define day_countARS = 0
+define day_promptCSE = "Work on\npersonal website"
 define day_buttonCSE = False
-define day_promptHON = "Prepare for interview"
+define day_countCSE = 0
+define day_promptHON = "Prepare for\ninterview"
 define day_buttonHON = False
+define day_countHON = 0
 
 init python:
     style.choiceButton = Style(style.button_text)
-    style.choiceButton.color = "#FF0000"
+    style.choiceButton.font = "fonts/Courier Prime Bold.ttf"
+    style.choiceButton.size = 30
+    style.choiceButton.text_align = 0.5
+    style.choiceButton.color = "#FFFFFF"
     style.choiceButton.hover_color = "#0000FF"
     style.choiceButton.selected_color = "#00FF00"
+    style.choiceButton.selected_hover_color = "#0000FF"
+    style.choiceButton.insensitive_color = "#828282"
+
+    style.goButton = Style(style.button_text)
+    style.goButton.font = "fonts/OpenSans-Bold.ttf"
+    style.goButton.size = 60
+    style.goButton.text_align = 0.5
+    style.goButton.color = "#FFFFFF"
+    style.goButton.hover_color = "#00FF00"
+    style.goButton.insensitive_color = "#828282"
 
 screen day_actions():
     modal True
     vbox:
         xcenter 0.5
-        ycenter 0.5
+        ypos 0.35
         hbox:
+            ypos 0.5
             vbox:
                 xcenter 0.25
-                textbutton "[day_promptARS]" action [SetVariable("day_buttonARS", (not day_buttonARS)), SelectedIf(day_buttonARS)] text_style "choiceButton"
-                text " / 10" xcenter 0.5
+                textbutton "[day_promptARS]":
+                    action [SensitiveIf(day_countARS < 10 and not (day_buttonCSE and day_buttonHON)), SetVariable("day_buttonARS", (not day_buttonARS)), SelectedIf(day_buttonARS)]
+                    text_style "choiceButton"
+                    #sensitive If(not (day_buttonCSE and day_buttonHON))
+                text "[day_countARS] / 10":
+                    xcenter 0.5
             vbox:
                 xcenter 0.5
-                textbutton "[day_promptCSE]" action [SetVariable("day_buttonCSE", (not day_buttonCSE)), SelectedIf(day_buttonCSE)] text_style "choiceButton"
-                text " / 10" xcenter 0.5
+                textbutton "[day_promptCSE]":
+                    action [SensitiveIf(day_countCSE < 10 and not (day_buttonARS and day_buttonHON)), SetVariable("day_buttonCSE", (not day_buttonCSE)), SelectedIf(day_buttonCSE)]
+                    text_style "choiceButton"
+                    #sensitive If(not (day_buttonARS and day_buttonHON))
+                text "[day_countCSE] / 10":
+                    xcenter 0.5
             vbox:
                 xcenter 0.75
-                textbutton "[day_promptHON]" action [SetVariable("day_buttonHON", (not day_buttonHON)), SelectedIf(day_buttonHON)] text_style "choiceButton"
-                text " / 10" xcenter 0.5
-        textbutton "Go" action Jump("check_skills") text_style "choiceButton" xcenter 0.5
+                textbutton "[day_promptHON]":
+                    action [SensitiveIf(day_countHON < 10 and not (day_buttonARS and day_buttonCSE)), SetVariable("day_buttonHON", (not day_buttonHON)), SelectedIf(day_buttonHON)]
+                    text_style "choiceButton"
+                    #sensitive If(not (day_buttonARS and day_buttonCSE))
+                text "[day_countHON] / 10":
+                    xcenter 0.5
+
+    textbutton "GO":
+        action [SensitiveIf((day_buttonARS and day_buttonCSE) or (day_buttonARS and day_buttonHON) or (day_buttonCSE and day_buttonHON)), Jump("check_skills")]
+        text_style "goButton"
+        xcenter 0.5
+        ypos 0.6
 
 # ==============================================================================
 # Init Block - Transforms
@@ -316,10 +350,10 @@ image present_1a = "images/2_HON/present_1a.png"
 image present_1b = "images/2_HON/present_1b.png"
 
 image present_2:
-    "images/2_HON/present_2a.png" with Dissolve(0.5)
-    1.5
-    "images/2_HON/present_2b.png" with Dissolve(0.5)
-    1.5
+    "images/2_HON/present_2a.png"
+    0.5
+    "images/2_HON/present_2b.png"
+    0.5
     repeat
 
 image present_3 = "images/2_HON/present_3.png"

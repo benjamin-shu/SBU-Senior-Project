@@ -2,9 +2,11 @@ label day_start:
     if (day_num < 0 and day_num > 11):
         "Error with counter."
         return
-    elif (countdown > 10 or countdown < 1):
+    elif (countdown < 1):
         "Error with countdown."
         return
+    elif (day_num == 10 and countdown == 0 10):
+        jump interview
     else:
         scene West F 301C
         B "[countdown] days left until the interview."
@@ -49,5 +51,26 @@ label show_skills:
             $ renpy.jump("%s_sequences" % (codes[i]))
         else:
             $ i += 1
+
+    scene West F 301C with fade
+
+    # Update skill counters for choice screen.
+    $ day_countARS = progress[0]
+    $ day_countCSE = progress[1]
+    $ day_countHON = progress[2]
+
+    # Reset choice button controls.
+    $ day_buttonARS = False
+    $ day_buttonCSE = False
+    $ day_buttonHON = False
+
+    $ i = 0
+    while i < len(choices):
+        $ choices[i] = False
+        $ i += 1
+
+    # Update day_num and countdown counters.
+    $ day_num += 1
+    $ countdown -= 1
 
     jump day_start
