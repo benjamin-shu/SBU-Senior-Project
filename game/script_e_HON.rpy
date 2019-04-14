@@ -12,11 +12,11 @@ label HON_sequences_1:
 
     show resume_1a
     with dissolve
-    B "You had a look at your resume, and it...left a lot to be desired."
+    B "I had a look at my resume, and it...left a lot to be desired."
     hide resume_1a
     show resume_1b
     with dissolve
-    B "Thanks to some advice from the Career Center, you now have a more presentable format."
+    B "With help from the Career Center, though, I've made the format more presentable."
     hide resume_1b
     with dissolve
 
@@ -30,7 +30,7 @@ label HON_sequences_2:
 
     show resume_1b
     with dissolve
-    B "A counselor from the Career Center was nice enough to give you more tips on resume formatting."
+    B "A counselor from the Career Center was nice enough to give more tips on resume formatting."
     hide resume_1b
     show resume_2a
     with dissolve
@@ -40,7 +40,7 @@ label HON_sequences_2:
     with dissolve
     B "...and skills and extracurriculars goes at the bottom (if they actually read the whole thing)."
     show text "{color=#000000}{size=30}Resume: 2 / 2{/size}{/color}" at skill_check
-    B "Now, you have a resume that you're not ashamed of."
+    B "Now, I have a resume that I'm not totally ashamed of!"
     hide resume_2b
     with dissolve
 
@@ -56,11 +56,11 @@ label HON_sequences_3:
 
     show linkedin_1
     with dissolve
-    B "A few of your friends explained the importance of a LinkedIn profile, and told you to make sure yours is complete."
+    B "A few of my friends explained the importance of a LinkedIn profile, and told me to make sure mine is complete."
     hide linkedin_1
     show linkedin_1a
     with dissolve
-    B "At their insistence, you’ve added a profile picture, a cover photo, and a short bio."
+    B "At their insistence, I’ve added a profile picture, a cover photo, and a short bio."
     hide linkedin_1a
     with dissolve
 
@@ -78,12 +78,12 @@ label HON_sequences_4:
 
     show linkedin_2a
     with dissolve
-    B "In order to shut your friends up, you’ve uploaded your resume to your LinkedIn profile."
+    B "In order to shut my friends up, I’ve also uploaded my resume to my LinkedIn profile."
     hide linkedin_2a
     show linkedin_2b
     with dissolve
     show text "{color=#000000}{size=30}LinkedIn: 2 / 2{/size}{/color}" at skill_check
-    B "Doing so has built the rest of your profile for you and given employers a better sense of who they're rejecting."
+    B "Doing so built the rest of my profile for me, so that employers get a better sense of who they're rejecting."
     hide linkedin_2b
     with dissolve
 
@@ -99,11 +99,11 @@ label HON_sequences_5:
 
     show present_1a
     with dissolve
-    B "One of your courses has assigned a project that involves presenting to the class."
+    B "One of my courses has assigned a project that involves presenting to the class."
     hide present_1a
     show present_1b
     with dissolve
-    B "Expecting stage fright to destroy your higher-order thought, you start breaking information into simplified, panic-proof pieces."
+    B "Before stage fright could destroy my higher-order thought, I started breaking information into simplified, panic-proof pieces."
     hide present_1b
     with dissolve
 
@@ -117,8 +117,8 @@ label HON_sequences_6:
 
     show present_2
     with dissolve
-    B "Some quick testing shows most people incapable of paying attention to you for more than 30 seconds at a time."
-    B "To counter this, you start shortening your scripts and speaking at a higher volume."
+    B "Some quick testing shows most people can't pay attention to me for more than 30 seconds at a time."
+    B "To counter this, I've started shortening my scripts and speaking at a higher volume."
     hide present_2
     with dissolve
 
@@ -132,9 +132,10 @@ label HON_sequences_7:
 
     show present_3
     with dissolve
-    B "Further tests show that people pay more attention to pretty pictures - in response, you start adding visual aids to your PowerPoint slides."
+    B "Further tests show that people pay attention to pretty pictures - in response, I've started adding visual aids to my PowerPoint slides."
     show text "{color=#000000}{size=30}Presentation: 3 / 3{/size}{/color}" at skill_check
-    B "With some practice under your belt, you now feel more comfortable giving presentations on subjects you understand."
+    B "With some practice under my belt, I think I can better explain subjects I understand."
+    B "Because of course, I'll only ever have to explain things I understand."
     hide present_3
     with dissolve
 
@@ -148,7 +149,7 @@ label HON_sequences_8:
 
     show interview_1a
     with dissolve
-    B "To the horror of your friends and colleagues, you joked about doing an interview in your casual clothes."
+    B "To the horror of my friends and colleagues, I joked about doing an interview in casual clothes."
     hide interview_1a
     show interview_1b
     with dissolve
@@ -156,7 +157,7 @@ label HON_sequences_8:
     hide interview_1b
     show interview_1c
     with dissolve
-    B "Under threat of further bodily harm, you find some more formal clothes for your interview."
+    B "Under threat of further bodily harm, I've found some more formal clothes for the interview."
     hide interview_1c
     with dissolve
 
@@ -172,8 +173,8 @@ label HON_sequences_9:
 
     show interview_2
     with dissolve
-    B "Having applied for this job months ago, you’ve long since forgotten every detail about the company (and why you applied in the first place)."
-    B "You spend some time refreshing your memory, as these details might come up during the interview."
+    B "I applied for this job months ago, and I’ve forgotten everything about Debugging Enterprises."
+    B "I spent some time reviewing, as these details {i}{b}just{/b}{/i} might come up during the interview."
     hide interview_2
     with dissolve
 
@@ -189,16 +190,16 @@ label HON_sequences_10:
 
     show interview_3a
     with dissolve
-    B "While you feel mostly prepared, you’re still worried about actually speaking to the interviewer."
+    B "While I feel mostly prepared, I'm still worried about actually speaking to the interviewer."
     hide interview_3a
     show interview_3b
     with dissolve
-    B "To help with your crippling fear of failure, one of your friends offers to do mock interview questions."
+    B "To help with my crippling fear of failure, one of my friends offered to do a mock interview."
     hide interview_3b
     show interview_3c
     with dissolve
     show text "{color=#000000}{size=30}Interviewing: 3 / 3{/size}{/color}" at skill_check
-    B "While the experience takes an unprofessional turn, the practice helps you feel more comfortable in an interview setting."
+    B "The experience was very unprofessional, but I think the practice made me less afraid of the interviewer."
     hide interview_3c
     with dissolve
 

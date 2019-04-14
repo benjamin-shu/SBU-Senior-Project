@@ -1,15 +1,15 @@
 label day_start:
-    if (day_num < 0 and day_num > 11):
-        "Error with counter."
-        return
-    elif (countdown < 1):
-        "Error with countdown."
-        return
+    if (day_num == 0):
+        scene West F 301C with fade
+        B "Well, I was definitely not ready for that call!"
+        B "I need to start preparing {b}{i}now{/i}{/b} - between classes and homework, I'm not going to have much time."
+        B "And starting now, the clock is ticking."
+        show Dimmed with dissolve
     elif (day_num == 10 and countdown == 0):
         jump interview
     else:
         scene West F 301C
-        B "[countdown] days left until the interview."
+        B "Just [countdown] days left until the interview."
         show Dimmed with dissolve
 
 label choose_skills:

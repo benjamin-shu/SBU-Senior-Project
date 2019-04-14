@@ -72,6 +72,11 @@ screen day_actions():
     vbox:
         xcenter 0.5
         ypos 0.35
+
+        text "What should I do today?":
+            font "fonts/Courier Prime Bold.ttf"
+            size 40
+            xcenter 0.5
         hbox:
             ypos 0.5
             vbox:
