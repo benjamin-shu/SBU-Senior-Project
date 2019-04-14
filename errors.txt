@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script_02_Assets.rpy", line 81: expected a keyword argument or child statement.
-    "[day_countARS] / 10"
-    ^
+File "game/script_f_Interview.rpy", line 82: invalid syntax
+    check_num = (progress[1]) if (progress[1] ) else
+    
 
 Ren'Py Version: Ren'Py 7.1.3.1092
-Wed Apr 10 16:10:43 2019
+Thu Apr 11 15:33:58 2019

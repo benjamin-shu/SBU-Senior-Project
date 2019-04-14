@@ -5,7 +5,7 @@ label day_start:
     elif (countdown < 1):
         "Error with countdown."
         return
-    elif (day_num == 10 and countdown == 0 10):
+    elif (day_num == 10 and countdown == 0):
         jump interview
     else:
         scene West F 301C
@@ -47,7 +47,6 @@ label show_skills:
     while i < len(choices):
         if (choices[i]):
             $ progress[i] += 1
-            "[progress]"
             $ renpy.jump("%s_sequences" % (codes[i]))
         else:
             $ i += 1

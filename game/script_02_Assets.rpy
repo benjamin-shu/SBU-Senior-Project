@@ -5,11 +5,10 @@ define b_name = "Ben"
 define B = DynamicCharacter("b_name", image="Ben", who_color="#71B7E2", who_bold=True,
     what_Size=30, what_Bold=False, what_font="fonts/Courier Prime Bold.ttf")
 
-# # (UNUSED)
-# define r_name = "???"
-# define r_path = ""
-# define R = DynamicCharacter("r_name", image="Rajesh", who_color="#159639", who_bold=True,
-#     what_Size=30, what_Bold=True, what_font="fonts/KaushanScript-Regular.otf")
+define r_name = "???"
+define r_path = ""
+define R = DynamicCharacter("r_name", image="Rajesh", who_color="#159639", who_bold=True,
+    what_Size=30, what_Bold=True, what_font="fonts/KaushanScript-Regular.otf")
 
 # Default darkness setting for sprites.
 define dark = -0.5
@@ -27,6 +26,7 @@ default countdown = 10
 define day_min = 1
 define day_max = 10
 default i = 0
+default check_num = 0
 
 # List of Booleans for tracking player's choices on a given day.
 default choices = [ False, False, False ]
@@ -109,6 +109,17 @@ screen day_actions():
 # Init Block - Transforms
 # ==============================================================================
 init:
+    # Define transformation for skill checks in the interview.
+    transform skill_check():
+        xalign 0.5
+        yalign 0.525
+        alpha 1.0
+
+        parallel:
+            linear 1.5 yalign 0.475
+        parallel:
+            linear 1.5 alpha 0.0
+
     # Define transformation for scaling images.
     transform img_Scale(x, y):
         size (x, y)

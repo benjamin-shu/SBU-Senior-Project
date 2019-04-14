@@ -1,7 +1,7 @@
 label ARS_sequences:
     # Retrieve index for ARS data using codes[].
     default ARS_index = codes.index("ARS")
-    
+
     # Set scene in Staller's eMedia SINC site.
     scene eMedia Screen with fade
 
@@ -25,6 +25,7 @@ label ARS_sequences_2:
 
     show composition_2 with dissolve
     B "As it turns out, there’s a few more concepts that you can expand on for the presentation."
+    show text "{color=#000000}{size=30}Composition: 2 / 2{/size}{/color}" at skill_check
     B "After adding {b}Space{/b}, {b}Color{/b}, and {b}Texture{/b}, you’ve covered all of the compositional elements and finished your PowerPoint."
     hide composition_2 with dissolve
 
@@ -51,6 +52,7 @@ label ARS_sequences_4:
 
     show typo_2 with dissolve
     B "To wrap up your explanation of typography, you decide to combine the different contrasts."
+    show text "{color=#000000}{size=30}Typography: 2 / 2{/size}{/color}" at skill_check
     B "To do so, you put {b}Texture{/b}, {b}Color{/b} and {b}Weight{/b} into one composition."
     hide typo_2 with dissolve
 
@@ -90,6 +92,7 @@ label ARS_sequences_7:
 
     show poster_3 with dissolve
     B "To add the finishing touches, you add rows and rows of empty seats, with pieces of text layered between them."
+    show text "{color=#000000}{size=30}Poster Design: 3 / 3{/size}{/color}" at skill_check
     B "While your choice of performer was a little unprofessional, you hope that this poster makes a good addition to your portfolio."
     hide poster_3 with dissolve
 
@@ -129,6 +132,7 @@ label ARS_sequences_10:
     show video_3 with dissolve
     show video_3a with dissolve
     B "As the final step, you add animated transitions between each picture in Adobe After Effects."
+    show text "{color=#000000}{size=30}Video Editing: 3 / 3{/size}{/color}" at skill_check
     B "All you have to do now is hope that the video proves to be more charming than you are."
     B "(Which, admittedly, isn’t a very high bar.)"
     hide video_3

@@ -39,6 +39,7 @@ label HON_sequences_2:
     show resume_2b
     with dissolve
     B "...and skills and extracurriculars goes at the bottom (if they actually read the whole thing)."
+    show text "{color=#000000}{size=30}Resume: 2 / 2{/size}{/color}" at skill_check
     B "Now, you have a resume that you're not ashamed of."
     hide resume_2b
     with dissolve
@@ -81,6 +82,7 @@ label HON_sequences_4:
     hide linkedin_2a
     show linkedin_2b
     with dissolve
+    show text "{color=#000000}{size=30}LinkedIn: 2 / 2{/size}{/color}" at skill_check
     B "Doing so has built the rest of your profile for you and given employers a better sense of who they're rejecting."
     hide linkedin_2b
     with dissolve
@@ -131,6 +133,7 @@ label HON_sequences_7:
     show present_3
     with dissolve
     B "Further tests show that people pay more attention to pretty pictures - in response, you start adding visual aids to your PowerPoint slides."
+    show text "{color=#000000}{size=30}Presentation: 3 / 3{/size}{/color}" at skill_check
     B "With some practice under your belt, you now feel more comfortable giving presentations on subjects you understand."
     hide present_3
     with dissolve
@@ -194,6 +197,7 @@ label HON_sequences_10:
     hide interview_3b
     show interview_3c
     with dissolve
+    show text "{color=#000000}{size=30}Interviewing: 3 / 3{/size}{/color}" at skill_check
     B "While the experience takes an unprofessional turn, the practice helps you feel more comfortable in an interview setting."
     hide interview_3c
     with dissolve

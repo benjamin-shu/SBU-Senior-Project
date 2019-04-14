@@ -1,28 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script_02_Assets.rpy", line 51, in script
-    init python:
-  File "game/script_02_Assets.rpy", line 54, in <module>
-    style.goButton.size = 16
-Exception: Style 'goButton' does not exist.
+  File "game/gui.rpy", line 409, in script
+    $ config.button_text_properties["Start Game"] = dict(size=18)
+  File "game/gui.rpy", line 409, in <module>
+    $ config.button_text_properties["Start Game"] = dict(size=18)
+Exception: config.button_text_properties is not a known configuration variable.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script_02_Assets.rpy", line 51, in script
-    init python:
+  File "game/gui.rpy", line 409, in script
+    $ config.button_text_properties["Start Game"] = dict(size=18)
   File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\ast.py", line 881, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\python.py", line 1913, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/script_02_Assets.rpy", line 54, in <module>
-    style.goButton.size = 16
-  File "style.pyx", line 216, in renpy.style.StyleManager.__getattr__
-  File "style.pyx", line 83, in renpy.style.get_style
-Exception: Style 'goButton' does not exist.
+  File "game/gui.rpy", line 409, in <module>
+    $ config.button_text_properties["Start Game"] = dict(size=18)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\defaultstore.py", line 87, in __getattr__
+    raise Exception('config.%s is not a known configuration variable.' % (name))
+Exception: config.button_text_properties is not a known configuration variable.
 
 Windows-8-6.2.9200
 Ren'Py 7.1.3.1092
-SBU Senior Project 1.0
-Wed Apr 10 16:11:30 2019
+ 
+Sat Apr 13 17:10:38 2019

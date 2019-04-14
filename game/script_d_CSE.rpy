@@ -25,6 +25,7 @@ label CSE_sequences_2:
 
     show uml_2 with dissolve
     B "You decide to add diagrams for other pieces of the website - the server, the design, and the interactive pieces."
+    show text "{color=#000000}{size=30}UML Diagrams: 2 / 2{/size}{/color}" at skill_check
     B "You’re done with the planning stage, and you’re now ready to begin coding."
     hide uml_2 with dissolve
 
@@ -57,6 +58,7 @@ label CSE_sequences_4:
 
     show html_2 with dissolve
     B "Basic HTML works, but doesn’t really look very good - to fix this, you add some CSS styling."
+    show text "{color=#000000}{size=30}HTML Designs: 2 / 2{/size}{/color}" at skill_check
     B "Now that your pages are set up, you’re free to put up more content."
     hide html_2 with dissolve
 
@@ -112,6 +114,7 @@ label CSE_sequences_7:
 
     show content_3 with dissolve
     B "You decide to upload some of your old code, along with written explanations - hopefully, no one else will make the same mistakes you did."
+    show text "{color=#000000}{size=30}Digital Content: 3 / 3{/size}{/color}" at skill_check
     B "All that’s left now is to put your website on the Internet."
     hide content_3 with dissolve
 
@@ -163,6 +166,7 @@ label CSE_sequences_10:
 
     show web_3 with dissolve
     B "You eventually decide to use Microsoft Azure, because of its reputation and support for Node.js (and because you have a free account)."
+    show text "{color=#000000}{size=30}Web Development: 3 / 3{/size}{/color}" at skill_check
     B "After hours upon hours of work, you’ve finally put yourself out on the Internet for everyone to see."
     hide web_3 with dissolve
 

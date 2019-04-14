@@ -397,7 +397,9 @@ style main_menu_vbox:
     yoffset -20
 
 style main_menu_text:
-    properties gui.text_properties("main_menu", accent=True)
+    xalign 1.0
+    color "#d52027"
+    outlines [(1, "#000", 0, 0)]
 
 style main_menu_title:
     properties gui.text_properties("title")
