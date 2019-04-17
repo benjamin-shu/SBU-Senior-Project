@@ -1,9 +1,8 @@
 label day_start:
     if (day_num == 0):
         scene West F 301C with fade
-        B "Well, I was definitely not ready for that call!"
-        B "I need to start preparing {b}{i}now{/i}{/b} - between classes and homework, I'm not going to have much time."
-        B "And starting now, the clock is ticking."
+        B "It's almost the end of the semester - this call could not have come at a worse possible time."
+        B "I'd better start preparing now. Between tests and homework, I'm not going to have much tme to get ready."
         show Dimmed with dissolve
     elif (day_num == 10 and countdown == 0):
         jump interview

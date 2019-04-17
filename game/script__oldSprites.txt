@@ -1,4 +1,3 @@
-# Character sprites for Ben.
 image Ben Walk Neut = "Ben/Walking/Neutral.png"
 image Ben Walk Neut Dark = im.MatrixColor("Ben/Walking/Neutral.png", im.matrix.brightness(dark))
 image Ben Walk Neut Spk = "Ben/Walking/Neutral Speaking.png"
@@ -33,7 +32,3 @@ image Ben Casual Pens Dark = im.MatrixColor("Ben/Casual/Pensive.png", im.matrix.
 image Ben Casual Pens Spk = "Ben/Casual/Pensive Speaking.png"
 
 image Ben Pho Chk Sto Dark = im.MatrixColor("Ben/Phone Check/Stoic.png", im.matrix.brightness(dark))
-
-# Character sprites for Rajesh. (HAS NOT APPEARED)
-# image Rajesh Walk Neut = "Rajesh/Walking/Neutral.png"
-# image Rajesh Walk Neut Spk = "Rajesh/Walking/Neutral Speaking.png"

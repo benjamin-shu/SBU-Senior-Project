@@ -5,7 +5,7 @@ label start:
 
     $ renpy.pause(5.0)
 
-    play sound "sounds/Phone Ringing 8x.mp3" loop
+    play sound "sounds/Phone Vibrating.mp3" loop
     stop music
 
     $ renpy.pause(2.0)
@@ -16,7 +16,7 @@ label start:
     play sound "sounds/Bounce.mp3"
 
     "THUD" with vpunch
-    play sound "sounds/Phone Ringing 8x.mp3" loop
+    play sound "sounds/Phone Vibrating.mp3" loop
 
     $ renpy.pause(2.0)
 

@@ -17,17 +17,6 @@ define dark = -0.5
 define dissolve = Dissolve(0.5)
 
 # ==============================================================================
-# Sprite Image Definitions
-# ==============================================================================
-image Ben Phone Check Sleepy Spk = "images/Ben/Phone Check/Sleepy Spk.png"
-image Ben Phone Talk Sleepy Spk = "images/Ben/Phone Talk/Sleepy Spk.png"
-image Ben Phone Talk Sleepy = im.MatrixColor("images/Ben/Phone Talk/Sleepy.png", im.matrix.brightness(dark))
-image Ben Phone Talk Panic = im.MatrixColor("images/Ben/Phone Talk/Panic.png", im.matrix.brightness(dark))
-image Ben Phone Talk Panic Spk = "images/Ben/Phone Talk/Panic Spk.png"
-image Ben Phone Check Panic = im.MatrixColor("images/Ben/Phone Check/Panic.png", im.matrix.brightness(dark))
-image Ben Phone Check Curse = im.MatrixColor("images/Ben/Phone Check/Curse.png", im.matrix.brightness(dark))
-
-# ==============================================================================
 # Day Loop Control Variables
 # ==============================================================================
 
@@ -95,7 +84,6 @@ screen day_actions():
                 textbutton "[day_promptARS]":
                     action [SensitiveIf(day_countARS < 10 and not (day_buttonCSE and day_buttonHON)), SetVariable("day_buttonARS", (not day_buttonARS)), SelectedIf(day_buttonARS)]
                     text_style "choiceButton"
-                    #sensitive If(not (day_buttonCSE and day_buttonHON))
                 text "[day_countARS] / 10":
                     xcenter 0.5
             vbox:
@@ -103,7 +91,6 @@ screen day_actions():
                 textbutton "[day_promptCSE]":
                     action [SensitiveIf(day_countCSE < 10 and not (day_buttonARS and day_buttonHON)), SetVariable("day_buttonCSE", (not day_buttonCSE)), SelectedIf(day_buttonCSE)]
                     text_style "choiceButton"
-                    #sensitive If(not (day_buttonARS and day_buttonHON))
                 text "[day_countCSE] / 10":
                     xcenter 0.5
             vbox:
@@ -111,7 +98,6 @@ screen day_actions():
                 textbutton "[day_promptHON]":
                     action [SensitiveIf(day_countHON < 10 and not (day_buttonARS and day_buttonCSE)), SetVariable("day_buttonHON", (not day_buttonHON)), SelectedIf(day_buttonHON)]
                     text_style "choiceButton"
-                    #sensitive If(not (day_buttonARS and day_buttonCSE))
                 text "[day_countHON] / 10":
                     xcenter 0.5
 

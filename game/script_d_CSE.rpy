@@ -12,6 +12,7 @@ label CSE_sequences_1:
 
     show uml_1 with dissolve
     B "Not too long ago, I had an idea for building my own website."
+    show text "{color=#000000}{size=30}{b}UML Diagrams: 1 / 2{/b}{/size}{/color}" at skill_check
     B "To start planning it out, I’ve started making diagrams to outline what each page will have."
     hide uml_1 with dissolve
 
@@ -25,7 +26,7 @@ label CSE_sequences_2:
 
     show uml_2 with dissolve
     B "I decided to add diagrams for other pieces of the website - the server, the design, and the interactive pages."
-    show text "{color=#000000}{size=30}UML Diagrams: 2 / 2{/size}{/color}" at skill_check
+    show text "{color=#000000}{size=30}{b}UML Diagrams: 2 / 2{/b}{/size}{/color}" at skill_check
     B "I'm done with the planning, and now I'm ready to begin coding."
     hide uml_2 with dissolve
 
@@ -41,6 +42,7 @@ label CSE_sequences_3:
 
     show html_1 with dissolve
     B "The plan calls for four pages - a home page, a bio, a photo gallery, and a projects page."
+    show text "{color=#000000}{size=30}{b}HTML Designs: 1 / 2{/b}{/size}{/color}" at skill_check
     B "I started by making a separate HTML document for each page and laying out the important elements."
     hide html_1 with dissolve
 
@@ -58,7 +60,7 @@ label CSE_sequences_4:
 
     show html_2 with dissolve
     B "Basic HTML works, but doesn’t really look very good - to fix this, I've added some CSS."
-    show text "{color=#000000}{size=30}HTML Designs: 2 / 2{/size}{/color}" at skill_check
+    show text "{color=#000000}{size=30}{b}HTML Designs: 2 / 2{/b}{/size}{/color}" at skill_check
     B "Now that the pages are set up, I'm free to put up some real content."
     hide html_2 with dissolve
 
@@ -76,6 +78,7 @@ label CSE_sequences_5:
 
     show content_1 with dissolve
     B "Having the web pages is all well and good, but it doesn’t mean much if there’s no actual content."
+    show text "{color=#000000}{size=30}{b}Digital Content: 1 / 3{/b}{/size}{/color}" at skill_check
     B "Despite the disgust I feel looking at my old artwork, I've added links to my Google Drive portfolio."
     hide content_1 with dissolve
 
@@ -94,6 +97,7 @@ label CSE_sequences_6:
     show content_2a
     show content_2b
     with dissolve
+    show text "{color=#000000}{size=30}{b}Digital Content: 2 / 3{/b}{/size}{/color}" at skill_check
     B "With the power of JavaScript, I’ve added a scrolling gallery feature - now visitors can see all of my work at once."
     B "I’m not sure how to feel about that, but I'll keep the feature regardless."
     hide content_2a
@@ -114,7 +118,7 @@ label CSE_sequences_7:
 
     show content_3 with dissolve
     B "I've uploaded some of my old code, along with written explanations - hopefully, no one else will make the same mistakes I did."
-    show text "{color=#000000}{size=30}Digital Content: 3 / 3{/size}{/color}" at skill_check
+    show text "{color=#000000}{size=30}{b}Digital Content: 3 / 3{/b}{/size}{/color}" at skill_check
     B "And with that, all that’s left now is to put my website on the Internet."
     hide content_3 with dissolve
 
@@ -131,6 +135,7 @@ label CSE_sequences_8:
     with dissolve
 
     show web_1 with dissolve
+    show text "{color=#000000}{size=30}{b}Web Development: 1 / 3{/b}{/size}{/color}" at skill_check
     B "To get my website online, I wrote a Node.js server application - if this gets hosted, then anyone online can see it."
     B "I'm not sure if I should be excited or terrified by that, so I'll just be both."
     hide web_1 with dissolve
@@ -149,6 +154,7 @@ label CSE_sequences_9:
 
     show web_2 with dissolve
     B "To make my website’s pages load faster, I spent some time deleting unnecessary text from every file I made."
+    show text "{color=#000000}{size=30}{b}Web Development: 2 / 3{/b}{/size}{/color}" at skill_check
     B "This is exactly as tedious as it sounds (and could probably be done faster, if I were smarter)."
     hide web_2 with dissolve
 
@@ -166,7 +172,7 @@ label CSE_sequences_10:
 
     show web_3 with dissolve
     B "I eventually decided to use Microsoft Azure, because of its reputation and support for Node.js (and because I have a free account)."
-    show text "{color=#000000}{size=30}Web Development: 3 / 3{/size}{/color}" at skill_check
+    show text "{color=#000000}{size=30}{b}Web Development: 3 / 3{/b}{/size}{/color}" at skill_check
     B "After hours upon hours of work, I’ve finally put myself out on the Internet for everyone to see."
     B "I'll try to contain my joy."
     hide web_3 with dissolve
