@@ -398,11 +398,17 @@ style main_menu_vbox:
 
 style main_menu_text:
     xalign 1.0
-    color "#d52027"
-    outlines [(1, "#000", 0, 0)]
+    size 40
+    bold True
+    color "#000000"
+    outlines [(1, "#FFF", 0, 0)]
 
 style main_menu_title:
-    properties gui.text_properties("title")
+    xalign 1.0
+    size 40
+    bold True
+    color "#000000"
+    outlines [(1, "#FFF", 0, 0)]
 
 style main_menu_version:
     properties gui.text_properties("version")

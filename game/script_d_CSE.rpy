@@ -171,7 +171,7 @@ label CSE_sequences_10:
     with dissolve
 
     show web_3 with dissolve
-    B "I eventually decided to use Microsoft Azure, because of its reputation and support for Node.js (and because I have a free account)."
+    B "I eventually decided to use Google Firebase, because it's easy to use (and because I have a free account)."
     show text "{color=#000000}{size=30}{b}Web Development: 3 / 3{/b}{/size}{/color}" at skill_check
     B "After hours upon hours of work, I’ve finally put myself out on the Internet for everyone to see."
     B "I'll try to contain my joy."
