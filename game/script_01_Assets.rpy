@@ -403,6 +403,9 @@ image eMedia Seats = "Backgrounds/eMedia Seats.png"
 image eMedia Screen = "Backgrounds/eMedia Screen.png"
 
 # Interview Background
+image Interview BG = "Backgrounds/Interview BG.png"
+image Interviewer Back = "Backgrounds/Interviewer Back.png"
+image Interviewer Front = "Backgrounds/Interviewer Front.png"
 
 # ==============================================================================
 # Screen Effects - Images
