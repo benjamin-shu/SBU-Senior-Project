@@ -17,10 +17,10 @@ label interview:
     scene Interview BG with fade
 
     # show Ben Interview Neutral at interview_l with dissolve
-    # show Interviewer Back
+    show Interviewer Back
     # show Raj Interview Neutral at interview_r
-    # show Interviewer Front
-    # with dissolve
+    show Interviewer Front
+    with dissolve
 
     # show Raj Interview Neutral Spk at interview_r with dissolve
     R "It's very good to finally meet you, Benjamin!"
@@ -104,12 +104,13 @@ label interview:
     # show Raj Interview Guide at interview_r with dissolve
     R "So, just as a start, could you tell me about some previous projects you've done?"
     # show Raj Interview Neutral at interview_r with dissolve
+    window hide
 
 label question1:
     menu:
-        "{font='fonts/KaushanScript-Regular.otf'}So, just as a start, could you tell me about some previous projects you've done?{/font}"
+        "{font=fonts/KaushanScript-Regular.otf}So, just as a start, could you tell me about some previous projects you've done?{/font}"
 
-        "{font='fonts/Courier Prime Bold.otf'}I've been building an art portolio.{/font}" if (progress[0] >= 2) and not arsTalked:
+        "{font=fonts/Courier Prime Bold.ttf}I've been building an art portolio.{/font}" if (progress[0] >= 2) and not arsTalked:
             # show Ben Interview Neutral Spk at interview_l with dissolve
             if cseTalked:
                 B "I've also been building a portfolio out of projects from an old art class."
@@ -208,7 +209,7 @@ label question1:
             # show Raj Interview Neutral at interview_r with dissolve
             jump question1
 
-        "{font='fonts/Courier Prime Bold.otf'}I've been making my own website.{/font}" if (progress[1] >= 2) and not cseTalked:
+        "{font=fonts/Courier Prime Bold.ttf}I've been making my own website.{/font}" if (progress[1] >= 2) and not cseTalked:
             # show Ben Interview Neutral Spk at interview_l with dissolve
             if arsTalked:
                 B "I've also been working on my own personal website."
@@ -280,8 +281,8 @@ label question1:
             $ cseTalked = True
 
             if (progress[2] > 6):
-                show text "{color=#00FF00}{size=30}{b}Presentation: 3 / 3{/b}{/size}{/color}" at skill_check
                 if (progress[1] == 10):
+                    show text "{color=#00FF00}{size=30}{b}Presentation: 3 / 3{/b}{/size}{/color}" at skill_check
                     # show Ben Interview Explain_1 at interview_l with dissolve
                     B "Overall, it wasn't too bad - it was definitely easier than the CS projects at Stony Brook."
                     # show Ben Interview Explain_2 at interview_l with dissolve
@@ -297,6 +298,8 @@ label question1:
                     # with dissolve
                     B "Whoever said it was not wrong."
                 else:
+                    $ check_num = (progress[2] - 4 if (progress[2] - 4 > 0) else 0) if (progress[2] < 7) else 3
+                    show text "{color=#FF0000}{size=30}{b}Presentation: [check_num] / 3{/b}{/size}{/color}" at skill_check
                     # show Ben Interview Awkward Spk at interview_l
                     B "Sadly, I didn't get much further than that - the actual website isn't online."
                     # show Ben Interview Awkward at interview_l
@@ -352,7 +355,7 @@ label question2:
 
     # show Raj Interview Neutral at interview_r with dissolve
     menu:
-        "{font='fonts/KaushanScript-Regular.otf'}[question2Prompt]{/font}"
+        "{font=fonts/KaushanScript-Regular.otf}[question2Prompt]{/font}"
 
         "I prefer my art projects." if projCountARS > 0:
             $ interestARS = True
@@ -426,7 +429,7 @@ label question2:
     # show Raj Interview Neutral at interview_r with dissolve
 
     menu:
-        "{font='fonts/KaushanScript-Regular.otf'}With that in mind - why did you apply to Debugging Enterprises?{/font}"
+        "{font=fonts/KaushanScript-Regular.otf}With that in mind - why did you apply to Debugging Enterprises?{/font}"
 
         "Because I want to develop my professional skills.":
             # show Ben Interview Neutral Spk at interview_l with dissolve
@@ -561,18 +564,88 @@ label question3:
     R "So what is it about yourself, then, that makes you a good fit for this company?"
     # show Raj Interview Neutral at interview_r with dissolve
     menu:
-        "{font='fonts/KaushanScript-Regular.otf'}So, what is it about yourself, then, that makes you a good fit for this company?{/font}"
+        "{font=fonts/KaushanScript-Regular.otf}So, what is it about yourself, then, that makes you a good fit for this company?{/font}"
 
         "My work ethic.":
+            # show Ben Interview Serious Spk at interview_l with dissolve
+            B "I would say that my work ethic makes me a good fit for Debugging Enterprises."
+            # show Ben Interview Serious Spk at interview_l with dissolve
+            B "I always put my full effort into a project, and I will never pass responsibility."
+            # show Ben Interview Neutral Spk at interview_l with dissolve
+            B "My parents taught me integrity and honesty early on, and those have served me well my entire life."
+            jump conclusion
 
         "My skillset.":
+            # show Ben Interview Serious Spk at interview_l with dissolve
+            B "I would say that my skillset makes me a good fit for Debugging Enterprises."
+            if (projCountARS > projCountCSE):
+                # show Ben Interview Explain_1 at interview_l with dissolve
+                B "I'm familiar with the Adobe Creative Cloud, and I know how to use it."
+                # show Ben Interview Neutral Spk at interview_l with dissolve
+                B "And with it, I can make almost any message more engaging and easier to understand."
+
+            elif (projCountARS < projCountCSE):
+                # show Ben Interview Explain_1 at interview_l with dissolve
+                B "I've used HTML, CSS, and JavaScript all together to make web pages."
+                # show Ben Interview Neutral at interview_l with dissolve
+                B "When combined with my knowledge of Node.js, I understand every step in building a basic website."
+
+            elif (projCountARS == projCountCSE):
+                # show Ben Interview Explain_1 at interview_l with dissolve
+                B "I have a working knowledge of both web development {i}and{/i} content creation."
+                # show Ben Interview Neutral Spk at interview_l with dissolve
+                B "That means that I can fit into and assist a lot of different teams while still being useful."
+
+            jump conclusion
 
         "My ability to communicate and cooperate." if (progress[2] == 10):
+            # show Ben Interview Serious Spk at interview_l with dissolve
+            B "I would say that my ability to communicate and cooperate makes me a good fit."
+            # show Ben Interview Explain_1 Spk at interview_l with dissolve
+            B "More than anything, I pride myself on just being able to talk to the people I work with."
+            # show Ben Interview Serious Spk at interview_l with dissolve
+            B "Going into any kind of project, I never really know if my own skills are enough to succeed."
+            # show Ben Interview Neutral Spk at interview_l with dissolve
+            B "But I always know that I can support my team, and that I can rely on their support in return."
+            jump conclusion
 
+label conclusion:
+    # show Ben Interview Neutral at interview_l
+    # show Raj Interview Cheer at interview_r
+    # with dissolve
+    R "Well, with that, I think that's all of my questions!"
+    # show Raj Interview Neutral Spk at interview_r with dissolve
+    R "I'm supposed to send you over to Human Resources next - they'll have some more questions for you."
+    # show Raj Interview Neutral Spk at interview_r with dissolve
+    R "They'll also want you to fill out some more paperwork, as part of the application process."
+    # show Raj Interview Cheer at interview_r with dissolve
+    R "It's been a pleasure, Benjamin! Hopefully, we'll speak again soon."
+    # show Raj Interview Neutral at interview_r
+    # show Ben Interview Neutral Spk at interview_l
+    # with dissolve
+    B "Likewise! Thank you for your time, sir, and have a nice day."
 
-
-label final_Score:
     scene Black with fade
-    show
+    scene West F with fade
+    "[[1 Week Later...]"
+
+    scene West F 301C with dissolve
+    show Dimmed with dissolve
+
+    R "Dear Benjamin,"
+    R "Hello again! It was great speaking to you last week."
+    R "As you requested, I have attached your questionnaire results in this email."
+
+    show Score Sheet
+    show markerARS at setMarker(508, 190)
+    show markerCSE at setMarker(508, 290)
+    show markerHON at setMarker(508, 390)
+    with dissolve
+
+    R "I also have news regarding the status of your application."
+    if (finalScore > 5):
+        R ""
+    else:
+        R ""
 
     return

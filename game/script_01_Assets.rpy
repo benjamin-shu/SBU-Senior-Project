@@ -127,9 +127,9 @@ init:
         size (x, y)
 
     # Define transformation for centering images on projector screen.
-    transform projectCenter():
-        xalign 0.5
-        yalign 0.2
+    transform setMarker(x, y):
+        xcenter x
+        ycenter y
 
 # ==============================================================================
 # Init Block - Screen Positions
@@ -387,6 +387,7 @@ image interview_3c = "images/2_HON/interview_3c.png"
 # ==============================================================================
 
 # West Apartments
+image West F = "Backgrounds/West F.png"
 image West F 301 Hallway = "Backgrounds/West F 301 Hallway 1.png"
 image West F 301C = "Backgrounds/West F 301C.png"
 image West F 301C Door = "Backgrounds/West F 301C Door.png"
@@ -419,6 +420,12 @@ image Dimmed = "Screen Effects/Dimmed.png"
 
 # Image used to show Ben using his laptop.
 image Laptop = "Screen Effects/Laptop.png"
+
+# The score card shown at the end of the game and its associated markers.
+image Score Sheet = "Screen Effects/Score Sheet.png"
+image markerARS = "Screen Effects/Score Marker.png"
+image markerCSE = "Screen Effects/Score Marker.png"
+image markerHON = "Screen Effects/Score Marker.png"
 
 # ==============================================================================
 # Screen Effects - ATL

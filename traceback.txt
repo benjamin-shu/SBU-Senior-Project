@@ -1,38 +1,38 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 185, in script
-    python:
-  File "renpy/common/00start.rpy", line 186, in <module>
-    renpy.execute_default_statement(True)
-Exception: store.day_num is being given a default a second time.
+  File "game/script_f_Interview.rpy", line 301, in script
+    B "Sadly, I didn't get much further than that - the actual website isn't online."
+Exception: String "String u'{color=#FF0000}{size=30}{b}Presentation: [] / 3{/b}{/size}{/color}' ends with an open format operation." ends with an open format operation.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\bootstrap.py", line 313, in bootstrap
-    renpy.main.main()
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\main.py", line 513, in main
-    run(restart)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\main.py", line 139, in run
-    renpy.execution.run_context(True)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\execution.py", line 876, in run_context
-    context.run()
-  File "renpy/common/00start.rpy", line 185, in script
-    python:
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\ast.py", line 881, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\python.py", line 1913, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "renpy/common/00start.rpy", line 186, in <module>
-    renpy.execute_default_statement(True)
-  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\exports.py", line 3334, in execute_default_statement
-    i.set_default(start)
-  File "game/script_02_Assets.rpyc", line 35, in set_default
-    �uR� �$Q��\�RC2�VA/��Ȋ	0�;u%-@e6Ui	*�Pe���:^�Y*�|�JQ%���5TFJ�$��O2��4\�
-Exception: store.day_num is being given a default a second time.
+  File "game/script_f_Interview.rpy", line 301, in script
+    B "Sadly, I didn't get much further than that - the actual website isn't online."
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\ast.py", line 1150, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\ast.py", line 1120, in show_imspec
+    atl=atl)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\exports.py", line 683, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\image.py", line 416, in find_target
+    error(str(e))
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\display\image.py", line 379, in error
+    self.target = renpy.text.text.Text(msg, color=(255, 0, 0, 255), xanchor=0, xpos=0, yanchor=0, ypos=0)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\text\text.py", line 1423, in __init__
+    self.set_text(text, scope, substitute)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\text\text.py", line 1542, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute)
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\substitutions.py", line 244, in substitute
+    s = formatter.vformat(s, (), kwargs)
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 563, in vformat
+  File "/home/tom/ab/x64lucid-deps/install/lib/python2.7/string.py", line 572, in _vformat
+  File "C:\Users\Benjamin Shu\Documents\renpy-6.99.14.1-sdk\renpy\substitutions.py", line 159, in parse
+    raise Exception("String {0!r} ends with an open format operation.".format(s))
+Exception: String "String u'{color=#FF0000}{size=30}{b}Presentation: [] / 3{/b}{/size}{/color}' ends with an open format operation." ends with an open format operation.
 
 Windows-8-6.2.9200
 Ren'Py 7.1.3.1092
 SBU Senior Project 1.0
-Thu Apr 18 16:06:12 2019
+Tue Apr 23 00:19:11 2019
