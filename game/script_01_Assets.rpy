@@ -11,7 +11,7 @@ define R = DynamicCharacter("r_name", image="Rajesh", who_color="#159639", who_b
     what_Size=30, what_Bold=True, what_font="fonts/KaushanScript-Regular.otf")
 
 # Default darkness setting for sprites.
-define dark = -0.5
+define dark = -0.25
 
 # Define new default Dissolve for transitions between sprites.
 define dissolve = Dissolve(0.5)
@@ -396,7 +396,7 @@ image eMedia Screen = "Backgrounds/eMedia Screen.png"
 # Interview Background
 image Interview BG = "Backgrounds/Interview BG.png"
 image Interviewer Back = "Backgrounds/Interviewer Back.png"
-image Interviewer Front = "Backgrounds/Interviewer Front.png"
+image Boss Desk = "Backgrounds/Boss Desk.png"
 
 # ==============================================================================
 # Screen Effects - Images
