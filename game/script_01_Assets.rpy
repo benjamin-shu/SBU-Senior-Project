@@ -134,21 +134,11 @@ init:
 # ==============================================================================
 # Init Block - Screen Positions
 # ==============================================================================
-    transform center_l():
-        xpos 0.5
-        xanchor 225
-        yanchor 360
+    transform interview_l():
+        xcenter 295
 
-    transform center_l_stand():
-        xpos 0.5
-        xanchor 225
-        ypos 0.15
-        yanchor 360
-
-    transform center_r():
-        xpos 0.75
-        xanchor 225
-        yanchor 360
+    transform interview_r():
+        xcenter 985
 
     transform center_r_stand():
         xpos 0.75

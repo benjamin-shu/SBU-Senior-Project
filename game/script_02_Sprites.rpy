@@ -15,19 +15,18 @@ image Ben Interview Awkward = im.MatrixColor("images/Ben/Interview/Awkward.png",
 image Ben Interview Awkward Spk = "images/Ben/Interview/Awkward.png"
 image Ben Interview Serious = im.MatrixColor("images/Ben/Interview/Serious.png", im.matrix.brightness(dark))
 image Ben Interview Serious Spk = "images/Ben/Interview/Serious Speaking.png"
-# image Ben Interview Explain_1 = "images/Ben/Interview/Explain_1.png"
-# image Ben Interview Explain_1 = "images/Ben/Interview/Explain_2.png"
-# image Ben Interview Explain_1 = "images/Ben/Interview/Explain_3.png"
-# image Ben Interview Explain_1 = "images/Ben/Interview/Explain_4.png"
+image Ben Interview Explain_1 = "images/Ben/Interview/Explain_1.png"
+image Ben Interview Explain_2 = "images/Ben/Interview/Explain_2.png"
+image Ben Interview Explain_3 = "images/Ben/Interview/Explain_3.png"
 
 # ==============================================================================
 # Sprites - Rajesh
 # ==============================================================================
-# image Raj Interview Neutral = im.MatrixColor("images/Rajesh/Interview/Neutral.png", im.matrix.brightness(dark))
-# image Raj Interview Neutral Spk = "images/Rajesh/Interview/Neutral Speaking.png"
-# image Raj Interview Awkward = im.MatrixColor("images/Rajesh/Interview/Awkward.png", im.matrix.brightness(dark))
-# image Raj Interview Awkward Spk = "images/Rajesh/Interview/Awkward Speaking.png"
-# image Raj Interview Cheer = "images/Rajesh/Interview/Cheer.png"
-# image Raj Interview Guide = "images/Rajesh/Interview/Guide.png"
-# image Raj Interview Question = im.MatrixColor("images/Rajesh/Interview/Question.png", im.matrix.brightness(dark))
-# image Raj Interview Question Spk = "images/Rajesh/Interview/Question Speaking.png"
+image Raj Interview Neutral = im.MatrixColor("images/Rajesh/Interview/Neutral.png", im.matrix.brightness(dark))
+image Raj Interview Neutral Spk = "images/Rajesh/Interview/Neutral Speaking.png"
+image Raj Interview Awkward = im.MatrixColor("images/Rajesh/Interview/Awkward.png", im.matrix.brightness(dark))
+image Raj Interview Awkward Spk = "images/Rajesh/Interview/Awkward Speaking.png"
+image Raj Interview Cheer = "images/Rajesh/Interview/Cheer.png"
+image Raj Interview Guide = "images/Rajesh/Interview/Guide.png"
+image Raj Interview Question = im.MatrixColor("images/Rajesh/Interview/Question.png", im.matrix.brightness(dark))
+image Raj Interview Question Spk = "images/Rajesh/Interview/Question Speaking.png"
