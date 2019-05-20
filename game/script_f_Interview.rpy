@@ -2,6 +2,7 @@ label interview:
     default projCountARS = 0
     default projCountCSE = 0
     default projScore = 0
+    default commCount = 0
     default arsTalked = False
     default cseTalked = False
 
@@ -9,6 +10,9 @@ label interview:
     default interestARS = False
     default interestCSE = False
 
+    default arsPix = 0
+    default csePix = 0
+    default honPix = 0
     default finalScore = 0
 
     show Ben Interview Serious Spk with dissolve
@@ -18,8 +22,8 @@ label interview:
 
     show Ben Interview Neutral at interview_l with dissolve
     show Interviewer Back at center with dissolve
-    show Raj Interview Neutral at interview_r with dissolve
     show Boss Desk at center with dissolve
+    show Raj Interview Neutral at interview_r behind Boss with dissolve
 
     show Raj Interview Neutral Spk at interview_r with dissolve
     R "It's very good to finally meet you, Benjamin!"
@@ -48,7 +52,7 @@ label interview:
         with dissolve
         B "Oh! Well, that's good to hear. I'm glad you liked it!"
         show Ben Interview Neutral at interview_l with dissolve
-        $ finalScore += 1
+        $ commCount += 1
     else:
         show Raj Interview Neutral Spk at interview_r with dissolve
         R "Now, before we begin, I wanted to ask a question about your resume."
@@ -85,7 +89,7 @@ label interview:
         with dissolve
         show text "{color=#00FF00}{size=30}{b}LinkedIn: [check_num] / 2{/b}{/size}{/color}" at skill_check
         R "Oh, good! Your LinkedIn profile was correct, then. That makes the paperwork easier."
-        $ finalScore += 1
+        $ commCount += 1
     else:
         show Raj Interview Cheer at interview_r
         show Ben Interview Neutral at interview_l
@@ -312,6 +316,8 @@ label question1:
             show Raj Interview Guide at interview_r
             with dissolve
             R "So, is there anything else you'd like to tell me about?"
+            show Raj Interview Neutral at interview_r with dissolve
+
             jump question1
 
         "{font=fonts/Courier Prime Bold.ttf}I haven't had the time to do much else.{/font}" if (arsTalked or cseTalked):
@@ -331,6 +337,7 @@ label question1:
 label question2:
     $ projScore += projCountARS
     $ projScore += projCountCSE
+    $ finalScore += projScore
 
     show Ben Interview Neutral at interview_l
     show Raj Interview Cheer at interview_r
@@ -396,7 +403,7 @@ label question2:
             show Raj Interview Question Spk at interview_r
             with dissolve
             R "Really? More often than not, the people we hire can only work with one or the other."
-            if (projCountARS < projCountCSE) or (projCountARS < projCountCSE):
+            if (projCountARS < projCountCSE) or (projCountARS > projCountCSE):
                 show Raj Interview Question Spk at interview_r with dissolve
                 R "Based off what you've told me, I would have assumed the same of you."
             else:
@@ -418,6 +425,8 @@ label question2:
                 with dissolve
                 R "Well, I'll be sure to keep that in mind!"
 
+                $ commCount += 1
+
     show Raj Interview Neutral Spk at interview_r with dissolve
     R "That actually leads nicely into my next question."
     show Raj Interview Neutral Spk at interview_r with dissolve
@@ -431,7 +440,7 @@ label question2:
     menu:
         "{font=fonts/KaushanScript-Regular.otf}With that in mind - why did you apply to Debugging Enterprises?{/font}"
 
-        "Because I want to develop my professional skills.":
+        "{font=fonts/Courier Prime Bold.ttf}To develop my professional skills.{/font}":
             show Ben Interview Neutral Spk at interview_l with dissolve
             B "I applied here because I wanted to develop my professional skills."
             show Ben Interview Awkward Spk at interview_l with dissolve
@@ -451,7 +460,7 @@ label question2:
             show Ben Interview Neutral at interview_l
             jump question3
 
-        "I'd like to work in marketing and digital communications." if (progress[0] == 10):
+        "{font=fonts/Courier Prime Bold.ttf}To work in marketing and digital communications.{/font}" if (progress[0] == 10):
             show Ben Interview Neutral Spk at interview_l with dissolve
             B "I applied here because I'd like to work in marketing and digital communications."
             if (not interestARS and interestCSE):
@@ -470,6 +479,8 @@ label question2:
                 with dissolve
                 R "Oh, okay - I just wanted to clear that up!"
 
+                $ commCount -= 3
+
             elif (interestARS):
                 show Ben Interview Awkward Spk at interview_l with dissolve
                 B "I'm not quite as comfortable with programming as most other Computer Science majors."
@@ -487,9 +498,11 @@ label question2:
                 B "Yes, sir."
                 show Ben Interview Neutral at interview_l
 
+                $ commCount += 1
+
             jump question3
 
-        "I wanted to learn more about web developement." if (progress[1] == 10):
+        "{font=fonts/Courier Prime Bold.ttf}I wanted to learn more about web development.{/font}" if (progress[1] == 10):
             show Ben Interview Neutral Spk at interview_l with dissolve
             B "I applied here because I want to learn more about web development."
             if (not interestCSE and interestARS):
@@ -508,8 +521,10 @@ label question2:
                 with dissolve
                 R "Alright, then - just wanted to make sure I had that right!"
 
+                $ commCount -= 3
+
             elif (interestCSE):
-                show Ben Interview Neutral at interview_l with dissolve
+                show Ben Interview Neutral Spk at interview_l with dissolve
                 B "I started learning about JavaScript and HTML a couple of years ago for a class."
                 show Ben Interview Explain_1 at interview_l with dissolve
                 B "Those two languages have everything I want from programming - limitless potential, backed by the power of modern browsers."
@@ -527,9 +542,11 @@ label question2:
                 B "Yes, sir."
                 show Ben Interview Neutral at interview_l
 
+                $ commCount += 1
+
             jump question3
 
-        "Because this company seemed like the best fit for me." if (progress[2] == 10):
+        "{font=fonts/Courier Prime Bold.ttf}This company seemed like the best fit for me.{/font}" if (progress[2] == 10):
             show Ben Interview Neutral Spk at interview_l with dissolve
             B "I applied to Debugging Enterprises because this company seemed like the best fit for me."
             show Ben Interview Explain_1 at interview_l with dissolve
@@ -558,6 +575,8 @@ label question2:
                 show Ben Interview Neutral Spk at interview_l with dissolve
                 B "If Debugging Enterprises wants to teach people to program, then I'd love to be a part of that."
 
+            $ commCount += 1
+
 label question3:
     show Ben Interview Neutral at interview_l with dissolve
     show Raj Interview Guide at interview_r with dissolve
@@ -566,7 +585,7 @@ label question3:
     menu:
         "{font=fonts/KaushanScript-Regular.otf}So, what is it about yourself, then, that makes you a good fit for this company?{/font}"
 
-        "My work ethic.":
+        "{font=fonts/Courier Prime Bold.ttf}My work ethic.{/font}":
             show Ben Interview Serious Spk at interview_l with dissolve
             B "I would say that my work ethic makes me a good fit for Debugging Enterprises."
             show Ben Interview Serious Spk at interview_l with dissolve
@@ -575,7 +594,7 @@ label question3:
             B "My parents taught me integrity and honesty early on, and those have served me well my entire life."
             jump conclusion
 
-        "My skillset.":
+        "{font=fonts/Courier Prime Bold.ttf}My skillset.{/font}":
             show Ben Interview Serious Spk at interview_l with dissolve
             B "I would say that my skillset makes me a good fit for Debugging Enterprises."
             if (projCountARS > projCountCSE):
@@ -598,7 +617,7 @@ label question3:
 
             jump conclusion
 
-        "My ability to communicate and cooperate." if (progress[2] == 10):
+        "{font=fonts/Courier Prime Bold.ttf}My ability to communicate and cooperate.{/font}" if (progress[2] == 10):
             show Ben Interview Serious Spk at interview_l with dissolve
             B "I would say that my ability to communicate and cooperate makes me a good fit."
             show Ben Interview Explain_1 Spk at interview_l with dissolve
@@ -607,6 +626,9 @@ label question3:
             B "Going into any kind of project, I never really know if my own skills are enough to succeed."
             show Ben Interview Neutral Spk at interview_l with dissolve
             B "But I always know that I can support my team, and that I can rely on their support in return."
+
+            $ commCount += 3
+
             jump conclusion
 
 label conclusion:
@@ -645,15 +667,49 @@ label conclusion:
     R "As you requested, I have attached your questionnaire results in this email."
 
     show Score Sheet
-    show markerARS at setMarker(508, 190)
-    show markerCSE at setMarker(508, 290)
-    show markerHON at setMarker(508, 390)
+    $ arsPix = 508 + (60 * projCountARS * 2)
+    $ csePix = 508 + (60 * projCountCSE * 2)
+    $ honPix = 508 + (60 * commCount)
+
+    show markerARS at setMarker(arsPix, 190)
+    show markerCSE at setMarker(csePix, 290)
+    show markerHON at setMarker(honPix, 390)
     with dissolve
 
     R "I also have news regarding the status of your application."
-    if (finalScore > 5):
-        R ""
+    if (finalScore > 6):
+        R "We would like to offer you a position at Debugging Enterprises, starting this summer."
+        if (interestARS and not interestCSE):
+            R "Our Web Design team is very much interested in your work, and would like to have you join."
+        elif (interestCSE and not interestARS):
+            R "The Software Development program has reviewed your projects and accepted your application."
+        elif (interestARS and interestCSE):
+            R "Your work caught the attention of our Multimedia Team, and they would like to have you on board."
+
+        hide Score Sheet
+        hide markerARS
+        hide markerCSE
+        hide markerHON
+        with dissolve
+        R "Further information on the offer has been attached to this email."
+        R "We hope that you take the time to consider this offer.\nShould you accept, we very much look forward to working with you."
+
+        hide Dimmed with dissolve
+        scene Black with fade
+
     else:
-        R ""
+        R "Unfortunately, we have decided not to move forward with your application."
+        R "Debugging Enterprises has only a limited number of positions, and ultimately must reject some qualified candidates."
+
+        hide Score Sheet
+        hide markerARS
+        hide markerCSE
+        hide markerHON
+        with dissolve
+        R "Please do not let this discourage you from applying again - another department may still have open positions."
+        R "Thank you for taking the time to apply. We wish you the best of luck in your job search."
+
+        hide Dimmed with dissolve
+        scene Black with fade
 
     return
